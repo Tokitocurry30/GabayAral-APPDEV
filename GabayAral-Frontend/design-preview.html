@@ -1,0 +1,406 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="GabayAral official frontend design system preview">
+
+    <title>GabayAral | Design System Preview</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Global Design System -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Preview-specific CSS -->
+    <link rel="stylesheet" href="assets/css/design-preview.css">
+</head>
+
+<body>
+
+    <main class="design-preview">
+
+        <!-- BRAND HEADER -->
+        <header class="preview-header">
+
+            <div class="preview-brand">
+                <div class="preview-logo">
+                    <i class="bi bi-book-half"></i>
+                </div>
+
+                <div>
+                    <h1>GabayAral</h1>
+                    <p>Design System v1.0</p>
+                </div>
+            </div>
+
+            <span class="preview-label">
+                Frontend Design Reference
+            </span>
+
+        </header>
+
+        <div class="preview-content">
+
+            <!-- INTRODUCTION -->
+            <section class="preview-intro">
+                <span class="eyebrow">OFFICIAL BRAND GUIDELINES</span>
+
+                <h2>Our Visual Identity</h2>
+
+                <p>
+                    A consistent, accessible and modern design
+                    for all six GabayAral user roles.
+                </p>
+            </section>
+
+
+            <!-- COLOR PALETTE -->
+            <section class="preview-section">
+
+                <div class="preview-section-heading">
+                    <div>
+                        <h3>01. Brand Colors</h3>
+                        <p>Our official working color palette.</p>
+                    </div>
+                </div>
+
+                <div class="color-grid">
+
+                    <article class="color-card">
+                        <div class="color-swatch swatch-navy"></div>
+                        <strong>Primary Navy</strong>
+                        <span>#16324F</span>
+                    </article>
+
+                    <article class="color-card">
+                        <div class="color-swatch swatch-dark-navy"></div>
+                        <strong>Dark Navy</strong>
+                        <span>#102E49</span>
+                    </article>
+
+                    <article class="color-card">
+                        <div class="color-swatch swatch-teal"></div>
+                        <strong>Primary Teal</strong>
+                        <span>#0F766E</span>
+                    </article>
+
+                    <article class="color-card">
+                        <div class="color-swatch swatch-turquoise"></div>
+                        <strong>Turquoise</strong>
+                        <span>#19C5B7</span>
+                    </article>
+
+                    <article class="color-card">
+                        <div class="color-swatch swatch-blue"></div>
+                        <strong>Information Blue</strong>
+                        <span>#2563EB</span>
+                    </article>
+
+                    <article class="color-card">
+                        <div class="color-swatch swatch-green"></div>
+                        <strong>Success Green</strong>
+                        <span>#15803D</span>
+                    </article>
+
+                    <article class="color-card">
+                        <div class="color-swatch swatch-purple"></div>
+                        <strong>AI Purple</strong>
+                        <span>#7C3AED</span>
+                    </article>
+
+                    <article class="color-card">
+                        <div class="color-swatch swatch-amber"></div>
+                        <strong>Warning Amber</strong>
+                        <span>#B45309</span>
+                    </article>
+
+                    <article class="color-card">
+                        <div class="color-swatch swatch-red"></div>
+                        <strong>Danger Red</strong>
+                        <span>#B91C1C</span>
+                    </article>
+
+                    <article class="color-card">
+                        <div class="color-swatch swatch-background"></div>
+                        <strong>Page Background</strong>
+                        <span>#F8FAFC</span>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- TYPOGRAPHY -->
+            <section class="preview-section">
+
+                <h3>02. Typography</h3>
+                <p class="preview-description">
+                    Inter and system fonts for clear readability.
+                </p>
+
+                <div class="sample-card typography-sample">
+                    <h1>Heading One — 29px</h1>
+                    <h2>Heading Two — 22px</h2>
+                    <h3>Heading Three — 17px</h3>
+
+                    <p class="sample-body">
+                        Body text — 14px. This is the standard
+                        paragraph style used throughout GabayAral.
+                    </p>
+
+                    <span class="sample-caption">
+                        Caption and helper text — 12px.
+                    </span>
+                </div>
+
+            </section>
+
+
+            <!-- BUTTONS -->
+            <section class="preview-section">
+
+                <h3>03. Buttons</h3>
+                <p class="preview-description">
+                    Reusable button appearance and hierarchy.
+                </p>
+
+                <div class="sample-card button-samples">
+
+                    <span class="btn-ga btn-ga-primary">
+                        <i class="bi bi-plus-lg"></i>
+                        Primary Action
+                    </span>
+
+                    <span class="btn-ga btn-ga-outline">
+                        <i class="bi bi-eye"></i>
+                        Secondary Action
+                    </span>
+
+                    <span class="btn-ga btn-ga-danger">
+                        <i class="bi bi-trash"></i>
+                        Delete
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- STATUS LABELS -->
+            <section class="preview-section">
+
+                <h3>04. Status Labels</h3>
+
+                <div class="sample-card status-samples">
+
+                    <span class="status-pill status-success">
+                        Active
+                    </span>
+
+                    <span class="status-pill status-pending">
+                        Pending
+                    </span>
+
+                    <span class="status-pill status-info">
+                        Information
+                    </span>
+
+                    <span class="status-pill status-danger">
+                        Rejected
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- STATISTIC CARDS -->
+            <section class="preview-section">
+
+                <h3>05. Dashboard Cards</h3>
+                <p class="preview-description">
+                    Standard statistic cards used in dashboards.
+                </p>
+
+                <div class="preview-stats">
+
+                    <article class="stat-card">
+                        <span class="stat-icon blue">
+                            <i class="bi bi-book"></i>
+                        </span>
+
+                        <strong class="stat-value">24</strong>
+                        <span class="stat-label">My Subjects</span>
+                    </article>
+
+                    <article class="stat-card">
+                        <span class="stat-icon green">
+                            <i class="bi bi-check-circle"></i>
+                        </span>
+
+                        <strong class="stat-value">18</strong>
+                        <span class="stat-label">Completed</span>
+                    </article>
+
+                    <article class="stat-card">
+                        <span class="stat-icon purple">
+                            <i class="bi bi-stars"></i>
+                        </span>
+
+                        <strong class="stat-value">06</strong>
+                        <span class="stat-label">AI Drafts</span>
+                    </article>
+
+                    <article class="stat-card">
+                        <span class="stat-icon amber">
+                            <i class="bi bi-clock"></i>
+                        </span>
+
+                        <strong class="stat-value">08</strong>
+                        <span class="stat-label">Pending Tasks</span>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- FORM ELEMENTS -->
+            <section class="preview-section">
+
+                <h3>06. Form Elements</h3>
+
+                <div class="sample-card form-sample">
+
+                    <div>
+                        <label class="form-label">
+                            Sample Input
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Enter information..."
+                            disabled
+                        >
+                    </div>
+
+                    <div>
+                        <label class="form-label">
+                            Sample Selection
+                        </label>
+
+                        <select class="form-select" disabled>
+                            <option>Select an option</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- TABLE -->
+            <section class="preview-section">
+
+                <h3>07. Table Style</h3>
+
+                <div class="sample-card table-responsive">
+
+                    <table class="table preview-table align-middle">
+
+                        <thead>
+                            <tr>
+                                <th>Student</th>
+                                <th>Subject</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Juan Dela Cruz</td>
+                                <td>Mathematics</td>
+                                <td>
+                                    <span class="status-pill status-success">
+                                        Completed
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Maria Santos</td>
+                                <td>Science</td>
+                                <td>
+                                    <span class="status-pill status-pending">
+                                        Pending
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- DESIGN RULES -->
+            <section class="preview-section">
+
+                <h3>08. Design Rules</h3>
+
+                <div class="sample-card design-rules">
+
+                    <p><i class="bi bi-check-circle-fill"></i>
+                        Use the same brand colors across all six roles.
+                    </p>
+
+                    <p><i class="bi bi-check-circle-fill"></i>
+                        Keep cards white with subtle borders and shadows.
+                    </p>
+
+                    <p><i class="bi bi-check-circle-fill"></i>
+                        Use consistent spacing and rounded corners.
+                    </p>
+
+                    <p><i class="bi bi-check-circle-fill"></i>
+                        Maintain responsive desktop and mobile layouts.
+                    </p>
+
+                    <p><i class="bi bi-check-circle-fill"></i>
+                        Use Bootstrap Icons consistently.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <footer class="preview-footer">
+            GabayAral — Frontend Design Reference v1.0
+        </footer>
+
+    </main>
+
+</body>
+</html>

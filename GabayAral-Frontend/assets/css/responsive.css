@@ -1,0 +1,98 @@
+
+/* =========================================
+   GABAYARAL - RESPONSIVE DESIGN
+   ========================================= */
+
+/* LARGE TABLETS AND SMALL LAPTOPS */
+
+@media (max-width: 1250px) {
+
+    .content-wrap {
+        padding: 18px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+
+    .content-wrap {
+        padding: 16px;
+    }
+
+    .page-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .heading-actions {
+        width: 100%;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* MOBILE PHONES */
+
+@media (max-width: 650px) {
+
+    .content-wrap {
+        padding: 14px 12px;
+    }
+
+    .page-heading h1 {
+        font-size: 24px;
+    }
+
+    .page-heading p {
+        font-size: 12px;
+    }
+
+    .heading-actions {
+        flex-direction: column;
+    }
+
+    .heading-actions .btn-ga {
+        width: 100%;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+    }
+
+    .stat-card {
+        padding: 10px;
+    }
+
+    .stat-value {
+        font-size: 22px;
+    }
+
+    .panel-card {
+        padding: 12px;
+    }
+
+}
+
+/* VERY SMALL PHONES */
+
+@media (max-width: 380px) {
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-heading h1 {
+        font-size: 22px;
+    }
+
+}

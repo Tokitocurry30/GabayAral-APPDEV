@@ -1,0 +1,156 @@
+
+/* =====================================
+   GABAYARAL - GLOBAL DESIGN SYSTEM
+   ===================================== */
+
+:root {
+
+    /* Brand Colors */
+    --navy: #16324F;
+    --dark-navy: #102E49;
+    --teal: #0F766E;
+    --turquoise: #19C5B7;
+
+    /* Supporting Colors */
+    --blue: #2563EB;
+    --green: #15803D;
+    --purple: #7C3AED;
+    --amber: #B45309;
+    --red: #B91C1C;
+
+    /* Background Colors */
+    --background: #F8FAFC;
+    --white: #FFFFFF;
+    --gray: #F1F5F9;
+
+    /* Text Colors */
+    --ink: #14243B;
+    --muted: #64748B;
+
+    /* Borders and Shadows */
+    --border: #E2E8F0;
+    --shadow: 0 2px 7px rgba(15, 35, 60, 0.10);
+
+    /* Layout */
+    --sidebar-width: 255px;
+    --topbar-height: 62px;
+
+    /* Radius */
+    --radius-card: 12px;
+    --radius-button: 8px;
+}
+
+/* =====================================
+   GLOBAL RESET
+   ===================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--ink);
+
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 14px;
+
+    min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =====================================
+   WELCOME SCREEN
+   ===================================== */
+
+.welcome-section {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 16px;
+}
+
+.brand-icon {
+    width: 76px;
+    height: 76px;
+
+    display: grid;
+    place-items: center;
+
+    margin: 0 auto 18px;
+
+    background: var(--navy);
+    color: var(--turquoise);
+
+    border-radius: 20px;
+    font-size: 38px;
+
+    box-shadow: var(--shadow);
+}
+
+.welcome-section h1 {
+    color: var(--navy);
+    font-size: clamp(30px, 5vw, 42px);
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.welcome-subtitle {
+    color: var(--muted);
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+.welcome-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-top: 22px;
+    padding: 10px 16px;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+
+    background: #16A34A;
+    border-radius: 50%;
+}
+
+/* =====================================
+   RESPONSIVE
+   ===================================== */
+
+@media (max-width: 650px) {
+
+    .welcome-subtitle {
+        font-size: 13px;
+    }
+
+}

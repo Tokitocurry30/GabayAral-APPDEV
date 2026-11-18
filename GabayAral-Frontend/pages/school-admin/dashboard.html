@@ -1,0 +1,1353 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="GabayAral School Administrator Dashboard.">
+
+    <meta name="theme-color" content="#16324F">
+
+    <title>School Administrator Dashboard | GabayAral</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- GLOBAL DESIGN SYSTEM -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+
+    <!-- SHARED LAYOUT -->
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+
+    <!-- SCHOOL ADMINISTRATOR -->
+    <link rel="stylesheet" href="../../assets/css/school-admin.css">
+
+</head>
+
+
+<body>
+
+<div class="app-shell">
+
+
+    <!-- =====================================
+         SCHOOL ADMINISTRATOR SIDEBAR
+    ====================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+        aria-label="School Administrator navigation">
+
+
+        <!-- BRAND -->
+
+        <div class="brand-block">
+
+            <a href="dashboard.html" class="brand">
+
+                <i class="bi bi-book-half"></i>
+
+                <span>GabayAral</span>
+
+            </a>
+
+            <span class="role-pill">
+                School Administrator
+            </span>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="side-nav">
+
+
+            <!-- OVERVIEW -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Overview</p>
+
+                <a
+                    href="dashboard.html"
+                    class="side-link active"
+                    aria-current="page">
+
+                    <i class="bi bi-grid-1x2-fill"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+            </div>
+
+
+            <!-- SCHOOL MANAGEMENT -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">School Management</p>
+
+                <a href="school-profile.html" class="side-link">
+                    <i class="bi bi-building"></i>
+                    <span>School Profile</span>
+                </a>
+
+                <a href="school-setup.html" class="side-link">
+                    <i class="bi bi-sliders"></i>
+                    <span>School Setup</span>
+                </a>
+
+                <a href="grade-levels.html" class="side-link">
+                    <i class="bi bi-diagram-3"></i>
+                    <span>Grade-Level Spaces</span>
+                </a>
+
+                <a href="sections.html" class="side-link">
+                    <i class="bi bi-people"></i>
+                    <span>Sections</span>
+                </a>
+
+                <a href="subject-library.html" class="side-link">
+                    <i class="bi bi-book"></i>
+                    <span>Subject Library</span>
+                </a>
+
+                <a href="subject-offerings.html" class="side-link">
+                    <i class="bi bi-journal-bookmark"></i>
+                    <span>Subject Offerings</span>
+                </a>
+
+                <a href="copy-subjects.html" class="side-link">
+                    <i class="bi bi-copy"></i>
+                    <span>Copy Subjects</span>
+                </a>
+
+            </div>
+
+
+            <!-- TEACHERS -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Teacher Management</p>
+
+                <a href="teachers.html" class="side-link">
+                    <i class="bi bi-person-workspace"></i>
+                    <span>Teacher Directory</span>
+                </a>
+
+                <a href="teacher-invitations.html" class="side-link">
+                    <i class="bi bi-envelope-paper"></i>
+                    <span>Teacher Invitations</span>
+                </a>
+
+                <a href="teacher-replacement.html" class="side-link">
+                    <i class="bi bi-arrow-left-right"></i>
+                    <span>Teacher Replacement</span>
+                </a>
+
+            </div>
+
+
+            <!-- STUDENTS -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Student Management</p>
+
+                <a href="student-enrollments.html" class="side-link">
+                    <i class="bi bi-mortarboard"></i>
+                    <span>Student Enrollments</span>
+                </a>
+
+                <a href="student-codes.html" class="side-link">
+                    <i class="bi bi-upc-scan"></i>
+                    <span>Student Subject Codes</span>
+                </a>
+
+                <a href="parent-codes.html" class="side-link">
+                    <i class="bi bi-qr-code"></i>
+                    <span>Parent Section Codes</span>
+                </a>
+
+            </div>
+
+
+            <!-- GUARDIAN -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Guardian Management</p>
+
+                <a href="guardian-requests.html" class="side-link">
+                    <i class="bi bi-person-check"></i>
+                    <span>Referred Guardian Requests</span>
+                </a>
+
+            </div>
+
+
+            <!-- COMMUNICATION -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Communication</p>
+
+                <a href="announcements.html" class="side-link">
+                    <i class="bi bi-megaphone"></i>
+                    <span>School Announcements</span>
+                </a>
+
+            </div>
+
+
+            <!-- RECORDS -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Records & Workspace</p>
+
+                <a href="archives.html" class="side-link">
+                    <i class="bi bi-archive"></i>
+                    <span>Archive & Restoration</span>
+                </a>
+
+                <a href="deactivation-request.html" class="side-link">
+                    <i class="bi bi-building-x"></i>
+                    <span>Workspace Deactivation</span>
+                </a>
+
+                <a href="activity-history.html" class="side-link">
+                    <i class="bi bi-clock-history"></i>
+                    <span>Activity History</span>
+                </a>
+
+            </div>
+
+
+            <!-- ACCOUNT -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Account</p>
+
+                <a href="#" class="side-link">
+                    <i class="bi bi-bell"></i>
+                    <span>Notifications</span>
+                </a>
+
+                <a href="#" class="side-link">
+                    <i class="bi bi-universal-access"></i>
+                    <span>EasyAccess</span>
+                </a>
+
+                <a href="../../index.html" class="side-link">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Return to Homepage</span>
+                </a>
+
+            </div>
+
+
+        </nav>
+
+
+        <!-- SIDEBAR FOOTER -->
+
+        <div class="sidebar-footer">
+
+            <span class="footer-dot"></span>
+
+            School Workspace
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- MOBILE BACKDROP -->
+
+    <div
+        class="sidebar-backdrop"
+        id="sidebarBackdrop">
+    </div>
+
+
+
+    <!-- =====================================
+         MAIN CONTENT
+    ====================================== -->
+
+    <main class="main-area">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+
+            <button
+                type="button"
+                class="icon-button-ga mobile-menu"
+                id="menuToggle"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+                <i class="bi bi-list"></i>
+
+            </button>
+
+
+            <div class="breadcrumbs">
+
+                <i class="bi bi-house-door-fill"></i>
+
+                <span>School Administration</span>
+
+                <span>/</span>
+
+                <strong>Dashboard</strong>
+
+            </div>
+
+
+            <div class="topbar-tools">
+
+
+                <button
+                    type="button"
+                    class="school-select"
+                    aria-label="Current school context">
+
+                    <span>
+                        <i class="bi bi-bank me-1"></i>
+                        San Isidro National High School
+                    </span>
+
+                    <i class="bi bi-chevron-down"></i>
+
+                </button>
+
+
+                <label class="search-box">
+
+                    <i class="bi bi-search"></i>
+
+                    <input
+                        type="search"
+                        id="dashboardSearch"
+                        placeholder="Search dashboard..."
+                        aria-label="Search dashboard">
+
+                </label>
+
+
+                <button
+                    type="button"
+                    class="icon-button-ga"
+                    aria-label="Notifications">
+
+                    <i class="bi bi-bell"></i>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="profile-button">
+
+                    <span class="avatar">
+                        <i class="bi bi-person-fill"></i>
+                    </span>
+
+                    <span>Administrator</span>
+
+                    <i class="bi bi-chevron-down"></i>
+
+                </button>
+
+
+            </div>
+
+        </header>
+
+
+
+        <!-- DASHBOARD CONTENT -->
+
+        <section class="main-content">
+
+
+            <!-- SCHOOL CONTEXT -->
+
+            <div class="sa-school-context sa-searchable">
+
+                <div class="sa-school-info">
+
+                    <div class="sa-school-icon">
+
+                        <i class="bi bi-building"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            San Isidro National High School
+                        </strong>
+
+                        <span>
+                            Active School Workspace · School Administrator
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <span class="status-pill status-success">
+
+                    <i class="bi bi-check-circle me-1"></i>
+
+                    Active Workspace
+
+                </span>
+
+            </div>
+
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="page-heading">
+
+                <div>
+
+                    <h1>School Dashboard</h1>
+
+                    <p>
+                        Manage your school's academic structure,
+                        teachers, enrollments and operations.
+                    </p>
+
+                    <p class="text-secondary small mt-2 mb-0"
+                        id="saCurrentDate">
+                    </p>
+
+                </div>
+
+
+                <div class="heading-actions">
+
+                    <a
+                        href="school-setup.html"
+                        class="btn-ga btn-ga-primary">
+
+                        <i class="bi bi-plus-lg"></i>
+
+                        School Setup
+
+                    </a>
+
+
+                    <a
+                        href="announcements.html"
+                        class="btn-ga btn-ga-outline">
+
+                        <i class="bi bi-megaphone"></i>
+
+                        Announcements
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 SUMMARY CARDS
+            ================================== -->
+
+            <div class="sa-dashboard-grid">
+
+
+                <article class="sa-stat-card sa-searchable">
+
+                    <div class="sa-stat-top">
+
+                        <span class="sa-stat-icon blue">
+                            <i class="bi bi-diagram-3"></i>
+                        </span>
+
+                    </div>
+
+                    <strong class="sa-stat-value">08</strong>
+
+                    <span class="sa-stat-label">
+                        Grade-Level Spaces
+                    </span>
+
+                    <span class="sa-stat-note">
+                        Sample workspace data
+                    </span>
+
+                </article>
+
+
+                <article class="sa-stat-card sa-searchable">
+
+                    <div class="sa-stat-top">
+
+                        <span class="sa-stat-icon green">
+                            <i class="bi bi-people"></i>
+                        </span>
+
+                    </div>
+
+                    <strong class="sa-stat-value">24</strong>
+
+                    <span class="sa-stat-label">
+                        Active Sections
+                    </span>
+
+                    <span class="sa-stat-note">
+                        Sample workspace data
+                    </span>
+
+                </article>
+
+
+                <article class="sa-stat-card sa-searchable">
+
+                    <div class="sa-stat-top">
+
+                        <span class="sa-stat-icon purple">
+                            <i class="bi bi-person-workspace"></i>
+                        </span>
+
+                    </div>
+
+                    <strong class="sa-stat-value">36</strong>
+
+                    <span class="sa-stat-label">
+                        Teacher Assignments
+                    </span>
+
+                    <span class="sa-stat-note">
+                        Sample workspace data
+                    </span>
+
+                </article>
+
+
+                <article class="sa-stat-card sa-searchable">
+
+                    <div class="sa-stat-top">
+
+                        <span class="sa-stat-icon amber">
+                            <i class="bi bi-mortarboard"></i>
+                        </span>
+
+                    </div>
+
+                    <strong class="sa-stat-value">720</strong>
+
+                    <span class="sa-stat-label">
+                        Student Enrollments
+                    </span>
+
+                    <span class="sa-stat-note">
+                        Sample workspace data
+                    </span>
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 ACADEMIC STRUCTURE AND QUICK ACTIONS
+            ================================== -->
+
+            <div class="row g-3 mb-3">
+
+
+                <!-- ACADEMIC STRUCTURE -->
+
+                <div class="col-12 col-xl-6">
+
+                    <section class="sa-panel sa-searchable">
+
+
+                        <div class="sa-panel-header">
+
+                            <h2>
+                                <i class="bi bi-diagram-3 me-2"></i>
+                                Academic Structure
+                            </h2>
+
+                            <a href="grade-levels.html">
+                                Manage Structure
+                            </a>
+
+                        </div>
+
+
+                        <div class="sa-structure-list">
+
+
+                            <div class="sa-structure-row">
+
+                                <div class="sa-structure-icon">
+                                    <i class="bi bi-layers"></i>
+                                </div>
+
+                                <div class="sa-structure-details">
+
+                                    <strong>
+                                        Grade-Level Spaces
+                                    </strong>
+
+                                    <span>
+                                        8 active spaces
+                                    </span>
+
+                                </div>
+
+                                <span class="status-pill status-success">
+                                    Active
+                                </span>
+
+                            </div>
+
+
+                            <div class="sa-structure-row">
+
+                                <div class="sa-structure-icon">
+                                    <i class="bi bi-people"></i>
+                                </div>
+
+                                <div class="sa-structure-details">
+
+                                    <strong>
+                                        Sections
+                                    </strong>
+
+                                    <span>
+                                        24 active sections
+                                    </span>
+
+                                </div>
+
+                                <span class="status-pill status-success">
+                                    Active
+                                </span>
+
+                            </div>
+
+
+                            <div class="sa-structure-row">
+
+                                <div class="sa-structure-icon">
+                                    <i class="bi bi-book"></i>
+                                </div>
+
+                                <div class="sa-structure-details">
+
+                                    <strong>
+                                        Subject Library
+                                    </strong>
+
+                                    <span>
+                                        Reusable school subjects
+                                    </span>
+
+                                </div>
+
+                                <a href="subject-library.html"
+                                    class="auth-text-link">
+                                    Open
+                                </a>
+
+                            </div>
+
+
+                            <div class="sa-structure-row">
+
+                                <div class="sa-structure-icon">
+                                    <i class="bi bi-journal-bookmark"></i>
+                                </div>
+
+                                <div class="sa-structure-details">
+
+                                    <strong>
+                                        Subject Offerings
+                                    </strong>
+
+                                    <span>
+                                        Section-specific offerings
+                                    </span>
+
+                                </div>
+
+                                <a href="subject-offerings.html"
+                                    class="auth-text-link">
+                                    Open
+                                </a>
+
+                            </div>
+
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+
+
+                <!-- QUICK ACTIONS -->
+
+                <div class="col-12 col-xl-6">
+
+                    <section class="sa-panel sa-searchable">
+
+
+                        <div class="sa-panel-header">
+
+                            <h2>
+                                <i class="bi bi-lightning-charge me-2"></i>
+                                Administrative Quick Actions
+                            </h2>
+
+                        </div>
+
+
+                        <div class="sa-quick-actions">
+
+
+                            <a href="grade-levels.html"
+                                class="sa-quick-action">
+
+                                <i class="bi bi-plus-circle"></i>
+
+                                Create Grade Space
+
+                            </a>
+
+
+                            <a href="sections.html"
+                                class="sa-quick-action">
+
+                                <i class="bi bi-people"></i>
+
+                                Manage Sections
+
+                            </a>
+
+
+                            <a href="subject-offerings.html"
+                                class="sa-quick-action">
+
+                                <i class="bi bi-journal-plus"></i>
+
+                                Create Offering
+
+                            </a>
+
+
+                            <a href="teachers.html"
+                                class="sa-quick-action">
+
+                                <i class="bi bi-person-plus"></i>
+
+                                Assign Teacher
+
+                            </a>
+
+
+                            <a href="student-codes.html"
+                                class="sa-quick-action">
+
+                                <i class="bi bi-upc-scan"></i>
+
+                                Student Subject Codes
+
+                            </a>
+
+
+                            <a href="parent-codes.html"
+                                class="sa-quick-action">
+
+                                <i class="bi bi-qr-code"></i>
+
+                                Parent Section Codes
+
+                            </a>
+
+
+                            <a href="teacher-invitations.html"
+                                class="sa-quick-action">
+
+                                <i class="bi bi-envelope-plus"></i>
+
+                                Invite Teacher
+
+                            </a>
+
+
+                            <a href="announcements.html"
+                                class="sa-quick-action">
+
+                                <i class="bi bi-megaphone"></i>
+
+                                School Announcement
+
+                            </a>
+
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 TEACHERS AND GUARDIAN REQUESTS
+            ================================== -->
+
+            <div class="row g-3 mb-3">
+
+
+                <!-- TEACHER ASSIGNMENT -->
+
+                <div class="col-12 col-lg-6">
+
+                    <section class="sa-panel sa-searchable">
+
+
+                        <div class="sa-panel-header">
+
+                            <h2>
+                                <i class="bi bi-person-workspace me-2"></i>
+                                Teacher Assignment Summary
+                            </h2>
+
+                            <a href="teachers.html">
+                                View Directory
+                            </a>
+
+                        </div>
+
+
+                        <div class="sa-status-row">
+
+                            <span>Active Assignments</span>
+
+                            <strong>36</strong>
+
+                        </div>
+
+
+                        <div class="sa-status-row">
+
+                            <span>Pending Invitations</span>
+
+                            <span class="status-pill status-pending">
+                                03
+                            </span>
+
+                        </div>
+
+
+                        <div class="sa-status-row">
+
+                            <span>Unassigned Offerings</span>
+
+                            <span class="status-pill status-info">
+                                02
+                            </span>
+
+                        </div>
+
+
+                        <div class="sa-status-row">
+
+                            <span>Teacher Replacements</span>
+
+                            <strong>01</strong>
+
+                        </div>
+
+
+                    </section>
+
+                </div>
+
+
+
+                <!-- GUARDIAN REQUESTS -->
+
+                <div class="col-12 col-lg-6">
+
+                    <section class="sa-panel sa-searchable">
+
+
+                        <div class="sa-panel-header">
+
+                            <h2>
+                                <i class="bi bi-person-check me-2"></i>
+                                Referred Guardian Requests
+                            </h2>
+
+                            <a href="guardian-requests.html">
+                                Review Cases
+                            </a>
+
+                        </div>
+
+
+                        <div class="sa-status-row">
+
+                            <span>Awaiting Administrator Review</span>
+
+                            <span class="status-pill status-pending">
+                                02 Pending
+                            </span>
+
+                        </div>
+
+
+                        <div class="sa-status-row">
+
+                            <span>Referred by Teacher</span>
+
+                            <strong>02</strong>
+
+                        </div>
+
+
+                        <div class="sa-status-row">
+
+                            <span>Needs Additional Information</span>
+
+                            <strong>01</strong>
+
+                        </div>
+
+
+                        <p class="text-secondary small mt-3 mb-0">
+
+                            Ordinary Guardian verification is
+                            handled by the assigned Teacher.
+                            Only referred cases appear here.
+
+                        </p>
+
+
+                    </section>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 CODES AND ANNOUNCEMENTS
+            ================================== -->
+
+            <div class="row g-3 mb-3">
+
+
+                <!-- CODE STATUS -->
+
+                <div class="col-12 col-lg-6">
+
+                    <section class="sa-panel sa-searchable">
+
+
+                        <div class="sa-panel-header">
+
+                            <h2>
+                                <i class="bi bi-qr-code me-2"></i>
+                                Code Management
+                            </h2>
+
+                        </div>
+
+
+                        <div class="sa-status-row">
+
+                            <span>Student Subject Codes</span>
+
+                            <a href="student-codes.html">
+                                Manage <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+
+                        <div class="sa-status-row">
+
+                            <span>Parent Section Codes</span>
+
+                            <a href="parent-codes.html">
+                                Manage <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+
+                        <div class="sa-status-row">
+
+                            <span>Code Regeneration History</span>
+
+                            <strong>Available in management</strong>
+
+                        </div>
+
+
+                    </section>
+
+                </div>
+
+
+
+                <!-- ANNOUNCEMENTS -->
+
+                <div class="col-12 col-lg-6">
+
+                    <section class="sa-panel sa-searchable">
+
+
+                        <div class="sa-panel-header">
+
+                            <h2>
+                                <i class="bi bi-megaphone me-2"></i>
+                                Recent School Announcements
+                            </h2>
+
+                            <a href="announcements.html">
+                                View All
+                            </a>
+
+                        </div>
+
+
+                        <div class="sa-activity-item">
+
+                            <div class="sa-activity-icon">
+                                <i class="bi bi-megaphone"></i>
+                            </div>
+
+                            <div class="sa-activity-details">
+
+                                <strong>
+                                    School Academic Orientation
+                                </strong>
+
+                                <span>
+                                    Sample announcement · School-wide
+                                </span>
+
+                            </div>
+
+                            <span class="status-pill status-success">
+                                Published
+                            </span>
+
+                        </div>
+
+
+                        <div class="sa-activity-item">
+
+                            <div class="sa-activity-icon">
+                                <i class="bi bi-calendar-event"></i>
+                            </div>
+
+                            <div class="sa-activity-details">
+
+                                <strong>
+                                    Parent Orientation Schedule
+                                </strong>
+
+                                <span>
+                                    Sample announcement · Grade-level
+                                </span>
+
+                            </div>
+
+                            <span class="status-pill status-success">
+                                Published
+                            </span>
+
+                        </div>
+
+
+                    </section>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 ARCHIVE AND ACTIVITY HISTORY
+            ================================== -->
+
+            <div class="row g-3">
+
+
+                <!-- WORKSPACE STATUS -->
+
+                <div class="col-12 col-lg-5">
+
+                    <section class="sa-panel sa-searchable">
+
+
+                        <div class="sa-panel-header">
+
+                            <h2>
+                                <i class="bi bi-archive me-2"></i>
+                                Archive & Workspace Status
+                            </h2>
+
+                        </div>
+
+
+                        <div class="sa-status-row">
+
+                            <span>Workspace Status</span>
+
+                            <span class="status-pill status-success">
+                                Active
+                            </span>
+
+                        </div>
+
+
+                        <div class="sa-status-row">
+
+                            <span>Archived Grade Spaces</span>
+
+                            <strong>01</strong>
+
+                        </div>
+
+
+                        <div class="sa-status-row">
+
+                            <span>Archived Sections</span>
+
+                            <strong>02</strong>
+
+                        </div>
+
+
+                        <div class="mt-3">
+
+                            <a
+                                href="archives.html"
+                                class="btn-ga btn-ga-outline w-100">
+
+                                <i class="bi bi-archive"></i>
+
+                                Manage Archives
+
+                            </a>
+
+                        </div>
+
+
+                    </section>
+
+                </div>
+
+
+
+                <!-- ACTIVITY HISTORY -->
+
+                <div class="col-12 col-lg-7">
+
+                    <section class="sa-panel sa-searchable">
+
+
+                        <div class="sa-panel-header">
+
+                            <h2>
+                                <i class="bi bi-clock-history me-2"></i>
+                                Recent Administrative Activity
+                            </h2>
+
+                            <a href="activity-history.html">
+                                View History
+                            </a>
+
+                        </div>
+
+
+                        <div class="sa-activity-item">
+
+                            <div class="sa-activity-icon">
+                                <i class="bi bi-person-plus"></i>
+                            </div>
+
+                            <div class="sa-activity-details">
+
+                                <strong>
+                                    Teacher invitation prepared
+                                </strong>
+
+                                <span>
+                                    Sample activity record
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="sa-activity-item">
+
+                            <div class="sa-activity-icon">
+                                <i class="bi bi-journal-plus"></i>
+                            </div>
+
+                            <div class="sa-activity-details">
+
+                                <strong>
+                                    Subject offering created
+                                </strong>
+
+                                <span>
+                                    Sample activity record
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="sa-activity-item">
+
+                            <div class="sa-activity-icon">
+                                <i class="bi bi-qr-code"></i>
+                            </div>
+
+                            <div class="sa-activity-details">
+
+                                <strong>
+                                    Parent Section Code generated
+                                </strong>
+
+                                <span>
+                                    Sample activity record
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </section>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- DEMO DATA NOTICE -->
+
+            <p class="text-secondary small mt-4 mb-0">
+
+                <i class="bi bi-info-circle me-1"></i>
+
+                Dashboard values are sample information for
+                frontend development. Actual school data will
+                be supplied by the authorized Backend APIs.
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- FOOTER -->
+
+        <footer class="main-footer">
+
+            GabayAral &copy; <span id="saFooterYear">2026</span>
+
+            | School Administrator Workspace
+
+        </footer>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- BOOTSTRAP JAVASCRIPT -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- SHARED LAYOUT -->
+
+<script src="../../assets/js/layout.js"></script>
+
+
+<!-- SCHOOL ADMINISTRATOR -->
+
+<script src="../../assets/js/school-admin.js"></script>
+
+
+</body>
+
+</html>

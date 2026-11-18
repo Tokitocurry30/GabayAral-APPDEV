@@ -1,0 +1,321 @@
+
+/* =========================================
+   GABAYARAL - DESIGN SYSTEM PREVIEW
+   ========================================= */
+
+.design-preview {
+    min-height: 100vh;
+    background: var(--background);
+}
+
+.preview-header {
+    min-height: 85px;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.preview-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.preview-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: var(--navy);
+    color: var(--turquoise);
+    font-size: 25px;
+}
+
+.preview-brand h1 {
+    margin: 0;
+    color: var(--navy);
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.preview-brand p {
+    margin: 2px 0 0;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.preview-label {
+    padding: 7px 13px;
+    background: #E4F7F4;
+    color: var(--teal);
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.preview-content {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+.preview-intro {
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    color: var(--teal);
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 1px;
+}
+
+.preview-intro h2 {
+    margin: 8px 0;
+    color: var(--navy);
+    font-size: 29px;
+    font-weight: 800;
+}
+
+.preview-intro p,
+.preview-description {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.preview-section {
+    margin-bottom: 30px;
+}
+
+.preview-section h3 {
+    margin-bottom: 6px;
+    color: var(--navy);
+    font-size: 17px;
+    font-weight: 750;
+}
+
+.preview-section-heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.color-card,
+.sample-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow);
+}
+
+.color-card {
+    padding: 9px;
+    min-width: 0;
+}
+
+.color-swatch {
+    height: 65px;
+    border-radius: 8px;
+    margin-bottom: 9px;
+}
+
+.color-card strong,
+.color-card span {
+    display: block;
+    overflow-wrap: anywhere;
+}
+
+.color-card strong {
+    color: var(--ink);
+    font-size: 11px;
+    margin-bottom: 3px;
+}
+
+.color-card span {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.swatch-navy { background: #16324F; }
+.swatch-dark-navy { background: #102E49; }
+.swatch-teal { background: #0F766E; }
+.swatch-turquoise { background: #19C5B7; }
+.swatch-blue { background: #2563EB; }
+.swatch-green { background: #15803D; }
+.swatch-purple { background: #7C3AED; }
+.swatch-amber { background: #B45309; }
+.swatch-red { background: #B91C1C; }
+.swatch-background { background: #F8FAFC; border: 1px solid var(--border); }
+
+.sample-card {
+    padding: 18px;
+    margin-top: 12px;
+}
+
+.typography-sample h1 {
+    color: var(--navy);
+    font-size: 29px;
+    font-weight: 800;
+}
+
+.typography-sample h2 {
+    color: var(--navy);
+    font-size: 22px;
+    font-weight: 750;
+}
+
+.typography-sample h3 {
+    font-size: 17px;
+}
+
+.sample-body {
+    color: var(--ink);
+    font-size: 14px;
+}
+
+.sample-caption {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.button-samples,
+.status-samples {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.preview-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.preview-stats .stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.form-sample {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.preview-table {
+    margin: 0;
+    font-size: 13px;
+}
+
+.preview-table thead th {
+    background: #F1F5F9;
+    color: var(--navy);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.preview-table tbody td {
+    color: var(--ink);
+}
+
+.design-rules p {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--ink);
+    font-size: 13px;
+    margin: 0;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.design-rules p:last-child {
+    border-bottom: 0;
+}
+
+.design-rules i {
+    color: var(--green);
+}
+
+.preview-footer {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .color-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .preview-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .preview-header {
+        padding: 13px 15px;
+    }
+
+    .preview-label {
+        display: none;
+    }
+
+    .preview-content {
+        padding: 22px 13px;
+    }
+
+    .preview-intro h2 {
+        font-size: 25px;
+    }
+
+    .color-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .form-sample {
+        grid-template-columns: 1fr;
+    }
+
+    .preview-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sample-card {
+        padding: 13px;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .preview-stats {
+        grid-template-columns: 1fr;
+    }
+
+}
