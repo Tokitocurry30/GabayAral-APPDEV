@@ -1,0 +1,1010 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Manage section-specific Subject Offerings in GabayAral.">
+    <meta name="theme-color" content="#16324F">
+
+    <title>Subject Offering Management | GabayAral</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- GLOBAL DESIGN SYSTEM -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+
+    <!-- SHARED LAYOUT -->
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+
+    <!-- SCHOOL ADMINISTRATOR -->
+    <link rel="stylesheet" href="../../assets/css/school-admin.css">
+
+</head>
+
+<body>
+
+<div class="app-shell">
+
+
+    <!-- =====================================
+         SIDEBAR
+    ====================================== -->
+
+    <aside class="sidebar" id="sidebar"
+        aria-label="School Administrator navigation">
+
+        <div class="brand-block">
+
+            <a href="dashboard.html" class="brand">
+                <i class="bi bi-book-half"></i>
+                <span>GabayAral</span>
+            </a>
+
+            <span class="role-pill">
+                School Administrator
+            </span>
+
+        </div>
+
+
+        <nav class="side-nav">
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Overview</p>
+
+                <a href="dashboard.html" class="side-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>Dashboard</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">School Management</p>
+
+                <a href="school-profile.html" class="side-link">
+                    <i class="bi bi-building"></i>
+                    <span>School Profile</span>
+                </a>
+
+                <a href="school-setup.html" class="side-link">
+                    <i class="bi bi-sliders"></i>
+                    <span>School Setup</span>
+                </a>
+
+                <a href="grade-levels.html" class="side-link">
+                    <i class="bi bi-diagram-3"></i>
+                    <span>Grade-Level Spaces</span>
+                </a>
+
+                <a href="sections.html" class="side-link">
+                    <i class="bi bi-people"></i>
+                    <span>Sections</span>
+                </a>
+
+                <a href="subject-library.html" class="side-link">
+                    <i class="bi bi-book"></i>
+                    <span>Subject Library</span>
+                </a>
+
+                <a href="subject-offerings.html"
+                    class="side-link active"
+                    aria-current="page">
+
+                    <i class="bi bi-journal-bookmark"></i>
+                    <span>Subject Offerings</span>
+
+                </a>
+
+                <a href="copy-subjects.html" class="side-link">
+                    <i class="bi bi-copy"></i>
+                    <span>Copy Subjects</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Teacher Management</p>
+
+                <a href="teachers.html" class="side-link">
+                    <i class="bi bi-person-workspace"></i>
+                    <span>Teacher Directory</span>
+                </a>
+
+                <a href="teacher-invitations.html" class="side-link">
+                    <i class="bi bi-envelope-paper"></i>
+                    <span>Teacher Invitations</span>
+                </a>
+
+                <a href="teacher-replacement.html" class="side-link">
+                    <i class="bi bi-arrow-left-right"></i>
+                    <span>Teacher Replacement</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Student Management</p>
+
+                <a href="student-enrollments.html" class="side-link">
+                    <i class="bi bi-mortarboard"></i>
+                    <span>Student Enrollments</span>
+                </a>
+
+                <a href="student-codes.html" class="side-link">
+                    <i class="bi bi-upc-scan"></i>
+                    <span>Student Subject Codes</span>
+                </a>
+
+                <a href="parent-codes.html" class="side-link">
+                    <i class="bi bi-qr-code"></i>
+                    <span>Parent Section Codes</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Guardian Management</p>
+
+                <a href="guardian-requests.html" class="side-link">
+                    <i class="bi bi-person-check"></i>
+                    <span>Referred Guardian Requests</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Communication</p>
+
+                <a href="announcements.html" class="side-link">
+                    <i class="bi bi-megaphone"></i>
+                    <span>School Announcements</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Records & Workspace</p>
+
+                <a href="archives.html" class="side-link">
+                    <i class="bi bi-archive"></i>
+                    <span>Archive & Restoration</span>
+                </a>
+
+                <a href="deactivation-request.html" class="side-link">
+                    <i class="bi bi-building-x"></i>
+                    <span>Workspace Deactivation</span>
+                </a>
+
+                <a href="activity-history.html" class="side-link">
+                    <i class="bi bi-clock-history"></i>
+                    <span>Activity History</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Account</p>
+
+                <a href="activity-history.html" class="side-link">
+    <i class="bi bi-bell"></i>
+    <span>Notifications</span>
+</a>
+
+                <a href="easy-access.html" class="side-link">
+    <i class="bi bi-universal-access"></i>
+    <span>EasyAccess</span>
+</a>
+
+                <a href="../../index.html" class="side-link">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Return to Homepage</span>
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+            <span class="footer-dot"></span>
+            School Workspace
+        </div>
+
+    </aside>
+
+
+
+    <!-- MOBILE BACKDROP -->
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+
+
+    <!-- =====================================
+         MAIN AREA
+    ====================================== -->
+
+    <main class="main-area">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <button
+                type="button"
+                class="icon-button-ga mobile-menu"
+                id="menuToggle"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+                <i class="bi bi-list"></i>
+
+            </button>
+
+
+            <div class="breadcrumbs">
+
+                <i class="bi bi-house-door-fill"></i>
+
+                <span>School Administration</span>
+
+                <span>/</span>
+
+                <strong>Subject Offerings</strong>
+
+            </div>
+
+
+            <div class="topbar-tools">
+
+                
+<div class="school-selector-wrapper" id="schoolSelectorWrapper">
+
+    <button
+        type="button"
+        class="school-select"
+        id="schoolSelectButton"
+        aria-label="Select school workspace"
+        aria-expanded="false"
+        aria-controls="schoolSelectMenu">
+
+        <span class="school-select-current">
+            <i class="bi bi-bank me-1"></i>
+            <span id="schoolSelectCurrentName">
+                San Isidro National High School
+            </span>
+        </span>
+
+        <i class="bi bi-chevron-down school-select-chevron"></i>
+
+    </button>
+
+    <div
+        class="school-select-menu"
+        id="schoolSelectMenu"
+        role="menu"
+        aria-label="Available school workspaces"
+        hidden>
+
+        <div class="school-select-menu-header">
+            <strong>School Workspaces</strong>
+            <span>Select an available workspace</span>
+        </div>
+
+        <button
+            type="button"
+            class="school-select-option active"
+            data-school-id="school-001"
+            data-school-name="San Isidro National High School"
+            role="menuitemradio"
+            aria-checked="true">
+
+            <span class="school-option-icon">
+                <i class="bi bi-bank"></i>
+            </span>
+
+            <span class="school-option-details">
+                <strong>San Isidro National High School</strong>
+                <small>Current workspace</small>
+            </span>
+
+            <i class="bi bi-check-circle-fill school-option-check"></i>
+        </button>
+
+        <button
+            type="button"
+            class="school-select-option"
+            data-school-id="demo-school-002"
+            data-school-name="Sample School Workspace B"
+            role="menuitemradio"
+            aria-checked="false">
+
+            <span class="school-option-icon">
+                <i class="bi bi-building"></i>
+            </span>
+
+            <span class="school-option-details">
+                <strong>Sample School Workspace B</strong>
+                <small>Demonstration workspace only</small>
+            </span>
+
+        </button>
+
+        <div class="school-select-menu-footer">
+            <i class="bi bi-info-circle"></i>
+            School switching is a frontend demonstration.
+        </div>
+
+    </div>
+
+</div>
+
+
+
+                <a
+                    href="activity-history.html"
+                    class="icon-button-ga"
+                    aria-label="Open activity history and notifications"
+                    title="Notifications">
+
+                    <i class="bi bi-bell"></i>
+
+                </a>
+
+
+                
+<div class="admin-profile-wrapper" id="adminProfileWrapper">
+
+    <button
+        type="button"
+        class="profile-button"
+        id="adminProfileButton"
+        aria-label="Administrator account menu"
+        aria-expanded="false"
+        aria-controls="adminProfileMenu">
+
+        <span class="avatar">
+            <i class="bi bi-person-fill"></i>
+        </span>
+
+        <span>Administrator</span>
+
+        <i class="bi bi-chevron-down admin-profile-chevron"></i>
+
+    </button>
+
+    <div
+        class="admin-profile-menu"
+        id="adminProfileMenu"
+        aria-label="Administrator account options"
+        hidden>
+
+        <div class="admin-profile-menu-header">
+
+            <span class="admin-profile-menu-avatar">
+                <i class="bi bi-person-fill"></i>
+            </span>
+
+            <div>
+                <strong>Administrator</strong>
+                <small>School Administrator</small>
+            </div>
+
+        </div>
+
+        <div class="admin-profile-menu-divider"></div>
+
+        <a
+            href="school-profile.html"
+            class="admin-profile-menu-item">
+
+            <i class="bi bi-person-gear"></i>
+            <span>Profile Settings</span>
+
+        </a>
+
+        <a
+            href="easy-access.html"
+            class="admin-profile-menu-item">
+
+            <i class="bi bi-universal-access"></i>
+            <span>EasyAccess</span>
+
+        </a>
+
+        <button
+            type="button"
+            class="admin-profile-menu-item"
+            id="adminAccountSecurityButton">
+
+            <i class="bi bi-shield-lock"></i>
+            <span>Account Security</span>
+            <small>Coming soon</small>
+
+        </button>
+
+        <div class="admin-profile-menu-divider"></div>
+
+        <button
+            type="button"
+            class="admin-profile-menu-item danger"
+            id="adminSignOutButton">
+
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Sign Out</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+
+            </div>
+
+        </header>
+
+
+
+        <!-- PAGE CONTENT -->
+
+        <section class="main-content">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="page-heading">
+
+                <div>
+
+                    <h1>Subject Offering Management</h1>
+
+                    <p>
+                        Connect reusable school subjects
+                        to their specific Sections.
+                    </p>
+
+                </div>
+
+
+                <div class="heading-actions">
+
+                    <a href="subject-library.html"
+                        class="btn-ga btn-ga-outline">
+
+                        <i class="bi bi-book"></i>
+
+                        Subject Library
+
+                    </a>
+
+
+                    <button
+                        type="button"
+                        class="btn-ga btn-ga-primary"
+                        id="createOfferingButton">
+
+                        <i class="bi bi-plus-lg"></i>
+
+                        Create Offering
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SUMMARY CARDS -->
+
+            <div class="sa-offering-summary">
+
+
+                <div class="sa-offering-summary-card">
+
+                    <span>All Offerings</span>
+
+                    <strong id="offeringTotalCount">0</strong>
+
+                </div>
+
+
+                <div class="sa-offering-summary-card">
+
+                    <span>Active Offerings</span>
+
+                    <strong id="offeringActiveCount">0</strong>
+
+                </div>
+
+
+                <div class="sa-offering-summary-card">
+
+                    <span>Archived Offerings</span>
+
+                    <strong id="offeringArchivedCount">0</strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- FEEDBACK MESSAGE -->
+
+            <div
+                id="offeringMessage"
+                class="sa-offering-message"
+                role="status"
+                aria-live="polite">
+            </div>
+
+
+
+            <!-- FILTERS -->
+
+            <div class="sa-offering-toolbar">
+
+                <div class="sa-offering-filters">
+
+
+                    <input
+                        type="search"
+                        class="form-control sa-offering-search"
+                        id="offeringSearch"
+                        placeholder="Search offerings..."
+                        aria-label="Search offerings">
+
+
+                    <select
+                        class="form-select sa-offering-filter"
+                        id="offeringGradeFilter"
+                        aria-label="Filter by grade">
+
+                        <option value="all">
+                            All Grade-Level Spaces
+                        </option>
+
+                    </select>
+
+
+                    <select
+                        class="form-select sa-offering-filter"
+                        id="offeringSectionFilter"
+                        aria-label="Filter by section">
+
+                        <option value="all">
+                            All Sections
+                        </option>
+
+                    </select>
+
+
+                    <select
+                        class="form-select sa-offering-filter"
+                        id="offeringSubjectFilter"
+                        aria-label="Filter by subject">
+
+                        <option value="all">
+                            All Subjects
+                        </option>
+
+                    </select>
+
+
+                    <select
+                        class="form-select sa-offering-filter"
+                        id="offeringStatusFilter"
+                        aria-label="Filter by offering status">
+
+                        <option value="all">All Statuses</option>
+
+                        <option value="active">Active</option>
+
+                        <option value="archived">Archived</option>
+
+                    </select>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- OFFERING TABLE -->
+
+            <section class="sa-offering-table-card">
+
+
+                <div class="sa-offering-table-header">
+
+                    <div>
+
+                        <h2>
+                            <i class="bi bi-journal-bookmark me-2"></i>
+                            Section-Specific Subject Offerings
+                        </h2>
+
+                        <p>
+                            Each row represents a subject
+                            offered in one specific Section.
+                        </p>
+
+                    </div>
+
+
+                    <span
+                        class="text-secondary small"
+                        id="offeringResultCount">
+
+                        0 records displayed
+
+                    </span>
+
+                </div>
+
+
+
+                <div class="table-responsive">
+
+                    <table class="table sa-offering-table align-middle">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Subject</th>
+
+                                <th>Grade-Level Space</th>
+
+                                <th>Section</th>
+
+                                <th>Status</th>
+
+                                <th class="text-end">Actions</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="offeringTableBody">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+
+                <!-- EMPTY STATE -->
+
+                <div
+                    class="sa-offering-empty"
+                    id="offeringEmptyState"
+                    hidden>
+
+                    <i class="bi bi-journal-x"></i>
+
+                    <strong>No Subject Offerings Found</strong>
+
+                    <p class="small mt-2 mb-0">
+
+                        Try changing your filters or create
+                        a new Subject Offering.
+
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- RELATIONSHIP INFORMATION -->
+
+            <div class="sa-offering-hierarchy mt-3">
+
+                <i class="bi bi-info-circle me-2"></i>
+
+                <strong>Academic relationship:</strong>
+
+                Each Subject Offering connects exactly one
+                Section with one reusable Subject from the
+                School Subject Library. The same Subject
+                in another Section requires a separate
+                Subject Offering record.
+
+            </div>
+
+
+
+            <!-- PERMISSION INFORMATION -->
+
+            <div class="sa-offering-hierarchy mt-3">
+
+                <i class="bi bi-shield-check me-2"></i>
+
+                Teacher assignment, Student enrollment and
+                Student Join Code management are separate
+                processes. They are not performed on this page.
+
+            </div>
+
+
+
+            <p class="text-secondary small mt-3 mb-0">
+
+                <i class="bi bi-info-circle me-1"></i>
+
+                Sample records are used for Frontend testing.
+                Changes are temporary and are not saved to PostgreSQL.
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- FOOTER -->
+
+        <footer class="main-footer">
+
+            GabayAral &copy; <span id="saFooterYear">2026</span>
+
+            | School Administrator Workspace
+
+        </footer>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- =====================================
+     CREATE SUBJECT OFFERING MODAL
+====================================== -->
+
+<div
+    class="modal fade sa-offering-modal"
+    id="offeringModal"
+    tabindex="-1"
+    aria-labelledby="offeringModalTitle"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+
+            <form id="offeringForm">
+
+
+                <div class="modal-header">
+
+                    <h2
+                        class="modal-title"
+                        id="offeringModalTitle">
+
+                        Create Subject Offering
+
+                    </h2>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                    </button>
+
+                </div>
+
+
+
+                <div class="modal-body">
+
+
+                    <div class="mb-3">
+
+                        <label
+                            for="offeringGradeLevel"
+                            class="form-label">
+
+                            Grade-Level Space
+
+                        </label>
+
+                        <select
+                            class="form-select"
+                            id="offeringGradeLevel"
+                            required>
+
+                            <option value="">
+                                Select Grade-Level Space
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="mb-3">
+
+                        <label
+                            for="offeringSection"
+                            class="form-label">
+
+                            Section
+
+                        </label>
+
+                        <select
+                            class="form-select"
+                            id="offeringSection"
+                            required>
+
+                            <option value="">
+                                Select Section
+                            </option>
+
+                        </select>
+
+                        <span class="small text-secondary">
+                            Sections are filtered by the selected Grade-Level Space.
+                        </span>
+
+                    </div>
+
+
+                    <div class="mb-3">
+
+                        <label
+                            for="offeringSubject"
+                            class="form-label">
+
+                            Subject from School Subject Library
+
+                        </label>
+
+                        <select
+                            class="form-select"
+                            id="offeringSubject"
+                            required>
+
+                            <option value="">
+                                Select Subject
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div
+                        id="offeringModalMessage"
+                        class="small text-danger"
+                        role="alert"
+                        aria-live="polite">
+                    </div>
+
+
+                    <div class="sa-offering-hierarchy">
+
+                        <i class="bi bi-info-circle me-1"></i>
+
+                        The selected Section and Subject will
+                        form one independent Subject Offering.
+                        Teacher assignment will be managed separately.
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn-ga btn-ga-outline"
+                        data-bs-dismiss="modal">
+
+                        Cancel
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="btn-ga btn-ga-primary">
+
+                        <i class="bi bi-check-lg"></i>
+
+                        Create Offering
+
+                    </button>
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- BOOTSTRAP JAVASCRIPT -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- SHARED LAYOUT -->
+
+<script src="../../assets/js/layout.js"></script>
+
+
+<!-- SCHOOL ADMINISTRATOR -->
+
+<script src="../../assets/js/school-admin.js"></script>
+
+
+</body>
+
+</html>

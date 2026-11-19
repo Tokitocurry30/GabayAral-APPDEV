@@ -1,0 +1,939 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Manage the GabayAral School Subject Library.">
+    <meta name="theme-color" content="#16324F">
+
+    <title>School Subject Library | GabayAral</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- GLOBAL DESIGN SYSTEM -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+
+    <!-- SHARED LAYOUT -->
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+
+    <!-- SCHOOL ADMINISTRATOR -->
+    <link rel="stylesheet" href="../../assets/css/school-admin.css">
+
+</head>
+
+<body>
+
+<div class="app-shell">
+
+
+    <!-- =====================================
+         SIDEBAR
+    ====================================== -->
+
+    <aside class="sidebar" id="sidebar"
+        aria-label="School Administrator navigation">
+
+        <div class="brand-block">
+
+            <a href="dashboard.html" class="brand">
+                <i class="bi bi-book-half"></i>
+                <span>GabayAral</span>
+            </a>
+
+            <span class="role-pill">
+                School Administrator
+            </span>
+
+        </div>
+
+
+        <nav class="side-nav">
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Overview</p>
+
+                <a href="dashboard.html" class="side-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>Dashboard</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">School Management</p>
+
+                <a href="school-profile.html" class="side-link">
+                    <i class="bi bi-building"></i>
+                    <span>School Profile</span>
+                </a>
+
+                <a href="school-setup.html" class="side-link">
+                    <i class="bi bi-sliders"></i>
+                    <span>School Setup</span>
+                </a>
+
+                <a href="grade-levels.html" class="side-link">
+                    <i class="bi bi-diagram-3"></i>
+                    <span>Grade-Level Spaces</span>
+                </a>
+
+                <a href="sections.html" class="side-link">
+                    <i class="bi bi-people"></i>
+                    <span>Sections</span>
+                </a>
+
+                <a href="subject-library.html"
+                    class="side-link active"
+                    aria-current="page">
+
+                    <i class="bi bi-book"></i>
+                    <span>Subject Library</span>
+
+                </a>
+
+                <a href="subject-offerings.html" class="side-link">
+                    <i class="bi bi-journal-bookmark"></i>
+                    <span>Subject Offerings</span>
+                </a>
+
+                <a href="copy-subjects.html" class="side-link">
+                    <i class="bi bi-copy"></i>
+                    <span>Copy Subjects</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Teacher Management</p>
+
+                <a href="teachers.html" class="side-link">
+                    <i class="bi bi-person-workspace"></i>
+                    <span>Teacher Directory</span>
+                </a>
+
+                <a href="teacher-invitations.html" class="side-link">
+                    <i class="bi bi-envelope-paper"></i>
+                    <span>Teacher Invitations</span>
+                </a>
+
+                <a href="teacher-replacement.html" class="side-link">
+                    <i class="bi bi-arrow-left-right"></i>
+                    <span>Teacher Replacement</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Student Management</p>
+
+                <a href="student-enrollments.html" class="side-link">
+                    <i class="bi bi-mortarboard"></i>
+                    <span>Student Enrollments</span>
+                </a>
+
+                <a href="student-codes.html" class="side-link">
+                    <i class="bi bi-upc-scan"></i>
+                    <span>Student Subject Codes</span>
+                </a>
+
+                <a href="parent-codes.html" class="side-link">
+                    <i class="bi bi-qr-code"></i>
+                    <span>Parent Section Codes</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Guardian Management</p>
+
+                <a href="guardian-requests.html" class="side-link">
+                    <i class="bi bi-person-check"></i>
+                    <span>Referred Guardian Requests</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Communication</p>
+
+                <a href="announcements.html" class="side-link">
+                    <i class="bi bi-megaphone"></i>
+                    <span>School Announcements</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Records & Workspace</p>
+
+                <a href="archives.html" class="side-link">
+                    <i class="bi bi-archive"></i>
+                    <span>Archive & Restoration</span>
+                </a>
+
+                <a href="deactivation-request.html" class="side-link">
+                    <i class="bi bi-building-x"></i>
+                    <span>Workspace Deactivation</span>
+                </a>
+
+                <a href="activity-history.html" class="side-link">
+                    <i class="bi bi-clock-history"></i>
+                    <span>Activity History</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Account</p>
+
+                <a href="activity-history.html" class="side-link">
+    <i class="bi bi-bell"></i>
+    <span>Notifications</span>
+</a>
+
+                <a href="easy-access.html" class="side-link">
+    <i class="bi bi-universal-access"></i>
+    <span>EasyAccess</span>
+</a>
+
+                <a href="../../index.html" class="side-link">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Return to Homepage</span>
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+            <span class="footer-dot"></span>
+            School Workspace
+        </div>
+
+    </aside>
+
+
+
+    <!-- MOBILE BACKDROP -->
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+
+
+    <!-- =====================================
+         MAIN CONTENT
+    ====================================== -->
+
+    <main class="main-area">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <button
+                type="button"
+                class="icon-button-ga mobile-menu"
+                id="menuToggle"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+                <i class="bi bi-list"></i>
+
+            </button>
+
+
+            <div class="breadcrumbs">
+
+                <i class="bi bi-house-door-fill"></i>
+
+                <span>School Administration</span>
+
+                <span>/</span>
+
+                <strong>Subject Library</strong>
+
+            </div>
+
+
+            <div class="topbar-tools">
+
+                
+<div class="school-selector-wrapper" id="schoolSelectorWrapper">
+
+    <button
+        type="button"
+        class="school-select"
+        id="schoolSelectButton"
+        aria-label="Select school workspace"
+        aria-expanded="false"
+        aria-controls="schoolSelectMenu">
+
+        <span class="school-select-current">
+            <i class="bi bi-bank me-1"></i>
+            <span id="schoolSelectCurrentName">
+                San Isidro National High School
+            </span>
+        </span>
+
+        <i class="bi bi-chevron-down school-select-chevron"></i>
+
+    </button>
+
+    <div
+        class="school-select-menu"
+        id="schoolSelectMenu"
+        role="menu"
+        aria-label="Available school workspaces"
+        hidden>
+
+        <div class="school-select-menu-header">
+            <strong>School Workspaces</strong>
+            <span>Select an available workspace</span>
+        </div>
+
+        <button
+            type="button"
+            class="school-select-option active"
+            data-school-id="school-001"
+            data-school-name="San Isidro National High School"
+            role="menuitemradio"
+            aria-checked="true">
+
+            <span class="school-option-icon">
+                <i class="bi bi-bank"></i>
+            </span>
+
+            <span class="school-option-details">
+                <strong>San Isidro National High School</strong>
+                <small>Current workspace</small>
+            </span>
+
+            <i class="bi bi-check-circle-fill school-option-check"></i>
+        </button>
+
+        <button
+            type="button"
+            class="school-select-option"
+            data-school-id="demo-school-002"
+            data-school-name="Sample School Workspace B"
+            role="menuitemradio"
+            aria-checked="false">
+
+            <span class="school-option-icon">
+                <i class="bi bi-building"></i>
+            </span>
+
+            <span class="school-option-details">
+                <strong>Sample School Workspace B</strong>
+                <small>Demonstration workspace only</small>
+            </span>
+
+        </button>
+
+        <div class="school-select-menu-footer">
+            <i class="bi bi-info-circle"></i>
+            School switching is a frontend demonstration.
+        </div>
+
+    </div>
+
+</div>
+
+
+
+                <a
+                    href="activity-history.html"
+                    class="icon-button-ga"
+                    aria-label="Open activity history and notifications"
+                    title="Notifications">
+
+                    <i class="bi bi-bell"></i>
+
+                </a>
+
+
+                
+<div class="admin-profile-wrapper" id="adminProfileWrapper">
+
+    <button
+        type="button"
+        class="profile-button"
+        id="adminProfileButton"
+        aria-label="Administrator account menu"
+        aria-expanded="false"
+        aria-controls="adminProfileMenu">
+
+        <span class="avatar">
+            <i class="bi bi-person-fill"></i>
+        </span>
+
+        <span>Administrator</span>
+
+        <i class="bi bi-chevron-down admin-profile-chevron"></i>
+
+    </button>
+
+    <div
+        class="admin-profile-menu"
+        id="adminProfileMenu"
+        aria-label="Administrator account options"
+        hidden>
+
+        <div class="admin-profile-menu-header">
+
+            <span class="admin-profile-menu-avatar">
+                <i class="bi bi-person-fill"></i>
+            </span>
+
+            <div>
+                <strong>Administrator</strong>
+                <small>School Administrator</small>
+            </div>
+
+        </div>
+
+        <div class="admin-profile-menu-divider"></div>
+
+        <a
+            href="school-profile.html"
+            class="admin-profile-menu-item">
+
+            <i class="bi bi-person-gear"></i>
+            <span>Profile Settings</span>
+
+        </a>
+
+        <a
+            href="easy-access.html"
+            class="admin-profile-menu-item">
+
+            <i class="bi bi-universal-access"></i>
+            <span>EasyAccess</span>
+
+        </a>
+
+        <button
+            type="button"
+            class="admin-profile-menu-item"
+            id="adminAccountSecurityButton">
+
+            <i class="bi bi-shield-lock"></i>
+            <span>Account Security</span>
+            <small>Coming soon</small>
+
+        </button>
+
+        <div class="admin-profile-menu-divider"></div>
+
+        <button
+            type="button"
+            class="admin-profile-menu-item danger"
+            id="adminSignOutButton">
+
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Sign Out</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+
+            </div>
+
+        </header>
+
+
+
+        <!-- PAGE CONTENT -->
+
+        <section class="main-content">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="page-heading">
+
+                <div>
+
+                    <h1>School Subject Library</h1>
+
+                    <p>
+                        Maintain the reusable subject catalog
+                        for your school's academic offerings.
+                    </p>
+
+                </div>
+
+
+                <div class="heading-actions">
+
+                    <a href="dashboard.html"
+                        class="btn-ga btn-ga-outline">
+
+                        <i class="bi bi-arrow-left"></i>
+
+                        Dashboard
+
+                    </a>
+
+
+                    <button
+                        type="button"
+                        class="btn-ga btn-ga-primary"
+                        id="createSubjectButton">
+
+                        <i class="bi bi-plus-lg"></i>
+
+                        Add Subject
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SUMMARY CARDS -->
+
+            <div class="sa-subject-summary">
+
+
+                <div class="sa-subject-summary-card">
+
+                    <span>All Subjects</span>
+
+                    <strong id="subjectTotalCount">0</strong>
+
+                </div>
+
+
+                <div class="sa-subject-summary-card">
+
+                    <span>Active Subjects</span>
+
+                    <strong id="subjectActiveCount">0</strong>
+
+                </div>
+
+
+                <div class="sa-subject-summary-card">
+
+                    <span>Archived Subjects</span>
+
+                    <strong id="subjectArchivedCount">0</strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- FEEDBACK MESSAGE -->
+
+            <div
+                id="subjectMessage"
+                class="sa-subject-message"
+                role="status"
+                aria-live="polite">
+            </div>
+
+
+
+            <!-- TOOLBAR -->
+
+            <div class="sa-subject-toolbar">
+
+
+                <div class="sa-subject-filters">
+
+
+                    <div class="input-group sa-subject-search">
+
+                        <span class="input-group-text bg-white">
+                            <i class="bi bi-search"></i>
+                        </span>
+
+                        <input
+                            type="search"
+                            class="form-control"
+                            id="subjectSearch"
+                            placeholder="Search subjects..."
+                            aria-label="Search subjects">
+
+                    </div>
+
+
+                    <select
+                        class="form-select sa-subject-filter"
+                        id="subjectStatusFilter"
+                        aria-label="Filter subject status">
+
+                        <option value="all">All Statuses</option>
+
+                        <option value="active">Active</option>
+
+                        <option value="archived">Archived</option>
+
+                    </select>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SUBJECT TABLE -->
+
+            <section class="sa-subject-table-card">
+
+
+                <div class="sa-subject-table-header">
+
+                    <div>
+
+                        <h2>
+                            <i class="bi bi-book me-2"></i>
+                            Reusable Subject Catalog
+                        </h2>
+
+                        <p>
+                            Subjects available for school-specific
+                            Subject Offerings.
+                        </p>
+
+                    </div>
+
+
+                    <span
+                        class="text-secondary small"
+                        id="subjectResultCount">
+
+                        0 records displayed
+
+                    </span>
+
+                </div>
+
+
+
+                <div class="table-responsive">
+
+                    <table class="table sa-subject-table align-middle">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Subject Name</th>
+
+                                <th>Catalog Status</th>
+
+                                <th class="text-end">Actions</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="subjectTableBody">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+
+                <!-- EMPTY STATE -->
+
+                <div
+                    class="sa-subject-empty"
+                    id="subjectEmptyState"
+                    hidden>
+
+                    <i class="bi bi-book"></i>
+
+                    <strong>No Subjects Found</strong>
+
+                    <p class="small mt-2 mb-0">
+
+                        Try changing your search or status filter,
+                        or add a new subject.
+
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- SUBJECT AND OFFERING EXPLANATION -->
+
+            <div class="sa-wizard-info mt-3">
+
+                <i class="bi bi-info-circle"></i>
+
+                <span>
+
+                    A Subject is a reusable catalog entry.
+                    A Subject Offering is a separate record that
+                    connects a Subject to a particular Section.
+                    One Subject may be used by multiple Offerings.
+
+                </span>
+
+            </div>
+
+
+            <!-- ARCHIVING NOTICE -->
+
+            <div class="sa-wizard-info">
+
+                <i class="bi bi-shield-check"></i>
+
+                <span>
+
+                    Archiving a Subject must preserve its historical
+                    academic records. The Backend will validate
+                    whether the Subject can be archived when
+                    related Offerings exist.
+
+                </span>
+
+            </div>
+
+
+            <p class="text-secondary small mt-3 mb-0">
+
+                <i class="bi bi-info-circle me-1"></i>
+
+                Sample subject records are used for Frontend testing.
+                Changes are temporary and are not saved to PostgreSQL.
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- FOOTER -->
+
+        <footer class="main-footer">
+
+            GabayAral &copy; <span id="saFooterYear">2026</span>
+
+            | School Administrator Workspace
+
+        </footer>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- =====================================
+     CREATE / EDIT SUBJECT MODAL
+====================================== -->
+
+<div
+    class="modal fade sa-subject-modal"
+    id="subjectModal"
+    tabindex="-1"
+    aria-labelledby="subjectModalTitle"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+
+            <form id="subjectForm">
+
+
+                <div class="modal-header">
+
+                    <h2
+                        class="modal-title"
+                        id="subjectModalTitle">
+
+                        Add School Subject
+
+                    </h2>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                    </button>
+
+                </div>
+
+
+
+                <div class="modal-body">
+
+
+                    <input
+                        type="hidden"
+                        id="subjectRecordId"
+                    >
+
+
+                    <div class="mb-3">
+
+                        <label
+                            for="subjectName"
+                            class="form-label">
+
+                            Subject Name
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="subjectName"
+                            placeholder="Example: Mathematics"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div
+                        id="subjectModalMessage"
+                        class="small text-danger"
+                        role="alert"
+                        aria-live="polite">
+                    </div>
+
+
+                    <div class="sa-wizard-info">
+
+                        <i class="bi bi-info-circle"></i>
+
+                        <span>
+
+                            The subject will be added to this
+                            school's reusable catalog in the
+                            demonstration. Actual school ownership
+                            is enforced by the Backend.
+
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn-ga btn-ga-outline"
+                        data-bs-dismiss="modal">
+
+                        Cancel
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="btn-ga btn-ga-primary">
+
+                        <i class="bi bi-check-lg"></i>
+
+                        Save Subject
+
+                    </button>
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- BOOTSTRAP JAVASCRIPT -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- SHARED LAYOUT -->
+
+<script src="../../assets/js/layout.js"></script>
+
+
+<!-- SCHOOL ADMINISTRATOR -->
+
+<script src="../../assets/js/school-admin.js"></script>
+
+
+</body>
+
+</html>

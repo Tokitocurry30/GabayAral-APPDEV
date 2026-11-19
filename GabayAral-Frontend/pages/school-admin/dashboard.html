@@ -257,15 +257,15 @@
 
                 <p class="nav-heading">Account</p>
 
-                <a href="#" class="side-link">
+                <a href="activity-history.html" class="side-link">
                     <i class="bi bi-bell"></i>
                     <span>Notifications</span>
                 </a>
 
-                <a href="#" class="side-link">
-                    <i class="bi bi-universal-access"></i>
-                    <span>EasyAccess</span>
-                </a>
+                <a href="easy-access.html" class="side-link">
+    <i class="bi bi-universal-access"></i>
+    <span>EasyAccess</span>
+</a>
 
                 <a href="../../index.html" class="side-link">
                     <i class="bi bi-box-arrow-right"></i>
@@ -341,19 +341,117 @@
             <div class="topbar-tools">
 
 
+                
+            <!-- F9.22.5.1 - SCHOOL SELECTOR -->
+
+            <div class="school-selector-wrapper" id="schoolSelectorWrapper">
+
                 <button
                     type="button"
                     class="school-select"
-                    aria-label="Current school context">
+                    id="schoolSelectButton"
+                    aria-label="Select school workspace"
+                    aria-expanded="false"
+                    aria-controls="schoolSelectMenu">
 
-                    <span>
+                    <span class="school-select-current">
+
                         <i class="bi bi-bank me-1"></i>
-                        San Isidro National High School
+
+                        <span id="schoolSelectCurrentName">
+                            San Isidro National High School
+                        </span>
+
                     </span>
 
-                    <i class="bi bi-chevron-down"></i>
+                    <i class="bi bi-chevron-down school-select-chevron"></i>
 
                 </button>
+
+                <!-- SCHOOL DROPDOWN -->
+
+                <div
+                    class="school-select-menu"
+                    id="schoolSelectMenu"
+                    role="menu"
+                    aria-label="Available school workspaces"
+                    hidden>
+
+                    <div class="school-select-menu-header">
+
+                        <strong>School Workspaces</strong>
+
+                        <span>Select an available workspace</span>
+
+                    </div>
+
+                    <!-- CURRENT SCHOOL -->
+
+                    <button
+                        type="button"
+                        class="school-select-option active"
+                        data-school-id="school-001"
+                        data-school-name="San Isidro National High School"
+                        role="menuitemradio"
+                        aria-checked="true">
+
+                        <span class="school-option-icon">
+                            <i class="bi bi-bank"></i>
+                        </span>
+
+                        <span class="school-option-details">
+
+                            <strong>
+                                San Isidro National High School
+                            </strong>
+
+                            <small>Current workspace</small>
+
+                        </span>
+
+                        <i class="bi bi-check-circle-fill school-option-check"></i>
+
+                    </button>
+
+                    <!-- DEMONSTRATION SCHOOL -->
+
+                    <button
+                        type="button"
+                        class="school-select-option"
+                        data-school-id="demo-school-002"
+                        data-school-name="Sample School Workspace B"
+                        role="menuitemradio"
+                        aria-checked="false">
+
+                        <span class="school-option-icon">
+                            <i class="bi bi-building"></i>
+                        </span>
+
+                        <span class="school-option-details">
+
+                            <strong>
+                                Sample School Workspace B
+                            </strong>
+
+                            <small>Demonstration workspace only</small>
+
+                        </span>
+
+                    </button>
+
+                    <div class="school-select-menu-footer">
+
+                        <i class="bi bi-info-circle"></i>
+
+                        School switching is a frontend demonstration.
+                        Authorized memberships will be supplied by the Backend.
+
+                    </div>
+
+                </div>
+
+            </div>
+
 
 
                 <label class="search-box">
@@ -369,29 +467,109 @@
                 </label>
 
 
-                <button
-                    type="button"
+                <a
+                    href="activity-history.html"
                     class="icon-button-ga"
-                    aria-label="Notifications">
+                    aria-label="Open activity history and notifications"
+                    title="Notifications">
 
                     <i class="bi bi-bell"></i>
 
-                </button>
+                </a>
 
 
-                <button
-                    type="button"
-                    class="profile-button">
+                
+<!-- F9.22.6 - ADMINISTRATOR PROFILE DROPDOWN -->
 
-                    <span class="avatar">
-                        <i class="bi bi-person-fill"></i>
-                    </span>
+<div class="admin-profile-wrapper" id="adminProfileWrapper">
 
-                    <span>Administrator</span>
+    <button
+        type="button"
+        class="profile-button"
+        id="adminProfileButton"
+        aria-label="Administrator account menu"
+        aria-expanded="false"
+        aria-controls="adminProfileMenu">
 
-                    <i class="bi bi-chevron-down"></i>
+        <span class="avatar">
+            <i class="bi bi-person-fill"></i>
+        </span>
 
-                </button>
+        <span>Administrator</span>
+
+        <i class="bi bi-chevron-down admin-profile-chevron"></i>
+
+    </button>
+
+    <!-- PROFILE DROPDOWN -->
+
+    <div
+        class="admin-profile-menu"
+        id="adminProfileMenu"
+        aria-label="Administrator account options"
+        hidden>
+
+        <div class="admin-profile-menu-header">
+
+            <span class="admin-profile-menu-avatar">
+                <i class="bi bi-person-fill"></i>
+            </span>
+
+            <div>
+                <strong>Administrator</strong>
+                <small>School Administrator</small>
+            </div>
+
+        </div>
+
+        <div class="admin-profile-menu-divider"></div>
+
+        <a
+            href="school-profile.html"
+            class="admin-profile-menu-item">
+
+            <i class="bi bi-person-gear"></i>
+            <span>Profile Settings</span>
+
+        </a>
+
+        <a
+            href="easy-access.html"
+            class="admin-profile-menu-item">
+
+            <i class="bi bi-universal-access"></i>
+            <span>EasyAccess</span>
+
+        </a>
+
+        <button
+            type="button"
+            class="admin-profile-menu-item"
+            id="adminAccountSecurityButton">
+
+            <i class="bi bi-shield-lock"></i>
+            <span>Account Security</span>
+
+            <small>Coming soon</small>
+
+        </button>
+
+        <div class="admin-profile-menu-divider"></div>
+
+        <button
+            type="button"
+            class="admin-profile-menu-item danger"
+            id="adminSignOutButton">
+
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Sign Out</span>
+
+        </button>
+
+    </div>
+
+</div>
+
 
 
             </div>
@@ -816,6 +994,15 @@
 
                             </a>
 
+                            <a href="student-enrollments.html"
+                                class="sa-quick-action">
+
+                                <i class="bi bi-mortarboard"></i>
+
+                                Student Enrollment Overview
+
+                            </a>
+
 
                             <a href="teacher-invitations.html"
                                 class="sa-quick-action">
@@ -826,6 +1013,23 @@
 
                             </a>
 
+                            <a href="teacher-replacement.html"
+                                class="sa-quick-action">
+
+                                <i class="bi bi-arrow-left-right"></i>
+
+                                Teacher Replacement
+
+                            </a>
+
+                            <a href="guardian-requests.html"
+                                class="sa-quick-action">
+
+                                <i class="bi bi-person-check"></i>
+
+                                Referred Guardian Requests
+
+                            </a>
 
                             <a href="announcements.html"
                                 class="sa-quick-action">
@@ -1188,11 +1392,21 @@
 
                             <a
                                 href="archives.html"
-                                class="btn-ga btn-ga-outline w-100">
+                                class="btn-ga btn-ga-outline w-100 mb-2">
 
                                 <i class="bi bi-archive"></i>
 
                                 Manage Archives
+
+                            </a>
+
+                            <a
+                                href="deactivation-request.html"
+                                class="btn-ga btn-ga-outline w-100 mt-2">
+
+                                <i class="bi bi-building-x"></i>
+
+                                Workspace Deactivation Request
 
                             </a>
 

@@ -1,0 +1,828 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+
+    <title>EasyAccess | GabayAral School Administrator</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- EXISTING SHARED DESIGN SYSTEM -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/school-admin.css">
+
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <!-- SIDEBAR -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+        aria-label="School Administrator navigation">
+
+        <div class="brand-block">
+
+            <a href="dashboard.html" class="brand">
+                <i class="bi bi-book-half"></i>
+                <span>GabayAral</span>
+            </a>
+
+            <span class="role-pill">
+                School Administrator
+            </span>
+
+        </div>
+
+        <nav class="side-nav">
+
+            <div class="nav-group">
+                <p class="nav-heading">Overview</p>
+
+                <a href="dashboard.html" class="side-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>Dashboard</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">School Management</p>
+
+                <a href="school-profile.html" class="side-link">
+                    <i class="bi bi-building"></i>
+                    <span>School Profile</span>
+                </a>
+
+                <a href="school-setup.html" class="side-link">
+                    <i class="bi bi-sliders"></i>
+                    <span>School Setup</span>
+                </a>
+
+                <a href="grade-levels.html" class="side-link">
+                    <i class="bi bi-diagram-3"></i>
+                    <span>Grade-Level Spaces</span>
+                </a>
+
+                <a href="sections.html" class="side-link">
+                    <i class="bi bi-people"></i>
+                    <span>Sections</span>
+                </a>
+
+                <a href="subject-library.html" class="side-link">
+                    <i class="bi bi-book"></i>
+                    <span>Subject Library</span>
+                </a>
+
+                <a href="subject-offerings.html" class="side-link">
+                    <i class="bi bi-journal-bookmark"></i>
+                    <span>Subject Offerings</span>
+                </a>
+
+                <a href="copy-subjects.html" class="side-link">
+                    <i class="bi bi-copy"></i>
+                    <span>Copy Subjects</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Teacher Management</p>
+
+                <a href="teachers.html" class="side-link">
+                    <i class="bi bi-person-workspace"></i>
+                    <span>Teacher Directory</span>
+                </a>
+
+                <a href="teacher-invitations.html" class="side-link">
+                    <i class="bi bi-envelope-paper"></i>
+                    <span>Teacher Invitations</span>
+                </a>
+
+                <a href="teacher-replacement.html" class="side-link">
+                    <i class="bi bi-arrow-left-right"></i>
+                    <span>Teacher Replacement</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Student Management</p>
+
+                <a href="student-enrollments.html" class="side-link">
+                    <i class="bi bi-mortarboard"></i>
+                    <span>Student Enrollments</span>
+                </a>
+
+                <a href="student-codes.html" class="side-link">
+                    <i class="bi bi-upc-scan"></i>
+                    <span>Student Subject Codes</span>
+                </a>
+
+                <a href="parent-codes.html" class="side-link">
+                    <i class="bi bi-qr-code"></i>
+                    <span>Parent Section Codes</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Guardian Management</p>
+
+                <a href="guardian-requests.html" class="side-link">
+                    <i class="bi bi-person-check"></i>
+                    <span>Referred Guardian Requests</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Communication</p>
+
+                <a href="announcements.html" class="side-link">
+                    <i class="bi bi-megaphone"></i>
+                    <span>School Announcements</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Records & Workspace</p>
+
+                <a href="archives.html" class="side-link">
+                    <i class="bi bi-archive"></i>
+                    <span>Archive & Restoration</span>
+                </a>
+
+                <a href="deactivation-request.html" class="side-link">
+                    <i class="bi bi-building-x"></i>
+                    <span>Workspace Deactivation</span>
+                </a>
+
+                <a href="activity-history.html" class="side-link">
+                    <i class="bi bi-clock-history"></i>
+                    <span>Activity History</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Account</p>
+
+                <a href="activity-history.html" class="side-link">
+                    <i class="bi bi-bell"></i>
+                    <span>Notifications</span>
+                </a>
+
+                <a
+                    href="easy-access.html"
+                    class="side-link active"
+                    aria-current="page">
+
+                    <i class="bi bi-universal-access"></i>
+                    <span>EasyAccess</span>
+                </a>
+
+                <a href="../../index.html" class="side-link">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Return to Homepage</span>
+                </a>
+            </div>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <span class="footer-dot"></span>
+            School Workspace
+        </div>
+
+    </aside>
+
+    <!-- MOBILE BACKDROP -->
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <!-- MAIN AREA -->
+
+    <main class="main-area">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <button
+                type="button"
+                class="icon-button-ga mobile-menu"
+                id="menuToggle"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="breadcrumbs">
+                <i class="bi bi-house-door-fill"></i>
+                <span>School Administration</span>
+                <span>/</span>
+                <strong>EasyAccess</strong>
+            </div>
+
+            <div class="topbar-tools">
+
+                
+<div class="school-selector-wrapper" id="schoolSelectorWrapper">
+
+    <button
+        type="button"
+        class="school-select"
+        id="schoolSelectButton"
+        aria-label="Select school workspace"
+        aria-expanded="false"
+        aria-controls="schoolSelectMenu">
+
+        <span class="school-select-current">
+            <i class="bi bi-bank me-1"></i>
+            <span id="schoolSelectCurrentName">
+                San Isidro National High School
+            </span>
+        </span>
+
+        <i class="bi bi-chevron-down school-select-chevron"></i>
+
+    </button>
+
+    <div
+        class="school-select-menu"
+        id="schoolSelectMenu"
+        role="menu"
+        aria-label="Available school workspaces"
+        hidden>
+
+        <div class="school-select-menu-header">
+            <strong>School Workspaces</strong>
+            <span>Select an available workspace</span>
+        </div>
+
+        <button
+            type="button"
+            class="school-select-option active"
+            data-school-id="school-001"
+            data-school-name="San Isidro National High School"
+            role="menuitemradio"
+            aria-checked="true">
+
+            <span class="school-option-icon">
+                <i class="bi bi-bank"></i>
+            </span>
+
+            <span class="school-option-details">
+                <strong>San Isidro National High School</strong>
+                <small>Current workspace</small>
+            </span>
+
+            <i class="bi bi-check-circle-fill school-option-check"></i>
+        </button>
+
+        <button
+            type="button"
+            class="school-select-option"
+            data-school-id="demo-school-002"
+            data-school-name="Sample School Workspace B"
+            role="menuitemradio"
+            aria-checked="false">
+
+            <span class="school-option-icon">
+                <i class="bi bi-building"></i>
+            </span>
+
+            <span class="school-option-details">
+                <strong>Sample School Workspace B</strong>
+                <small>Demonstration workspace only</small>
+            </span>
+
+        </button>
+
+        <div class="school-select-menu-footer">
+            <i class="bi bi-info-circle"></i>
+            School switching is a frontend demonstration.
+        </div>
+
+    </div>
+
+</div>
+
+
+                <a
+                    href="activity-history.html"
+                    class="icon-button-ga"
+                    aria-label="Open activity history and notifications"
+                    title="Notifications">
+
+                    <i class="bi bi-bell"></i>
+                </a>
+
+                
+<div class="admin-profile-wrapper" id="adminProfileWrapper">
+
+    <button
+        type="button"
+        class="profile-button"
+        id="adminProfileButton"
+        aria-label="Administrator account menu"
+        aria-expanded="false"
+        aria-controls="adminProfileMenu">
+
+        <span class="avatar">
+            <i class="bi bi-person-fill"></i>
+        </span>
+
+        <span>Administrator</span>
+
+        <i class="bi bi-chevron-down admin-profile-chevron"></i>
+
+    </button>
+
+    <div
+        class="admin-profile-menu"
+        id="adminProfileMenu"
+        aria-label="Administrator account options"
+        hidden>
+
+        <div class="admin-profile-menu-header">
+
+            <span class="admin-profile-menu-avatar">
+                <i class="bi bi-person-fill"></i>
+            </span>
+
+            <div>
+                <strong>Administrator</strong>
+                <small>School Administrator</small>
+            </div>
+
+        </div>
+
+        <div class="admin-profile-menu-divider"></div>
+
+        <a
+            href="school-profile.html"
+            class="admin-profile-menu-item">
+
+            <i class="bi bi-person-gear"></i>
+            <span>Profile Settings</span>
+
+        </a>
+
+        <a
+            href="easy-access.html"
+            class="admin-profile-menu-item">
+
+            <i class="bi bi-universal-access"></i>
+            <span>EasyAccess</span>
+
+        </a>
+
+        <button
+            type="button"
+            class="admin-profile-menu-item"
+            id="adminAccountSecurityButton">
+
+            <i class="bi bi-shield-lock"></i>
+            <span>Account Security</span>
+            <small>Coming soon</small>
+
+        </button>
+
+        <div class="admin-profile-menu-divider"></div>
+
+        <button
+            type="button"
+            class="admin-profile-menu-item danger"
+            id="adminSignOutButton">
+
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Sign Out</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+
+            </div>
+
+        </header>
+
+        <!-- PAGE CONTENT -->
+
+        <section class="main-content ea-page">
+
+            <div class="page-heading">
+
+                <div>
+                    <h1>EasyAccess</h1>
+
+                    <p>
+                        Personalize how GabayAral looks,
+                        reads, and responds to your accessibility needs.
+                    </p>
+                </div>
+
+                <span class="ea-personal-badge">
+                    <i class="bi bi-person-check"></i>
+                    Personal settings
+                </span>
+
+            </div>
+
+            <div class="ea-notice" role="note">
+
+                <i class="bi bi-shield-check"></i>
+
+                <div>
+                    <strong>Your preferences are personal.</strong>
+
+                    These settings apply to this browser on this
+                    device during the frontend demonstration.
+                    They do not change settings for other users.
+                </div>
+
+            </div>
+
+            <div class="ea-layout">
+
+                <!-- LEFT: SETTINGS -->
+
+                <div class="ea-settings-column">
+
+                    <!-- DISPLAY -->
+
+                    <section class="ea-card">
+
+                        <div class="ea-card-heading">
+
+                            <span class="ea-icon">
+                                <i class="bi bi-type"></i>
+                            </span>
+
+                            <div>
+                                <h2>Display Preferences</h2>
+                                <p>Adjust the size and appearance of interface content.</p>
+                            </div>
+
+                        </div>
+
+                        <fieldset class="ea-fieldset">
+
+                            <legend>Text Size</legend>
+
+                            <div class="ea-choice-group">
+
+                                <label class="ea-choice">
+                                    <input
+                                        type="radio"
+                                        name="eaFontSize"
+                                        value="normal"
+                                        checked>
+                                    <span class="ea-choice-small">A</span>
+                                    <span>Normal</span>
+                                </label>
+
+                                <label class="ea-choice">
+                                    <input
+                                        type="radio"
+                                        name="eaFontSize"
+                                        value="large">
+                                    <span class="ea-choice-medium">A</span>
+                                    <span>Large</span>
+                                </label>
+
+                                <label class="ea-choice">
+                                    <input
+                                        type="radio"
+                                        name="eaFontSize"
+                                        value="extra-large">
+                                    <span class="ea-choice-large">A</span>
+                                    <span>Extra Large</span>
+                                </label>
+
+                            </div>
+
+                        </fieldset>
+
+                        <div class="ea-setting-row">
+
+                            <div>
+                                <h3>High Contrast</h3>
+                                <p>Use stronger text and border contrast for improved readability.</p>
+                            </div>
+
+                            <label class="ea-switch">
+                                <input type="checkbox" id="eaHighContrast">
+                                <span class="ea-switch-track"></span>
+                                <span class="visually-hidden">Enable high contrast</span>
+                            </label>
+
+                        </div>
+
+                        <div class="ea-setting-row">
+
+                            <div>
+                                <h3>Simplified Display</h3>
+                                <p>Reduce decorative shadows and visual effects.</p>
+                            </div>
+
+                            <label class="ea-switch">
+                                <input type="checkbox" id="eaSimplified">
+                                <span class="ea-switch-track"></span>
+                                <span class="visually-hidden">Enable simplified display</span>
+                            </label>
+
+                        </div>
+
+                    </section>
+
+                    <!-- READING ASSISTANCE -->
+
+                    <section class="ea-card">
+
+                        <div class="ea-card-heading">
+
+                            <span class="ea-icon purple">
+                                <i class="bi bi-volume-up"></i>
+                            </span>
+
+                            <div>
+                                <h2>Reading Assistance</h2>
+                                <p>Choose whether to use browser text-to-speech assistance.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="ea-setting-row">
+
+                            <div>
+                                <h3>Enable Text-to-Speech</h3>
+                                <p>Allow the browser to read the accessibility preview aloud.</p>
+                            </div>
+
+                            <label class="ea-switch">
+                                <input type="checkbox" id="eaSpeechEnabled">
+                                <span class="ea-switch-track"></span>
+                                <span class="visually-hidden">Enable text-to-speech</span>
+                            </label>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="btn-ga btn-ga-outline"
+                            id="eaReadPreview">
+
+                            <i class="bi bi-play-circle"></i>
+                            Read Accessibility Overview
+
+                        </button>
+
+                        <p
+                            class="ea-helper"
+                            id="eaSpeechStatus"
+                            aria-live="polite">
+
+                            Text-to-speech is off.
+                            Turn it on to try the reading preview.
+
+                        </p>
+
+                    </section>
+
+                    <!-- MOTION -->
+
+                    <section class="ea-card">
+
+                        <div class="ea-card-heading">
+
+                            <span class="ea-icon amber">
+                                <i class="bi bi-universal-access"></i>
+                            </span>
+
+                            <div>
+                                <h2>Motion Preferences</h2>
+                                <p>Choose how much movement appears in the interface.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="ea-setting-row">
+
+                            <div>
+                                <h3>Reduce Motion</h3>
+                                <p>Minimize non-essential transitions and animations.</p>
+                            </div>
+
+                            <label class="ea-switch">
+                                <input type="checkbox" id="eaReduceMotion">
+                                <span class="ea-switch-track"></span>
+                                <span class="visually-hidden">Reduce motion</span>
+                            </label>
+
+                        </div>
+
+                    </section>
+
+                    <!-- LANGUAGE -->
+
+                    <section class="ea-card">
+
+                        <div class="ea-card-heading">
+
+                            <span class="ea-icon blue">
+                                <i class="bi bi-translate"></i>
+                            </span>
+
+                            <div>
+                                <h2>Language Preference</h2>
+                                <p>Save your preferred language for future multilingual support.</p>
+                            </div>
+
+                        </div>
+
+                        <label class="ea-label" for="eaLanguage">
+                            Preferred Language
+                        </label>
+
+                        <select
+                            class="form-select ea-language-select"
+                            id="eaLanguage">
+
+                            <option value="en">English</option>
+                            <option value="fil">Filipino</option>
+                            <option value="ceb">Cebuano</option>
+                            <option value="ilo">Ilocano</option>
+
+                        </select>
+
+                        <p class="ea-helper">
+                            This saves your language preference only.
+                            Full interface translation is not yet connected.
+                        </p>
+
+                    </section>
+
+                </div>
+
+                <!-- RIGHT: PREVIEW -->
+
+                <aside class="ea-preview-column">
+
+                    <section class="ea-card">
+
+                        <div class="ea-card-heading">
+
+                            <span class="ea-icon green">
+                                <i class="bi bi-eye"></i>
+                            </span>
+
+                            <div>
+                                <h2>Accessibility Preview</h2>
+                                <p>Review your selected display preferences.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="ea-preview-sample">
+
+                            <span class="ea-preview-label">
+                                SAMPLE CONTENT
+                            </span>
+
+                            <h3>Welcome to GabayAral</h3>
+
+                            <p>
+                                Accessibility preferences help make
+                                the workspace more comfortable to use.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="btn-ga btn-ga-primary"
+                                disabled>
+
+                                Sample Button
+
+                            </button>
+
+                        </div>
+
+                        <p class="ea-helper">
+                            The preview reflects your selected
+                            settings after saving.
+                        </p>
+
+                    </section>
+
+                    <section class="ea-card ea-summary-card">
+
+                        <h2>
+                            <i class="bi bi-info-circle"></i>
+                            About Your Settings
+                        </h2>
+
+                        <ul>
+                            <li>Preferences are stored in this browser.</li>
+                            <li>Clearing browser data may remove saved preferences.</li>
+                            <li>Account synchronization is not yet connected.</li>
+                        </ul>
+
+                    </section>
+
+                </aside>
+
+            </div>
+
+            <!-- ACTIONS -->
+
+            <div class="ea-actions">
+
+                <button
+                    type="button"
+                    class="btn-ga btn-ga-outline"
+                    id="eaResetButton">
+
+                    <i class="bi bi-arrow-counterclockwise"></i>
+                    Restore Defaults
+
+                </button>
+
+                <button
+                    type="button"
+                    class="btn-ga btn-ga-primary"
+                    id="eaSaveButton">
+
+                    <i class="bi bi-check2-circle"></i>
+                    Save Preferences
+
+                </button>
+
+            </div>
+
+            <p
+                class="ea-save-message"
+                id="eaSaveMessage"
+                role="status"
+                aria-live="polite">
+            </p>
+
+        </section>
+
+        <!-- FOOTER -->
+
+        <footer class="main-footer">
+
+            GabayAral &copy;
+            <span id="saFooterYear">2026</span>
+
+            | School Administrator Workspace
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- BOOTSTRAP JAVASCRIPT -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- SHARED LAYOUT -->
+
+<script src="../../assets/js/layout.js"></script>
+
+<!-- SHARED SCHOOL ADMINISTRATOR JAVASCRIPT -->
+
+<script src="../../assets/js/school-admin.js"></script>
+
+</body>
+</html>

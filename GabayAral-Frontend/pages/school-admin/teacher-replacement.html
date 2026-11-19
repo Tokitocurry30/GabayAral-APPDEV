@@ -1,0 +1,1093 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Manage Teacher replacement requests and assignment history in GabayAral.">
+    <meta name="theme-color" content="#16324F">
+
+    <title>Teacher Replacement | GabayAral</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- GLOBAL DESIGN SYSTEM -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+
+    <!-- SHARED LAYOUT -->
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+
+    <!-- SCHOOL ADMINISTRATOR -->
+    <link rel="stylesheet" href="../../assets/css/school-admin.css">
+
+</head>
+
+<body>
+
+<div class="app-shell">
+
+
+    <!-- =====================================
+         SIDEBAR
+    ====================================== -->
+
+    <aside class="sidebar" id="sidebar"
+        aria-label="School Administrator navigation">
+
+        <div class="brand-block">
+
+            <a href="dashboard.html" class="brand">
+                <i class="bi bi-book-half"></i>
+                <span>GabayAral</span>
+            </a>
+
+            <span class="role-pill">
+                School Administrator
+            </span>
+
+        </div>
+
+
+        <nav class="side-nav">
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Overview</p>
+
+                <a href="dashboard.html" class="side-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>Dashboard</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">School Management</p>
+
+                <a href="school-profile.html" class="side-link">
+                    <i class="bi bi-building"></i>
+                    <span>School Profile</span>
+                </a>
+
+                <a href="school-setup.html" class="side-link">
+                    <i class="bi bi-sliders"></i>
+                    <span>School Setup</span>
+                </a>
+
+                <a href="grade-levels.html" class="side-link">
+                    <i class="bi bi-diagram-3"></i>
+                    <span>Grade-Level Spaces</span>
+                </a>
+
+                <a href="sections.html" class="side-link">
+                    <i class="bi bi-people"></i>
+                    <span>Sections</span>
+                </a>
+
+                <a href="subject-library.html" class="side-link">
+                    <i class="bi bi-book"></i>
+                    <span>Subject Library</span>
+                </a>
+
+                <a href="subject-offerings.html" class="side-link">
+                    <i class="bi bi-journal-bookmark"></i>
+                    <span>Subject Offerings</span>
+                </a>
+
+                <a href="copy-subjects.html" class="side-link">
+                    <i class="bi bi-copy"></i>
+                    <span>Copy Subjects</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Teacher Management</p>
+
+                <a href="teachers.html" class="side-link">
+                    <i class="bi bi-person-workspace"></i>
+                    <span>Teacher Directory</span>
+                </a>
+
+                <a href="teacher-invitations.html" class="side-link">
+                    <i class="bi bi-envelope-paper"></i>
+                    <span>Teacher Invitations</span>
+                </a>
+
+                <a href="teacher-replacement.html"
+                    class="side-link active"
+                    aria-current="page">
+
+                    <i class="bi bi-arrow-left-right"></i>
+                    <span>Teacher Replacement</span>
+
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Student Management</p>
+
+                <a href="student-enrollments.html" class="side-link">
+                    <i class="bi bi-mortarboard"></i>
+                    <span>Student Enrollments</span>
+                </a>
+
+                <a href="student-codes.html" class="side-link">
+                    <i class="bi bi-upc-scan"></i>
+                    <span>Student Subject Codes</span>
+                </a>
+
+                <a href="parent-codes.html" class="side-link">
+                    <i class="bi bi-qr-code"></i>
+                    <span>Parent Section Codes</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Guardian Management</p>
+
+                <a href="guardian-requests.html" class="side-link">
+                    <i class="bi bi-person-check"></i>
+                    <span>Referred Guardian Requests</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Communication</p>
+
+                <a href="announcements.html" class="side-link">
+                    <i class="bi bi-megaphone"></i>
+                    <span>School Announcements</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Records & Workspace</p>
+
+                <a href="archives.html" class="side-link">
+                    <i class="bi bi-archive"></i>
+                    <span>Archive & Restoration</span>
+                </a>
+
+                <a href="deactivation-request.html" class="side-link">
+                    <i class="bi bi-building-x"></i>
+                    <span>Workspace Deactivation</span>
+                </a>
+
+                <a href="activity-history.html" class="side-link">
+                    <i class="bi bi-clock-history"></i>
+                    <span>Activity History</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Account</p>
+
+                <a href="activity-history.html" class="side-link">
+    <i class="bi bi-bell"></i>
+    <span>Notifications</span>
+</a>
+
+                <a href="easy-access.html" class="side-link">
+    <i class="bi bi-universal-access"></i>
+    <span>EasyAccess</span>
+</a>
+
+                <a href="../../index.html" class="side-link">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Return to Homepage</span>
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+            <span class="footer-dot"></span>
+            School Workspace
+        </div>
+
+    </aside>
+
+
+
+    <!-- MOBILE BACKDROP -->
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+
+
+    <!-- =====================================
+         MAIN AREA
+    ====================================== -->
+
+    <main class="main-area">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <button
+                type="button"
+                class="icon-button-ga mobile-menu"
+                id="menuToggle"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+                <i class="bi bi-list"></i>
+
+            </button>
+
+
+            <div class="breadcrumbs">
+
+                <i class="bi bi-house-door-fill"></i>
+
+                <span>School Administration</span>
+
+                <span>/</span>
+
+                <strong>Teacher Replacement</strong>
+
+            </div>
+
+
+            <div class="topbar-tools">
+
+                
+<div class="school-selector-wrapper" id="schoolSelectorWrapper">
+
+    <button
+        type="button"
+        class="school-select"
+        id="schoolSelectButton"
+        aria-label="Select school workspace"
+        aria-expanded="false"
+        aria-controls="schoolSelectMenu">
+
+        <span class="school-select-current">
+            <i class="bi bi-bank me-1"></i>
+            <span id="schoolSelectCurrentName">
+                San Isidro National High School
+            </span>
+        </span>
+
+        <i class="bi bi-chevron-down school-select-chevron"></i>
+
+    </button>
+
+    <div
+        class="school-select-menu"
+        id="schoolSelectMenu"
+        role="menu"
+        aria-label="Available school workspaces"
+        hidden>
+
+        <div class="school-select-menu-header">
+            <strong>School Workspaces</strong>
+            <span>Select an available workspace</span>
+        </div>
+
+        <button
+            type="button"
+            class="school-select-option active"
+            data-school-id="school-001"
+            data-school-name="San Isidro National High School"
+            role="menuitemradio"
+            aria-checked="true">
+
+            <span class="school-option-icon">
+                <i class="bi bi-bank"></i>
+            </span>
+
+            <span class="school-option-details">
+                <strong>San Isidro National High School</strong>
+                <small>Current workspace</small>
+            </span>
+
+            <i class="bi bi-check-circle-fill school-option-check"></i>
+        </button>
+
+        <button
+            type="button"
+            class="school-select-option"
+            data-school-id="demo-school-002"
+            data-school-name="Sample School Workspace B"
+            role="menuitemradio"
+            aria-checked="false">
+
+            <span class="school-option-icon">
+                <i class="bi bi-building"></i>
+            </span>
+
+            <span class="school-option-details">
+                <strong>Sample School Workspace B</strong>
+                <small>Demonstration workspace only</small>
+            </span>
+
+        </button>
+
+        <div class="school-select-menu-footer">
+            <i class="bi bi-info-circle"></i>
+            School switching is a frontend demonstration.
+        </div>
+
+    </div>
+
+</div>
+
+
+
+                <a
+                    href="activity-history.html"
+                    class="icon-button-ga"
+                    aria-label="Open activity history and notifications"
+                    title="Notifications">
+
+                    <i class="bi bi-bell"></i>
+
+                </a>
+
+
+                
+<div class="admin-profile-wrapper" id="adminProfileWrapper">
+
+    <button
+        type="button"
+        class="profile-button"
+        id="adminProfileButton"
+        aria-label="Administrator account menu"
+        aria-expanded="false"
+        aria-controls="adminProfileMenu">
+
+        <span class="avatar">
+            <i class="bi bi-person-fill"></i>
+        </span>
+
+        <span>Administrator</span>
+
+        <i class="bi bi-chevron-down admin-profile-chevron"></i>
+
+    </button>
+
+    <div
+        class="admin-profile-menu"
+        id="adminProfileMenu"
+        aria-label="Administrator account options"
+        hidden>
+
+        <div class="admin-profile-menu-header">
+
+            <span class="admin-profile-menu-avatar">
+                <i class="bi bi-person-fill"></i>
+            </span>
+
+            <div>
+                <strong>Administrator</strong>
+                <small>School Administrator</small>
+            </div>
+
+        </div>
+
+        <div class="admin-profile-menu-divider"></div>
+
+        <a
+            href="school-profile.html"
+            class="admin-profile-menu-item">
+
+            <i class="bi bi-person-gear"></i>
+            <span>Profile Settings</span>
+
+        </a>
+
+        <a
+            href="easy-access.html"
+            class="admin-profile-menu-item">
+
+            <i class="bi bi-universal-access"></i>
+            <span>EasyAccess</span>
+
+        </a>
+
+        <button
+            type="button"
+            class="admin-profile-menu-item"
+            id="adminAccountSecurityButton">
+
+            <i class="bi bi-shield-lock"></i>
+            <span>Account Security</span>
+            <small>Coming soon</small>
+
+        </button>
+
+        <div class="admin-profile-menu-divider"></div>
+
+        <button
+            type="button"
+            class="admin-profile-menu-item danger"
+            id="adminSignOutButton">
+
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Sign Out</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+
+            </div>
+
+        </header>
+
+
+
+        <!-- PAGE CONTENT -->
+
+        <section class="main-content">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="page-heading">
+
+                <div>
+
+                    <h1>Teacher Replacement</h1>
+
+                    <p>
+                        Manage proposed Teacher replacements
+                        while preserving assignment history.
+                    </p>
+
+                </div>
+
+
+                <div class="heading-actions">
+
+                    <a href="teachers.html"
+                        class="btn-ga btn-ga-outline">
+
+                        <i class="bi bi-people"></i>
+
+                        Teacher Directory
+
+                    </a>
+
+
+                    <button
+                        type="button"
+                        class="btn-ga btn-ga-primary"
+                        id="createReplacementButton">
+
+                        <i class="bi bi-arrow-left-right"></i>
+
+                        Initiate Replacement
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- IMPORTANT RULE -->
+
+            <div class="sa-replacement-note">
+
+                <i class="bi bi-shield-check me-2"></i>
+
+                <strong>Replacement rule:</strong>
+
+                The current Teacher remains assigned while
+                the proposed replacement is awaiting acceptance.
+                The replacement activates only after acceptance.
+                Previous assignment history must be preserved.
+
+            </div>
+
+
+
+            <!-- SUMMARY CARDS -->
+
+            <div class="sa-replacement-summary mt-3">
+
+
+                <div class="sa-replacement-summary-card">
+
+                    <span>Total Replacement Requests</span>
+
+                    <strong id="replacementTotalCount">0</strong>
+
+                </div>
+
+
+                <div class="sa-replacement-summary-card">
+
+                    <span>Awaiting Acceptance</span>
+
+                    <strong id="replacementPendingCount">0</strong>
+
+                </div>
+
+
+                <div class="sa-replacement-summary-card">
+
+                    <span>Completed</span>
+
+                    <strong id="replacementCompletedCount">0</strong>
+
+                </div>
+
+
+                <div class="sa-replacement-summary-card">
+
+                    <span>Declined / Revoked</span>
+
+                    <strong id="replacementCancelledCount">0</strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- FEEDBACK -->
+
+            <div
+                id="replacementMessage"
+                class="sa-replacement-message"
+                role="status"
+                aria-live="polite">
+            </div>
+
+
+
+            <!-- =================================
+                 REPLACEMENT REQUESTS
+            ================================== -->
+
+            <section class="sa-replacement-section">
+
+
+                <div class="sa-replacement-section-header">
+
+                    <div>
+
+                        <h2>
+                            <i class="bi bi-arrow-left-right me-2"></i>
+                            Teacher Replacement Requests
+                        </h2>
+
+                        <p>
+                            Review current and proposed
+                            Teacher changes for each Offering.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FILTERS -->
+
+                <div class="sa-replacement-toolbar">
+
+
+                    <div class="input-group sa-replacement-search">
+
+                        <span class="input-group-text bg-white">
+                            <i class="bi bi-search"></i>
+                        </span>
+
+                        <input
+                            type="search"
+                            class="form-control"
+                            id="replacementSearch"
+                            placeholder="Search Teacher or Offering..."
+                            aria-label="Search replacements">
+
+                    </div>
+
+
+                    <select
+                        class="form-select sa-replacement-filter"
+                        id="replacementStatusFilter"
+                        aria-label="Filter replacement status">
+
+                        <option value="all">All Statuses</option>
+
+                        <option value="pending">Awaiting Acceptance</option>
+
+                        <option value="accepted">Accepted</option>
+
+                        <option value="declined">Declined</option>
+
+                        <option value="revoked">Revoked</option>
+
+                    </select>
+
+
+                    <span
+                        class="text-secondary small"
+                        id="replacementResultCount">
+
+                        0 replacement requests displayed
+
+                    </span>
+
+
+                </div>
+
+
+
+                <!-- TABLE -->
+
+                <div class="table-responsive">
+
+                    <table class="table sa-replacement-table align-middle">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Current Teacher</th>
+
+                                <th>Proposed Replacement</th>
+
+                                <th>Subject Offering</th>
+
+                                <th>Request Date</th>
+
+                                <th>Status</th>
+
+                                <th class="text-end">Actions</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="replacementTableBody">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+
+                <!-- EMPTY STATE -->
+
+                <div
+                    class="sa-replacement-empty"
+                    id="replacementEmptyState"
+                    hidden>
+
+                    <i class="bi bi-arrow-left-right"></i>
+
+                    <strong>No Replacement Requests Found</strong>
+
+                    <p class="small mt-2 mb-0">
+
+                        Create a replacement request or change
+                        your search and filters.
+
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================
+                 ASSIGNMENT HISTORY
+            ================================== -->
+
+            <section class="sa-replacement-section">
+
+
+                <div class="sa-replacement-section-header">
+
+                    <div>
+
+                        <h2>
+                            <i class="bi bi-clock-history me-2"></i>
+                            Teacher Assignment History
+                        </h2>
+
+                        <p>
+                            Previous and current assignments
+                            are preserved for historical reference.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="sa-replacement-toolbar">
+
+                    <div class="input-group sa-replacement-search">
+
+                        <span class="input-group-text bg-white">
+                            <i class="bi bi-search"></i>
+                        </span>
+
+                        <input
+                            type="search"
+                            class="form-control"
+                            id="replacementHistorySearch"
+                            placeholder="Search assignment history..."
+                            aria-label="Search assignment history">
+
+                    </div>
+
+
+                    <span
+                        class="text-secondary small"
+                        id="replacementHistoryResultCount">
+
+                        0 assignment records displayed
+
+                    </span>
+
+                </div>
+
+
+
+                <div class="table-responsive">
+
+                    <table class="table sa-replacement-table align-middle">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Assignment ID</th>
+
+                                <th>Teacher</th>
+
+                                <th>Subject Offering</th>
+
+                                <th>Start Date</th>
+
+                                <th>End Date</th>
+
+                                <th>Status</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="replacementHistoryBody">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+
+                <div
+                    class="sa-replacement-empty"
+                    id="replacementHistoryEmptyState"
+                    hidden>
+
+                    <i class="bi bi-clock-history"></i>
+
+                    <strong>No Assignment History Found</strong>
+
+                    <p class="small mt-2 mb-0">
+                        No records match your search.
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- BACKEND INTEGRATION NOTICE -->
+
+            <div class="sa-replacement-note warning">
+
+                <i class="bi bi-exclamation-triangle me-2"></i>
+
+                <strong>Demonstration limitation:</strong>
+
+                The acceptance control used for testing is
+                simulated. In production, only the invited
+                Teacher's authenticated acceptance response
+                can authorize the Backend replacement transaction.
+
+            </div>
+
+
+            <p class="text-secondary small mt-3 mb-0">
+
+                <i class="bi bi-info-circle me-1"></i>
+
+                Sample Teachers and assignment records are
+                used for Frontend testing. Changes are
+                temporary and are not saved to PostgreSQL.
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- FOOTER -->
+
+        <footer class="main-footer">
+
+            GabayAral &copy; <span id="saFooterYear">2026</span>
+
+            | School Administrator Workspace
+
+        </footer>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- =====================================
+     INITIATE REPLACEMENT MODAL
+====================================== -->
+
+<div
+    class="modal fade sa-replacement-modal"
+    id="teacherReplacementModal"
+    tabindex="-1"
+    aria-labelledby="teacherReplacementModalTitle"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+
+            <form id="teacherReplacementForm">
+
+
+                <div class="modal-header">
+
+                    <h2
+                        class="modal-title"
+                        id="teacherReplacementModalTitle">
+
+                        Initiate Teacher Replacement
+
+                    </h2>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                    </button>
+
+                </div>
+
+
+
+                <div class="modal-body">
+
+
+                    <div class="mb-3">
+
+                        <label
+                            for="replacementAssignment"
+                            class="form-label">
+
+                            Current Teacher Assignment
+
+                        </label>
+
+                        <select
+                            class="form-select"
+                            id="replacementAssignment"
+                            required>
+
+                            <option value="">
+                                Select Current Assignment
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="mb-3">
+
+                        <label
+                            for="replacementTeacher"
+                            class="form-label">
+
+                            Proposed Replacement Teacher
+
+                        </label>
+
+                        <select
+                            class="form-select"
+                            id="replacementTeacher"
+                            required>
+
+                            <option value="">
+                                Select Replacement Teacher
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div
+                        id="replacementModalMessage"
+                        class="small text-danger"
+                        role="alert"
+                        aria-live="polite">
+                    </div>
+
+
+                    <div class="sa-replacement-note">
+
+                        <i class="bi bi-info-circle me-2"></i>
+
+                        The current Teacher remains assigned
+                        until the proposed replacement accepts.
+
+                    </div>
+
+
+                    <div class="sa-replacement-note warning">
+
+                        <i class="bi bi-shield-exclamation me-2"></i>
+
+                        This demonstration does not send a real
+                        invitation. The actual Teacher must
+                        authenticate and accept through the
+                        Backend workflow.
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn-ga btn-ga-outline"
+                        data-bs-dismiss="modal">
+
+                        Cancel
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="btn-ga btn-ga-primary">
+
+                        <i class="bi bi-check-lg"></i>
+
+                        Create Replacement Request
+
+                    </button>
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- BOOTSTRAP JAVASCRIPT -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- SHARED LAYOUT -->
+
+<script src="../../assets/js/layout.js"></script>
+
+
+<!-- SCHOOL ADMINISTRATOR -->
+
+<script src="../../assets/js/school-admin.js"></script>
+
+
+</body>
+
+</html>

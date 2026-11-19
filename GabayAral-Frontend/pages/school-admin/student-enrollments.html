@@ -1,0 +1,1065 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Monitor official Student Section Placements and Subject Enrollments in GabayAral.">
+    <meta name="theme-color" content="#16324F">
+
+    <title>Student Enrollment Overview | GabayAral</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- GLOBAL DESIGN SYSTEM -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+
+    <!-- SHARED LAYOUT -->
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+
+    <!-- SCHOOL ADMINISTRATOR -->
+    <link rel="stylesheet" href="../../assets/css/school-admin.css">
+
+</head>
+
+<body>
+
+<div class="app-shell">
+
+
+    <!-- =====================================
+         SIDEBAR
+    ====================================== -->
+
+    <aside class="sidebar" id="sidebar"
+        aria-label="School Administrator navigation">
+
+        <div class="brand-block">
+
+            <a href="dashboard.html" class="brand">
+                <i class="bi bi-book-half"></i>
+                <span>GabayAral</span>
+            </a>
+
+            <span class="role-pill">
+                School Administrator
+            </span>
+
+        </div>
+
+
+        <nav class="side-nav">
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Overview</p>
+
+                <a href="dashboard.html" class="side-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>Dashboard</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">School Management</p>
+
+                <a href="school-profile.html" class="side-link">
+                    <i class="bi bi-building"></i>
+                    <span>School Profile</span>
+                </a>
+
+                <a href="school-setup.html" class="side-link">
+                    <i class="bi bi-sliders"></i>
+                    <span>School Setup</span>
+                </a>
+
+                <a href="grade-levels.html" class="side-link">
+                    <i class="bi bi-diagram-3"></i>
+                    <span>Grade-Level Spaces</span>
+                </a>
+
+                <a href="sections.html" class="side-link">
+                    <i class="bi bi-people"></i>
+                    <span>Sections</span>
+                </a>
+
+                <a href="subject-library.html" class="side-link">
+                    <i class="bi bi-book"></i>
+                    <span>Subject Library</span>
+                </a>
+
+                <a href="subject-offerings.html" class="side-link">
+                    <i class="bi bi-journal-bookmark"></i>
+                    <span>Subject Offerings</span>
+                </a>
+
+                <a href="copy-subjects.html" class="side-link">
+                    <i class="bi bi-copy"></i>
+                    <span>Copy Subjects</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Teacher Management</p>
+
+                <a href="teachers.html" class="side-link">
+                    <i class="bi bi-person-workspace"></i>
+                    <span>Teacher Directory</span>
+                </a>
+
+                <a href="teacher-invitations.html" class="side-link">
+                    <i class="bi bi-envelope-paper"></i>
+                    <span>Teacher Invitations</span>
+                </a>
+
+                <a href="teacher-replacement.html" class="side-link">
+                    <i class="bi bi-arrow-left-right"></i>
+                    <span>Teacher Replacement</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Student Management</p>
+
+                <a href="student-enrollments.html"
+                    class="side-link active"
+                    aria-current="page">
+
+                    <i class="bi bi-mortarboard"></i>
+                    <span>Student Enrollments</span>
+
+                </a>
+
+                <a href="student-codes.html" class="side-link">
+                    <i class="bi bi-upc-scan"></i>
+                    <span>Student Subject Codes</span>
+                </a>
+
+                <a href="parent-codes.html" class="side-link">
+                    <i class="bi bi-qr-code"></i>
+                    <span>Parent Section Codes</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Guardian Management</p>
+
+                <a href="guardian-requests.html" class="side-link">
+                    <i class="bi bi-person-check"></i>
+                    <span>Referred Guardian Requests</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Communication</p>
+
+                <a href="announcements.html" class="side-link">
+                    <i class="bi bi-megaphone"></i>
+                    <span>School Announcements</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Records & Workspace</p>
+
+                <a href="archives.html" class="side-link">
+                    <i class="bi bi-archive"></i>
+                    <span>Archive & Restoration</span>
+                </a>
+
+                <a href="deactivation-request.html" class="side-link">
+                    <i class="bi bi-building-x"></i>
+                    <span>Workspace Deactivation</span>
+                </a>
+
+                <a href="activity-history.html" class="side-link">
+                    <i class="bi bi-clock-history"></i>
+                    <span>Activity History</span>
+                </a>
+
+            </div>
+
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Account</p>
+
+                <a href="activity-history.html" class="side-link">
+    <i class="bi bi-bell"></i>
+    <span>Notifications</span>
+</a>
+
+                <a href="easy-access.html" class="side-link">
+    <i class="bi bi-universal-access"></i>
+    <span>EasyAccess</span>
+</a>
+
+                <a href="../../index.html" class="side-link">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Return to Homepage</span>
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+            <span class="footer-dot"></span>
+            School Workspace
+        </div>
+
+    </aside>
+
+
+
+    <!-- MOBILE BACKDROP -->
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+
+
+    <!-- =====================================
+         MAIN AREA
+    ====================================== -->
+
+    <main class="main-area">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <button
+                type="button"
+                class="icon-button-ga mobile-menu"
+                id="menuToggle"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+                <i class="bi bi-list"></i>
+
+            </button>
+
+
+            <div class="breadcrumbs">
+
+                <i class="bi bi-house-door-fill"></i>
+
+                <span>School Administration</span>
+
+                <span>/</span>
+
+                <strong>Student Enrollments</strong>
+
+            </div>
+
+
+            <div class="topbar-tools">
+
+                
+<div class="school-selector-wrapper" id="schoolSelectorWrapper">
+
+    <button
+        type="button"
+        class="school-select"
+        id="schoolSelectButton"
+        aria-label="Select school workspace"
+        aria-expanded="false"
+        aria-controls="schoolSelectMenu">
+
+        <span class="school-select-current">
+            <i class="bi bi-bank me-1"></i>
+            <span id="schoolSelectCurrentName">
+                San Isidro National High School
+            </span>
+        </span>
+
+        <i class="bi bi-chevron-down school-select-chevron"></i>
+
+    </button>
+
+    <div
+        class="school-select-menu"
+        id="schoolSelectMenu"
+        role="menu"
+        aria-label="Available school workspaces"
+        hidden>
+
+        <div class="school-select-menu-header">
+            <strong>School Workspaces</strong>
+            <span>Select an available workspace</span>
+        </div>
+
+        <button
+            type="button"
+            class="school-select-option active"
+            data-school-id="school-001"
+            data-school-name="San Isidro National High School"
+            role="menuitemradio"
+            aria-checked="true">
+
+            <span class="school-option-icon">
+                <i class="bi bi-bank"></i>
+            </span>
+
+            <span class="school-option-details">
+                <strong>San Isidro National High School</strong>
+                <small>Current workspace</small>
+            </span>
+
+            <i class="bi bi-check-circle-fill school-option-check"></i>
+        </button>
+
+        <button
+            type="button"
+            class="school-select-option"
+            data-school-id="demo-school-002"
+            data-school-name="Sample School Workspace B"
+            role="menuitemradio"
+            aria-checked="false">
+
+            <span class="school-option-icon">
+                <i class="bi bi-building"></i>
+            </span>
+
+            <span class="school-option-details">
+                <strong>Sample School Workspace B</strong>
+                <small>Demonstration workspace only</small>
+            </span>
+
+        </button>
+
+        <div class="school-select-menu-footer">
+            <i class="bi bi-info-circle"></i>
+            School switching is a frontend demonstration.
+        </div>
+
+    </div>
+
+</div>
+
+
+
+                <a
+                    href="activity-history.html"
+                    class="icon-button-ga"
+                    aria-label="Open activity history and notifications"
+                    title="Notifications">
+
+                    <i class="bi bi-bell"></i>
+
+                </a>
+
+
+                
+<div class="admin-profile-wrapper" id="adminProfileWrapper">
+
+    <button
+        type="button"
+        class="profile-button"
+        id="adminProfileButton"
+        aria-label="Administrator account menu"
+        aria-expanded="false"
+        aria-controls="adminProfileMenu">
+
+        <span class="avatar">
+            <i class="bi bi-person-fill"></i>
+        </span>
+
+        <span>Administrator</span>
+
+        <i class="bi bi-chevron-down admin-profile-chevron"></i>
+
+    </button>
+
+    <div
+        class="admin-profile-menu"
+        id="adminProfileMenu"
+        aria-label="Administrator account options"
+        hidden>
+
+        <div class="admin-profile-menu-header">
+
+            <span class="admin-profile-menu-avatar">
+                <i class="bi bi-person-fill"></i>
+            </span>
+
+            <div>
+                <strong>Administrator</strong>
+                <small>School Administrator</small>
+            </div>
+
+        </div>
+
+        <div class="admin-profile-menu-divider"></div>
+
+        <a
+            href="school-profile.html"
+            class="admin-profile-menu-item">
+
+            <i class="bi bi-person-gear"></i>
+            <span>Profile Settings</span>
+
+        </a>
+
+        <a
+            href="easy-access.html"
+            class="admin-profile-menu-item">
+
+            <i class="bi bi-universal-access"></i>
+            <span>EasyAccess</span>
+
+        </a>
+
+        <button
+            type="button"
+            class="admin-profile-menu-item"
+            id="adminAccountSecurityButton">
+
+            <i class="bi bi-shield-lock"></i>
+            <span>Account Security</span>
+            <small>Coming soon</small>
+
+        </button>
+
+        <div class="admin-profile-menu-divider"></div>
+
+        <button
+            type="button"
+            class="admin-profile-menu-item danger"
+            id="adminSignOutButton">
+
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Sign Out</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+
+            </div>
+
+        </header>
+
+
+
+        <!-- PAGE CONTENT -->
+
+        <section class="main-content">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="page-heading">
+
+                <div>
+
+                    <h1>Student Enrollment Overview</h1>
+
+                    <p>
+                        Monitor official Section Placements
+                        and Subject Enrollments within your school.
+                    </p>
+
+                </div>
+
+
+                <div class="heading-actions">
+
+                    <a href="student-codes.html"
+                        class="btn-ga btn-ga-outline">
+
+                        <i class="bi bi-upc-scan"></i>
+
+                        Student Subject Codes
+
+                    </a>
+
+
+                    <a href="parent-codes.html"
+                        class="btn-ga btn-ga-primary">
+
+                        <i class="bi bi-qr-code"></i>
+
+                        Parent Section Codes
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- IMPORTANT NOTICE -->
+
+            <div class="sa-enrollment-note">
+
+                <i class="bi bi-info-circle me-2"></i>
+
+                <strong>Two separate enrollment records:</strong>
+
+                Official Section Placement establishes where
+                a Student is placed in the school. Subject
+                Enrollment establishes which exact Subject
+                Offering the Student has joined.
+
+            </div>
+
+
+
+            <!-- SUMMARY CARDS -->
+
+            <div class="sa-enrollment-summary mt-3">
+
+
+                <div class="sa-enrollment-summary-card">
+
+                    <span>Unique Students with Active Placements</span>
+
+                    <strong id="enrollmentTotalStudents">0</strong>
+
+                </div>
+
+
+                <div class="sa-enrollment-summary-card">
+
+                    <span>Active Section Placements</span>
+
+                    <strong id="enrollmentActivePlacements">0</strong>
+
+                </div>
+
+
+                <div class="sa-enrollment-summary-card">
+
+                    <span>Active Subject Enrollments</span>
+
+                    <strong id="enrollmentActiveSubjects">0</strong>
+
+                </div>
+
+
+                <div class="sa-enrollment-summary-card">
+
+                    <span>Historical Records</span>
+
+                    <strong id="enrollmentHistoricalRecords">0</strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 ENROLLMENT TABS
+            ================================== -->
+
+            <div
+                class="sa-enrollment-tabs"
+                role="tablist"
+                aria-label="Student enrollment record types">
+
+
+                <button
+                    type="button"
+                    class="sa-enrollment-tab active"
+                    data-enrollment-tab="placements"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="placementPanel">
+
+                    <i class="bi bi-people me-1"></i>
+
+                    Official Section Placements
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sa-enrollment-tab"
+                    data-enrollment-tab="subjects"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="subjectEnrollmentPanel">
+
+                    <i class="bi bi-book me-1"></i>
+
+                    Subject Enrollments
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 SECTION PLACEMENT PANEL
+            ================================== -->
+
+            <section
+                class="sa-enrollment-panel active"
+                id="placementPanel"
+                data-enrollment-panel="placements"
+                role="tabpanel">
+
+
+                <section class="sa-enrollment-section">
+
+
+                    <div class="sa-enrollment-section-header">
+
+                        <div>
+
+                            <h2>
+                                <i class="bi bi-people me-2"></i>
+                                Official Student Section Placements
+                            </h2>
+
+                            <p>
+                                Official records identifying
+                                each Student's Section placement.
+                            </p>
+
+                        </div>
+
+
+                        <span class="badge bg-primary-subtle text-primary">
+                            STUDENT_SECTION_ENROLLMENTS
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- FILTERS -->
+
+                    <div class="sa-enrollment-toolbar">
+
+
+                        <div class="input-group sa-enrollment-search">
+
+                            <span class="input-group-text bg-white">
+                                <i class="bi bi-search"></i>
+                            </span>
+
+                            <input
+                                type="search"
+                                class="form-control"
+                                id="placementSearch"
+                                placeholder="Search Student or Section..."
+                                aria-label="Search Section Placements">
+
+                        </div>
+
+
+                        <select
+                            class="form-select sa-enrollment-filter"
+                            id="placementGradeFilter"
+                            aria-label="Filter placements by grade">
+
+                            <option value="all">
+                                All Grade-Level Spaces
+                            </option>
+
+                        </select>
+
+
+                        <select
+                            class="form-select sa-enrollment-filter"
+                            id="placementStatusFilter"
+                            aria-label="Filter placement status">
+
+                            <option value="all">All Statuses</option>
+
+                            <option value="active">Active</option>
+
+                            <option value="ended">Ended</option>
+
+                        </select>
+
+
+                        <span
+                            class="text-secondary small"
+                            id="placementResultCount">
+
+                            0 placement records displayed
+
+                        </span>
+
+
+                    </div>
+
+
+
+                    <!-- PLACEMENT TABLE -->
+
+                    <div class="table-responsive">
+
+                        <table class="table sa-enrollment-table align-middle">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Student</th>
+
+                                    <th>Grade-Level Space</th>
+
+                                    <th>Section</th>
+
+                                    <th>Placement Date</th>
+
+                                    <th>Status</th>
+
+                                    <th>Record ID</th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="sectionPlacementTableBody">
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+
+                    <!-- EMPTY STATE -->
+
+                    <div
+                        class="sa-enrollment-empty"
+                        id="placementEmptyState"
+                        hidden>
+
+                        <i class="bi bi-people"></i>
+
+                        <strong>No Section Placement Records Found</strong>
+
+                        <p class="small mt-2 mb-0">
+                            Try changing your search or filters.
+                        </p>
+
+                    </div>
+
+
+                </section>
+
+
+
+                <div class="sa-enrollment-note">
+
+                    <i class="bi bi-shield-check me-2"></i>
+
+                    Section transfers must preserve the previous
+                    placement and create a new placement record.
+                    Multiple active Section placements are allowed
+                    under the approved system rules.
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================
+                 SUBJECT ENROLLMENT PANEL
+            ================================== -->
+
+            <section
+                class="sa-enrollment-panel"
+                id="subjectEnrollmentPanel"
+                data-enrollment-panel="subjects"
+                role="tabpanel"
+                hidden>
+
+
+                <section class="sa-enrollment-section">
+
+
+                    <div class="sa-enrollment-section-header">
+
+                        <div>
+
+                            <h2>
+                                <i class="bi bi-book me-2"></i>
+                                Student Subject Enrollments
+                            </h2>
+
+                            <p>
+                                Enrollment records connected
+                                to exact Subject Offerings.
+                            </p>
+
+                        </div>
+
+
+                        <span class="badge bg-primary-subtle text-primary">
+                            STUDENT_ENROLLMENTS
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- FILTERS -->
+
+                    <div class="sa-enrollment-toolbar">
+
+
+                        <div class="input-group sa-enrollment-search">
+
+                            <span class="input-group-text bg-white">
+                                <i class="bi bi-search"></i>
+                            </span>
+
+                            <input
+                                type="search"
+                                class="form-control"
+                                id="studentSubjectSearch"
+                                placeholder="Search Student or Subject..."
+                                aria-label="Search Subject Enrollments">
+
+                        </div>
+
+
+                        <select
+                            class="form-select sa-enrollment-filter"
+                            id="studentSubjectGradeFilter"
+                            aria-label="Filter Subject Enrollments by grade">
+
+                            <option value="all">
+                                All Grade-Level Spaces
+                            </option>
+
+                        </select>
+
+
+                        <select
+                            class="form-select sa-enrollment-filter"
+                            id="studentSubjectStatusFilter"
+                            aria-label="Filter Subject Enrollment status">
+
+                            <option value="all">All Statuses</option>
+
+                            <option value="active">Active</option>
+
+                            <option value="ended">Ended</option>
+
+                        </select>
+
+
+                        <span
+                            class="text-secondary small"
+                            id="studentSubjectResultCount">
+
+                            0 subject enrollment records displayed
+
+                        </span>
+
+
+                    </div>
+
+
+
+                    <!-- SUBJECT ENROLLMENT TABLE -->
+
+                    <div class="table-responsive">
+
+                        <table class="table sa-enrollment-table align-middle">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Student</th>
+
+                                    <th>Subject</th>
+
+                                    <th>Grade-Level Space</th>
+
+                                    <th>Section</th>
+
+                                    <th>Enrollment Date</th>
+
+                                    <th>Status</th>
+
+                                    <th>Record ID</th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="studentSubjectEnrollmentTableBody">
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+
+                    <!-- EMPTY STATE -->
+
+                    <div
+                        class="sa-enrollment-empty"
+                        id="studentSubjectEmptyState"
+                        hidden>
+
+                        <i class="bi bi-book"></i>
+
+                        <strong>No Subject Enrollment Records Found</strong>
+
+                        <p class="small mt-2 mb-0">
+                            Try changing your search or filters.
+                        </p>
+
+                    </div>
+
+
+                </section>
+
+
+
+                <div class="sa-enrollment-note">
+
+                    <i class="bi bi-shield-check me-2"></i>
+
+                    Every Subject Enrollment must reference
+                    the exact Subject Offering and the Student's
+                    corresponding official Section Placement.
+                    A valid Student Join Code automatically
+                    joins the Student to its exact Offering;
+                    no Teacher or Administrator approval is
+                    required for a valid code-based join.
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- HISTORICAL INFORMATION -->
+
+            <div class="sa-enrollment-note warning mt-3">
+
+                <i class="bi bi-archive me-2"></i>
+
+                <strong>Historical preservation:</strong>
+
+                Ended placements and enrollments remain available
+                for historical reference. Do not permanently
+                delete official academic records.
+
+            </div>
+
+
+            <!-- FOOTER NOTICE -->
+
+            <p class="text-secondary small mt-3 mb-0">
+
+                <i class="bi bi-info-circle me-1"></i>
+
+                Sample Student and enrollment records are
+                used for Frontend testing. Changes are
+                temporary and are not saved to PostgreSQL.
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- FOOTER -->
+
+        <footer class="main-footer">
+
+            GabayAral &copy; <span id="saFooterYear">2026</span>
+
+            | School Administrator Workspace
+
+        </footer>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- BOOTSTRAP JAVASCRIPT -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- SHARED LAYOUT -->
+
+<script src="../../assets/js/layout.js"></script>
+
+
+<!-- SCHOOL ADMINISTRATOR -->
+
+<script src="../../assets/js/school-admin.js"></script>
+
+
+</body>
+
+</html>

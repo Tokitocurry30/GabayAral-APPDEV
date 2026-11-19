@@ -1,0 +1,630 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Manage archived school academic records in GabayAral.">
+    <meta name="theme-color" content="#16324F">
+
+    <title>Archive and Restoration | GabayAral</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/school-admin.css">
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <aside class="sidebar" id="sidebar" aria-label="School Administrator navigation">
+
+        <div class="brand-block">
+            <a href="dashboard.html" class="brand">
+                <i class="bi bi-book-half"></i>
+                <span>GabayAral</span>
+            </a>
+            <span class="role-pill">School Administrator</span>
+        </div>
+
+        <nav class="side-nav">
+
+            <div class="nav-group">
+                <p class="nav-heading">Overview</p>
+                <a href="dashboard.html" class="side-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>Dashboard</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">School Management</p>
+
+                <a href="school-profile.html" class="side-link">
+                    <i class="bi bi-building"></i><span>School Profile</span>
+                </a>
+
+                <a href="school-setup.html" class="side-link">
+                    <i class="bi bi-sliders"></i><span>School Setup</span>
+                </a>
+
+                <a href="grade-levels.html" class="side-link">
+                    <i class="bi bi-diagram-3"></i><span>Grade-Level Spaces</span>
+                </a>
+
+                <a href="sections.html" class="side-link">
+                    <i class="bi bi-people"></i><span>Sections</span>
+                </a>
+
+                <a href="subject-library.html" class="side-link">
+                    <i class="bi bi-book"></i><span>Subject Library</span>
+                </a>
+
+                <a href="subject-offerings.html" class="side-link">
+                    <i class="bi bi-journal-bookmark"></i><span>Subject Offerings</span>
+                </a>
+
+                <a href="copy-subjects.html" class="side-link">
+                    <i class="bi bi-copy"></i><span>Copy Subjects</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Teacher Management</p>
+
+                <a href="teachers.html" class="side-link">
+                    <i class="bi bi-person-workspace"></i><span>Teacher Directory</span>
+                </a>
+
+                <a href="teacher-invitations.html" class="side-link">
+                    <i class="bi bi-envelope-paper"></i><span>Teacher Invitations</span>
+                </a>
+
+                <a href="teacher-replacement.html" class="side-link">
+                    <i class="bi bi-arrow-left-right"></i><span>Teacher Replacement</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Student Management</p>
+
+                <a href="student-enrollments.html" class="side-link">
+                    <i class="bi bi-mortarboard"></i><span>Student Enrollments</span>
+                </a>
+
+                <a href="student-codes.html" class="side-link">
+                    <i class="bi bi-upc-scan"></i><span>Student Subject Codes</span>
+                </a>
+
+                <a href="parent-codes.html" class="side-link">
+                    <i class="bi bi-qr-code"></i><span>Parent Section Codes</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Guardian Management</p>
+                <a href="guardian-requests.html" class="side-link">
+                    <i class="bi bi-person-check"></i><span>Referred Guardian Requests</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Communication</p>
+                <a href="announcements.html" class="side-link">
+                    <i class="bi bi-megaphone"></i><span>School Announcements</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Records & Workspace</p>
+
+                <a href="archives.html" class="side-link active" aria-current="page">
+                    <i class="bi bi-archive"></i><span>Archive & Restoration</span>
+                </a>
+
+                <a href="deactivation-request.html" class="side-link">
+                    <i class="bi bi-building-x"></i><span>Workspace Deactivation</span>
+                </a>
+
+                <a href="activity-history.html" class="side-link">
+                    <i class="bi bi-clock-history"></i><span>Activity History</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Account</p>
+
+                
+                <a href="activity-history.html" class="side-link">
+                    <i class="bi bi-bell"></i>
+                    <span>Notifications</span>
+                </a>
+
+
+                <a href="easy-access.html" class="side-link">
+                    <i class="bi bi-universal-access"></i>
+                    <span>EasyAccess</span>
+                </a>
+
+                <a href="../../index.html" class="side-link">
+                    <i class="bi bi-box-arrow-right"></i><span>Return to Homepage</span>
+                </a>
+            </div>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <span class="footer-dot"></span>
+            School Workspace
+        </div>
+
+    </aside>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <main class="main-area">
+
+        <header class="topbar">
+
+            <button type="button"
+                class="icon-button-ga mobile-menu"
+                id="menuToggle"
+                aria-label="Open navigation"
+                aria-expanded="false">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="breadcrumbs">
+                <i class="bi bi-house-door-fill"></i>
+                <span>School Administration</span>
+                <span>/</span>
+                <strong>Archive & Restoration</strong>
+            </div>
+
+            <div class="topbar-tools">
+
+                
+<div class="school-selector-wrapper" id="schoolSelectorWrapper">
+
+    <button
+        type="button"
+        class="school-select"
+        id="schoolSelectButton"
+        aria-label="Select school workspace"
+        aria-expanded="false"
+        aria-controls="schoolSelectMenu">
+
+        <span class="school-select-current">
+            <i class="bi bi-bank me-1"></i>
+            <span id="schoolSelectCurrentName">
+                San Isidro National High School
+            </span>
+        </span>
+
+        <i class="bi bi-chevron-down school-select-chevron"></i>
+
+    </button>
+
+    <div
+        class="school-select-menu"
+        id="schoolSelectMenu"
+        role="menu"
+        aria-label="Available school workspaces"
+        hidden>
+
+        <div class="school-select-menu-header">
+            <strong>School Workspaces</strong>
+            <span>Select an available workspace</span>
+        </div>
+
+        <button
+            type="button"
+            class="school-select-option active"
+            data-school-id="school-001"
+            data-school-name="San Isidro National High School"
+            role="menuitemradio"
+            aria-checked="true">
+
+            <span class="school-option-icon">
+                <i class="bi bi-bank"></i>
+            </span>
+
+            <span class="school-option-details">
+                <strong>San Isidro National High School</strong>
+                <small>Current workspace</small>
+            </span>
+
+            <i class="bi bi-check-circle-fill school-option-check"></i>
+        </button>
+
+        <button
+            type="button"
+            class="school-select-option"
+            data-school-id="demo-school-002"
+            data-school-name="Sample School Workspace B"
+            role="menuitemradio"
+            aria-checked="false">
+
+            <span class="school-option-icon">
+                <i class="bi bi-building"></i>
+            </span>
+
+            <span class="school-option-details">
+                <strong>Sample School Workspace B</strong>
+                <small>Demonstration workspace only</small>
+            </span>
+
+        </button>
+
+        <div class="school-select-menu-footer">
+            <i class="bi bi-info-circle"></i>
+            School switching is a frontend demonstration.
+        </div>
+
+    </div>
+
+</div>
+
+
+                
+                    <a
+                        href="activity-history.html"
+                        class="icon-button-ga"
+                        aria-label="Open activity history and notifications"
+                        title="Notifications">
+
+                        <i class="bi bi-bell"></i>
+
+                    </a>
+
+
+                
+<div class="admin-profile-wrapper" id="adminProfileWrapper">
+
+    <button
+        type="button"
+        class="profile-button"
+        id="adminProfileButton"
+        aria-label="Administrator account menu"
+        aria-expanded="false"
+        aria-controls="adminProfileMenu">
+
+        <span class="avatar">
+            <i class="bi bi-person-fill"></i>
+        </span>
+
+        <span>Administrator</span>
+
+        <i class="bi bi-chevron-down admin-profile-chevron"></i>
+
+    </button>
+
+    <div
+        class="admin-profile-menu"
+        id="adminProfileMenu"
+        aria-label="Administrator account options"
+        hidden>
+
+        <div class="admin-profile-menu-header">
+
+            <span class="admin-profile-menu-avatar">
+                <i class="bi bi-person-fill"></i>
+            </span>
+
+            <div>
+                <strong>Administrator</strong>
+                <small>School Administrator</small>
+            </div>
+
+        </div>
+
+        <div class="admin-profile-menu-divider"></div>
+
+        <a
+            href="school-profile.html"
+            class="admin-profile-menu-item">
+
+            <i class="bi bi-person-gear"></i>
+            <span>Profile Settings</span>
+
+        </a>
+
+        <a
+            href="easy-access.html"
+            class="admin-profile-menu-item">
+
+            <i class="bi bi-universal-access"></i>
+            <span>EasyAccess</span>
+
+        </a>
+
+        <button
+            type="button"
+            class="admin-profile-menu-item"
+            id="adminAccountSecurityButton">
+
+            <i class="bi bi-shield-lock"></i>
+            <span>Account Security</span>
+            <small>Coming soon</small>
+
+        </button>
+
+        <div class="admin-profile-menu-divider"></div>
+
+        <button
+            type="button"
+            class="admin-profile-menu-item danger"
+            id="adminSignOutButton">
+
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Sign Out</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+
+            </div>
+
+        </header>
+
+        <section class="main-content">
+
+            <div class="page-heading">
+
+                <div>
+                    <h1>Archive and Restoration</h1>
+                    <p>Review archived school records and restore eligible academic structures.</p>
+                </div>
+
+            </div>
+
+            <div class="sa-archive-note">
+                <i class="bi bi-shield-check me-2"></i>
+                <strong>Record preservation:</strong>
+                Archiving does not permanently delete records. Original identifiers,
+                academic relationships and historical information must be preserved.
+            </div>
+
+            <div class="sa-archive-note warning mt-3">
+                <i class="bi bi-exclamation-triangle me-2"></i>
+                <strong>Restoration protection:</strong>
+                A record must pass ownership, dependency and integrity checks before
+                restoration. A blocked record must not be restored by bypassing validation.
+            </div>
+
+            <div class="sa-archive-summary mt-3">
+
+                <div class="sa-archive-summary-card">
+                    <span>Total Sample Records</span>
+                    <strong id="archiveTotalCount">0</strong>
+                </div>
+
+                <div class="sa-archive-summary-card">
+                    <span>Eligible for Restoration</span>
+                    <strong id="archiveRestorableCount">0</strong>
+                </div>
+
+                <div class="sa-archive-summary-card">
+                    <span>Restoration Blocked</span>
+                    <strong id="archiveBlockedCount">0</strong>
+                </div>
+
+                <div class="sa-archive-summary-card">
+                    <span>Restored in Demo</span>
+                    <strong id="archiveRestoredCount">0</strong>
+                </div>
+
+            </div>
+
+            <div id="archiveMessage"
+                class="sa-archive-message"
+                role="status"
+                aria-live="polite">
+            </div>
+
+            <section class="sa-archive-section">
+
+                <div class="sa-archive-section-header">
+                    <div>
+                        <h2><i class="bi bi-archive me-2"></i>Archived School Records</h2>
+                        <p>Search and review archived records before restoration.</p>
+                    </div>
+                </div>
+
+                <div class="sa-archive-toolbar">
+
+                    <div class="input-group sa-archive-search">
+                        <span class="input-group-text bg-white">
+                            <i class="bi bi-search"></i>
+                        </span>
+
+                        <input type="search"
+                            class="form-control"
+                            id="archiveSearch"
+                            placeholder="Search archived records..."
+                            aria-label="Search archived records">
+                    </div>
+
+                    <select class="form-select sa-archive-filter"
+                        id="archiveCategoryFilter"
+                        aria-label="Filter archive category">
+
+                        <option value="all">All Categories</option>
+                        <option value="Grade-Level Space">Grade-Level Space</option>
+                        <option value="Section">Section</option>
+                        <option value="Subject">Subject</option>
+                        <option value="Subject Offering">Subject Offering</option>
+                        <option value="Announcement">Announcement</option>
+
+                    </select>
+
+                    <select class="form-select sa-archive-filter"
+                        id="archiveStatusFilter"
+                        aria-label="Filter archive status">
+
+                        <option value="all">All Statuses</option>
+                        <option value="archived">Archived</option>
+                        <option value="restored">Restored</option>
+
+                    </select>
+
+                    <span class="text-secondary small" id="archiveResultCount">
+                        0 records displayed
+                    </span>
+
+                </div>
+
+                <div class="table-responsive">
+
+                    <table class="table sa-archive-table align-middle">
+
+                        <thead>
+                            <tr>
+                                <th>Record</th>
+                                <th>Category</th>
+                                <th>Archive Date</th>
+                                <th>Status</th>
+                                <th>Restoration Eligibility</th>
+                                <th class="text-end">Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="archiveTableBody"></tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="sa-archive-empty" id="archiveEmptyState" hidden>
+                    <i class="bi bi-archive"></i>
+                    <strong>No Archived Records Found</strong>
+                    <p class="small mt-2 mb-0">Try changing your search or filters.</p>
+                </div>
+
+            </section>
+
+            <div class="sa-archive-note">
+                <i class="bi bi-info-circle me-2"></i>
+                <strong>Historical lifecycle records:</strong>
+                Ended Teacher Assignments, revoked codes and withdrawn announcements
+                are not automatically treated as archived academic structures.
+                Their own lifecycle history must remain intact.
+            </div>
+
+            <p class="text-secondary small mt-3 mb-0">
+                <i class="bi bi-info-circle me-1"></i>
+                Fictional sample data is used for Frontend testing.
+                Restoration actions do not modify PostgreSQL.
+            </p>
+
+        </section>
+
+        <footer class="main-footer">
+            GabayAral &copy; <span id="saFooterYear">2026</span>
+            | School Administrator Workspace
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- ARCHIVE DETAIL MODAL -->
+
+<div class="modal fade"
+    id="archiveDetailModal"
+    tabindex="-1"
+    aria-labelledby="archiveDetailModalTitle"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" id="archiveDetailModalTitle">
+                    Archived Record Details
+                </h2>
+
+                <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close">
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="sa-archive-detail">
+                    <span>Record Name</span>
+                    <strong id="archiveDetailName">—</strong>
+                </div>
+
+                <div class="sa-archive-detail">
+                    <span>Category</span>
+                    <strong id="archiveDetailCategory">—</strong>
+                </div>
+
+                <div class="sa-archive-detail">
+                    <span>Archive Date</span>
+                    <strong id="archiveDetailDate">—</strong>
+                </div>
+
+                <div class="sa-archive-detail">
+                    <span>Archive Reason</span>
+                    <strong id="archiveDetailReason">—</strong>
+                </div>
+
+                <div class="sa-archive-detail">
+                    <span>Dependency Check</span>
+                    <strong id="archiveDetailDependency">—</strong>
+                </div>
+
+                <div class="sa-archive-detail">
+                    <span>Current Status</span>
+                    <strong id="archiveDetailStatus">—</strong>
+                </div>
+
+                <div class="sa-archive-note warning">
+                    <i class="bi bi-shield-lock me-2"></i>
+                    Restoration must pass Backend integrity and authorization checks.
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button"
+                    class="btn-ga btn-ga-outline"
+                    data-bs-dismiss="modal">
+                    Close
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/layout.js"></script>
+<script src="../../assets/js/school-admin.js"></script>
+
+</body>
+</html>
+

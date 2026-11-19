@@ -1,0 +1,748 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Submit and monitor school workspace deactivation requests in GabayAral.">
+    <meta name="theme-color" content="#16324F">
+
+    <title>Workspace Deactivation Request | GabayAral</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/school-admin.css">
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar" id="sidebar" aria-label="School Administrator navigation">
+
+        <div class="brand-block">
+
+            <a href="dashboard.html" class="brand">
+                <i class="bi bi-book-half"></i>
+                <span>GabayAral</span>
+            </a>
+
+            <span class="role-pill">School Administrator</span>
+
+        </div>
+
+        <nav class="side-nav">
+
+            <div class="nav-group">
+                <p class="nav-heading">Overview</p>
+
+                <a href="dashboard.html" class="side-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>Dashboard</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">School Management</p>
+
+                <a href="school-profile.html" class="side-link">
+                    <i class="bi bi-building"></i>
+                    <span>School Profile</span>
+                </a>
+
+                <a href="school-setup.html" class="side-link">
+                    <i class="bi bi-sliders"></i>
+                    <span>School Setup</span>
+                </a>
+
+                <a href="grade-levels.html" class="side-link">
+                    <i class="bi bi-diagram-3"></i>
+                    <span>Grade-Level Spaces</span>
+                </a>
+
+                <a href="sections.html" class="side-link">
+                    <i class="bi bi-people"></i>
+                    <span>Sections</span>
+                </a>
+
+                <a href="subject-library.html" class="side-link">
+                    <i class="bi bi-book"></i>
+                    <span>Subject Library</span>
+                </a>
+
+                <a href="subject-offerings.html" class="side-link">
+                    <i class="bi bi-journal-bookmark"></i>
+                    <span>Subject Offerings</span>
+                </a>
+
+                <a href="copy-subjects.html" class="side-link">
+                    <i class="bi bi-copy"></i>
+                    <span>Copy Subjects</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Teacher Management</p>
+
+                <a href="teachers.html" class="side-link">
+                    <i class="bi bi-person-workspace"></i>
+                    <span>Teacher Directory</span>
+                </a>
+
+                <a href="teacher-invitations.html" class="side-link">
+                    <i class="bi bi-envelope-paper"></i>
+                    <span>Teacher Invitations</span>
+                </a>
+
+                <a href="teacher-replacement.html" class="side-link">
+                    <i class="bi bi-arrow-left-right"></i>
+                    <span>Teacher Replacement</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Student Management</p>
+
+                <a href="student-enrollments.html" class="side-link">
+                    <i class="bi bi-mortarboard"></i>
+                    <span>Student Enrollments</span>
+                </a>
+
+                <a href="student-codes.html" class="side-link">
+                    <i class="bi bi-upc-scan"></i>
+                    <span>Student Subject Codes</span>
+                </a>
+
+                <a href="parent-codes.html" class="side-link">
+                    <i class="bi bi-qr-code"></i>
+                    <span>Parent Section Codes</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Guardian Management</p>
+
+                <a href="guardian-requests.html" class="side-link">
+                    <i class="bi bi-person-check"></i>
+                    <span>Referred Guardian Requests</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Communication</p>
+
+                <a href="announcements.html" class="side-link">
+                    <i class="bi bi-megaphone"></i>
+                    <span>School Announcements</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Records & Workspace</p>
+
+                <a href="archives.html" class="side-link">
+                    <i class="bi bi-archive"></i>
+                    <span>Archive & Restoration</span>
+                </a>
+
+                <a href="deactivation-request.html"
+                    class="side-link active"
+                    aria-current="page">
+
+                    <i class="bi bi-building-x"></i>
+                    <span>Workspace Deactivation</span>
+                </a>
+
+                <a href="activity-history.html" class="side-link">
+                    <i class="bi bi-clock-history"></i>
+                    <span>Activity History</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Account</p>
+
+                <a href="activity-history.html" class="side-link">
+    <i class="bi bi-bell"></i>
+    <span>Notifications</span>
+</a>
+
+                <a href="easy-access.html" class="side-link">
+    <i class="bi bi-universal-access"></i>
+    <span>EasyAccess</span>
+</a>
+
+                <a href="../../index.html" class="side-link">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Return to Homepage</span>
+                </a>
+            </div>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <span class="footer-dot"></span>
+            School Workspace
+        </div>
+
+    </aside>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <!-- MAIN AREA -->
+
+    <main class="main-area">
+
+        <header class="topbar">
+
+            <button type="button"
+                class="icon-button-ga mobile-menu"
+                id="menuToggle"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+                <i class="bi bi-list"></i>
+
+            </button>
+
+            <div class="breadcrumbs">
+                <i class="bi bi-house-door-fill"></i>
+                <span>School Administration</span>
+                <span>/</span>
+                <strong>Workspace Deactivation</strong>
+            </div>
+
+            <div class="topbar-tools">
+
+                
+<div class="school-selector-wrapper" id="schoolSelectorWrapper">
+
+    <button
+        type="button"
+        class="school-select"
+        id="schoolSelectButton"
+        aria-label="Select school workspace"
+        aria-expanded="false"
+        aria-controls="schoolSelectMenu">
+
+        <span class="school-select-current">
+            <i class="bi bi-bank me-1"></i>
+            <span id="schoolSelectCurrentName">
+                San Isidro National High School
+            </span>
+        </span>
+
+        <i class="bi bi-chevron-down school-select-chevron"></i>
+
+    </button>
+
+    <div
+        class="school-select-menu"
+        id="schoolSelectMenu"
+        role="menu"
+        aria-label="Available school workspaces"
+        hidden>
+
+        <div class="school-select-menu-header">
+            <strong>School Workspaces</strong>
+            <span>Select an available workspace</span>
+        </div>
+
+        <button
+            type="button"
+            class="school-select-option active"
+            data-school-id="school-001"
+            data-school-name="San Isidro National High School"
+            role="menuitemradio"
+            aria-checked="true">
+
+            <span class="school-option-icon">
+                <i class="bi bi-bank"></i>
+            </span>
+
+            <span class="school-option-details">
+                <strong>San Isidro National High School</strong>
+                <small>Current workspace</small>
+            </span>
+
+            <i class="bi bi-check-circle-fill school-option-check"></i>
+        </button>
+
+        <button
+            type="button"
+            class="school-select-option"
+            data-school-id="demo-school-002"
+            data-school-name="Sample School Workspace B"
+            role="menuitemradio"
+            aria-checked="false">
+
+            <span class="school-option-icon">
+                <i class="bi bi-building"></i>
+            </span>
+
+            <span class="school-option-details">
+                <strong>Sample School Workspace B</strong>
+                <small>Demonstration workspace only</small>
+            </span>
+
+        </button>
+
+        <div class="school-select-menu-footer">
+            <i class="bi bi-info-circle"></i>
+            School switching is a frontend demonstration.
+        </div>
+
+    </div>
+
+</div>
+
+
+                <a
+                    href="activity-history.html"
+                    class="icon-button-ga"
+                    aria-label="Open activity history and notifications"
+                    title="Notifications">
+
+                    <i class="bi bi-bell"></i>
+
+                </a>
+
+                
+<div class="admin-profile-wrapper" id="adminProfileWrapper">
+
+    <button
+        type="button"
+        class="profile-button"
+        id="adminProfileButton"
+        aria-label="Administrator account menu"
+        aria-expanded="false"
+        aria-controls="adminProfileMenu">
+
+        <span class="avatar">
+            <i class="bi bi-person-fill"></i>
+        </span>
+
+        <span>Administrator</span>
+
+        <i class="bi bi-chevron-down admin-profile-chevron"></i>
+
+    </button>
+
+    <div
+        class="admin-profile-menu"
+        id="adminProfileMenu"
+        aria-label="Administrator account options"
+        hidden>
+
+        <div class="admin-profile-menu-header">
+
+            <span class="admin-profile-menu-avatar">
+                <i class="bi bi-person-fill"></i>
+            </span>
+
+            <div>
+                <strong>Administrator</strong>
+                <small>School Administrator</small>
+            </div>
+
+        </div>
+
+        <div class="admin-profile-menu-divider"></div>
+
+        <a
+            href="school-profile.html"
+            class="admin-profile-menu-item">
+
+            <i class="bi bi-person-gear"></i>
+            <span>Profile Settings</span>
+
+        </a>
+
+        <a
+            href="easy-access.html"
+            class="admin-profile-menu-item">
+
+            <i class="bi bi-universal-access"></i>
+            <span>EasyAccess</span>
+
+        </a>
+
+        <button
+            type="button"
+            class="admin-profile-menu-item"
+            id="adminAccountSecurityButton">
+
+            <i class="bi bi-shield-lock"></i>
+            <span>Account Security</span>
+            <small>Coming soon</small>
+
+        </button>
+
+        <div class="admin-profile-menu-divider"></div>
+
+        <button
+            type="button"
+            class="admin-profile-menu-item danger"
+            id="adminSignOutButton">
+
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Sign Out</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+
+            </div>
+
+        </header>
+
+        <section class="main-content">
+
+            <!-- HEADING -->
+
+            <div class="page-heading">
+
+                <div>
+                    <h1>Workspace Deactivation Request</h1>
+
+                    <p>
+                        Submit and monitor a formal request
+                        concerning your school's GabayAral workspace.
+                    </p>
+                </div>
+
+                <div class="heading-actions">
+
+                    <a href="dashboard.html"
+                        class="btn-ga btn-ga-outline">
+
+                        <i class="bi bi-arrow-left"></i>
+                        Back to Dashboard
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- WARNING -->
+
+            <div class="sa-deactivation-warning">
+
+                <i class="bi bi-exclamation-triangle-fill me-2"></i>
+
+                <strong>Important:</strong>
+
+                Submitting this request does not immediately
+                deactivate your School workspace.
+
+                Only an authorized Platform Administrator
+                can review and authorize whole-school deactivation.
+
+            </div>
+
+            <!-- SUMMARY -->
+
+            <div class="sa-deactivation-summary">
+
+                <div class="sa-deactivation-summary-card">
+                    <span>Total Requests</span>
+                    <strong id="deactivationTotalCount">0</strong>
+                </div>
+
+                <div class="sa-deactivation-summary-card">
+                    <span>Awaiting Review</span>
+                    <strong id="deactivationPendingCount">0</strong>
+                </div>
+
+                <div class="sa-deactivation-summary-card">
+                    <span>Completed Decisions</span>
+                    <strong id="deactivationCompletedCount">0</strong>
+                </div>
+
+            </div>
+
+            <!-- FEEDBACK -->
+
+            <div id="deactivationMessage"
+                class="sa-deactivation-message"
+                role="status"
+                aria-live="polite">
+            </div>
+
+            <!-- SCHOOL INFORMATION -->
+
+            <section class="sa-deactivation-card">
+
+                <div class="sa-deactivation-header">
+
+                    <div class="sa-deactivation-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
+
+                    <div>
+                        <h2>Current School Workspace</h2>
+                        <p>Workspace associated with this request.</p>
+                    </div>
+
+                </div>
+
+                <div class="row g-3">
+
+                    <div class="col-md-6">
+                        <div class="sa-deactivation-detail">
+                            <span>Official School Name</span>
+                            <strong>San Isidro National High School</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="sa-deactivation-detail">
+                            <span>School Identifier</span>
+                            <strong>SAMPLE-SCHOOL-ID</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="sa-deactivation-detail">
+                            <span>Workspace Status</span>
+                            <strong>
+                                <span class="status-pill status-success">
+                                    Active
+                                </span>
+                            </strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="sa-deactivation-detail">
+                            <span>Request Authority</span>
+                            <strong>School Administrator</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- REQUEST FORM -->
+
+            <section class="sa-deactivation-card">
+
+                <div class="sa-deactivation-header">
+
+                    <div class="sa-deactivation-icon">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </div>
+
+                    <div>
+                        <h2>Submit Deactivation Request</h2>
+                        <p>Provide the reason for requesting deactivation.</p>
+                    </div>
+
+                </div>
+
+                <div class="sa-deactivation-info">
+
+                    <i class="bi bi-info-circle me-2"></i>
+
+                    Your request will be submitted for independent
+                    Platform Administrator review. Do not treat
+                    this form as an immediate workspace shutdown.
+
+                </div>
+
+                <form id="deactivationRequestForm"
+                    class="sa-deactivation-form">
+
+                    <div class="mb-3">
+
+                        <label for="deactivationReason"
+                            class="form-label">
+
+                            Reason for Deactivation Request
+
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            id="deactivationReason"
+                            name="reason"
+                            minlength="20"
+                            maxlength="2000"
+                            placeholder="Explain why your school is requesting workspace deactivation..."
+                            required>
+                        </textarea>
+
+                        <span class="sa-field-note">
+                            Provide a clear explanation. Minimum 20 characters in this demonstration.
+                        </span>
+
+                    </div>
+
+                    <div class="sa-deactivation-confirm">
+
+                        <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="deactivationConfirmation"
+                            required>
+
+                        <label for="deactivationConfirmation">
+
+                            I understand that this is a formal request,
+                            not an immediate deactivation. The Platform
+                            Administrator must independently review
+                            and authorize the request.
+
+                        </label>
+
+                    </div>
+
+                    <div class="sa-deactivation-actions">
+
+                        <button type="reset"
+                            class="btn-ga btn-ga-outline">
+
+                            <i class="bi bi-arrow-counterclockwise"></i>
+                            Reset Form
+
+                        </button>
+
+                        <button type="submit"
+                            class="btn-ga btn-ga-primary">
+
+                            <i class="bi bi-send"></i>
+                            Submit Request
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+            <!-- REQUEST HISTORY -->
+
+            <section class="sa-deactivation-card">
+
+                <div class="sa-deactivation-header">
+
+                    <div class="sa-deactivation-icon">
+                        <i class="bi bi-clock-history"></i>
+                    </div>
+
+                    <div>
+                        <h2>Deactivation Request History</h2>
+                        <p>Review previously submitted requests and their statuses.</p>
+                    </div>
+
+                </div>
+
+                <div class="table-responsive">
+
+                    <table class="table sa-deactivation-table align-middle">
+
+                        <thead>
+                            <tr>
+                                <th>Request Reference</th>
+                                <th>Submitted Date</th>
+                                <th>Reason</th>
+                                <th>Status</th>
+                                <th>Decision Date</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="deactivationHistoryBody">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div id="deactivationEmptyState"
+                    class="sa-deactivation-empty"
+                    hidden>
+
+                    <i class="bi bi-inbox"></i>
+
+                    <strong>No Deactivation Requests</strong>
+
+                    <p class="small mt-2 mb-0">
+                        Submitted requests will appear here.
+                    </p>
+
+                </div>
+
+                <p class="small text-secondary mt-2 mb-0"
+                    id="deactivationResultCount">
+                    0 requests displayed
+                </p>
+
+            </section>
+
+            <!-- GOVERNANCE NOTICE -->
+
+            <div class="sa-deactivation-warning">
+
+                <i class="bi bi-shield-lock-fill me-2"></i>
+
+                <strong>Data preservation:</strong>
+
+                Deactivation must not permanently erase
+                school academic records, student enrollment
+                history, announcements, grades, guardian
+                relationships or audit history.
+
+                Any approved deactivation and possible
+                future restoration must follow the authorized
+                Backend lifecycle and integrity rules.
+
+            </div>
+
+            <p class="text-secondary small mt-3 mb-0">
+
+                <i class="bi bi-info-circle me-1"></i>
+
+                Fictional sample information is used for
+                Frontend testing. No actual deactivation
+                request is sent to the Platform Administrator.
+
+            </p>
+
+        </section>
+
+        <footer class="main-footer">
+
+            GabayAral &copy;
+            <span id="saFooterYear">2026</span>
+            | School Administrator Workspace
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/layout.js"></script>
+<script src="../../assets/js/school-admin.js"></script>
+
+</body>
+</html>

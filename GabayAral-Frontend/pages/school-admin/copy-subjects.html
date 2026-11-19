@@ -1,0 +1,949 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Copy selected Subject Offerings between Sections in GabayAral.">
+    <meta name="theme-color" content="#16324F">
+
+    <title>Copy Subjects | GabayAral</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- GLOBAL DESIGN SYSTEM -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+
+    <!-- SHARED LAYOUT -->
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+
+    <!-- SCHOOL ADMINISTRATOR -->
+    <link rel="stylesheet" href="../../assets/css/school-admin.css">
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <!-- =====================================
+         SIDEBAR
+    ====================================== -->
+
+    <aside class="sidebar" id="sidebar"
+        aria-label="School Administrator navigation">
+
+        <div class="brand-block">
+
+            <a href="dashboard.html" class="brand">
+                <i class="bi bi-book-half"></i>
+                <span>GabayAral</span>
+            </a>
+
+            <span class="role-pill">
+                School Administrator
+            </span>
+
+        </div>
+
+        <nav class="side-nav">
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Overview</p>
+
+                <a href="dashboard.html" class="side-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>Dashboard</span>
+                </a>
+
+            </div>
+
+            <div class="nav-group">
+
+                <p class="nav-heading">School Management</p>
+
+                <a href="school-profile.html" class="side-link">
+                    <i class="bi bi-building"></i>
+                    <span>School Profile</span>
+                </a>
+
+                <a href="school-setup.html" class="side-link">
+                    <i class="bi bi-sliders"></i>
+                    <span>School Setup</span>
+                </a>
+
+                <a href="grade-levels.html" class="side-link">
+                    <i class="bi bi-diagram-3"></i>
+                    <span>Grade-Level Spaces</span>
+                </a>
+
+                <a href="sections.html" class="side-link">
+                    <i class="bi bi-people"></i>
+                    <span>Sections</span>
+                </a>
+
+                <a href="subject-library.html" class="side-link">
+                    <i class="bi bi-book"></i>
+                    <span>Subject Library</span>
+                </a>
+
+                <a href="subject-offerings.html" class="side-link">
+                    <i class="bi bi-journal-bookmark"></i>
+                    <span>Subject Offerings</span>
+                </a>
+
+                <a href="copy-subjects.html"
+                    class="side-link active"
+                    aria-current="page">
+                    <i class="bi bi-copy"></i>
+                    <span>Copy Subjects</span>
+                </a>
+
+            </div>
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Teacher Management</p>
+
+                <a href="teachers.html" class="side-link">
+                    <i class="bi bi-person-workspace"></i>
+                    <span>Teacher Directory</span>
+                </a>
+
+                <a href="teacher-invitations.html" class="side-link">
+                    <i class="bi bi-envelope-paper"></i>
+                    <span>Teacher Invitations</span>
+                </a>
+
+                <a href="teacher-replacement.html" class="side-link">
+                    <i class="bi bi-arrow-left-right"></i>
+                    <span>Teacher Replacement</span>
+                </a>
+
+            </div>
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Student Management</p>
+
+                <a href="student-enrollments.html" class="side-link">
+                    <i class="bi bi-mortarboard"></i>
+                    <span>Student Enrollments</span>
+                </a>
+
+                <a href="student-codes.html" class="side-link">
+                    <i class="bi bi-upc-scan"></i>
+                    <span>Student Subject Codes</span>
+                </a>
+
+                <a href="parent-codes.html" class="side-link">
+                    <i class="bi bi-qr-code"></i>
+                    <span>Parent Section Codes</span>
+                </a>
+
+            </div>
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Guardian Management</p>
+
+                <a href="guardian-requests.html" class="side-link">
+                    <i class="bi bi-person-check"></i>
+                    <span>Referred Guardian Requests</span>
+                </a>
+
+            </div>
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Communication</p>
+
+                <a href="announcements.html" class="side-link">
+                    <i class="bi bi-megaphone"></i>
+                    <span>School Announcements</span>
+                </a>
+
+            </div>
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Records & Workspace</p>
+
+                <a href="archives.html" class="side-link">
+                    <i class="bi bi-archive"></i>
+                    <span>Archive & Restoration</span>
+                </a>
+
+                <a href="deactivation-request.html" class="side-link">
+                    <i class="bi bi-building-x"></i>
+                    <span>Workspace Deactivation</span>
+                </a>
+
+                <a href="activity-history.html" class="side-link">
+                    <i class="bi bi-clock-history"></i>
+                    <span>Activity History</span>
+                </a>
+
+            </div>
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Account</p>
+
+                <a href="activity-history.html" class="side-link">
+                    <i class="bi bi-bell"></i>
+                    <span>Notifications</span>
+                </a>
+
+                <a href="easy-access.html" class="side-link">
+                    <i class="bi bi-universal-access"></i>
+                    <span>EasyAccess</span>
+                </a>
+
+                <a href="../../index.html" class="side-link">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Return to Homepage</span>
+                </a>
+
+            </div>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <span class="footer-dot"></span>
+            School Workspace
+        </div>
+
+    </aside>
+
+    <!-- MOBILE BACKDROP -->
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <!-- =====================================
+         MAIN WORKSPACE
+    ====================================== -->
+
+    <main class="main-area">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <button
+                type="button"
+                class="icon-button-ga mobile-menu"
+                id="menuToggle"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+                <i class="bi bi-list"></i>
+
+            </button>
+
+            <!-- BREADCRUMBS -->
+            <div class="breadcrumbs">
+
+                <i class="bi bi-house-door-fill"></i>
+
+                <span>School Administration</span>
+
+                <span>/</span>
+
+                <strong>Copy Subjects</strong>
+
+            </div>
+
+            <!-- IMPORTANT: OPEN TOPBAR TOOLS WRAPPER -->
+            <div class="topbar-tools">
+
+                <!-- SCHOOL SELECTOR -->
+                <div class="school-selector-wrapper"
+                    id="schoolSelectorWrapper">
+
+                    <button
+                        type="button"
+                        class="school-select"
+                        id="schoolSelectButton"
+                        aria-label="Select school workspace"
+                        aria-expanded="false"
+                        aria-controls="schoolSelectMenu">
+
+                        <span class="school-select-current">
+
+                            <i class="bi bi-bank me-1"></i>
+
+                            <span id="schoolSelectCurrentName">
+                                San Isidro National High School
+                            </span>
+
+                        </span>
+
+                        <i class="bi bi-chevron-down school-select-chevron"></i>
+
+                    </button>
+
+                    <div
+                        class="school-select-menu"
+                        id="schoolSelectMenu"
+                        role="menu"
+                        aria-label="Available school workspaces"
+                        hidden>
+
+                        <div class="school-select-menu-header">
+                            <strong>School Workspaces</strong>
+                            <span>Select an available workspace</span>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="school-select-option active"
+                            data-school-id="school-001"
+                            data-school-name="San Isidro National High School"
+                            role="menuitemradio"
+                            aria-checked="true">
+
+                            <span class="school-option-icon">
+                                <i class="bi bi-bank"></i>
+                            </span>
+
+                            <span class="school-option-details">
+                                <strong>San Isidro National High School</strong>
+                                <small>Current workspace</small>
+                            </span>
+
+                            <i class="bi bi-check-circle-fill school-option-check"></i>
+
+                        </button>
+
+                        <button
+                            type="button"
+                            class="school-select-option"
+                            data-school-id="demo-school-002"
+                            data-school-name="Sample School Workspace B"
+                            role="menuitemradio"
+                            aria-checked="false">
+
+                            <span class="school-option-icon">
+                                <i class="bi bi-building"></i>
+                            </span>
+
+                            <span class="school-option-details">
+                                <strong>Sample School Workspace B</strong>
+                                <small>Demonstration workspace only</small>
+                            </span>
+
+                        </button>
+
+                        <div class="school-select-menu-footer">
+                            <i class="bi bi-info-circle"></i>
+                            School switching is a frontend demonstration.
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- NOTIFICATIONS -->
+                <a
+                    href="activity-history.html"
+                    class="icon-button-ga"
+                    aria-label="Open activity history and notifications"
+                    title="Notifications">
+
+                    <i class="bi bi-bell"></i>
+
+                </a>
+
+                <!-- ADMINISTRATOR PROFILE -->
+                
+<div class="admin-profile-wrapper" id="adminProfileWrapper">
+
+    <button
+        type="button"
+        class="profile-button"
+        id="adminProfileButton"
+        aria-label="Administrator account menu"
+        aria-expanded="false"
+        aria-controls="adminProfileMenu">
+
+        <span class="avatar">
+            <i class="bi bi-person-fill"></i>
+        </span>
+
+        <span>Administrator</span>
+
+        <i class="bi bi-chevron-down admin-profile-chevron"></i>
+
+    </button>
+
+    <div
+        class="admin-profile-menu"
+        id="adminProfileMenu"
+        aria-label="Administrator account options"
+        hidden>
+
+        <div class="admin-profile-menu-header">
+
+            <span class="admin-profile-menu-avatar">
+                <i class="bi bi-person-fill"></i>
+            </span>
+
+            <div>
+                <strong>Administrator</strong>
+                <small>School Administrator</small>
+            </div>
+
+        </div>
+
+        <div class="admin-profile-menu-divider"></div>
+
+        <a
+            href="school-profile.html"
+            class="admin-profile-menu-item">
+
+            <i class="bi bi-person-gear"></i>
+            <span>Profile Settings</span>
+
+        </a>
+
+        <a
+            href="easy-access.html"
+            class="admin-profile-menu-item">
+
+            <i class="bi bi-universal-access"></i>
+            <span>EasyAccess</span>
+
+        </a>
+
+        <button
+            type="button"
+            class="admin-profile-menu-item"
+            id="adminAccountSecurityButton">
+
+            <i class="bi bi-shield-lock"></i>
+            <span>Account Security</span>
+            <small>Coming soon</small>
+
+        </button>
+
+        <div class="admin-profile-menu-divider"></div>
+
+        <button
+            type="button"
+            class="admin-profile-menu-item danger"
+            id="adminSignOutButton">
+
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Sign Out</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+
+            </div>
+            <!-- END TOPBAR TOOLS -->
+
+        </header>
+
+        <!-- =====================================
+             COPY SUBJECTS PAGE CONTENT
+        ====================================== -->
+
+        <section class="main-content">
+
+            <!-- PAGE HEADING -->
+            <div class="page-heading">
+
+                <div>
+
+                    <h1>Copy Subjects</h1>
+
+                    <p>
+                        Copy selected Subject Offerings
+                        from one Section to another.
+                    </p>
+
+                </div>
+
+                <div class="heading-actions">
+
+                    <a href="subject-offerings.html"
+                        class="btn-ga btn-ga-outline">
+
+                        <i class="bi bi-arrow-left"></i>
+                        Subject Offerings
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- IMPORTANT NOTICE -->
+            <div class="sa-copy-info">
+
+                <i class="bi bi-info-circle"></i>
+
+                <span>
+                    This tool copies selected Subject definitions
+                    into separate Subject Offerings for a
+                    destination Section. Teacher assignment
+                    information is presented only as a suggestion
+                    for review.
+                </span>
+
+            </div>
+
+            <!-- WARNING NOTICE -->
+            <div class="sa-copy-info sa-copy-warning">
+
+                <i class="bi bi-shield-exclamation"></i>
+
+                <span>
+                    Copying does not duplicate announcements,
+                    activities, Student enrollments, submissions,
+                    grades or Guardian acknowledgments.
+                    Existing destination Offerings are skipped.
+                </span>
+
+            </div>
+
+            <!-- =====================================
+                 FIVE-STEP WIZARD
+            ====================================== -->
+
+            <div class="sa-copy-container">
+
+                <div class="sa-copy-card">
+
+                    <form id="copySubjectsForm">
+
+                        <!-- PROGRESS STEPS -->
+                        <div class="sa-copy-progress">
+
+                            <div class="sa-copy-step active">
+                                <div class="sa-copy-step-number">1</div>
+                                <span>Source</span>
+                            </div>
+
+                            <div class="sa-copy-step">
+                                <div class="sa-copy-step-number">2</div>
+                                <span>Destination</span>
+                            </div>
+
+                            <div class="sa-copy-step">
+                                <div class="sa-copy-step-number">3</div>
+                                <span>Subjects</span>
+                            </div>
+
+                            <div class="sa-copy-step">
+                                <div class="sa-copy-step-number">4</div>
+                                <span>Teachers</span>
+                            </div>
+
+                            <div class="sa-copy-step">
+                                <div class="sa-copy-step-number">5</div>
+                                <span>Review</span>
+                            </div>
+
+                        </div>
+
+                        <!-- PROGRESS BAR -->
+                        <div class="sa-copy-progress-line">
+
+                            <div
+                                class="sa-copy-progress-fill"
+                                id="copyProgressFill">
+                            </div>
+
+                        </div>
+
+                        <!-- STEP 1: SOURCE -->
+                        <section class="sa-copy-panel active">
+
+                            <h2>
+                                <i class="bi bi-box-arrow-up-right me-2"></i>
+                                Select Source Section
+                            </h2>
+
+                            <p class="sa-copy-description">
+                                Select the existing Section whose
+                                active Subject Offerings you want to copy.
+                            </p>
+
+                            <div class="mb-3">
+
+                                <label
+                                    for="copySourceSection"
+                                    class="form-label">
+                                    Source Section
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    id="copySourceSection"
+                                    required>
+
+                                    <option value="">
+                                        Select Source Section
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                            <div class="sa-copy-info">
+
+                                <i class="bi bi-info-circle"></i>
+
+                                <span>
+                                    Only active Subject Offerings from
+                                    the selected source Section are
+                                    available for copying.
+                                </span>
+
+                            </div>
+
+                        </section>
+
+                        <!-- STEP 2: DESTINATION -->
+                        <section class="sa-copy-panel">
+
+                            <h2>
+                                <i class="bi bi-box-arrow-in-down me-2"></i>
+                                Select Destination Section
+                            </h2>
+
+                            <p class="sa-copy-description">
+                                Choose the Section that will receive
+                                the selected Subject Offerings.
+                            </p>
+
+                            <div class="mb-3">
+
+                                <label
+                                    for="copyDestinationSection"
+                                    class="form-label">
+                                    Destination Section
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    id="copyDestinationSection"
+                                    required>
+
+                                    <option value="">
+                                        Select Destination Section
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                            <div class="sa-copy-info">
+
+                                <i class="bi bi-shield-check"></i>
+
+                                <span>
+                                    The source and destination must
+                                    be different Sections within the
+                                    same authorized School workspace.
+                                </span>
+
+                            </div>
+
+                        </section>
+
+                        <!-- STEP 3: SUBJECT SELECTION -->
+                        <section class="sa-copy-panel">
+
+                            <h2>
+                                <i class="bi bi-journal-check me-2"></i>
+                                Select Subjects to Copy
+                            </h2>
+
+                            <p class="sa-copy-description">
+                                Select which active Subject Offerings
+                                from the source Section should be
+                                prepared for the destination.
+                            </p>
+
+                            <div class="sa-copy-toolbar">
+
+                                <strong>
+                                    Available Subject Offerings
+                                </strong>
+
+                                <div>
+
+                                    <button
+                                        type="button"
+                                        id="copySelectAll">
+                                        Select All
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        id="copyClearAll">
+                                        Clear All
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                            <div id="copySubjectList"></div>
+
+                            <div class="sa-copy-info">
+
+                                <i class="bi bi-info-circle"></i>
+
+                                <span>
+                                    A subject that already has an
+                                    Offering in the destination Section
+                                    will be unavailable for copying.
+                                    Review or restore the existing
+                                    Offering instead.
+                                </span>
+
+                            </div>
+
+                        </section>
+
+                        <!-- STEP 4: TEACHER REVIEW -->
+                        <section class="sa-copy-panel">
+
+                            <h2>
+                                <i class="bi bi-person-check me-2"></i>
+                                Review Teacher Suggestions
+                            </h2>
+
+                            <p class="sa-copy-description">
+                                Review available Teacher information
+                                from the source Offerings. You may
+                                retain it as a suggestion for the
+                                destination assignment process.
+                            </p>
+
+                            <div class="sa-copy-info">
+
+                                <i class="bi bi-shield-check"></i>
+
+                                <span>
+                                    Retaining a suggestion does not
+                                    create an active Teacher Assignment,
+                                    send an invitation or transfer an
+                                    existing assignment. Teacher
+                                    assignment remains a separate
+                                    authorized workflow.
+                                </span>
+
+                            </div>
+
+                            <div id="copyTeacherList"></div>
+
+                        </section>
+
+                        <!-- STEP 5: FINAL REVIEW -->
+                        <section class="sa-copy-panel">
+
+                            <h2>
+                                <i class="bi bi-clipboard-check me-2"></i>
+                                Review Copy Operation
+                            </h2>
+
+                            <p class="sa-copy-description">
+                                Check the source, destination,
+                                selected subjects and Teacher
+                                suggestions before completing
+                                the demonstration.
+                            </p>
+
+                            <div class="sa-copy-summary">
+
+                                <h3>Source Section</h3>
+
+                                <p id="copySummarySource">
+                                    Not selected
+                                </p>
+
+                            </div>
+
+                            <div class="sa-copy-summary">
+
+                                <h3>Destination Section</h3>
+
+                                <p id="copySummaryDestination">
+                                    Not selected
+                                </p>
+
+                            </div>
+
+                            <div class="sa-copy-summary">
+
+                                <h3>Selected Subjects</h3>
+
+                                <p id="copySummarySubjects">
+                                    None selected
+                                </p>
+
+                            </div>
+
+                            <div class="sa-copy-summary">
+
+                                <h3>Teacher Suggestions for Review</h3>
+
+                                <p id="copySummaryTeachers">
+                                    None selected
+                                </p>
+
+                            </div>
+
+                            <div class="sa-copy-summary">
+
+                                <h3>Expected Result</h3>
+
+                                <p id="copySummaryResult">
+                                    Not calculated
+                                </p>
+
+                            </div>
+
+                            <div class="sa-copy-info sa-copy-warning">
+
+                                <i class="bi bi-exclamation-triangle"></i>
+
+                                <span>
+                                    The demonstration creates only
+                                    temporary Subject Offering records.
+                                    Actual copying must be validated
+                                    and committed by the Backend.
+                                </span>
+
+                            </div>
+
+                            <div
+                                id="copyCompletionResult"
+                                class="sa-copy-result"
+                                hidden>
+                            </div>
+
+                        </section>
+
+                        <!-- WIZARD MESSAGE -->
+                        <div
+                            id="copySubjectsMessage"
+                            class="sa-copy-message"
+                            role="status"
+                            aria-live="polite">
+                        </div>
+
+                        <!-- WIZARD NAVIGATION -->
+                        <div class="sa-copy-navigation">
+
+                            <button
+                                type="button"
+                                class="btn-ga btn-ga-outline"
+                                id="copyPrevious"
+                                hidden>
+
+                                <i class="bi bi-arrow-left"></i>
+                                Previous
+
+                            </button>
+
+                            <span
+                                class="sa-copy-counter"
+                                id="copyStepLabel">
+                                Step 1 of 5
+                            </span>
+
+                            <button
+                                type="button"
+                                class="btn-ga btn-ga-primary"
+                                id="copyNext">
+
+                                Next
+                                <i class="bi bi-arrow-right"></i>
+
+                            </button>
+
+                            <button
+                                type="button"
+                                class="btn-ga btn-ga-primary"
+                                id="copyFinish"
+                                hidden>
+
+                                Confirm Demo Copy
+                                <i class="bi bi-check-lg"></i>
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <!-- FINAL INFORMATION NOTICE -->
+            <p class="text-secondary small mt-3 mb-0">
+
+                <i class="bi bi-info-circle me-1"></i>
+
+                Frontend demonstration only. The source,
+                destination, subject and Teacher records
+                are sample data and are not saved to PostgreSQL.
+
+            </p>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="main-footer">
+
+            GabayAral &copy;
+            <span id="saFooterYear">2026</span>
+
+            | School Administrator Workspace
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- BOOTSTRAP JAVASCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- SHARED LAYOUT -->
+<script src="../../assets/js/layout.js"></script>
+
+<!-- SCHOOL ADMINISTRATOR -->
+<script src="../../assets/js/school-admin.js"></script>
+
+</body>
+</html>

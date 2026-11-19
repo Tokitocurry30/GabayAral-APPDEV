@@ -256,15 +256,15 @@
 
                 <p class="nav-heading">Account</p>
 
-                <a href="#" class="side-link">
-                    <i class="bi bi-bell"></i>
-                    <span>Notifications</span>
-                </a>
+                <a href="activity-history.html" class="side-link">
+    <i class="bi bi-bell"></i>
+    <span>Notifications</span>
+</a>
 
-                <a href="#" class="side-link">
-                    <i class="bi bi-universal-access"></i>
-                    <span>EasyAccess</span>
-                </a>
+                <a href="easy-access.html" class="side-link">
+    <i class="bi bi-universal-access"></i>
+    <span>EasyAccess</span>
+</a>
 
                 <a href="../../index.html" class="side-link">
                     <i class="bi bi-box-arrow-right"></i>
@@ -330,44 +330,188 @@
 
             <div class="topbar-tools">
 
-                <button
-                    type="button"
-                    class="school-select"
-                    aria-label="Current school context">
+                
+<div class="school-selector-wrapper" id="schoolSelectorWrapper">
 
-                    <span>
-                        <i class="bi bi-bank me-1"></i>
-                        San Isidro National High School
-                    </span>
+    <button
+        type="button"
+        class="school-select"
+        id="schoolSelectButton"
+        aria-label="Select school workspace"
+        aria-expanded="false"
+        aria-controls="schoolSelectMenu">
 
-                    <i class="bi bi-chevron-down"></i>
+        <span class="school-select-current">
+            <i class="bi bi-bank me-1"></i>
+            <span id="schoolSelectCurrentName">
+                San Isidro National High School
+            </span>
+        </span>
 
-                </button>
+        <i class="bi bi-chevron-down school-select-chevron"></i>
+
+    </button>
+
+    <div
+        class="school-select-menu"
+        id="schoolSelectMenu"
+        role="menu"
+        aria-label="Available school workspaces"
+        hidden>
+
+        <div class="school-select-menu-header">
+            <strong>School Workspaces</strong>
+            <span>Select an available workspace</span>
+        </div>
+
+        <button
+            type="button"
+            class="school-select-option active"
+            data-school-id="school-001"
+            data-school-name="San Isidro National High School"
+            role="menuitemradio"
+            aria-checked="true">
+
+            <span class="school-option-icon">
+                <i class="bi bi-bank"></i>
+            </span>
+
+            <span class="school-option-details">
+                <strong>San Isidro National High School</strong>
+                <small>Current workspace</small>
+            </span>
+
+            <i class="bi bi-check-circle-fill school-option-check"></i>
+        </button>
+
+        <button
+            type="button"
+            class="school-select-option"
+            data-school-id="demo-school-002"
+            data-school-name="Sample School Workspace B"
+            role="menuitemradio"
+            aria-checked="false">
+
+            <span class="school-option-icon">
+                <i class="bi bi-building"></i>
+            </span>
+
+            <span class="school-option-details">
+                <strong>Sample School Workspace B</strong>
+                <small>Demonstration workspace only</small>
+            </span>
+
+        </button>
+
+        <div class="school-select-menu-footer">
+            <i class="bi bi-info-circle"></i>
+            School switching is a frontend demonstration.
+        </div>
+
+    </div>
+
+</div>
 
 
-                <button
-                    type="button"
+
+                <a
+                    href="activity-history.html"
                     class="icon-button-ga"
-                    aria-label="Notifications">
+                    aria-label="Open activity history and notifications"
+                    title="Notifications">
 
                     <i class="bi bi-bell"></i>
 
-                </button>
+                </a>
 
 
-                <button
-                    type="button"
-                    class="profile-button">
+                
+<div class="admin-profile-wrapper" id="adminProfileWrapper">
 
-                    <span class="avatar">
-                        <i class="bi bi-person-fill"></i>
-                    </span>
+    <button
+        type="button"
+        class="profile-button"
+        id="adminProfileButton"
+        aria-label="Administrator account menu"
+        aria-expanded="false"
+        aria-controls="adminProfileMenu">
 
-                    <span>Administrator</span>
+        <span class="avatar">
+            <i class="bi bi-person-fill"></i>
+        </span>
 
-                    <i class="bi bi-chevron-down"></i>
+        <span>Administrator</span>
 
-                </button>
+        <i class="bi bi-chevron-down admin-profile-chevron"></i>
+
+    </button>
+
+    <div
+        class="admin-profile-menu"
+        id="adminProfileMenu"
+        aria-label="Administrator account options"
+        hidden>
+
+        <div class="admin-profile-menu-header">
+
+            <span class="admin-profile-menu-avatar">
+                <i class="bi bi-person-fill"></i>
+            </span>
+
+            <div>
+                <strong>Administrator</strong>
+                <small>School Administrator</small>
+            </div>
+
+        </div>
+
+        <div class="admin-profile-menu-divider"></div>
+
+        <a
+            href="school-profile.html"
+            class="admin-profile-menu-item">
+
+            <i class="bi bi-person-gear"></i>
+            <span>Profile Settings</span>
+
+        </a>
+
+        <a
+            href="easy-access.html"
+            class="admin-profile-menu-item">
+
+            <i class="bi bi-universal-access"></i>
+            <span>EasyAccess</span>
+
+        </a>
+
+        <button
+            type="button"
+            class="admin-profile-menu-item"
+            id="adminAccountSecurityButton">
+
+            <i class="bi bi-shield-lock"></i>
+            <span>Account Security</span>
+            <small>Coming soon</small>
+
+        </button>
+
+        <div class="admin-profile-menu-divider"></div>
+
+        <button
+            type="button"
+            class="admin-profile-menu-item danger"
+            id="adminSignOutButton">
+
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Sign Out</span>
+
+        </button>
+
+    </div>
+
+</div>
+
 
             </div>
 
