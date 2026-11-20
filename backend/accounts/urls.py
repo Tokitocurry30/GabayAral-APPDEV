@@ -9,6 +9,9 @@ Authentication API Contract v0.1.
 
 from django.urls import path
 
+from django.urls import path
+from .views import school_admin_dashboard
+
 app_name = "accounts"
 
 urlpatterns = [
@@ -24,4 +27,15 @@ urlpatterns = [
     # POST /api/auth/resend-verification/
     # GET  /api/auth/schools/
     # POST /api/auth/select-school/
+]
+
+
+app_name = "accounts"
+
+urlpatterns = [
+    path(
+        "school-admin/dashboard/",
+        school_admin_dashboard,
+        name="school_admin_dashboard",
+    ),
 ]
