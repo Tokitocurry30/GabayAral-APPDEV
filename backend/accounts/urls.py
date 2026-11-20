@@ -1,22 +1,30 @@
 """
-GabayAral Authentication API Routes
+GabayAral Authentication and School Admin API Routes
 
-Status: Planning only
+Authentication endpoints are planned.
 
-Endpoints will be added after approval of
-Authentication API Contract v0.1.
+School Admin dashboard and user invitation routes
+are registered but remain protected until
+school-scoped authorization is implemented.
 """
 
 from django.urls import path
 
-from django.urls import path
-from .views import school_admin_dashboard
+from .views import (
+    school_admin_dashboard,
+    invite_school_user,
+    login_user,
+)
 
 app_name = "accounts"
 
+
 urlpatterns = [
-    # Proposed endpoints (not implemented):
-    #
+
+    # ==========================================
+    # AUTHENTICATION API (PLANNED)
+    # ==========================================
+
     # POST /api/auth/register/
     # POST /api/auth/login/
     # POST /api/auth/logout/
@@ -27,15 +35,33 @@ urlpatterns = [
     # POST /api/auth/resend-verification/
     # GET  /api/auth/schools/
     # POST /api/auth/select-school/
-]
 
 
-app_name = "accounts"
+    # ==========================================
+    # SCHOOL ADMIN DASHBOARD
+    # ==========================================
 
-urlpatterns = [
     path(
         "school-admin/dashboard/",
         school_admin_dashboard,
         name="school_admin_dashboard",
     ),
+
+
+    # ==========================================
+    # SCHOOL ADMIN USER MANAGEMENT
+    # ==========================================
+
+    path(
+        "school-admin/users/invite/",
+        invite_school_user,
+        name="invite_school_user",
+    ),
+
+    path(
+    "login/",
+    login_user,
+    name="login",
+),
+
 ]
