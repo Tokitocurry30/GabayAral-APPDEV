@@ -1,0 +1,1013 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+
+    <title>ClearPost | GabayAral</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- INTER FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SHARED CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+
+    <!-- TEACHER CSS -->
+    <link rel="stylesheet" href="../../assets/css/teacher.css">
+
+</head>
+
+<body>
+
+<div class="app-shell teacher-app">
+
+    <!-- =========================================
+         TEACHER SIDEBAR
+    ========================================== -->
+
+    <aside class="sidebar teacher-sidebar" id="sidebar">
+
+        <div class="brand-block">
+
+            <a href="dashboard.html" class="brand">
+                <i class="bi bi-book-half"></i>
+                <span>GabayAral</span>
+            </a>
+
+            <span class="role-pill">Teacher Workspace</span>
+
+        </div>
+
+
+        <nav class="side-nav">
+
+            <!-- OVERVIEW -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Overview</p>
+
+                <a href="dashboard.html" class="side-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="my-offerings.html" class="side-link">
+                    <i class="bi bi-journal-bookmark"></i>
+                    <span>My Subject Offerings</span>
+                </a>
+
+                <a href="my-students.html" class="side-link">
+                    <i class="bi bi-people"></i>
+                    <span>My Students</span>
+                </a>
+
+            </div>
+
+
+            <!-- TEACHING AND LEARNING -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Teaching & Learning</p>
+
+                <a href="activities.html" class="side-link">
+                    <i class="bi bi-journal-text"></i>
+                    <span>Activities</span>
+                </a>
+
+                <a href="submissions.html" class="side-link">
+                    <i class="bi bi-inbox"></i>
+                    <span>Submissions & Revisions</span>
+                </a>
+
+                <a href="quizzes.html" class="side-link">
+                    <i class="bi bi-ui-checks"></i>
+                    <span>Quizzes</span>
+                </a>
+
+                <a href="grades.html" class="side-link">
+                    <i class="bi bi-clipboard-data"></i>
+                    <span>Grades & Feedback</span>
+                </a>
+
+                <a href="grade-reviews.html" class="side-link">
+                    <i class="bi bi-clipboard-check"></i>
+                    <span>Grade Review Cases</span>
+                </a>
+
+            </div>
+
+
+            <!-- COMMUNICATION -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Communication</p>
+
+                <a href="announcements.html" class="side-link">
+                    <i class="bi bi-megaphone"></i>
+                    <span>Announcements</span>
+                </a>
+
+                <a href="clearpost.html"
+                   class="side-link active"
+                   aria-current="page">
+
+                    <i class="bi bi-stars"></i>
+                    <span>ClearPost</span>
+
+                </a>
+
+                <a href="guardian-requests.html" class="side-link">
+    <i class="bi bi-person-check"></i>
+    <span>Guardian Requests</span>
+</a>
+
+                <a href="parent-acknowledgments.html" class="side-link">
+    <i class="bi bi-check2-square"></i>
+    <span>Parent Acknowledgments</span>
+</a>
+
+            </div>
+
+
+            <!-- PLANNING -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Planning</p>
+
+                <a href="teacher-calendar.html" class="side-link">
+    <i class="bi bi-calendar3"></i>
+    <span>Teacher Calendar</span>
+</a>
+
+            </div>
+
+
+            <!-- WORKSPACE -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Workspace</p>
+
+                <a href="notifications.html" class="side-link">
+    <i class="bi bi-bell"></i>
+    <span>Notifications</span>
+</a>
+
+                <a href="activity-history.html" class="side-link">
+    <i class="bi bi-clock-history"></i>
+    <span>Activity History</span>
+</a>
+
+                <a href="easyaccess.html" class="side-link">
+    <i class="bi bi-universal-access"></i>
+    <span>EasyAccess</span>
+</a>
+
+            </div>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+            <span class="footer-dot"></span>
+            Teacher Workspace
+        </div>
+
+    </aside>
+
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+
+    <!-- =========================================
+         MAIN AREA
+    ========================================== -->
+
+    <main class="main-area">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar teacher-topbar">
+
+            <button type="button"
+                class="icon-button-ga mobile-menu"
+                id="menuToggle"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+                <i class="bi bi-list"></i>
+
+            </button>
+
+
+            <!-- BREADCRUMB -->
+
+            <div class="breadcrumbs">
+
+                <i class="bi bi-house-door-fill"></i>
+
+                <span>Teacher Workspace</span>
+
+                <span>/</span>
+
+                <strong>ClearPost</strong>
+
+            </div>
+
+
+            <div class="topbar-tools">
+
+
+                <!-- SCHOOL SELECTOR -->
+
+                <div class="school-selector-wrapper"
+                     id="teacherSchoolSelectorWrapper">
+
+                    <button type="button"
+                        class="school-select"
+                        id="teacherSchoolSelectButton"
+                        aria-label="Select school workspace"
+                        aria-expanded="false"
+                        aria-controls="teacherSchoolSelectMenu">
+
+                        <span class="school-select-current">
+
+                            <i class="bi bi-bank me-1"></i>
+
+                            <span id="teacherSchoolCurrentName">
+                                San Isidro National High School
+                            </span>
+
+                        </span>
+
+                        <i class="bi bi-chevron-down school-select-chevron"></i>
+
+                    </button>
+
+
+                    <div class="school-select-menu"
+                         id="teacherSchoolSelectMenu"
+                         role="menu"
+                         aria-label="Available school workspaces"
+                         hidden>
+
+                        <div class="school-select-menu-header">
+
+                            <strong>School Workspaces</strong>
+
+                            <span>Select an available workspace</span>
+
+                        </div>
+
+
+                        <button type="button"
+                            class="school-select-option active"
+                            data-school-id="school-001"
+                            data-school-name="San Isidro National High School"
+                            role="menuitemradio"
+                            aria-checked="true">
+
+                            <span class="school-option-icon">
+                                <i class="bi bi-bank"></i>
+                            </span>
+
+                            <span class="school-option-details">
+
+                                <strong>
+                                    San Isidro National High School
+                                </strong>
+
+                                <small>Current workspace</small>
+
+                            </span>
+
+                            <i class="bi bi-check-circle-fill school-option-check"></i>
+
+                        </button>
+
+
+                        <button type="button"
+                            class="school-select-option"
+                            data-school-id="demo-school-002"
+                            data-school-name="Sample School Workspace B"
+                            role="menuitemradio"
+                            aria-checked="false">
+
+                            <span class="school-option-icon">
+                                <i class="bi bi-building"></i>
+                            </span>
+
+                            <span class="school-option-details">
+
+                                <strong>Sample School Workspace B</strong>
+
+                                <small>Demonstration workspace only</small>
+
+                            </span>
+
+                        </button>
+
+
+                        <div class="school-select-menu-footer">
+
+                            <i class="bi bi-info-circle"></i>
+
+                            School switching is a frontend demonstration.
+                            Authorized memberships will be supplied by the Backend.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SEARCH -->
+
+                <label class="search-box teacher-dashboard-search">
+
+                    <i class="bi bi-search"></i>
+
+                    <input type="search"
+                        id="teacherClearPostTopbarSearch"
+                        placeholder="Search ClearPost..."
+                        aria-label="Search ClearPost">
+
+                </label>
+
+
+                <!-- NOTIFICATIONS -->
+
+                <button type="button"
+                    class="icon-button-ga"
+                    id="teacherNotificationButton"
+                    aria-label="Open notifications">
+
+                    <i class="bi bi-bell"></i>
+
+                </button>
+
+
+                <!-- PROFILE -->
+
+                <div class="admin-profile-wrapper"
+                     id="teacherProfileWrapper">
+
+                    <button type="button"
+                        class="profile-button"
+                        id="teacherProfileButton"
+                        aria-label="Teacher account menu"
+                        aria-expanded="false"
+                        aria-controls="teacherProfileMenu">
+
+                        <span class="avatar">
+                            <i class="bi bi-person-fill"></i>
+                        </span>
+
+                        <span>Teacher</span>
+
+                        <i class="bi bi-chevron-down admin-profile-chevron"></i>
+
+                    </button>
+
+
+                    <div class="admin-profile-menu"
+                         id="teacherProfileMenu"
+                         aria-label="Teacher account options"
+                         hidden>
+
+                        <div class="admin-profile-menu-header">
+
+                            <span class="admin-profile-menu-avatar">
+                                <i class="bi bi-person-fill"></i>
+                            </span>
+
+                            <div>
+                                <strong>Teacher</strong>
+                                <small>Teacher Workspace</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="admin-profile-menu-divider"></div>
+
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="profile">
+
+                            <i class="bi bi-person-gear"></i>
+                            <span>Profile Settings</span>
+
+                        </button>
+
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="security">
+
+                            <i class="bi bi-shield-lock"></i>
+                            <span>Account Security</span>
+                            <small>Coming soon</small>
+
+                        </button>
+
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="accessibility">
+
+                            <i class="bi bi-universal-access"></i>
+                            <span>EasyAccess</span>
+
+                        </button>
+
+
+                        <div class="admin-profile-menu-divider"></div>
+
+
+                        <button type="button"
+                            class="admin-profile-menu-item danger"
+                            data-profile-action="signout">
+
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span>Sign Out</span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================================
+             CLEARPOST CONTENT
+        ========================================== -->
+
+        <section class="main-content teacher-content">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="teacher-clearpost-heading">
+
+                <div>
+
+                    <span class="teacher-eyebrow">
+                        COMMUNICATION ASSISTANCE
+                    </span>
+
+                    <h1>ClearPost</h1>
+
+                    <p>
+                        Prepare and validate announcement content before
+                        submitting it for Teacher review and approval.
+                    </p>
+
+                </div>
+
+
+                <div class="teacher-clearpost-heading-icon">
+                    <i class="bi bi-stars"></i>
+                </div>
+
+            </div>
+
+
+            <!-- DEMONSTRATION NOTICE -->
+
+            <div class="teacher-clearpost-notice" role="note">
+
+                <i class="bi bi-info-circle-fill"></i>
+
+                <div>
+
+                    <strong>ClearPost and AI Content Assistant</strong>
+
+                    <span>
+                        ClearPost uses rule-based validation. AI assistance
+                        is optional, and AI-generated content must remain
+                        a draft until reviewed and approved by the Teacher.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- WORKFLOW -->
+
+            <section class="teacher-panel teacher-clearpost-workflow">
+
+                <div class="teacher-clearpost-section-heading">
+
+                    <div>
+
+                        <h2>Announcement Preparation Workflow</h2>
+
+                        <p>
+                            Follow the required steps before publication.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="teacher-clearpost-steps">
+
+
+                    <div class="teacher-clearpost-step active">
+
+                        <span class="teacher-clearpost-step-number">
+                            1
+                        </span>
+
+                        <div>
+                            <strong>Prepare Draft</strong>
+                            <small>Write announcement content</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="teacher-clearpost-step-connector"></div>
+
+
+                    <div class="teacher-clearpost-step">
+
+                        <span class="teacher-clearpost-step-number">
+                            2
+                        </span>
+
+                        <div>
+                            <strong>ClearPost Check</strong>
+                            <small>Validate the draft</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="teacher-clearpost-step-connector"></div>
+
+
+                    <div class="teacher-clearpost-step">
+
+                        <span class="teacher-clearpost-step-number">
+                            3
+                        </span>
+
+                        <div>
+                            <strong>Teacher Review</strong>
+                            <small>Review and approve</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="teacher-clearpost-step-connector"></div>
+
+
+                    <div class="teacher-clearpost-step">
+
+                        <span class="teacher-clearpost-step-number">
+                            4
+                        </span>
+
+                        <div>
+                            <strong>Publication</strong>
+                            <small>Publish or schedule</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- MAIN TWO-COLUMN AREA -->
+
+            <div class="teacher-clearpost-layout">
+
+
+                <!-- LEFT: ANNOUNCEMENT COMPOSER -->
+
+                <section class="teacher-panel teacher-clearpost-composer">
+
+                    <div class="teacher-clearpost-section-heading">
+
+                        <div>
+
+                            <h2>Announcement Draft</h2>
+
+                            <p>
+                                Prepare the content you want to validate.
+                            </p>
+
+                        </div>
+
+                        <span class="teacher-clearpost-draft-badge">
+                            <i class="bi bi-file-earmark-text"></i>
+                            Draft
+                        </span>
+
+                    </div>
+
+
+                    <form id="teacherClearPostForm" novalidate>
+
+
+                        <!-- TITLE -->
+
+                        <div class="teacher-clearpost-field">
+
+                            <label for="teacherClearPostTitle">
+                                Announcement Title
+                                <span>*</span>
+                            </label>
+
+                            <input type="text"
+                                id="teacherClearPostTitle"
+                                name="announcementTitle"
+                                placeholder="Enter announcement title"
+                                autocomplete="off"
+                                required>
+
+                            <small>
+                                Enter a clear and meaningful announcement title.
+                            </small>
+
+                        </div>
+
+
+                        <!-- CONTENT -->
+
+                        <div class="teacher-clearpost-field">
+
+                            <div class="teacher-clearpost-label-row">
+
+                                <label for="teacherClearPostContent">
+                                    Announcement Content
+                                    <span>*</span>
+                                </label>
+
+                                <span id="teacherClearPostCharacterCount">
+                                    0 characters
+                                </span>
+
+                            </div>
+
+
+                            <textarea id="teacherClearPostContent"
+                                name="announcementContent"
+                                rows="11"
+                                placeholder="Write your announcement here..."
+                                required></textarea>
+
+                            <small>
+                                Write the complete announcement message.
+                            </small>
+
+                        </div>
+
+
+                        <!-- EDITOR INFORMATION -->
+
+                        <div class="teacher-clearpost-editor-note">
+
+                            <i class="bi bi-shield-check"></i>
+
+                            <span>
+                                Your draft remains private in this demonstration.
+                                It will not be published automatically.
+                            </span>
+
+                        </div>
+
+
+                        <!-- FORM ACTIONS -->
+
+                        <div class="teacher-clearpost-form-actions">
+
+                            <button type="button"
+                                class="teacher-clearpost-secondary-button"
+                                id="teacherClearPostReset">
+
+                                <i class="bi bi-arrow-counterclockwise"></i>
+
+                                Clear Draft
+
+                            </button>
+
+
+                            <button type="button"
+                                class="teacher-clearpost-primary-button"
+                                id="teacherClearPostRunCheck">
+
+                                <i class="bi bi-shield-check"></i>
+
+                                Run ClearPost Check
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+
+                <!-- RIGHT: VALIDATION PANEL -->
+
+                <section class="teacher-panel teacher-clearpost-validation">
+
+                    <div class="teacher-clearpost-section-heading">
+
+                        <div>
+
+                            <h2>ClearPost Validation</h2>
+
+                            <p>
+                                Review the draft validation status.
+                            </p>
+
+                        </div>
+
+                        <span class="teacher-clearpost-validation-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </span>
+
+                    </div>
+
+
+                    <!-- VALIDATION STATUS -->
+
+                    <div class="teacher-clearpost-validation-status"
+                        id="teacherClearPostValidationStatus">
+
+                        <div class="teacher-clearpost-status-icon">
+                            <i class="bi bi-hourglass-split"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>Not Yet Checked</strong>
+
+                            <span>
+                                Run ClearPost Check to inspect your draft.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- VALIDATION RESULTS -->
+
+                    <div class="teacher-clearpost-results">
+
+                        <h3>Validation Results</h3>
+
+                        <div id="teacherClearPostResults">
+
+                            <div class="teacher-clearpost-empty-result">
+
+                                <i class="bi bi-clipboard-check"></i>
+
+                                <strong>No validation results yet</strong>
+
+                                <span>
+                                    Your results will appear here after
+                                    running ClearPost.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- VALIDATION LIMITATION -->
+
+                    <div class="teacher-clearpost-rule-note">
+
+                        <i class="bi bi-info-circle"></i>
+
+                        <div>
+
+                            <strong>Validation Rule Set</strong>
+
+                            <p>
+                                Detailed ClearPost policy rules are pending
+                                confirmation from the approved project
+                                specifications. Basic required-field checks
+                                are demonstration-only.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- =====================================
+                 AI CONTENT ASSISTANT
+            ====================================== -->
+
+            <section class="teacher-panel teacher-clearpost-ai">
+
+                <div class="teacher-clearpost-ai-heading">
+
+                    <div class="teacher-clearpost-ai-icon">
+                        <i class="bi bi-stars"></i>
+                    </div>
+
+                    <div>
+
+                        <h2>AI Content Assistant</h2>
+
+                        <p>
+                            Request an optional AI-generated announcement draft.
+                        </p>
+
+                    </div>
+
+                    <span class="teacher-clearpost-ai-badge">
+                        Optional Assistance
+                    </span>
+
+                </div>
+
+
+                <div class="teacher-clearpost-ai-body">
+
+
+                    <!-- AI INSTRUCTION -->
+
+                    <div class="teacher-clearpost-field">
+
+                        <label for="teacherClearPostAIPrompt">
+                            Instructions for AI Draft
+                        </label>
+
+                        <textarea id="teacherClearPostAIPrompt"
+                            rows="4"
+                            placeholder="Describe the announcement you want assistance with..."></textarea>
+
+                        <small>
+                            Provide instructions about the announcement
+                            you want the AI service to draft.
+                        </small>
+
+                    </div>
+
+
+                    <!-- AI REQUEST BUTTON -->
+
+                    <div class="teacher-clearpost-ai-actions">
+
+                        <button type="button"
+                            class="teacher-clearpost-ai-button"
+                            id="teacherClearPostRequestAI">
+
+                            <i class="bi bi-stars"></i>
+
+                            Request AI Draft
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- AI STATUS -->
+
+                    <div class="teacher-clearpost-ai-status"
+                        id="teacherClearPostAIStatus"
+                        role="status"
+                        aria-live="polite">
+
+                        <i class="bi bi-info-circle"></i>
+
+                        <span>
+                            AI service is not connected in this frontend
+                            demonstration. AI draft requests will be
+                            handled through Django during Backend integration.
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================
+                 TEACHER APPROVAL NOTICE
+            ====================================== -->
+
+            <section class="teacher-clearpost-approval-note">
+
+                <div class="teacher-clearpost-approval-icon">
+                    <i class="bi bi-person-check-fill"></i>
+                </div>
+
+                <div>
+
+                    <strong>Teacher Review and Approval Required</strong>
+
+                    <p>
+                        ClearPost validation does not automatically approve
+                        or publish an announcement. AI-generated content
+                        must be reviewed and approved by the Teacher.
+                        Publication or scheduling follows the approved
+                        announcement workflow.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- STATUS MESSAGE -->
+
+            <div id="teacherClearPostMessage"
+                class="teacher-clearpost-message"
+                role="status"
+                aria-live="polite"
+                hidden>
+            </div>
+
+
+            <!-- FOOTER NOTE -->
+
+            <p class="teacher-footer-note">
+
+                <i class="bi bi-info-circle me-1"></i>
+
+                Frontend demonstration only. No AI request, announcement
+                publication, or database saving is connected yet.
+
+            </p>
+
+
+        </section>
+
+
+        <!-- MAIN FOOTER -->
+
+        <footer class="main-footer">
+
+            GabayAral &copy;
+
+            <span id="teacherFooterYear">2026</span>
+
+            | Teacher Workspace
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- SHARED LAYOUT -->
+<script src="../../assets/js/layout.js"></script>
+
+<!-- TEACHER -->
+<script src="../../assets/js/teacher.js"></script>
+
+</body>
+</html>

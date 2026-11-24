@@ -1,0 +1,720 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+
+    <title>My Students | GabayAral</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- INTER FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SHARED CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+
+    <!-- TEACHER CSS -->
+    <link rel="stylesheet" href="../../assets/css/teacher.css">
+</head>
+
+<body>
+
+<div class="app-shell teacher-app">
+
+    <!-- =====================================
+         TEACHER SIDEBAR
+    ====================================== -->
+
+    <aside class="sidebar teacher-sidebar" id="sidebar">
+
+        <div class="brand-block">
+            <a href="dashboard.html" class="brand">
+                <i class="bi bi-book-half"></i>
+                <span>GabayAral</span>
+            </a>
+
+            <span class="role-pill">Teacher Workspace</span>
+        </div>
+
+        <nav class="side-nav">
+
+            <div class="nav-group">
+                <p class="nav-heading">Overview</p>
+
+                <a href="dashboard.html" class="side-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="my-offerings.html" class="side-link">
+                    <i class="bi bi-journal-bookmark"></i>
+                    <span>My Subject Offerings</span>
+                </a>
+
+                <a href="my-students.html"
+                   class="side-link active"
+                   aria-current="page">
+                    <i class="bi bi-people"></i>
+                    <span>My Students</span>
+                </a>
+            </div>
+
+            
+            <div class="nav-group">
+                <p class="nav-heading">Teaching & Learning</p>
+
+                <a href="activities.html" class="side-link">
+                    <i class="bi bi-journal-text"></i>
+                    <span>Activities</span>
+                </a>
+
+                <a href="submissions.html" class="side-link">
+                    <i class="bi bi-inbox"></i>
+                    <span>Submissions & Revisions</span>
+                </a>
+
+                <a href="quizzes.html" class="side-link">
+                    <i class="bi bi-ui-checks"></i>
+                    <span>Quizzes</span>
+                </a>
+
+                <a href="grades.html" class="side-link">
+                    <i class="bi bi-clipboard-data"></i>
+                    <span>Grades & Feedback</span>
+                </a>
+
+                <a href="grade-reviews.html" class="side-link">
+                    <i class="bi bi-clipboard-check"></i>
+                    <span>Grade Review Cases</span>
+                </a>
+            </div>
+
+
+            <div class="nav-group">
+                <p class="nav-heading">Communication</p>
+
+                
+<a href="announcements.html" class="side-link">
+    <i class="bi bi-megaphone"></i>
+    <span>Announcements</span>
+</a>
+
+
+                <a href="clearpost.html" class="side-link">
+    <i class="bi bi-stars"></i>
+    <span>ClearPost</span>
+</a>
+
+                <a href="guardian-requests.html" class="side-link">
+    <i class="bi bi-person-check"></i>
+    <span>Guardian Requests</span>
+</a>
+
+                <a href="parent-acknowledgments.html" class="side-link">
+    <i class="bi bi-check2-square"></i>
+    <span>Parent Acknowledgments</span>
+</a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Planning</p>
+
+                <a href="teacher-calendar.html" class="side-link">
+    <i class="bi bi-calendar3"></i>
+    <span>Teacher Calendar</span>
+</a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Workspace</p>
+
+                <a href="notifications.html" class="side-link">
+    <i class="bi bi-bell"></i>
+    <span>Notifications</span>
+</a>
+
+                <a href="activity-history.html" class="side-link">
+    <i class="bi bi-clock-history"></i>
+    <span>Activity History</span>
+</a>
+
+                <a href="easyaccess.html" class="side-link">
+    <i class="bi bi-universal-access"></i>
+    <span>EasyAccess</span>
+</a>
+            </div>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <span class="footer-dot"></span>
+            Teacher Workspace
+        </div>
+
+    </aside>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <!-- =====================================
+         MAIN AREA
+    ====================================== -->
+
+    <main class="main-area">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar teacher-topbar">
+
+            <button type="button"
+                class="icon-button-ga mobile-menu"
+                id="menuToggle"
+                aria-label="Open navigation"
+                aria-expanded="false">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="breadcrumbs">
+                <i class="bi bi-house-door-fill"></i>
+                <span>Teacher Workspace</span>
+                <span>/</span>
+                <strong>My Students</strong>
+            </div>
+
+            <div class="topbar-tools">
+
+                <!-- SCHOOL SELECTOR -->
+
+                <div class="school-selector-wrapper"
+                     id="teacherSchoolSelectorWrapper">
+
+                    <button type="button"
+                        class="school-select"
+                        id="teacherSchoolSelectButton"
+                        aria-label="Select school workspace"
+                        aria-expanded="false"
+                        aria-controls="teacherSchoolSelectMenu">
+
+                        <span class="school-select-current">
+                            <i class="bi bi-bank me-1"></i>
+                            <span id="teacherSchoolCurrentName">
+                                San Isidro National High School
+                            </span>
+                        </span>
+
+                        <i class="bi bi-chevron-down school-select-chevron"></i>
+                    </button>
+
+                    <div class="school-select-menu"
+                        id="teacherSchoolSelectMenu"
+                        role="menu"
+                        aria-label="Available school workspaces"
+                        hidden>
+
+                        <div class="school-select-menu-header">
+                            <strong>School Workspaces</strong>
+                            <span>Select an available workspace</span>
+                        </div>
+
+                        <button type="button"
+                            class="school-select-option active"
+                            data-school-id="school-001"
+                            data-school-name="San Isidro National High School"
+                            role="menuitemradio"
+                            aria-checked="true">
+
+                            <span class="school-option-icon">
+                                <i class="bi bi-bank"></i>
+                            </span>
+
+                            <span class="school-option-details">
+                                <strong>San Isidro National High School</strong>
+                                <small>Current workspace</small>
+                            </span>
+
+                            <i class="bi bi-check-circle-fill school-option-check"></i>
+                        </button>
+
+                        <button type="button"
+                            class="school-select-option"
+                            data-school-id="demo-school-002"
+                            data-school-name="Sample School Workspace B"
+                            role="menuitemradio"
+                            aria-checked="false">
+
+                            <span class="school-option-icon">
+                                <i class="bi bi-building"></i>
+                            </span>
+
+                            <span class="school-option-details">
+                                <strong>Sample School Workspace B</strong>
+                                <small>Demonstration workspace only</small>
+                            </span>
+                        </button>
+
+                        <div class="school-select-menu-footer">
+                            <i class="bi bi-info-circle"></i>
+                            School switching is a frontend demonstration.
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- TOPBAR SEARCH -->
+
+                <label class="search-box">
+                    <i class="bi bi-search"></i>
+
+                    <input type="search"
+                        id="teacherStudentTopSearch"
+                        placeholder="Search students..."
+                        aria-label="Search students">
+                </label>
+
+                <!-- NOTIFICATIONS -->
+
+                <button type="button"
+                    class="icon-button-ga"
+                    id="teacherNotificationButton"
+                    aria-label="Open notifications"
+                    title="Notifications">
+                    <i class="bi bi-bell"></i>
+                </button>
+
+                <!-- PROFILE -->
+
+                <div class="admin-profile-wrapper"
+                     id="teacherProfileWrapper">
+
+                    <button type="button"
+                        class="profile-button"
+                        id="teacherProfileButton"
+                        aria-label="Teacher account menu"
+                        aria-expanded="false"
+                        aria-controls="teacherProfileMenu">
+
+                        <span class="avatar">
+                            <i class="bi bi-person-fill"></i>
+                        </span>
+
+                        <span>Teacher</span>
+
+                        <i class="bi bi-chevron-down admin-profile-chevron"></i>
+                    </button>
+
+                    <div class="admin-profile-menu"
+                        id="teacherProfileMenu"
+                        hidden>
+
+                        <div class="admin-profile-menu-header">
+
+                            <span class="admin-profile-menu-avatar">
+                                <i class="bi bi-person-fill"></i>
+                            </span>
+
+                            <div>
+                                <strong>Teacher</strong>
+                                <small>Teacher Workspace</small>
+                            </div>
+
+                        </div>
+
+                        <div class="admin-profile-menu-divider"></div>
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="profile">
+                            <i class="bi bi-person-gear"></i>
+                            <span>Profile Settings</span>
+                        </button>
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="security">
+                            <i class="bi bi-shield-lock"></i>
+                            <span>Account Security</span>
+                            <small>Coming soon</small>
+                        </button>
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="accessibility">
+                            <i class="bi bi-universal-access"></i>
+                            <span>EasyAccess</span>
+                        </button>
+
+                        <div class="admin-profile-menu-divider"></div>
+
+                        <button type="button"
+                            class="admin-profile-menu-item danger"
+                            data-profile-action="signout">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span>Sign Out</span>
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- =====================================
+             PAGE CONTENT
+        ====================================== -->
+
+        <section class="main-content teacher-content">
+
+            <!-- PAGE HEADING -->
+
+            <div class="teacher-page-heading">
+
+                <div>
+                    <span class="teacher-eyebrow">
+                        TEACHING & LEARNING
+                    </span>
+
+                    <h1>My Students</h1>
+
+                    <p>
+                        View Students associated with your authorized
+                        teaching assignments and Subject Offerings.
+                    </p>
+                </div>
+
+                <a href="dashboard.html"
+                   class="teacher-back-button">
+                    <i class="bi bi-arrow-left"></i>
+                    Back to Dashboard
+                </a>
+
+            </div>
+
+            <!-- DEMO NOTICE -->
+
+            <div class="teacher-demo-notice">
+                <i class="bi bi-info-circle-fill"></i>
+
+                <span>
+                    Demonstration Student records only. Actual Student
+                    visibility will be restricted to your authorized
+                    teaching assignments by the Backend.
+                </span>
+            </div>
+
+            <!-- SUMMARY CARDS -->
+
+            <div class="teacher-student-stats">
+
+                <article class="teacher-stat-card">
+                    <div class="teacher-stat-top">
+                        <span class="teacher-stat-icon blue">
+                            <i class="bi bi-people-fill"></i>
+                        </span>
+                        <span class="teacher-stat-label">
+                            Demo Students
+                        </span>
+                    </div>
+
+                    <strong class="teacher-stat-number"
+                        id="teacherStudentTotal">0</strong>
+
+                    <span class="teacher-stat-caption">
+                        Unique demonstration Students
+                    </span>
+                </article>
+
+                <article class="teacher-stat-card">
+                    <div class="teacher-stat-top">
+                        <span class="teacher-stat-icon teal">
+                            <i class="bi bi-person-check-fill"></i>
+                        </span>
+                        <span class="teacher-stat-label">
+                            Active Enrollments
+                        </span>
+                    </div>
+
+                    <strong class="teacher-stat-number"
+                        id="teacherStudentActive">0</strong>
+
+                    <span class="teacher-stat-caption">
+                        Active sample Student records
+                    </span>
+                </article>
+
+                <article class="teacher-stat-card">
+                    <div class="teacher-stat-top">
+                        <span class="teacher-stat-icon purple">
+                            <i class="bi bi-mortarboard-fill"></i>
+                        </span>
+                        <span class="teacher-stat-label">
+                            Grade Levels
+                        </span>
+                    </div>
+
+                    <strong class="teacher-stat-number"
+                        id="teacherStudentGrades">0</strong>
+
+                    <span class="teacher-stat-caption">
+                        Grade levels represented
+                    </span>
+                </article>
+
+                <article class="teacher-stat-card">
+                    <div class="teacher-stat-top">
+                        <span class="teacher-stat-icon amber">
+                            <i class="bi bi-diagram-3-fill"></i>
+                        </span>
+                        <span class="teacher-stat-label">
+                            Sections
+                        </span>
+                    </div>
+
+                    <strong class="teacher-stat-number"
+                        id="teacherStudentSections">0</strong>
+
+                    <span class="teacher-stat-caption">
+                        Sections represented
+                    </span>
+                </article>
+
+            </div>
+
+            <!-- STUDENT DIRECTORY FILTERS -->
+
+            <section class="teacher-panel teacher-student-filter-panel">
+
+                <div class="teacher-filter-heading">
+
+                    <div>
+                        <h2>Student Directory</h2>
+                        <p>
+                            Search and filter your authorized
+                            Student records.
+                        </p>
+                    </div>
+
+                    <span class="teacher-record-count"
+                        id="teacherStudentRecordCount">
+                        0 records
+                    </span>
+
+                </div>
+
+                <div class="teacher-student-filters">
+
+                    <label class="teacher-filter-control">
+
+                        <span>Search Students</span>
+
+                        <div class="teacher-filter-input">
+                            <i class="bi bi-search"></i>
+
+                            <input type="search"
+                                id="teacherStudentSearch"
+                                placeholder="Student name or Student ID">
+                        </div>
+
+                    </label>
+
+                    <label class="teacher-filter-control">
+
+                        <span>Grade-Level</span>
+
+                        <select id="teacherStudentGradeFilter">
+                            <option value="all">All Grade Levels</option>
+                        </select>
+
+                    </label>
+
+                    <label class="teacher-filter-control">
+
+                        <span>Section</span>
+
+                        <select id="teacherStudentSectionFilter">
+                            <option value="all">All Sections</option>
+                        </select>
+
+                    </label>
+
+                    <label class="teacher-filter-control">
+
+                        <span>Enrollment Status</span>
+
+                        <select id="teacherStudentStatusFilter">
+                            <option value="all">All Statuses</option>
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                        </select>
+
+                    </label>
+
+                    <button type="button"
+                        class="teacher-clear-filter"
+                        id="teacherStudentClearFilters">
+
+                        <i class="bi bi-arrow-counterclockwise"></i>
+                        Clear Filters
+
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- STUDENT TABLE -->
+
+            <section class="teacher-panel teacher-student-table-panel">
+
+                <div class="teacher-panel-header">
+
+                    <div>
+                        <h2>Assigned Students</h2>
+                        <p>
+                            Official section placement and subject
+                            enrollment are displayed separately.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="teacher-table-wrapper"
+                    id="teacherStudentTableWrapper">
+
+                    <table class="teacher-student-table">
+
+                        <thead>
+                            <tr>
+                                <th>Student</th>
+                                <th>Student ID</th>
+                                <th>Official Section</th>
+                                <th>Subject Offering</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="teacherStudentTableBody">
+                            <!-- Generated by teacher.js -->
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="teacher-student-empty"
+                    id="teacherStudentEmpty"
+                    hidden>
+
+                    <i class="bi bi-people"></i>
+
+                    <strong>No Students Found</strong>
+
+                    <span>
+                        Try changing your search or filters.
+                    </span>
+
+                </div>
+
+            </section>
+
+            <p class="teacher-footer-note">
+                <i class="bi bi-info-circle me-1"></i>
+                Fictional demonstration records only. No real
+                Student information is displayed or saved.
+            </p>
+
+        </section>
+
+        <!-- FOOTER -->
+
+        <footer class="main-footer">
+            GabayAral &copy;
+            <span id="teacherFooterYear">2026</span>
+            | Teacher Workspace
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- STUDENT DETAILS MODAL -->
+
+<div class="modal fade"
+    id="teacherStudentDetailsModal"
+    tabindex="-1"
+    aria-labelledby="teacherStudentDetailsTitle"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content teacher-details-modal">
+
+            <div class="modal-header">
+
+                <div>
+                    <span class="teacher-eyebrow">
+                        STUDENT INFORMATION
+                    </span>
+
+                    <h5 class="modal-title"
+                        id="teacherStudentDetailsTitle">
+                        Student Details
+                    </h5>
+                </div>
+
+                <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+
+            </div>
+
+            <div class="modal-body"
+                id="teacherStudentDetailsBody">
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button"
+                    class="teacher-modal-close"
+                    data-bs-dismiss="modal">
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- BOOTSTRAP JAVASCRIPT -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- SHARED LAYOUT -->
+
+<script src="../../assets/js/layout.js"></script>
+
+<!-- TEACHER JAVASCRIPT -->
+
+<script src="../../assets/js/teacher.js"></script>
+
+</body>
+</html>

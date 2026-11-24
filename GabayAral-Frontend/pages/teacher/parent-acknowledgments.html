@@ -1,0 +1,983 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+
+    <title>Parent Acknowledgments | GabayAral</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- INTER FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SHARED CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+
+    <!-- TEACHER CSS -->
+    <link rel="stylesheet" href="../../assets/css/teacher.css">
+
+</head>
+
+<body>
+
+<div class="app-shell teacher-app">
+
+    <!-- =========================================
+         TEACHER SIDEBAR
+    ========================================== -->
+
+    <aside class="sidebar teacher-sidebar" id="sidebar">
+
+        <div class="brand-block">
+
+            <a href="dashboard.html" class="brand">
+                <i class="bi bi-book-half"></i>
+                <span>GabayAral</span>
+            </a>
+
+            <span class="role-pill">Teacher Workspace</span>
+
+        </div>
+
+
+        <nav class="side-nav">
+
+            <!-- OVERVIEW -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Overview</p>
+
+                <a href="dashboard.html" class="side-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="my-offerings.html" class="side-link">
+                    <i class="bi bi-journal-bookmark"></i>
+                    <span>My Subject Offerings</span>
+                </a>
+
+                <a href="my-students.html" class="side-link">
+                    <i class="bi bi-people"></i>
+                    <span>My Students</span>
+                </a>
+
+            </div>
+
+
+            <!-- TEACHING AND LEARNING -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Teaching & Learning</p>
+
+                <a href="activities.html" class="side-link">
+                    <i class="bi bi-journal-text"></i>
+                    <span>Activities</span>
+                </a>
+
+                <a href="submissions.html" class="side-link">
+                    <i class="bi bi-inbox"></i>
+                    <span>Submissions & Revisions</span>
+                </a>
+
+                <a href="quizzes.html" class="side-link">
+                    <i class="bi bi-ui-checks"></i>
+                    <span>Quizzes</span>
+                </a>
+
+                <a href="grades.html" class="side-link">
+                    <i class="bi bi-clipboard-data"></i>
+                    <span>Grades & Feedback</span>
+                </a>
+
+                <a href="grade-reviews.html" class="side-link">
+                    <i class="bi bi-clipboard-check"></i>
+                    <span>Grade Review Cases</span>
+                </a>
+
+            </div>
+
+
+            <!-- COMMUNICATION -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Communication</p>
+
+                <a href="announcements.html" class="side-link">
+                    <i class="bi bi-megaphone"></i>
+                    <span>Announcements</span>
+                </a>
+
+                <a href="clearpost.html" class="side-link">
+                    <i class="bi bi-stars"></i>
+                    <span>ClearPost</span>
+                </a>
+
+                <a href="guardian-requests.html" class="side-link">
+                    <i class="bi bi-person-check"></i>
+                    <span>Guardian Requests</span>
+                </a>
+
+                <a href="parent-acknowledgments.html"
+                   class="side-link active"
+                   aria-current="page">
+
+                    <i class="bi bi-check2-square"></i>
+                    <span>Parent Acknowledgments</span>
+
+                </a>
+
+            </div>
+
+
+            <!-- PLANNING -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Planning</p>
+
+                <a href="teacher-calendar.html" class="side-link">
+    <i class="bi bi-calendar3"></i>
+    <span>Teacher Calendar</span>
+</a>
+
+            </div>
+
+
+            <!-- WORKSPACE -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Workspace</p>
+
+                <a href="notifications.html" class="side-link">
+    <i class="bi bi-bell"></i>
+    <span>Notifications</span>
+</a>
+
+                <a href="activity-history.html" class="side-link">
+    <i class="bi bi-clock-history"></i>
+    <span>Activity History</span>
+</a>
+
+                <a href="easyaccess.html" class="side-link">
+    <i class="bi bi-universal-access"></i>
+    <span>EasyAccess</span>
+</a>
+
+            </div>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+            <span class="footer-dot"></span>
+            Teacher Workspace
+        </div>
+
+    </aside>
+
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+
+    <!-- =========================================
+         MAIN AREA
+    ========================================== -->
+
+    <main class="main-area">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar teacher-topbar">
+
+            <button type="button"
+                class="icon-button-ga mobile-menu"
+                id="menuToggle"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+                <i class="bi bi-list"></i>
+
+            </button>
+
+
+            <!-- BREADCRUMB -->
+
+            <div class="breadcrumbs">
+
+                <i class="bi bi-house-door-fill"></i>
+
+                <span>Teacher Workspace</span>
+
+                <span>/</span>
+
+                <strong>Parent Acknowledgments</strong>
+
+            </div>
+
+
+            <div class="topbar-tools">
+
+
+                <!-- SCHOOL SELECTOR -->
+
+                <div class="school-selector-wrapper"
+                     id="teacherSchoolSelectorWrapper">
+
+                    <button type="button"
+                        class="school-select"
+                        id="teacherSchoolSelectButton"
+                        aria-label="Select school workspace"
+                        aria-expanded="false"
+                        aria-controls="teacherSchoolSelectMenu">
+
+                        <span class="school-select-current">
+
+                            <i class="bi bi-bank me-1"></i>
+
+                            <span id="teacherSchoolCurrentName">
+                                San Isidro National High School
+                            </span>
+
+                        </span>
+
+                        <i class="bi bi-chevron-down school-select-chevron"></i>
+
+                    </button>
+
+
+                    <div class="school-select-menu"
+                         id="teacherSchoolSelectMenu"
+                         role="menu"
+                         aria-label="Available school workspaces"
+                         hidden>
+
+                        <div class="school-select-menu-header">
+
+                            <strong>School Workspaces</strong>
+
+                            <span>Select an available workspace</span>
+
+                        </div>
+
+
+                        <button type="button"
+                            class="school-select-option active"
+                            data-school-id="school-001"
+                            data-school-name="San Isidro National High School"
+                            role="menuitemradio"
+                            aria-checked="true">
+
+                            <span class="school-option-icon">
+                                <i class="bi bi-bank"></i>
+                            </span>
+
+                            <span class="school-option-details">
+
+                                <strong>
+                                    San Isidro National High School
+                                </strong>
+
+                                <small>Current workspace</small>
+
+                            </span>
+
+                            <i class="bi bi-check-circle-fill school-option-check"></i>
+
+                        </button>
+
+
+                        <button type="button"
+                            class="school-select-option"
+                            data-school-id="demo-school-002"
+                            data-school-name="Sample School Workspace B"
+                            role="menuitemradio"
+                            aria-checked="false">
+
+                            <span class="school-option-icon">
+                                <i class="bi bi-building"></i>
+                            </span>
+
+                            <span class="school-option-details">
+
+                                <strong>Sample School Workspace B</strong>
+
+                                <small>Demonstration workspace only</small>
+
+                            </span>
+
+                        </button>
+
+
+                        <div class="school-select-menu-footer">
+
+                            <i class="bi bi-info-circle"></i>
+
+                            School switching is a frontend demonstration.
+                            Authorized memberships will be supplied by the Backend.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TOPBAR SEARCH -->
+
+                <label class="search-box teacher-dashboard-search">
+
+                    <i class="bi bi-search"></i>
+
+                    <input type="search"
+                        id="teacherParentAckTopbarSearch"
+                        placeholder="Search acknowledgments..."
+                        aria-label="Search parent acknowledgments">
+
+                </label>
+
+
+                <!-- NOTIFICATIONS -->
+
+                <button type="button"
+                    class="icon-button-ga"
+                    id="teacherNotificationButton"
+                    aria-label="Open notifications">
+
+                    <i class="bi bi-bell"></i>
+
+                </button>
+
+
+                <!-- PROFILE -->
+
+                <div class="admin-profile-wrapper"
+                     id="teacherProfileWrapper">
+
+                    <button type="button"
+                        class="profile-button"
+                        id="teacherProfileButton"
+                        aria-label="Teacher account menu"
+                        aria-expanded="false"
+                        aria-controls="teacherProfileMenu">
+
+                        <span class="avatar">
+                            <i class="bi bi-person-fill"></i>
+                        </span>
+
+                        <span>Teacher</span>
+
+                        <i class="bi bi-chevron-down admin-profile-chevron"></i>
+
+                    </button>
+
+
+                    <div class="admin-profile-menu"
+                         id="teacherProfileMenu"
+                         aria-label="Teacher account options"
+                         hidden>
+
+                        <div class="admin-profile-menu-header">
+
+                            <span class="admin-profile-menu-avatar">
+                                <i class="bi bi-person-fill"></i>
+                            </span>
+
+                            <div>
+                                <strong>Teacher</strong>
+                                <small>Teacher Workspace</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="admin-profile-menu-divider"></div>
+
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="profile">
+
+                            <i class="bi bi-person-gear"></i>
+                            <span>Profile Settings</span>
+
+                        </button>
+
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="security">
+
+                            <i class="bi bi-shield-lock"></i>
+                            <span>Account Security</span>
+                            <small>Coming soon</small>
+
+                        </button>
+
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="accessibility">
+
+                            <i class="bi bi-universal-access"></i>
+                            <span>EasyAccess</span>
+
+                        </button>
+
+
+                        <div class="admin-profile-menu-divider"></div>
+
+
+                        <button type="button"
+                            class="admin-profile-menu-item danger"
+                            data-profile-action="signout">
+
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span>Sign Out</span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================================
+             PARENT ACKNOWLEDGMENTS CONTENT
+        ========================================== -->
+
+        <section class="main-content teacher-content">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="teacher-parent-ack-heading">
+
+                <div>
+
+                    <span class="teacher-eyebrow">
+                        COMMUNICATION REPORTS
+                    </span>
+
+                    <h1>Parent Acknowledgments</h1>
+
+                    <p>
+                        Monitor guardian acknowledgments for eligible
+                        published announcement versions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- INFORMATION NOTICE -->
+
+            <div class="teacher-parent-ack-notice" role="note">
+
+                <i class="bi bi-info-circle-fill"></i>
+
+                <div>
+
+                    <strong>Teacher Read-Only Report</strong>
+
+                    <span>
+                        This page allows authorized Teachers to monitor
+                        acknowledgment records. Parents acknowledge their
+                        own eligible announcement versions. Teachers cannot
+                        acknowledge on behalf of a Parent.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUMMARY CARDS -->
+
+            <div class="teacher-parent-ack-stats">
+
+
+                <!-- TOTAL ELIGIBLE -->
+
+                <article class="teacher-stat-card">
+
+                    <div class="teacher-stat-top">
+
+                        <span class="teacher-stat-icon blue">
+                            <i class="bi bi-people"></i>
+                        </span>
+
+                        <span class="teacher-stat-label">
+                            Total Eligible Records
+                        </span>
+
+                    </div>
+
+                    <strong class="teacher-stat-number"
+                        id="teacherParentAckTotal">0</strong>
+
+                    <span class="teacher-stat-caption">
+                        Guardian and version combinations
+                    </span>
+
+                </article>
+
+
+                <!-- ACKNOWLEDGED -->
+
+                <article class="teacher-stat-card">
+
+                    <div class="teacher-stat-top">
+
+                        <span class="teacher-stat-icon teal">
+                            <i class="bi bi-check-circle"></i>
+                        </span>
+
+                        <span class="teacher-stat-label">
+                            Acknowledged
+                        </span>
+
+                    </div>
+
+                    <strong class="teacher-stat-number"
+                        id="teacherParentAckAcknowledged">0</strong>
+
+                    <span class="teacher-stat-caption">
+                        Explicit acknowledgments recorded
+                    </span>
+
+                </article>
+
+
+                <!-- AWAITING -->
+
+                <article class="teacher-stat-card">
+
+                    <div class="teacher-stat-top">
+
+                        <span class="teacher-stat-icon amber">
+                            <i class="bi bi-hourglass-split"></i>
+                        </span>
+
+                        <span class="teacher-stat-label">
+                            Awaiting Acknowledgment
+                        </span>
+
+                    </div>
+
+                    <strong class="teacher-stat-number"
+                        id="teacherParentAckAwaiting">0</strong>
+
+                    <span class="teacher-stat-caption">
+                        No acknowledgment record yet
+                    </span>
+
+                </article>
+
+
+                <!-- DISTINCT ANNOUNCEMENTS -->
+
+                <article class="teacher-stat-card">
+
+                    <div class="teacher-stat-top">
+
+                        <span class="teacher-stat-icon purple">
+                            <i class="bi bi-megaphone"></i>
+                        </span>
+
+                        <span class="teacher-stat-label">
+                            Announcements
+                        </span>
+
+                    </div>
+
+                    <strong class="teacher-stat-number"
+                        id="teacherParentAckAnnouncements">0</strong>
+
+                    <span class="teacher-stat-caption">
+                        Distinct published announcements
+                    </span>
+
+                </article>
+
+            </div>
+
+
+            <!-- ACKNOWLEDGMENT DIRECTORY -->
+
+            <section class="teacher-panel teacher-parent-ack-directory">
+
+
+                <!-- PANEL HEADING -->
+
+                <div class="teacher-parent-ack-directory-heading">
+
+                    <div>
+
+                        <h2>Acknowledgment Directory</h2>
+
+                        <p>
+                            View acknowledgment status for each eligible
+                            guardian and announcement version.
+                        </p>
+
+                    </div>
+
+
+                    <span class="teacher-record-count"
+                        id="teacherParentAckRecordCount"
+                        aria-live="polite">
+
+                        0 records
+
+                    </span>
+
+                </div>
+
+
+                <!-- FILTERS -->
+
+                <div class="teacher-parent-ack-filters">
+
+
+                    <!-- SEARCH -->
+
+                    <label class="teacher-filter-control">
+
+                        <span>Search Records</span>
+
+                        <div class="teacher-filter-input">
+
+                            <i class="bi bi-search"></i>
+
+                            <input type="search"
+                                id="teacherParentAckSearch"
+                                placeholder="Search announcement, guardian or student...">
+
+                        </div>
+
+                    </label>
+
+
+                    <!-- STATUS FILTER -->
+
+                    <label class="teacher-filter-control">
+
+                        <span>Acknowledgment Status</span>
+
+                        <select id="teacherParentAckStatusFilter">
+
+                            <option value="all">
+                                All Statuses
+                            </option>
+
+                            <option value="ACKNOWLEDGED">
+                                Acknowledged
+                            </option>
+
+                            <option value="AWAITING">
+                                Awaiting Acknowledgment
+                            </option>
+
+                        </select>
+
+                    </label>
+
+
+                    <!-- CLEAR FILTERS -->
+
+                    <button type="button"
+                        class="teacher-clear-filter"
+                        id="teacherParentAckClearFilters">
+
+                        <i class="bi bi-arrow-counterclockwise"></i>
+
+                        Clear Filters
+
+                    </button>
+
+                </div>
+
+
+                <!-- TABLE -->
+
+                <div class="teacher-table-wrapper">
+
+                    <table class="teacher-parent-ack-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th scope="col">Announcement</th>
+
+                                <th scope="col">Version</th>
+
+                                <th scope="col">Guardian</th>
+
+                                <th scope="col">Linked Student</th>
+
+                                <th scope="col">Section</th>
+
+                                <th scope="col">Status</th>
+
+                                <th scope="col">Acknowledged At</th>
+
+                                <th scope="col">Action</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="teacherParentAckTableBody">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- EMPTY STATE -->
+
+                <div class="teacher-parent-ack-empty"
+                    id="teacherParentAckEmpty"
+                    hidden>
+
+                    <i class="bi bi-check2-square"></i>
+
+                    <strong>No acknowledgment records found</strong>
+
+                    <span>
+                        Try changing your search or status filter.
+                    </span>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- ACKNOWLEDGMENT POLICY -->
+
+            <section class="teacher-parent-ack-policy">
+
+
+                <div class="teacher-parent-ack-policy-icon">
+
+                    <i class="bi bi-shield-check"></i>
+
+                </div>
+
+
+                <div>
+
+                    <strong>Parent Acknowledgment Rules</strong>
+
+                    <ul>
+
+                        <li>
+                            Each acknowledgment belongs to one Guardian
+                            account/link and one exact announcement version.
+                        </li>
+
+                        <li>
+                            Each Guardian acknowledges independently.
+                        </li>
+
+                        <li>
+                            Material announcement changes require fresh
+                            acknowledgment.
+                        </li>
+
+                        <li>
+                            Minor spelling or formatting corrections do
+                            not reset the acknowledgment requirement.
+                        </li>
+
+                        <li>
+                            Announcement reads and Parent acknowledgments
+                            are separate records.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+            <!-- STATUS MESSAGE -->
+
+            <div id="teacherParentAckMessage"
+                class="teacher-parent-ack-message"
+                role="status"
+                aria-live="polite"
+                hidden>
+            </div>
+
+
+            <!-- FOOTER NOTE -->
+
+            <p class="teacher-footer-note">
+
+                <i class="bi bi-info-circle me-1"></i>
+
+                Frontend demonstration only. Acknowledgment records are
+                not connected to official Guardian accounts or PostgreSQL.
+
+            </p>
+
+
+        </section>
+
+
+        <!-- MAIN FOOTER -->
+
+        <footer class="main-footer">
+
+            GabayAral &copy;
+
+            <span id="teacherFooterYear">2026</span>
+
+            | Teacher Workspace
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- =========================================
+     ACKNOWLEDGMENT DETAILS MODAL
+========================================== -->
+
+<div class="modal fade"
+    id="teacherParentAckDetailsModal"
+    tabindex="-1"
+    aria-labelledby="teacherParentAckDetailsTitle"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+
+        <div class="modal-content teacher-parent-ack-modal">
+
+
+            <!-- MODAL HEADER -->
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="teacher-eyebrow">
+                        COMMUNICATION REPORT
+                    </span>
+
+                    <h5 class="modal-title"
+                        id="teacherParentAckDetailsTitle">
+
+                        Acknowledgment Details
+
+                    </h5>
+
+                </div>
+
+
+                <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close">
+                </button>
+
+            </div>
+
+
+            <!-- MODAL BODY -->
+
+            <div class="modal-body">
+
+                <div id="teacherParentAckDetailsBody">
+
+                    <p class="text-secondary small">
+                        Select a record to view its acknowledgment details.
+                    </p>
+
+                </div>
+
+
+                <!-- VERSION INFORMATION -->
+
+                <section class="teacher-parent-ack-version-info">
+
+                    <h6>Announcement Version Information</h6>
+
+                    <div id="teacherParentAckVersionInfo">
+
+                        <p class="text-secondary small">
+                            No version information available.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+
+            <!-- MODAL FOOTER -->
+
+            <div class="modal-footer">
+
+                <button type="button"
+                    class="teacher-parent-ack-close-button"
+                    data-bs-dismiss="modal">
+
+                    Close
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- SHARED LAYOUT -->
+<script src="../../assets/js/layout.js"></script>
+
+<!-- TEACHER -->
+<script src="../../assets/js/teacher.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+
+    <title>Guardian Requests | GabayAral</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- INTER FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SHARED CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+
+    <!-- TEACHER CSS -->
+    <link rel="stylesheet" href="../../assets/css/teacher.css">
+
+</head>
+
+<body>
+
+<div class="app-shell teacher-app">
+
+    <!-- =========================================
+         TEACHER SIDEBAR
+    ========================================== -->
+
+    <aside class="sidebar teacher-sidebar" id="sidebar">
+
+        <div class="brand-block">
+
+            <a href="dashboard.html" class="brand">
+                <i class="bi bi-book-half"></i>
+                <span>GabayAral</span>
+            </a>
+
+            <span class="role-pill">Teacher Workspace</span>
+
+        </div>
+
+
+        <nav class="side-nav">
+
+            <!-- OVERVIEW -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Overview</p>
+
+                <a href="dashboard.html" class="side-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="my-offerings.html" class="side-link">
+                    <i class="bi bi-journal-bookmark"></i>
+                    <span>My Subject Offerings</span>
+                </a>
+
+                <a href="my-students.html" class="side-link">
+                    <i class="bi bi-people"></i>
+                    <span>My Students</span>
+                </a>
+
+            </div>
+
+
+            <!-- TEACHING AND LEARNING -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Teaching & Learning</p>
+
+                <a href="activities.html" class="side-link">
+                    <i class="bi bi-journal-text"></i>
+                    <span>Activities</span>
+                </a>
+
+                <a href="submissions.html" class="side-link">
+                    <i class="bi bi-inbox"></i>
+                    <span>Submissions & Revisions</span>
+                </a>
+
+                <a href="quizzes.html" class="side-link">
+                    <i class="bi bi-ui-checks"></i>
+                    <span>Quizzes</span>
+                </a>
+
+                <a href="grades.html" class="side-link">
+                    <i class="bi bi-clipboard-data"></i>
+                    <span>Grades & Feedback</span>
+                </a>
+
+                <a href="grade-reviews.html" class="side-link">
+                    <i class="bi bi-clipboard-check"></i>
+                    <span>Grade Review Cases</span>
+                </a>
+
+            </div>
+
+
+            <!-- COMMUNICATION -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Communication</p>
+
+                <a href="announcements.html" class="side-link">
+                    <i class="bi bi-megaphone"></i>
+                    <span>Announcements</span>
+                </a>
+
+                <a href="clearpost.html" class="side-link">
+                    <i class="bi bi-stars"></i>
+                    <span>ClearPost</span>
+                </a>
+
+                <a href="guardian-requests.html"
+                   class="side-link active"
+                   aria-current="page">
+
+                    <i class="bi bi-person-check"></i>
+                    <span>Guardian Requests</span>
+
+                </a>
+
+                <a href="parent-acknowledgments.html" class="side-link">
+    <i class="bi bi-check2-square"></i>
+    <span>Parent Acknowledgments</span>
+</a>
+
+            </div>
+
+
+            <!-- PLANNING -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Planning</p>
+
+                <a href="teacher-calendar.html" class="side-link">
+    <i class="bi bi-calendar3"></i>
+    <span>Teacher Calendar</span>
+</a>
+
+            </div>
+
+
+            <!-- WORKSPACE -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Workspace</p>
+
+                <a href="notifications.html" class="side-link">
+    <i class="bi bi-bell"></i>
+    <span>Notifications</span>
+</a>
+
+                <a href="activity-history.html" class="side-link">
+    <i class="bi bi-clock-history"></i>
+    <span>Activity History</span>
+</a>
+
+                <a href="easyaccess.html" class="side-link">
+    <i class="bi bi-universal-access"></i>
+    <span>EasyAccess</span>
+</a>
+
+            </div>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+            <span class="footer-dot"></span>
+            Teacher Workspace
+        </div>
+
+    </aside>
+
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+
+    <!-- =========================================
+         MAIN AREA
+    ========================================== -->
+
+    <main class="main-area">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar teacher-topbar">
+
+            <button type="button"
+                class="icon-button-ga mobile-menu"
+                id="menuToggle"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+                <i class="bi bi-list"></i>
+
+            </button>
+
+
+            <!-- BREADCRUMB -->
+
+            <div class="breadcrumbs">
+
+                <i class="bi bi-house-door-fill"></i>
+
+                <span>Teacher Workspace</span>
+
+                <span>/</span>
+
+                <strong>Guardian Requests</strong>
+
+            </div>
+
+
+            <div class="topbar-tools">
+
+
+                <!-- SCHOOL SELECTOR -->
+
+                <div class="school-selector-wrapper"
+                     id="teacherSchoolSelectorWrapper">
+
+                    <button type="button"
+                        class="school-select"
+                        id="teacherSchoolSelectButton"
+                        aria-label="Select school workspace"
+                        aria-expanded="false"
+                        aria-controls="teacherSchoolSelectMenu">
+
+                        <span class="school-select-current">
+
+                            <i class="bi bi-bank me-1"></i>
+
+                            <span id="teacherSchoolCurrentName">
+                                San Isidro National High School
+                            </span>
+
+                        </span>
+
+                        <i class="bi bi-chevron-down school-select-chevron"></i>
+
+                    </button>
+
+
+                    <div class="school-select-menu"
+                         id="teacherSchoolSelectMenu"
+                         role="menu"
+                         aria-label="Available school workspaces"
+                         hidden>
+
+                        <div class="school-select-menu-header">
+
+                            <strong>School Workspaces</strong>
+
+                            <span>Select an available workspace</span>
+
+                        </div>
+
+
+                        <button type="button"
+                            class="school-select-option active"
+                            data-school-id="school-001"
+                            data-school-name="San Isidro National High School"
+                            role="menuitemradio"
+                            aria-checked="true">
+
+                            <span class="school-option-icon">
+                                <i class="bi bi-bank"></i>
+                            </span>
+
+                            <span class="school-option-details">
+
+                                <strong>
+                                    San Isidro National High School
+                                </strong>
+
+                                <small>Current workspace</small>
+
+                            </span>
+
+                            <i class="bi bi-check-circle-fill school-option-check"></i>
+
+                        </button>
+
+
+                        <button type="button"
+                            class="school-select-option"
+                            data-school-id="demo-school-002"
+                            data-school-name="Sample School Workspace B"
+                            role="menuitemradio"
+                            aria-checked="false">
+
+                            <span class="school-option-icon">
+                                <i class="bi bi-building"></i>
+                            </span>
+
+                            <span class="school-option-details">
+
+                                <strong>Sample School Workspace B</strong>
+
+                                <small>Demonstration workspace only</small>
+
+                            </span>
+
+                        </button>
+
+
+                        <div class="school-select-menu-footer">
+
+                            <i class="bi bi-info-circle"></i>
+
+                            School switching is a frontend demonstration.
+                            Authorized memberships will be supplied by the Backend.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TOPBAR SEARCH -->
+
+                <label class="search-box teacher-dashboard-search">
+
+                    <i class="bi bi-search"></i>
+
+                    <input type="search"
+                        id="teacherGuardianTopbarSearch"
+                        placeholder="Search guardian requests..."
+                        aria-label="Search guardian requests">
+
+                </label>
+
+
+                <!-- NOTIFICATIONS -->
+
+                <button type="button"
+                    class="icon-button-ga"
+                    id="teacherNotificationButton"
+                    aria-label="Open notifications">
+
+                    <i class="bi bi-bell"></i>
+
+                </button>
+
+
+                <!-- PROFILE -->
+
+                <div class="admin-profile-wrapper"
+                     id="teacherProfileWrapper">
+
+                    <button type="button"
+                        class="profile-button"
+                        id="teacherProfileButton"
+                        aria-label="Teacher account menu"
+                        aria-expanded="false"
+                        aria-controls="teacherProfileMenu">
+
+                        <span class="avatar">
+                            <i class="bi bi-person-fill"></i>
+                        </span>
+
+                        <span>Teacher</span>
+
+                        <i class="bi bi-chevron-down admin-profile-chevron"></i>
+
+                    </button>
+
+
+                    <div class="admin-profile-menu"
+                         id="teacherProfileMenu"
+                         aria-label="Teacher account options"
+                         hidden>
+
+                        <div class="admin-profile-menu-header">
+
+                            <span class="admin-profile-menu-avatar">
+                                <i class="bi bi-person-fill"></i>
+                            </span>
+
+                            <div>
+                                <strong>Teacher</strong>
+                                <small>Teacher Workspace</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="admin-profile-menu-divider"></div>
+
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="profile">
+
+                            <i class="bi bi-person-gear"></i>
+                            <span>Profile Settings</span>
+
+                        </button>
+
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="security">
+
+                            <i class="bi bi-shield-lock"></i>
+                            <span>Account Security</span>
+                            <small>Coming soon</small>
+
+                        </button>
+
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="accessibility">
+
+                            <i class="bi bi-universal-access"></i>
+                            <span>EasyAccess</span>
+
+                        </button>
+
+
+                        <div class="admin-profile-menu-divider"></div>
+
+
+                        <button type="button"
+                            class="admin-profile-menu-item danger"
+                            data-profile-action="signout">
+
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span>Sign Out</span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================================
+             GUARDIAN REQUESTS CONTENT
+        ========================================== -->
+
+        <section class="main-content teacher-content">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="teacher-guardian-heading">
+
+                <div>
+
+                    <span class="teacher-eyebrow">
+                        PARENT CONNECTION
+                    </span>
+
+                    <h1>Guardian Requests</h1>
+
+                    <p>
+                        Review and verify guardian connection requests
+                        for your authorized sections.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- INFORMATION NOTICE -->
+
+            <div class="teacher-guardian-notice" role="note">
+
+                <i class="bi bi-shield-check"></i>
+
+                <div>
+
+                    <strong>Guardian Verification and Access Control</strong>
+
+                    <span>
+                        Guardian requests remain pending until reviewed.
+                        Verify the request against official school enrollment
+                        and guardian records. Refer cases you cannot independently verify.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUMMARY CARDS -->
+
+            <div class="teacher-guardian-stats">
+
+
+                <!-- TOTAL REQUESTS -->
+
+                <article class="teacher-stat-card">
+
+                    <div class="teacher-stat-top">
+
+                        <span class="teacher-stat-icon blue">
+                            <i class="bi bi-people"></i>
+                        </span>
+
+                        <span class="teacher-stat-label">
+                            Total Requests
+                        </span>
+
+                    </div>
+
+                    <strong class="teacher-stat-number"
+                        id="teacherGuardianTotal">0</strong>
+
+                    <span class="teacher-stat-caption">
+                        Available request records
+                    </span>
+
+                </article>
+
+
+                <!-- PENDING -->
+
+                <article class="teacher-stat-card">
+
+                    <div class="teacher-stat-top">
+
+                        <span class="teacher-stat-icon amber">
+                            <i class="bi bi-hourglass-split"></i>
+                        </span>
+
+                        <span class="teacher-stat-label">
+                            Pending Review
+                        </span>
+
+                    </div>
+
+                    <strong class="teacher-stat-number"
+                        id="teacherGuardianPending">0</strong>
+
+                    <span class="teacher-stat-caption">
+                        Awaiting verification
+                    </span>
+
+                </article>
+
+
+                <!-- ON HOLD -->
+
+                <article class="teacher-stat-card">
+
+                    <div class="teacher-stat-top">
+
+                        <span class="teacher-stat-icon purple">
+                            <i class="bi bi-arrow-up-right-circle"></i>
+                        </span>
+
+                        <span class="teacher-stat-label">
+                            On Hold
+                        </span>
+
+                    </div>
+
+                    <strong class="teacher-stat-number"
+                        id="teacherGuardianOnHold">0</strong>
+
+                    <span class="teacher-stat-caption">
+                        Referred for further review
+                    </span>
+
+                </article>
+
+
+                <!-- APPROVED -->
+
+                <article class="teacher-stat-card">
+
+                    <div class="teacher-stat-top">
+
+                        <span class="teacher-stat-icon teal">
+                            <i class="bi bi-check-circle"></i>
+                        </span>
+
+                        <span class="teacher-stat-label">
+                            Approved
+                        </span>
+
+                    </div>
+
+                    <strong class="teacher-stat-number"
+                        id="teacherGuardianApproved">0</strong>
+
+                    <span class="teacher-stat-caption">
+                        Verified connections
+                    </span>
+
+                </article>
+
+            </div>
+
+
+            <!-- REQUEST DIRECTORY -->
+
+            <section class="teacher-panel teacher-guardian-directory">
+
+
+                <!-- PANEL HEADING -->
+
+                <div class="teacher-guardian-directory-heading">
+
+                    <div>
+
+                        <h2>Guardian Request Directory</h2>
+
+                        <p>
+                            View requests and their verification status.
+                        </p>
+
+                    </div>
+
+                    <span class="teacher-record-count"
+                        id="teacherGuardianRecordCount"
+                        aria-live="polite">
+
+                        0 records
+
+                    </span>
+
+                </div>
+
+
+                <!-- FILTERS -->
+
+                <div class="teacher-guardian-filters">
+
+
+                    <!-- SEARCH -->
+
+                    <label class="teacher-filter-control">
+
+                        <span>Search Requests</span>
+
+                        <div class="teacher-filter-input">
+
+                            <i class="bi bi-search"></i>
+
+                            <input type="search"
+                                id="teacherGuardianSearch"
+                                placeholder="Search guardian, student or request ID...">
+
+                        </div>
+
+                    </label>
+
+
+                    <!-- STATUS FILTER -->
+
+                    <label class="teacher-filter-control">
+
+                        <span>Request Status</span>
+
+                        <select id="teacherGuardianStatusFilter">
+
+                            <option value="all">All Statuses</option>
+
+                            <option value="PENDING">Pending</option>
+
+                            <option value="ON_HOLD">On Hold</option>
+
+                            <option value="APPROVED">Approved</option>
+
+                            <option value="REJECTED">Rejected</option>
+
+                        </select>
+
+                    </label>
+
+
+                    <!-- CLEAR FILTERS -->
+
+                    <button type="button"
+                        class="teacher-clear-filter"
+                        id="teacherGuardianClearFilters">
+
+                        <i class="bi bi-arrow-counterclockwise"></i>
+
+                        Clear Filters
+
+                    </button>
+
+                </div>
+
+
+                <!-- TABLE -->
+
+                <div class="teacher-table-wrapper">
+
+                    <table class="teacher-guardian-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th scope="col">Request ID</th>
+
+                                <th scope="col">Guardian</th>
+
+                                <th scope="col">Student</th>
+
+                                <th scope="col">Section</th>
+
+                                <th scope="col">Relationship</th>
+
+                                <th scope="col">Date Submitted</th>
+
+                                <th scope="col">Status</th>
+
+                                <th scope="col">Action</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="teacherGuardianTableBody">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- EMPTY STATE -->
+
+                <div class="teacher-guardian-empty"
+                    id="teacherGuardianEmpty"
+                    hidden>
+
+                    <i class="bi bi-person-check"></i>
+
+                    <strong>No guardian requests found</strong>
+
+                    <span>
+                        Try changing your search or status filter.
+                    </span>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- VERIFICATION GUIDELINES -->
+
+            <section class="teacher-guardian-guidelines">
+
+                <div class="teacher-guardian-guidelines-icon">
+
+                    <i class="bi bi-info-circle"></i>
+
+                </div>
+
+
+                <div>
+
+                    <strong>Teacher Verification Guidelines</strong>
+
+                    <ul>
+
+                        <li>
+                            Verify the guardian against official school
+                            enrollment and guardian records.
+                        </li>
+
+                        <li>
+                            Each guardian must be independently verified
+                            for the relevant Student and Section.
+                        </li>
+
+                        <li>
+                            Refer requests that cannot be independently verified
+                            to the authorized School Administrator or registrar.
+                        </li>
+
+                        <li>
+                            Student approval is not required for guardian connection.
+                        </li>
+
+                        <li>
+                            Only the authorized School Administrator or registrar
+                            may revoke an approved guardian connection.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+            <!-- STATUS MESSAGE -->
+
+            <div id="teacherGuardianMessage"
+                class="teacher-guardian-message"
+                role="status"
+                aria-live="polite"
+                hidden>
+            </div>
+
+
+            <!-- FOOTER NOTE -->
+
+            <p class="teacher-footer-note">
+
+                <i class="bi bi-info-circle me-1"></i>
+
+                Frontend demonstration only. Request records and verification
+                actions are not connected to official school records or PostgreSQL.
+
+            </p>
+
+
+        </section>
+
+
+        <!-- MAIN FOOTER -->
+
+        <footer class="main-footer">
+
+            GabayAral &copy;
+
+            <span id="teacherFooterYear">2026</span>
+
+            | Teacher Workspace
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- =========================================
+     GUARDIAN REQUEST DETAILS MODAL
+========================================== -->
+
+<div class="modal fade"
+    id="teacherGuardianRequestDetailsModal"
+    tabindex="-1"
+    aria-labelledby="teacherGuardianRequestDetailsTitle"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+
+        <div class="modal-content teacher-guardian-modal">
+
+
+            <!-- MODAL HEADER -->
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="teacher-eyebrow">
+                        PARENT CONNECTION
+                    </span>
+
+                    <h5 class="modal-title"
+                        id="teacherGuardianRequestDetailsTitle">
+
+                        Guardian Request Details
+
+                    </h5>
+
+                </div>
+
+
+                <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close">
+                </button>
+
+            </div>
+
+
+            <!-- MODAL BODY -->
+
+            <div class="modal-body">
+
+
+                <!-- REQUEST INFORMATION -->
+
+                <div id="teacherGuardianRequestDetailsBody">
+
+                    <p class="text-secondary small">
+                        Select a guardian request to view its details.
+                    </p>
+
+                </div>
+
+
+                <!-- VERIFICATION PANEL -->
+
+                <section class="teacher-guardian-verification-panel"
+                    id="teacherGuardianVerificationPanel"
+                    hidden>
+
+
+                    <div class="teacher-guardian-verification-heading">
+
+                        <i class="bi bi-shield-check"></i>
+
+                        <div>
+
+                            <strong>Verification Decision</strong>
+
+                            <p>
+                                Review the official records before selecting
+                                an appropriate outcome.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <form id="teacherGuardianVerificationForm"
+                        novalidate>
+
+
+                        <!-- DECISION -->
+
+                        <div class="teacher-guardian-modal-field">
+
+                            <label for="teacherGuardianVerificationResult">
+
+                                Verification Result
+
+                            </label>
+
+
+                            <select id="teacherGuardianVerificationResult"
+                                required>
+
+                                <option value="">
+                                    Select verification result
+                                </option>
+
+                                <option value="verified">
+                                    Verified - Eligible Guardian
+                                </option>
+
+                                <option value="cannot_verify">
+                                    Cannot Independently Verify
+                                </option>
+
+                                <option value="not_eligible">
+                                    Confirmed Not Eligible
+                                </option>
+
+                            </select>
+
+                            <small>
+                                Choose the result based on official school
+                                enrollment and guardian records.
+                            </small>
+
+                        </div>
+
+
+                        <!-- REVIEW NOTE -->
+
+                        <div class="teacher-guardian-modal-field">
+
+                            <label for="teacherGuardianReviewNote">
+                                Review Note
+                            </label>
+
+                            <textarea id="teacherGuardianReviewNote"
+                                rows="3"
+                                placeholder="Enter relevant review notes..."></textarea>
+
+                        </div>
+
+
+                        <!-- REJECTION REASON -->
+
+                        <div class="teacher-guardian-modal-field"
+                            id="teacherGuardianRejectionReasonWrap"
+                            hidden>
+
+                            <label for="teacherGuardianRejectionReason">
+
+                                Rejection Reason
+                                <span>*</span>
+
+                            </label>
+
+                            <textarea id="teacherGuardianRejectionReason"
+                                rows="3"
+                                placeholder="Explain why the request was confirmed as not eligible..."></textarea>
+
+                            <small>
+                                A reason is required when rejecting a request.
+                            </small>
+
+                        </div>
+
+
+                        <!-- DECISION GUIDANCE -->
+
+                        <div class="teacher-guardian-decision-guidance"
+                            id="teacherGuardianDecisionGuidance">
+
+                            <i class="bi bi-info-circle"></i>
+
+                            <span>
+                                Select a verification result to see the
+                                corresponding decision guidance.
+                            </span>
+
+                        </div>
+
+
+                        <!-- SUBMIT DECISION -->
+
+                        <div class="teacher-guardian-verification-actions">
+
+                            <button type="button"
+                                class="teacher-guardian-cancel-button"
+                                data-bs-dismiss="modal">
+
+                                Cancel
+
+                            </button>
+
+
+                            <button type="submit"
+                                class="teacher-guardian-submit-button"
+                                id="teacherGuardianSubmitDecision">
+
+                                <i class="bi bi-check-circle"></i>
+
+                                Submit Decision
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+
+                <!-- REVIEW HISTORY -->
+
+                <section class="teacher-guardian-history">
+
+                    <h6>Request History</h6>
+
+                    <div id="teacherGuardianRequestHistory">
+
+                        <p class="text-secondary small">
+                            No history available in the demonstration.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- SHARED LAYOUT -->
+<script src="../../assets/js/layout.js"></script>
+
+<!-- TEACHER -->
+<script src="../../assets/js/teacher.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,820 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+
+    <title>Grades &amp; Feedback | GabayAral</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/teacher.css">
+</head>
+
+<body>
+
+<div class="app-shell teacher-app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar teacher-sidebar" id="sidebar">
+
+        <div class="brand-block">
+            <a href="dashboard.html" class="brand">
+                <i class="bi bi-book-half"></i>
+                <span>GabayAral</span>
+            </a>
+            <span class="role-pill">Teacher Workspace</span>
+        </div>
+
+        <nav class="side-nav">
+
+            <div class="nav-group">
+                <p class="nav-heading">Overview</p>
+
+                <a href="dashboard.html" class="side-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="my-offerings.html" class="side-link">
+                    <i class="bi bi-journal-bookmark"></i>
+                    <span>My Subject Offerings</span>
+                </a>
+
+                <a href="my-students.html" class="side-link">
+                    <i class="bi bi-people"></i>
+                    <span>My Students</span>
+                </a>
+            </div>
+
+
+            <div class="nav-group">
+                <p class="nav-heading">Teaching & Learning</p>
+
+                <a href="activities.html" class="side-link">
+                    <i class="bi bi-journal-text"></i>
+                    <span>Activities</span>
+                </a>
+
+                <a href="submissions.html" class="side-link">
+                    <i class="bi bi-inbox"></i>
+                    <span>Submissions & Revisions</span>
+                </a>
+
+                <a href="quizzes.html" class="side-link">
+                    <i class="bi bi-ui-checks"></i>
+                    <span>Quizzes</span>
+                </a>
+
+                <a href="grades.html" class="side-link active" aria-current="page">
+                    <i class="bi bi-clipboard-data"></i>
+                    <span>Grades & Feedback</span>
+                </a>
+
+                <a href="grade-reviews.html" class="side-link">
+                    <i class="bi bi-clipboard-check"></i>
+                    <span>Grade Review Cases</span>
+                </a>
+            </div>
+
+
+            <div class="nav-group">
+                <p class="nav-heading">Communication</p>
+
+                
+<a href="announcements.html" class="side-link">
+    <i class="bi bi-megaphone"></i>
+    <span>Announcements</span>
+</a>
+
+
+                <a href="clearpost.html" class="side-link">
+    <i class="bi bi-stars"></i>
+    <span>ClearPost</span>
+</a>
+
+                <a href="guardian-requests.html" class="side-link">
+    <i class="bi bi-person-check"></i>
+    <span>Guardian Requests</span>
+</a>
+
+                <a href="parent-acknowledgments.html" class="side-link">
+    <i class="bi bi-check2-square"></i>
+    <span>Parent Acknowledgments</span>
+</a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Planning</p>
+
+                <a href="teacher-calendar.html" class="side-link">
+    <i class="bi bi-calendar3"></i>
+    <span>Teacher Calendar</span>
+</a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Workspace</p>
+
+                <a href="notifications.html" class="side-link">
+    <i class="bi bi-bell"></i>
+    <span>Notifications</span>
+</a>
+
+                <a href="activity-history.html" class="side-link">
+    <i class="bi bi-clock-history"></i>
+    <span>Activity History</span>
+</a>
+
+                <a href="easyaccess.html" class="side-link">
+    <i class="bi bi-universal-access"></i>
+    <span>EasyAccess</span>
+</a>
+            </div>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <span class="footer-dot"></span>
+            Teacher Workspace
+        </div>
+
+    </aside>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <!-- MAIN AREA -->
+    <main class="main-area">
+
+        <!-- TOPBAR -->
+        <header class="topbar teacher-topbar">
+
+            <button type="button"
+                class="icon-button-ga mobile-menu"
+                id="menuToggle"
+                aria-label="Open navigation"
+                aria-expanded="false">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="breadcrumbs">
+                <i class="bi bi-house-door-fill"></i>
+                <span>Teacher Workspace</span>
+                <span>/</span>
+                <strong>Grades &amp; Feedback</strong>
+            </div>
+
+            <div class="topbar-tools">
+
+                <div class="school-selector-wrapper" id="teacherSchoolSelectorWrapper">
+
+                    <button type="button"
+                        class="school-select"
+                        id="teacherSchoolSelectButton"
+                        aria-label="Select school workspace"
+                        aria-expanded="false"
+                        aria-controls="teacherSchoolSelectMenu">
+
+                        <span class="school-select-current">
+                            <i class="bi bi-bank me-1"></i>
+                            <span id="teacherSchoolCurrentName">
+                                San Isidro National High School
+                            </span>
+                        </span>
+
+                        <i class="bi bi-chevron-down school-select-chevron"></i>
+                    </button>
+
+                    <div class="school-select-menu"
+                        id="teacherSchoolSelectMenu"
+                        role="menu"
+                        hidden>
+
+                        <div class="school-select-menu-header">
+                            <strong>School Workspaces</strong>
+                            <span>Select an available workspace</span>
+                        </div>
+
+                        <button type="button"
+                            class="school-select-option active"
+                            data-school-id="school-001"
+                            data-school-name="San Isidro National High School"
+                            role="menuitemradio"
+                            aria-checked="true">
+
+                            <span class="school-option-icon">
+                                <i class="bi bi-bank"></i>
+                            </span>
+
+                            <span class="school-option-details">
+                                <strong>San Isidro National High School</strong>
+                                <small>Current workspace</small>
+                            </span>
+
+                            <i class="bi bi-check-circle-fill school-option-check"></i>
+                        </button>
+
+                        <button type="button"
+                            class="school-select-option"
+                            data-school-id="demo-school-002"
+                            data-school-name="Sample School Workspace B"
+                            role="menuitemradio"
+                            aria-checked="false">
+
+                            <span class="school-option-icon">
+                                <i class="bi bi-building"></i>
+                            </span>
+
+                            <span class="school-option-details">
+                                <strong>Sample School Workspace B</strong>
+                                <small>Demonstration workspace only</small>
+                            </span>
+                        </button>
+
+                        <div class="school-select-menu-footer">
+                            <i class="bi bi-info-circle"></i>
+                            School switching is a frontend demonstration.
+                        </div>
+
+                    </div>
+                </div>
+
+                <label class="search-box">
+                    <i class="bi bi-search"></i>
+                    <input type="search"
+                        id="teacherGradeTopSearch"
+                        placeholder="Search grades..."
+                        aria-label="Search grades">
+                </label>
+
+                <button type="button"
+                    class="icon-button-ga"
+                    id="teacherNotificationButton"
+                    aria-label="Open notifications">
+                    <i class="bi bi-bell"></i>
+                </button>
+
+                <div class="admin-profile-wrapper" id="teacherProfileWrapper">
+
+                    <button type="button"
+                        class="profile-button"
+                        id="teacherProfileButton"
+                        aria-label="Teacher account menu"
+                        aria-expanded="false"
+                        aria-controls="teacherProfileMenu">
+
+                        <span class="avatar">
+                            <i class="bi bi-person-fill"></i>
+                        </span>
+
+                        <span>Teacher</span>
+                        <i class="bi bi-chevron-down admin-profile-chevron"></i>
+                    </button>
+
+                    <div class="admin-profile-menu"
+                        id="teacherProfileMenu"
+                        hidden>
+
+                        <div class="admin-profile-menu-header">
+                            <span class="admin-profile-menu-avatar">
+                                <i class="bi bi-person-fill"></i>
+                            </span>
+
+                            <div>
+                                <strong>Teacher</strong>
+                                <small>Teacher Workspace</small>
+                            </div>
+                        </div>
+
+                        <div class="admin-profile-menu-divider"></div>
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="profile">
+                            <i class="bi bi-person-gear"></i>
+                            <span>Profile Settings</span>
+                        </button>
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="security">
+                            <i class="bi bi-shield-lock"></i>
+                            <span>Account Security</span>
+                        </button>
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="accessibility">
+                            <i class="bi bi-universal-access"></i>
+                            <span>EasyAccess</span>
+                        </button>
+
+                        <div class="admin-profile-menu-divider"></div>
+
+                        <button type="button"
+                            class="admin-profile-menu-item danger"
+                            data-profile-action="signout">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span>Sign Out</span>
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <!-- PAGE CONTENT -->
+        <section class="main-content teacher-content">
+
+            <div class="teacher-page-heading">
+                <div>
+                    <span class="teacher-eyebrow">TEACHING &amp; LEARNING</span>
+                    <h1>Grades &amp; Feedback</h1>
+                    <p>Manage Student assessment results, grade corrections, and feedback release.</p>
+                </div>
+            </div>
+
+            <div class="teacher-demo-notice">
+                <i class="bi bi-info-circle-fill"></i>
+                <span>Demonstration records only. Grade changes and release actions are not saved to the Backend.</span>
+            </div>
+
+            <!-- SUMMARY -->
+            <div class="teacher-grade-stats">
+
+                <article class="teacher-stat-card">
+                    <div class="teacher-stat-top">
+                        <span class="teacher-stat-icon blue">
+                            <i class="bi bi-clipboard-data"></i>
+                        </span>
+                        <span class="teacher-stat-label">Total Grade Records</span>
+                    </div>
+                    <strong class="teacher-stat-number" id="teacherGradeTotal">0</strong>
+                    <span class="teacher-stat-caption">Sample assessment records</span>
+                </article>
+
+                <article class="teacher-stat-card">
+                    <div class="teacher-stat-top">
+                        <span class="teacher-stat-icon amber">
+                            <i class="bi bi-eye-slash"></i>
+                        </span>
+                        <span class="teacher-stat-label">Grade Not Released</span>
+                    </div>
+                    <strong class="teacher-stat-number" id="teacherGradeUnreleased">0</strong>
+                    <span class="teacher-stat-caption">Not yet visible to Students</span>
+                </article>
+
+                <article class="teacher-stat-card">
+                    <div class="teacher-stat-top">
+                        <span class="teacher-stat-icon teal">
+                            <i class="bi bi-check-circle"></i>
+                        </span>
+                        <span class="teacher-stat-label">Grades Released</span>
+                    </div>
+                    <strong class="teacher-stat-number" id="teacherGradeReleased">0</strong>
+                    <span class="teacher-stat-caption">Released grade records</span>
+                </article>
+
+                <article class="teacher-stat-card">
+                    <div class="teacher-stat-top">
+                        <span class="teacher-stat-icon purple">
+                            <i class="bi bi-chat-square-text"></i>
+                        </span>
+                        <span class="teacher-stat-label">Feedback Pending</span>
+                    </div>
+                    <strong class="teacher-stat-number" id="teacherGradeFeedbackPending">0</strong>
+                    <span class="teacher-stat-caption">Feedback not yet released</span>
+                </article>
+
+            </div>
+
+            <!-- DIRECTORY -->
+            <section class="teacher-panel teacher-grade-filter-panel">
+
+                <div class="teacher-filter-heading">
+                    <div>
+                        <h2>Grade Directory</h2>
+                        <p>Search and manage assessment grade records.</p>
+                    </div>
+
+                    <span class="teacher-record-count"
+                        id="teacherGradeRecordCount">0 records</span>
+                </div>
+
+                <div class="teacher-grade-filters">
+
+                    <label class="teacher-filter-control">
+                        <span>Search Student or Assessment</span>
+                        <div class="teacher-filter-input">
+                            <i class="bi bi-search"></i>
+                            <input type="search"
+                                id="teacherGradeSearch"
+                                placeholder="Student, assessment, or ID">
+                        </div>
+                    </label>
+
+                    <label class="teacher-filter-control">
+                        <span>Subject Offering</span>
+                        <select id="teacherGradeOfferingFilter">
+                            <option value="all">All Offerings</option>
+                        </select>
+                    </label>
+
+                    <label class="teacher-filter-control">
+                        <span>Grade Release</span>
+                        <select id="teacherGradeReleaseFilter">
+                            <option value="all">All Grades</option>
+                            <option value="released">Released</option>
+                            <option value="unreleased">Not Released</option>
+                        </select>
+                    </label>
+
+                    <button type="button"
+                        class="teacher-clear-filter"
+                        id="teacherGradeClearFilters">
+                        <i class="bi bi-arrow-counterclockwise"></i>
+                        Clear Filters
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- TABLE -->
+            <section class="teacher-panel teacher-grade-table-panel">
+
+                <div class="teacher-panel-header">
+                    <div>
+                        <h2>Assessment Results</h2>
+                        <p>Review scores and manage Student feedback.</p>
+                    </div>
+                </div>
+
+                <div class="teacher-table-wrapper">
+
+                    <table class="teacher-grade-table">
+
+                        <thead>
+                            <tr>
+                                <th>Student</th>
+                                <th>Assessment</th>
+                                <th>Subject Offering</th>
+                                <th>Score</th>
+                                <th>Grade Status</th>
+                                <th>Feedback Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="teacherGradeTableBody"></tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="teacher-grade-empty"
+                    id="teacherGradeEmpty"
+                    hidden>
+
+                    <i class="bi bi-clipboard-x"></i>
+                    <strong>No Grade Records Found</strong>
+                    <span>Try changing your search or filters.</span>
+
+                </div>
+
+            </section>
+
+            <p class="teacher-footer-note">
+                <i class="bi bi-info-circle me-1"></i>
+                Grade corrections, feedback, and release changes are temporary demonstrations and reset when the page is refreshed.
+            </p>
+
+        </section>
+
+        <footer class="main-footer">
+            GabayAral &copy; <span id="teacherFooterYear">2026</span> | Teacher Workspace
+        </footer>
+
+    </main>
+</div>
+
+<!-- GRADE DETAILS MODAL -->
+<div class="modal fade"
+    id="teacherGradeDetailsModal"
+    tabindex="-1"
+    aria-labelledby="teacherGradeDetailsTitle"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+
+        <div class="modal-content teacher-details-modal">
+
+            <div class="modal-header">
+                <div>
+                    <span class="teacher-eyebrow">GRADE RECORD</span>
+                    <h5 class="modal-title" id="teacherGradeDetailsTitle">
+                        Grade Details
+                    </h5>
+                </div>
+
+                <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body" id="teacherGradeDetailsBody"></div>
+
+            <div class="modal-footer">
+
+                <button type="button"
+                    class="teacher-modal-close"
+                    data-bs-dismiss="modal">
+                    Close
+                </button>
+
+                <button type="button"
+                    class="teacher-secondary-button"
+                    id="teacherGradeEditFromDetails">
+                    <i class="bi bi-pencil"></i>
+                    Edit Grade
+                </button>
+
+                <button type="button"
+                    class="teacher-primary-button"
+                    id="teacherGradeFeedbackFromDetails">
+                    <i class="bi bi-chat-left-text"></i>
+                    Manage Feedback
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- EDIT GRADE MODAL -->
+<div class="modal fade"
+    id="teacherGradeEditModal"
+    tabindex="-1"
+    aria-labelledby="teacherGradeEditTitle"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content teacher-details-modal">
+
+            <form id="teacherGradeEditForm">
+
+                <div class="modal-header">
+                    <div>
+                        <span class="teacher-eyebrow">GRADE CORRECTION</span>
+                        <h5 class="modal-title" id="teacherGradeEditTitle">
+                            Edit Grade
+                        </h5>
+                    </div>
+
+                    <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <p class="teacher-grade-modal-context"
+                        id="teacherGradeEditContext"></p>
+
+                    <label class="teacher-submission-field">
+                        <span>Score *</span>
+                        <input type="number"
+                            id="teacherGradeScore"
+                            min="0"
+                            step="0.01"
+                            required>
+                    </label>
+
+                    <label class="teacher-submission-field">
+                        <span>Maximum Points *</span>
+                        <input type="number"
+                            id="teacherGradeMaximum"
+                            min="0.01"
+                            step="0.01"
+                            required>
+                    </label>
+
+                    <label class="teacher-submission-field">
+                        <span>Reason for Correction *</span>
+                        <textarea id="teacherGradeCorrectionReason"
+                            rows="3"
+                            maxlength="1000"
+                            placeholder="Explain why the grade is being corrected..."
+                            required></textarea>
+                    </label>
+
+                    <div class="teacher-submission-modal-notice">
+                        <i class="bi bi-clock-history"></i>
+                        Grade corrections must preserve the previous value and correction history.
+                    </div>
+
+                    <p class="teacher-submission-form-error"
+                        id="teacherGradeEditError"
+                        role="alert"
+                        hidden></p>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button"
+                        class="teacher-modal-close"
+                        data-bs-dismiss="modal">Cancel</button>
+
+                    <button type="submit"
+                        class="teacher-primary-button">
+                        Save Correction
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!-- FEEDBACK MODAL -->
+<div class="modal fade"
+    id="teacherGradeFeedbackModal"
+    tabindex="-1"
+    aria-labelledby="teacherGradeFeedbackTitle"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content teacher-details-modal">
+
+            <form id="teacherGradeFeedbackForm">
+
+                <div class="modal-header">
+                    <div>
+                        <span class="teacher-eyebrow">STUDENT FEEDBACK</span>
+                        <h5 class="modal-title" id="teacherGradeFeedbackTitle">
+                            Manage Feedback
+                        </h5>
+                    </div>
+
+                    <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <p class="teacher-grade-modal-context"
+                        id="teacherGradeFeedbackContext"></p>
+
+                    <label class="teacher-submission-field">
+                        <span>Feedback *</span>
+                        <textarea id="teacherGradeFeedbackText"
+                            rows="5"
+                            maxlength="2000"
+                            placeholder="Write feedback for the Student..."
+                            required></textarea>
+                    </label>
+
+                    <div class="teacher-submission-modal-notice">
+                        <i class="bi bi-info-circle"></i>
+                        Saving feedback does not automatically release the grade or the feedback.
+                    </div>
+
+                    <p class="teacher-submission-form-error"
+                        id="teacherGradeFeedbackError"
+                        role="alert"
+                        hidden></p>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button"
+                        class="teacher-modal-close"
+                        data-bs-dismiss="modal">Cancel</button>
+
+                    <button type="submit"
+                        class="teacher-primary-button">
+                        Save Feedback
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!-- RELEASE CONTROLS MODAL -->
+<div class="modal fade"
+    id="teacherGradeReleaseModal"
+    tabindex="-1"
+    aria-labelledby="teacherGradeReleaseTitle"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content teacher-details-modal">
+
+            <div class="modal-header">
+                <div>
+                    <span class="teacher-eyebrow">VISIBILITY CONTROLS</span>
+                    <h5 class="modal-title" id="teacherGradeReleaseTitle">
+                        Grade &amp; Feedback Release
+                    </h5>
+                </div>
+
+                <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <p class="teacher-grade-modal-context"
+                    id="teacherGradeReleaseContext"></p>
+
+                <div class="teacher-grade-release-control">
+
+                    <div>
+                        <strong>Grade Release</strong>
+                        <small>Controls Student visibility of the grade.</small>
+                    </div>
+
+                    <button type="button"
+                        class="teacher-secondary-button"
+                        id="teacherGradeReleaseToggle">
+                        Release Grade
+                    </button>
+
+                </div>
+
+                <div class="teacher-grade-release-control">
+
+                    <div>
+                        <strong>Feedback Release</strong>
+                        <small>Controls Student visibility of Teacher feedback.</small>
+                    </div>
+
+                    <button type="button"
+                        class="teacher-secondary-button"
+                        id="teacherFeedbackReleaseToggle">
+                        Release Feedback
+                    </button>
+
+                </div>
+
+                <div class="teacher-submission-modal-notice mt-3">
+                    <i class="bi bi-shield-check"></i>
+                    Grade and feedback release are separate actions. Changing one must not automatically change the other.
+                </div>
+
+                <p class="teacher-submission-form-error"
+                    id="teacherGradeReleaseError"
+                    role="alert"
+                    hidden></p>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button"
+                    class="teacher-modal-close"
+                    data-bs-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="../../assets/js/layout.js"></script>
+<script src="../../assets/js/teacher.js"></script>
+
+</body>
+</html>

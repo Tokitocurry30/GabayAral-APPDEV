@@ -1,0 +1,1399 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+
+    <title>EasyAccess | GabayAral</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- INTER FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SHARED CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+
+    <!-- TEACHER CSS -->
+    <link rel="stylesheet" href="../../assets/css/teacher.css">
+
+</head>
+
+<body>
+
+<div class="app-shell teacher-app">
+
+    <!-- =========================================
+         TEACHER SIDEBAR
+    ========================================== -->
+
+    <aside class="sidebar teacher-sidebar" id="sidebar">
+
+        <div class="brand-block">
+
+            <a href="dashboard.html" class="brand">
+                <i class="bi bi-book-half"></i>
+                <span>GabayAral</span>
+            </a>
+
+            <span class="role-pill">Teacher Workspace</span>
+
+        </div>
+
+
+        <nav class="side-nav">
+
+            <!-- OVERVIEW -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Overview</p>
+
+                <a href="dashboard.html" class="side-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="my-offerings.html" class="side-link">
+                    <i class="bi bi-journal-bookmark"></i>
+                    <span>My Subject Offerings</span>
+                </a>
+
+                <a href="my-students.html" class="side-link">
+                    <i class="bi bi-people"></i>
+                    <span>My Students</span>
+                </a>
+
+            </div>
+
+
+            <!-- TEACHING AND LEARNING -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Teaching & Learning</p>
+
+                <a href="activities.html" class="side-link">
+                    <i class="bi bi-journal-text"></i>
+                    <span>Activities</span>
+                </a>
+
+                <a href="submissions.html" class="side-link">
+                    <i class="bi bi-inbox"></i>
+                    <span>Submissions & Revisions</span>
+                </a>
+
+                <a href="quizzes.html" class="side-link">
+                    <i class="bi bi-ui-checks"></i>
+                    <span>Quizzes</span>
+                </a>
+
+                <a href="grades.html" class="side-link">
+                    <i class="bi bi-clipboard-data"></i>
+                    <span>Grades & Feedback</span>
+                </a>
+
+                <a href="grade-reviews.html" class="side-link">
+                    <i class="bi bi-clipboard-check"></i>
+                    <span>Grade Review Cases</span>
+                </a>
+
+            </div>
+
+
+            <!-- COMMUNICATION -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Communication</p>
+
+                <a href="announcements.html" class="side-link">
+                    <i class="bi bi-megaphone"></i>
+                    <span>Announcements</span>
+                </a>
+
+                <a href="clearpost.html" class="side-link">
+                    <i class="bi bi-stars"></i>
+                    <span>ClearPost</span>
+                </a>
+
+                <a href="guardian-requests.html" class="side-link">
+                    <i class="bi bi-person-check"></i>
+                    <span>Guardian Requests</span>
+                </a>
+
+                <a href="parent-acknowledgments.html" class="side-link">
+                    <i class="bi bi-check2-square"></i>
+                    <span>Parent Acknowledgments</span>
+                </a>
+
+            </div>
+
+
+            <!-- PLANNING -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Planning</p>
+
+                <a href="teacher-calendar.html" class="side-link">
+                    <i class="bi bi-calendar3"></i>
+                    <span>Teacher Calendar</span>
+                </a>
+
+            </div>
+
+
+            <!-- WORKSPACE -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Workspace</p>
+
+                <a href="notifications.html" class="side-link">
+                    <i class="bi bi-bell"></i>
+                    <span>Notifications</span>
+                </a>
+
+                <a href="activity-history.html" class="side-link">
+                    <i class="bi bi-clock-history"></i>
+                    <span>Activity History</span>
+                </a>
+
+                <a href="easyaccess.html"
+                   class="side-link active"
+                   aria-current="page">
+
+                    <i class="bi bi-universal-access"></i>
+                    <span>EasyAccess</span>
+
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+            <span class="footer-dot"></span>
+            Teacher Workspace
+        </div>
+
+    </aside>
+
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+
+    <!-- =========================================
+         MAIN AREA
+    ========================================== -->
+
+    <main class="main-area">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar teacher-topbar">
+
+            <button type="button"
+                class="icon-button-ga mobile-menu"
+                id="menuToggle"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+                <i class="bi bi-list"></i>
+
+            </button>
+
+
+            <div class="breadcrumbs">
+
+                <i class="bi bi-house-door-fill"></i>
+
+                <span>Teacher Workspace</span>
+
+                <span>/</span>
+
+                <strong>EasyAccess</strong>
+
+            </div>
+
+
+            <div class="topbar-tools">
+
+
+                <!-- SCHOOL SELECTOR -->
+
+                <div class="school-selector-wrapper"
+                     id="teacherSchoolSelectorWrapper">
+
+                    <button type="button"
+                        class="school-select"
+                        id="teacherSchoolSelectButton"
+                        aria-label="Select school workspace"
+                        aria-expanded="false"
+                        aria-controls="teacherSchoolSelectMenu">
+
+                        <span class="school-select-current">
+
+                            <i class="bi bi-bank me-1"></i>
+
+                            <span id="teacherSchoolCurrentName">
+                                San Isidro National High School
+                            </span>
+
+                        </span>
+
+                        <i class="bi bi-chevron-down school-select-chevron"></i>
+
+                    </button>
+
+
+                    <div class="school-select-menu"
+                         id="teacherSchoolSelectMenu"
+                         role="menu"
+                         aria-label="Available school workspaces"
+                         hidden>
+
+                        <div class="school-select-menu-header">
+
+                            <strong>School Workspaces</strong>
+
+                            <span>Select an available workspace</span>
+
+                        </div>
+
+
+                        <button type="button"
+                            class="school-select-option active"
+                            data-school-id="school-001"
+                            data-school-name="San Isidro National High School"
+                            role="menuitemradio"
+                            aria-checked="true">
+
+                            <span class="school-option-icon">
+                                <i class="bi bi-bank"></i>
+                            </span>
+
+                            <span class="school-option-details">
+
+                                <strong>
+                                    San Isidro National High School
+                                </strong>
+
+                                <small>Current workspace</small>
+
+                            </span>
+
+                            <i class="bi bi-check-circle-fill school-option-check"></i>
+
+                        </button>
+
+
+                        <button type="button"
+                            class="school-select-option"
+                            data-school-id="demo-school-002"
+                            data-school-name="Sample School Workspace B"
+                            role="menuitemradio"
+                            aria-checked="false">
+
+                            <span class="school-option-icon">
+                                <i class="bi bi-building"></i>
+                            </span>
+
+                            <span class="school-option-details">
+
+                                <strong>Sample School Workspace B</strong>
+
+                                <small>Demonstration workspace only</small>
+
+                            </span>
+
+                        </button>
+
+
+                        <div class="school-select-menu-footer">
+
+                            <i class="bi bi-info-circle"></i>
+
+                            School switching is a frontend demonstration.
+                            Authorized memberships will be supplied by the Backend.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SEARCH -->
+
+                <label class="search-box teacher-dashboard-search">
+
+                    <i class="bi bi-search"></i>
+
+                    <input type="search"
+                        id="teacherEasyAccessTopbarSearch"
+                        placeholder="Search settings..."
+                        aria-label="Search accessibility settings">
+
+                </label>
+
+
+                <!-- NOTIFICATIONS -->
+
+                <button type="button"
+                    class="icon-button-ga"
+                    id="teacherNotificationButton"
+                    aria-label="Open notifications">
+
+                    <i class="bi bi-bell"></i>
+
+                </button>
+
+
+                <!-- PROFILE -->
+
+                <div class="admin-profile-wrapper"
+                     id="teacherProfileWrapper">
+
+                    <button type="button"
+                        class="profile-button"
+                        id="teacherProfileButton"
+                        aria-label="Teacher account menu"
+                        aria-expanded="false"
+                        aria-controls="teacherProfileMenu">
+
+                        <span class="avatar">
+                            <i class="bi bi-person-fill"></i>
+                        </span>
+
+                        <span>Teacher</span>
+
+                        <i class="bi bi-chevron-down admin-profile-chevron"></i>
+
+                    </button>
+
+
+                    <div class="admin-profile-menu"
+                         id="teacherProfileMenu"
+                         aria-label="Teacher account options"
+                         hidden>
+
+                        <div class="admin-profile-menu-header">
+
+                            <span class="admin-profile-menu-avatar">
+                                <i class="bi bi-person-fill"></i>
+                            </span>
+
+                            <div>
+                                <strong>Teacher</strong>
+                                <small>Teacher Workspace</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="admin-profile-menu-divider"></div>
+
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="profile">
+
+                            <i class="bi bi-person-gear"></i>
+                            <span>Profile Settings</span>
+
+                        </button>
+
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="security">
+
+                            <i class="bi bi-shield-lock"></i>
+                            <span>Account Security</span>
+                            <small>Coming soon</small>
+
+                        </button>
+
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="accessibility">
+
+                            <i class="bi bi-universal-access"></i>
+                            <span>EasyAccess</span>
+
+                        </button>
+
+
+                        <div class="admin-profile-menu-divider"></div>
+
+
+                        <button type="button"
+                            class="admin-profile-menu-item danger"
+                            data-profile-action="signout">
+
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span>Sign Out</span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================================
+             EASYACCESS CONTENT
+        ========================================== -->
+
+        <section class="main-content teacher-content teacher-ea-page">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="teacher-ea-heading">
+
+                <div>
+
+                    <span class="teacher-eyebrow">
+                        ACCESSIBILITY AND PERSONALIZATION
+                    </span>
+
+                    <h1>EasyAccess</h1>
+
+                    <p>
+                        Adjust your display, reading and language
+                        preferences to make GabayAral easier to use.
+                    </p>
+
+                </div>
+
+
+                <span class="teacher-ea-personal-badge">
+
+                    <i class="bi bi-person-lock"></i>
+
+                    Personal Settings
+
+                </span>
+
+            </div>
+
+
+            <!-- INFORMATION NOTICE -->
+
+            <div class="teacher-ea-notice" role="note">
+
+                <i class="bi bi-universal-access"></i>
+
+                <div>
+
+                    <strong>Your Accessibility Preferences</strong>
+
+                    <span>
+                        These settings are personal to your Teacher
+                        account. You can preview your changes, save
+                        your preferences and restore the default settings
+                        whenever you want.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- MAIN SETTINGS LAYOUT -->
+
+            <div class="teacher-ea-layout">
+
+
+                <!-- =================================
+                     LEFT: SETTINGS
+                ================================== -->
+
+                <div class="teacher-ea-settings-column">
+
+
+                    <!-- FONT AND TEXT SIZE -->
+
+                    <section class="teacher-ea-card"
+                        id="teacherEaDisplaySettings"
+                        data-ea-searchable="font text size display typography">
+
+                        <div class="teacher-ea-card-heading">
+
+                            <span class="teacher-ea-card-icon blue">
+                                <i class="bi bi-type"></i>
+                            </span>
+
+                            <div>
+
+                                <h2>Display and Text</h2>
+
+                                <p>
+                                    Adjust how text appears on your screen.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- FONT FAMILY -->
+
+                        <div class="teacher-ea-setting-row">
+
+                            <div class="teacher-ea-setting-description">
+
+                                <strong>Font Family</strong>
+
+                                <p>
+                                    Choose a font that is comfortable to read.
+                                </p>
+
+                            </div>
+
+
+                            <label class="teacher-ea-control">
+
+                                <span class="visually-hidden">
+                                    Font family
+                                </span>
+
+                                <select id="teacherEaFontFamily"
+                                    name="fontFamily">
+
+                                    <option value="inter">
+                                        Inter (Default)
+                                    </option>
+
+                                    <option value="arial">
+                                        Arial
+                                    </option>
+
+                                    <option value="verdana">
+                                        Verdana
+                                    </option>
+
+                                </select>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="teacher-ea-divider"></div>
+
+
+                        <!-- TEXT SIZE -->
+
+                        <fieldset class="teacher-ea-setting-fieldset">
+
+                            <legend>Text Size</legend>
+
+                            <p class="teacher-ea-helper">
+                                Select the text size that works best for you.
+                            </p>
+
+
+                            <div class="teacher-ea-choice-group">
+
+
+                                <label class="teacher-ea-choice">
+
+                                    <input type="radio"
+                                        name="teacherEaTextSize"
+                                        value="normal"
+                                        checked>
+
+                                    <span class="teacher-ea-choice-preview normal">
+                                        Aa
+                                    </span>
+
+                                    <span>Normal</span>
+
+                                </label>
+
+
+                                <label class="teacher-ea-choice">
+
+                                    <input type="radio"
+                                        name="teacherEaTextSize"
+                                        value="large">
+
+                                    <span class="teacher-ea-choice-preview large">
+                                        Aa
+                                    </span>
+
+                                    <span>Large</span>
+
+                                </label>
+
+
+                                <label class="teacher-ea-choice">
+
+                                    <input type="radio"
+                                        name="teacherEaTextSize"
+                                        value="extra-large">
+
+                                    <span class="teacher-ea-choice-preview extra-large">
+                                        Aa
+                                    </span>
+
+                                    <span>Extra Large</span>
+
+                                </label>
+
+                            </div>
+
+                        </fieldset>
+
+                    </section>
+
+
+                    <!-- COLOR AND DISPLAY -->
+
+                    <section class="teacher-ea-card"
+                        id="teacherEaAppearanceSettings"
+                        data-ea-searchable="color contrast simplified display motion">
+
+                        <div class="teacher-ea-card-heading">
+
+                            <span class="teacher-ea-card-icon purple">
+                                <i class="bi bi-palette"></i>
+                            </span>
+
+                            <div>
+
+                                <h2>Color and Display</h2>
+
+                                <p>
+                                    Improve visibility and reduce distractions.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- HIGH CONTRAST -->
+
+                        <div class="teacher-ea-setting-row">
+
+                            <div class="teacher-ea-setting-description">
+
+                                <strong>High Contrast</strong>
+
+                                <p>
+                                    Use stronger borders and darker text
+                                    for improved visibility.
+                                </p>
+
+                            </div>
+
+
+                            <label class="teacher-ea-switch">
+
+                                <input type="checkbox"
+                                    id="teacherEaHighContrast">
+
+                                <span class="teacher-ea-switch-track"></span>
+
+                                <span class="visually-hidden">
+                                    Enable high contrast
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="teacher-ea-divider"></div>
+
+
+                        <!-- SIMPLIFIED DISPLAY -->
+
+                        <div class="teacher-ea-setting-row">
+
+                            <div class="teacher-ea-setting-description">
+
+                                <strong>Simplified Display</strong>
+
+                                <p>
+                                    Reduce decorative visual effects
+                                    and card shadows.
+                                </p>
+
+                            </div>
+
+
+                            <label class="teacher-ea-switch">
+
+                                <input type="checkbox"
+                                    id="teacherEaSimplified">
+
+                                <span class="teacher-ea-switch-track"></span>
+
+                                <span class="visually-hidden">
+                                    Enable simplified display
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="teacher-ea-divider"></div>
+
+
+                        <!-- REDUCED MOTION -->
+
+                        <div class="teacher-ea-setting-row">
+
+                            <div class="teacher-ea-setting-description">
+
+                                <strong>Reduce Motion</strong>
+
+                                <p>
+                                    Reduce animations and transition effects
+                                    throughout the Teacher Workspace.
+                                </p>
+
+                            </div>
+
+
+                            <label class="teacher-ea-switch">
+
+                                <input type="checkbox"
+                                    id="teacherEaReduceMotion">
+
+                                <span class="teacher-ea-switch-track"></span>
+
+                                <span class="visually-hidden">
+                                    Enable reduced motion
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- LANGUAGE SETTINGS -->
+
+                    <section class="teacher-ea-card"
+                        id="teacherEaLanguageSettings"
+                        data-ea-searchable="language english filipino cebuano ilocano">
+
+                        <div class="teacher-ea-card-heading">
+
+                            <span class="teacher-ea-card-icon teal">
+                                <i class="bi bi-translate"></i>
+                            </span>
+
+                            <div>
+
+                                <h2>Language Preference</h2>
+
+                                <p>
+                                    Select your preferred language.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="teacher-ea-setting-row">
+
+                            <div class="teacher-ea-setting-description">
+
+                                <strong>Preferred Language</strong>
+
+                                <p>
+                                    Your selected language preference
+                                    will be saved to your settings.
+                                </p>
+
+                            </div>
+
+
+                            <label class="teacher-ea-control">
+
+                                <span class="visually-hidden">
+                                    Preferred language
+                                </span>
+
+                                <select id="teacherEaLanguage"
+                                    name="language">
+
+                                    <option value="en">
+                                        English
+                                    </option>
+
+                                    <option value="fil">
+                                        Filipino
+                                    </option>
+
+                                    <option value="ceb">
+                                        Cebuano
+                                    </option>
+
+                                    <option value="ilo">
+                                        Ilocano
+                                    </option>
+
+                                </select>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="teacher-ea-language-note">
+
+                            <i class="bi bi-info-circle"></i>
+
+                            <span>
+                                Automatic translation of every screen
+                                requires the approved language resources.
+                                Selecting a language here saves your
+                                preference but does not yet translate
+                                all interface content.
+                            </span>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- TEXT TO SPEECH -->
+
+                    <section class="teacher-ea-card"
+                        id="teacherEaSpeechSettings"
+                        data-ea-searchable="speech text to speech reading voice speed audio">
+
+                        <div class="teacher-ea-card-heading">
+
+                            <span class="teacher-ea-card-icon amber">
+                                <i class="bi bi-volume-up"></i>
+                            </span>
+
+                            <div>
+
+                                <h2>Text-to-Speech</h2>
+
+                                <p>
+                                    Configure your reading and speech preferences.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ENABLE SPEECH -->
+
+                        <div class="teacher-ea-setting-row">
+
+                            <div class="teacher-ea-setting-description">
+
+                                <strong>Enable Text-to-Speech</strong>
+
+                                <p>
+                                    Allow the reading preview to speak
+                                    using your browser or device.
+                                </p>
+
+                            </div>
+
+
+                            <label class="teacher-ea-switch">
+
+                                <input type="checkbox"
+                                    id="teacherEaSpeechEnabled">
+
+                                <span class="teacher-ea-switch-track"></span>
+
+                                <span class="visually-hidden">
+                                    Enable text-to-speech
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="teacher-ea-divider"></div>
+
+
+                        <!-- SPEECH VOICE -->
+
+                        <div class="teacher-ea-setting-block">
+
+                            <div class="teacher-ea-setting-description">
+
+                                <strong>Speech Voice</strong>
+
+                                <p>
+                                    Choose an available voice installed
+                                    in your browser or device.
+                                </p>
+
+                            </div>
+
+
+                            <label class="teacher-ea-control full-width">
+
+                                <span class="visually-hidden">
+                                    Speech voice
+                                </span>
+
+                                <select id="teacherEaTtsVoice">
+
+                                    <option value="">
+                                        Default Device Voice
+                                    </option>
+
+                                </select>
+
+                            </label>
+
+                            <small class="teacher-ea-helper"
+                                id="teacherEaVoiceStatus">
+
+                                Available voices depend on your browser
+                                and device.
+
+                            </small>
+
+                        </div>
+
+
+                        <div class="teacher-ea-divider"></div>
+
+
+                        <!-- SPEECH SPEED -->
+
+                        <div class="teacher-ea-setting-block">
+
+                            <div class="teacher-ea-setting-description">
+
+                                <strong>Speech Speed</strong>
+
+                                <p>
+                                    Adjust how quickly the reading preview speaks.
+                                </p>
+
+                            </div>
+
+
+                            <div class="teacher-ea-range-wrapper">
+
+                                <input type="range"
+                                    id="teacherEaSpeechSpeed"
+                                    name="speechSpeed"
+                                    min="0.5"
+                                    max="2"
+                                    step="0.1"
+                                    value="1">
+
+                                <div class="teacher-ea-range-labels">
+
+                                    <span>Slower</span>
+
+                                    <strong id="teacherEaSpeechSpeedValue">
+                                        1.0x
+                                    </strong>
+
+                                    <span>Faster</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- SPEECH STATUS -->
+
+                        <div class="teacher-ea-speech-status"
+                            id="teacherEaSpeechStatus"
+                            role="status"
+                            aria-live="polite">
+
+                            Text-to-speech is currently disabled.
+
+                        </div>
+
+
+                        <!-- SPEECH PREVIEW -->
+
+                        <button type="button"
+                            class="teacher-ea-read-button"
+                            id="teacherEaReadPreview">
+
+                            <i class="bi bi-play-circle"></i>
+
+                            Play Reading Preview
+
+                        </button>
+
+
+                        <button type="button"
+                            class="teacher-ea-stop-button"
+                            id="teacherEaStopPreview">
+
+                            <i class="bi bi-stop-circle"></i>
+
+                            Stop Reading
+
+                        </button>
+
+                    </section>
+
+
+                    <!-- SAVE / RESET ACTIONS -->
+
+                    <section class="teacher-ea-actions-card">
+
+                        <div class="teacher-ea-save-information">
+
+                            <i class="bi bi-shield-check"></i>
+
+                            <span>
+                                Your settings are personal and will not
+                                change another Teacher's preferences.
+                            </span>
+
+                        </div>
+
+
+                        <div class="teacher-ea-actions">
+
+                            <button type="button"
+                                class="teacher-ea-reset-button"
+                                id="teacherEaResetButton">
+
+                                <i class="bi bi-arrow-counterclockwise"></i>
+
+                                Restore Defaults
+
+                            </button>
+
+
+                            <button type="button"
+                                class="teacher-ea-save-button"
+                                id="teacherEaSaveButton">
+
+                                <i class="bi bi-check2-circle"></i>
+
+                                Save Preferences
+
+                            </button>
+
+                        </div>
+
+
+                        <div id="teacherEaSaveMessage"
+                            class="teacher-ea-save-message"
+                            role="status"
+                            aria-live="polite"
+                            hidden>
+                        </div>
+
+                    </section>
+
+
+                </div>
+
+
+                <!-- =================================
+                     RIGHT: PREVIEW
+                ================================== -->
+
+                <aside class="teacher-ea-preview-column">
+
+
+                    <!-- LIVE PREVIEW -->
+
+                    <section class="teacher-ea-card">
+
+                        <div class="teacher-ea-card-heading">
+
+                            <span class="teacher-ea-card-icon blue">
+                                <i class="bi bi-eye"></i>
+                            </span>
+
+                            <div>
+
+                                <h2>Accessibility Preview</h2>
+
+                                <p>
+                                    Preview your selected display settings.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="teacher-ea-preview-sample"
+                            id="teacherEaPreview">
+
+                            <span class="teacher-ea-preview-label">
+                                SAMPLE CONTENT
+                            </span>
+
+                            <h3>Welcome to GabayAral</h3>
+
+                            <p>
+                                This is a sample paragraph. You can use
+                                your accessibility settings to adjust
+                                text size, font and display appearance.
+                            </p>
+
+
+                            <div class="teacher-ea-preview-example">
+
+                                <strong>Learning Reminder</strong>
+
+                                <p>
+                                    Review your activities and announcements
+                                    regularly to stay updated.
+                                </p>
+
+                            </div>
+
+
+                            <button type="button"
+                                class="teacher-ea-preview-sample-button"
+                                disabled>
+
+                                Sample Button
+
+                            </button>
+
+                        </div>
+
+
+                        <p class="teacher-ea-preview-caption">
+
+                            <i class="bi bi-info-circle"></i>
+
+                            Preview changes here before saving your settings.
+
+                        </p>
+
+                    </section>
+
+
+                    <!-- ACCESSIBILITY SUMMARY -->
+
+                    <section class="teacher-ea-card">
+
+                        <div class="teacher-ea-card-heading">
+
+                            <span class="teacher-ea-card-icon teal">
+                                <i class="bi bi-universal-access"></i>
+                            </span>
+
+                            <div>
+
+                                <h2>Accessibility Guide</h2>
+
+                                <p>
+                                    What each setting helps you do.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="teacher-ea-guide-list">
+
+
+                            <div>
+
+                                <i class="bi bi-type"></i>
+
+                                <span>
+                                    **Readable Text**
+
+                                    <small>
+                                        Adjust the font and text size.
+                                    </small>
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="bi bi-eye"></i>
+
+                                <span>
+                                    **Better Visibility**
+
+                                    <small>
+                                        Improve contrast and simplify the display.
+                                    </small>
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="bi bi-translate"></i>
+
+                                <span>
+                                    **Language Preference**
+
+                                    <small>
+                                        Save your preferred language.
+                                    </small>
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="bi bi-volume-up"></i>
+
+                                <span>
+                                    **Reading Assistance**
+
+                                    <small>
+                                        Use supported browser/device speech synthesis.
+                                    </small>
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- PERSONAL SETTINGS NOTICE -->
+
+                    <section class="teacher-ea-card teacher-ea-summary-card">
+
+                        <h2>
+
+                            <i class="bi bi-lock-fill"></i>
+
+                            Personal Settings
+
+                        </h2>
+
+                        <p>
+                            Your preferences are stored separately
+                            from other users' settings.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Settings apply to your own browser session.
+                            </li>
+
+                            <li>
+                                Browser storage is used in this frontend demo.
+                            </li>
+
+                            <li>
+                                Account-wide synchronization will require
+                                Django and PostgreSQL integration.
+                            </li>
+
+                        </ul>
+
+                    </section>
+
+
+                </aside>
+
+
+            </div>
+
+
+            <!-- STATUS MESSAGE -->
+
+            <div id="teacherEasyAccessMessage"
+                class="teacher-ea-global-message"
+                role="status"
+                aria-live="polite"
+                hidden>
+            </div>
+
+
+            <!-- FOOTER NOTE -->
+
+            <p class="teacher-footer-note">
+
+                <i class="bi bi-info-circle me-1"></i>
+
+                Frontend demonstration only. Preferences are saved
+                locally in this browser. Official account-wide
+                persistence will be handled by the Backend.
+
+            </p>
+
+
+        </section>
+
+
+        <!-- MAIN FOOTER -->
+
+        <footer class="main-footer">
+
+            GabayAral &copy;
+
+            <span id="teacherFooterYear">2026</span>
+
+            | Teacher Workspace
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- SHARED LAYOUT -->
+<script src="../../assets/js/layout.js"></script>
+
+<!-- TEACHER -->
+<script src="../../assets/js/teacher.js"></script>
+
+</body>
+</html>

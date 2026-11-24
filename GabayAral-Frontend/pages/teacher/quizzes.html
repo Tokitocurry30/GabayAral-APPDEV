@@ -1,0 +1,784 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+
+    <title>Quiz Management | GabayAral</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/teacher.css">
+</head>
+
+<body>
+
+<div class="app-shell teacher-app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar teacher-sidebar" id="sidebar">
+
+        <div class="brand-block">
+            <a href="dashboard.html" class="brand">
+                <i class="bi bi-book-half"></i>
+                <span>GabayAral</span>
+            </a>
+            <span class="role-pill">Teacher Workspace</span>
+        </div>
+
+        <nav class="side-nav">
+
+            <div class="nav-group">
+                <p class="nav-heading">Overview</p>
+
+                <a href="dashboard.html" class="side-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="my-offerings.html" class="side-link">
+                    <i class="bi bi-journal-bookmark"></i>
+                    <span>My Subject Offerings</span>
+                </a>
+
+                <a href="my-students.html" class="side-link">
+                    <i class="bi bi-people"></i>
+                    <span>My Students</span>
+                </a>
+            </div>
+
+            
+            <div class="nav-group">
+                <p class="nav-heading">Teaching & Learning</p>
+
+                <a href="activities.html" class="side-link">
+                    <i class="bi bi-journal-text"></i>
+                    <span>Activities</span>
+                </a>
+
+                <a href="submissions.html" class="side-link">
+                    <i class="bi bi-inbox"></i>
+                    <span>Submissions & Revisions</span>
+                </a>
+
+                <a href="quizzes.html"
+                class="side-link active"
+                aria-current="page">
+                    <i class="bi bi-ui-checks"></i>
+                    <span>Quizzes</span>
+                </a>
+
+                <a href="grades.html" class="side-link">
+                    <i class="bi bi-clipboard-data"></i>
+                    <span>Grades & Feedback</span>
+                </a>
+
+                <a href="grade-reviews.html" class="side-link">
+                    <i class="bi bi-clipboard-check"></i>
+                    <span>Grade Review Cases</span>
+                </a>
+            </div>
+
+
+            <div class="nav-group">
+                <p class="nav-heading">Communication</p>
+
+                
+<a href="announcements.html" class="side-link">
+    <i class="bi bi-megaphone"></i>
+    <span>Announcements</span>
+</a>
+
+
+                <a href="clearpost.html" class="side-link">
+    <i class="bi bi-stars"></i>
+    <span>ClearPost</span>
+</a>
+
+                <a href="guardian-requests.html" class="side-link">
+    <i class="bi bi-person-check"></i>
+    <span>Guardian Requests</span>
+</a>
+
+                <a href="parent-acknowledgments.html" class="side-link">
+    <i class="bi bi-check2-square"></i>
+    <span>Parent Acknowledgments</span>
+</a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Planning</p>
+
+                <a href="teacher-calendar.html" class="side-link">
+    <i class="bi bi-calendar3"></i>
+    <span>Teacher Calendar</span>
+</a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-heading">Workspace</p>
+
+                <a href="notifications.html" class="side-link">
+    <i class="bi bi-bell"></i>
+    <span>Notifications</span>
+</a>
+
+                <a href="activity-history.html" class="side-link">
+    <i class="bi bi-clock-history"></i>
+    <span>Activity History</span>
+</a>
+
+                <a href="easyaccess.html" class="side-link">
+    <i class="bi bi-universal-access"></i>
+    <span>EasyAccess</span>
+</a>
+            </div>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <span class="footer-dot"></span>
+            Teacher Workspace
+        </div>
+
+    </aside>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <!-- MAIN AREA -->
+    <main class="main-area">
+
+        <!-- TOPBAR -->
+        <header class="topbar teacher-topbar">
+
+            <button type="button"
+                class="icon-button-ga mobile-menu"
+                id="menuToggle"
+                aria-label="Open navigation"
+                aria-expanded="false">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="breadcrumbs">
+                <i class="bi bi-house-door-fill"></i>
+                <span>Teacher Workspace</span>
+                <span>/</span>
+                <strong>Quizzes</strong>
+            </div>
+
+            <div class="topbar-tools">
+
+                <!-- SCHOOL SELECTOR -->
+                <div class="school-selector-wrapper" id="teacherSchoolSelectorWrapper">
+
+                    <button type="button"
+                        class="school-select"
+                        id="teacherSchoolSelectButton"
+                        aria-label="Select school workspace"
+                        aria-expanded="false"
+                        aria-controls="teacherSchoolSelectMenu">
+
+                        <span class="school-select-current">
+                            <i class="bi bi-bank me-1"></i>
+                            <span id="teacherSchoolCurrentName">
+                                San Isidro National High School
+                            </span>
+                        </span>
+
+                        <i class="bi bi-chevron-down school-select-chevron"></i>
+                    </button>
+
+                    <div class="school-select-menu"
+                        id="teacherSchoolSelectMenu"
+                        role="menu"
+                        hidden>
+
+                        <div class="school-select-menu-header">
+                            <strong>School Workspaces</strong>
+                            <span>Select an available workspace</span>
+                        </div>
+
+                        <button type="button"
+                            class="school-select-option active"
+                            data-school-id="school-001"
+                            data-school-name="San Isidro National High School"
+                            role="menuitemradio"
+                            aria-checked="true">
+
+                            <span class="school-option-icon">
+                                <i class="bi bi-bank"></i>
+                            </span>
+
+                            <span class="school-option-details">
+                                <strong>San Isidro National High School</strong>
+                                <small>Current workspace</small>
+                            </span>
+
+                            <i class="bi bi-check-circle-fill school-option-check"></i>
+                        </button>
+
+                        <button type="button"
+                            class="school-select-option"
+                            data-school-id="demo-school-002"
+                            data-school-name="Sample School Workspace B"
+                            role="menuitemradio"
+                            aria-checked="false">
+
+                            <span class="school-option-icon">
+                                <i class="bi bi-building"></i>
+                            </span>
+
+                            <span class="school-option-details">
+                                <strong>Sample School Workspace B</strong>
+                                <small>Demonstration workspace only</small>
+                            </span>
+
+                        </button>
+
+                        <div class="school-select-menu-footer">
+                            <i class="bi bi-info-circle"></i>
+                            School switching is a frontend demonstration.
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- TOPBAR SEARCH -->
+                <label class="search-box">
+                    <i class="bi bi-search"></i>
+                    <input type="search"
+                        id="teacherQuizTopSearch"
+                        placeholder="Search quizzes..."
+                        aria-label="Search quizzes">
+                </label>
+
+                <button type="button"
+                    class="icon-button-ga"
+                    id="teacherNotificationButton"
+                    aria-label="Open notifications">
+                    <i class="bi bi-bell"></i>
+                </button>
+
+                <!-- PROFILE -->
+                <div class="admin-profile-wrapper" id="teacherProfileWrapper">
+
+                    <button type="button"
+                        class="profile-button"
+                        id="teacherProfileButton"
+                        aria-label="Teacher account menu"
+                        aria-expanded="false"
+                        aria-controls="teacherProfileMenu">
+
+                        <span class="avatar">
+                            <i class="bi bi-person-fill"></i>
+                        </span>
+
+                        <span>Teacher</span>
+                        <i class="bi bi-chevron-down admin-profile-chevron"></i>
+                    </button>
+
+                    <div class="admin-profile-menu"
+                        id="teacherProfileMenu"
+                        hidden>
+
+                        <div class="admin-profile-menu-header">
+                            <span class="admin-profile-menu-avatar">
+                                <i class="bi bi-person-fill"></i>
+                            </span>
+
+                            <div>
+                                <strong>Teacher</strong>
+                                <small>Teacher Workspace</small>
+                            </div>
+                        </div>
+
+                        <div class="admin-profile-menu-divider"></div>
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="profile">
+                            <i class="bi bi-person-gear"></i>
+                            <span>Profile Settings</span>
+                        </button>
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="security">
+                            <i class="bi bi-shield-lock"></i>
+                            <span>Account Security</span>
+                        </button>
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="accessibility">
+                            <i class="bi bi-universal-access"></i>
+                            <span>EasyAccess</span>
+                        </button>
+
+                        <div class="admin-profile-menu-divider"></div>
+
+                        <button type="button"
+                            class="admin-profile-menu-item danger"
+                            data-profile-action="signout">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span>Sign Out</span>
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <!-- PAGE CONTENT -->
+        <section class="main-content teacher-content">
+
+            <div class="teacher-page-heading">
+                <div>
+                    <span class="teacher-eyebrow">TEACHING & LEARNING</span>
+                    <h1>Quiz Management</h1>
+                    <p>Create, organize, and manage quizzes for your assigned Subject Offerings.</p>
+                </div>
+
+                <button type="button"
+                    class="teacher-primary-button"
+                    id="teacherCreateQuizButton">
+                    <i class="bi bi-plus-lg"></i>
+                    Create Quiz
+                </button>
+            </div>
+
+            <div class="teacher-demo-notice">
+                <i class="bi bi-info-circle-fill"></i>
+                <span>Demonstration records only. Quiz creation, publishing, and attempts are not connected to the Backend.</span>
+            </div>
+
+            <!-- SUMMARY CARDS -->
+            <div class="teacher-quiz-stats">
+
+                <article class="teacher-stat-card">
+                    <div class="teacher-stat-top">
+                        <span class="teacher-stat-icon blue">
+                            <i class="bi bi-ui-checks"></i>
+                        </span>
+                        <span class="teacher-stat-label">Total Quizzes</span>
+                    </div>
+                    <strong class="teacher-stat-number" id="teacherQuizTotal">0</strong>
+                    <span class="teacher-stat-caption">All demonstration quizzes</span>
+                </article>
+
+                <article class="teacher-stat-card">
+                    <div class="teacher-stat-top">
+                        <span class="teacher-stat-icon amber">
+                            <i class="bi bi-pencil-square"></i>
+                        </span>
+                        <span class="teacher-stat-label">Drafts</span>
+                    </div>
+                    <strong class="teacher-stat-number" id="teacherQuizDrafts">0</strong>
+                    <span class="teacher-stat-caption">Not yet published</span>
+                </article>
+
+                <article class="teacher-stat-card">
+                    <div class="teacher-stat-top">
+                        <span class="teacher-stat-icon teal">
+                            <i class="bi bi-broadcast"></i>
+                        </span>
+                        <span class="teacher-stat-label">Published</span>
+                    </div>
+                    <strong class="teacher-stat-number" id="teacherQuizPublished">0</strong>
+                    <span class="teacher-stat-caption">Published quiz versions</span>
+                </article>
+
+                <article class="teacher-stat-card">
+                    <div class="teacher-stat-top">
+                        <span class="teacher-stat-icon purple">
+                            <i class="bi bi-lock"></i>
+                        </span>
+                        <span class="teacher-stat-label">Closed</span>
+                    </div>
+                    <strong class="teacher-stat-number" id="teacherQuizClosed">0</strong>
+                    <span class="teacher-stat-caption">No longer available</span>
+                </article>
+
+            </div>
+
+            <!-- QUIZ DIRECTORY -->
+            <section class="teacher-panel teacher-quiz-filter-panel">
+
+                <div class="teacher-filter-heading">
+                    <div>
+                        <h2>Quiz Directory</h2>
+                        <p>Search and manage your quizzes.</p>
+                    </div>
+
+                    <span class="teacher-record-count" id="teacherQuizRecordCount">
+                        0 records
+                    </span>
+                </div>
+
+                <div class="teacher-quiz-filters">
+
+                    <label class="teacher-filter-control">
+                        <span>Search Quizzes</span>
+                        <div class="teacher-filter-input">
+                            <i class="bi bi-search"></i>
+                            <input type="search"
+                                id="teacherQuizSearch"
+                                placeholder="Quiz title, subject, or ID">
+                        </div>
+                    </label>
+
+                    <label class="teacher-filter-control">
+                        <span>Subject Offering</span>
+                        <select id="teacherQuizOfferingFilter">
+                            <option value="all">All Offerings</option>
+                        </select>
+                    </label>
+
+                    <label class="teacher-filter-control">
+                        <span>Quiz Status</span>
+                        <select id="teacherQuizStatusFilter">
+                            <option value="all">All Statuses</option>
+                            <option value="draft">Draft</option>
+                            <option value="published">Published</option>
+                            <option value="closed">Closed</option>
+                        </select>
+                    </label>
+
+                    <button type="button"
+                        class="teacher-clear-filter"
+                        id="teacherQuizClearFilters">
+                        <i class="bi bi-arrow-counterclockwise"></i>
+                        Clear Filters
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- QUIZ TABLE -->
+            <section class="teacher-panel teacher-quiz-table-panel">
+
+                <div class="teacher-panel-header">
+                    <div>
+                        <h2>My Quizzes</h2>
+                        <p>Manage quiz versions, questions, and availability.</p>
+                    </div>
+                </div>
+
+                <div class="teacher-table-wrapper">
+
+                    <table class="teacher-quiz-table">
+
+                        <thead>
+                            <tr>
+                                <th>Quiz</th>
+                                <th>Subject Offering</th>
+                                <th>Version</th>
+                                <th>Questions</th>
+                                <th>Attempt Limit</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="teacherQuizTableBody"></tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="teacher-quiz-empty"
+                    id="teacherQuizEmpty"
+                    hidden>
+
+                    <i class="bi bi-ui-checks"></i>
+                    <strong>No Quizzes Found</strong>
+                    <span>Try changing your search or filters.</span>
+
+                </div>
+
+            </section>
+
+            <p class="teacher-footer-note">
+                <i class="bi bi-info-circle me-1"></i>
+                Quiz records and actions are browser-based demonstrations. Changes reset when the page is refreshed.
+            </p>
+
+        </section>
+
+        <footer class="main-footer">
+            GabayAral &copy; <span id="teacherFooterYear">2026</span> | Teacher Workspace
+        </footer>
+
+    </main>
+</div>
+
+<!-- CREATE / EDIT QUIZ MODAL -->
+<div class="modal fade"
+    id="teacherQuizEditorModal"
+    tabindex="-1"
+    aria-labelledby="teacherQuizEditorTitle"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+
+        <div class="modal-content teacher-details-modal">
+
+            <form id="teacherQuizEditorForm">
+
+                <div class="modal-header">
+                    <div>
+                        <span class="teacher-eyebrow">QUIZ BUILDER</span>
+                        <h5 class="modal-title" id="teacherQuizEditorTitle">
+                            Create Quiz
+                        </h5>
+                        <p class="text-muted small mb-0">
+                            Configure the quiz and add questions.
+                        </p>
+                    </div>
+
+                    <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <!-- QUIZ INFORMATION -->
+                    <div class="teacher-quiz-form-section">
+
+                        <h6>
+                            <i class="bi bi-card-heading"></i>
+                            Quiz Information
+                        </h6>
+
+                        <div class="teacher-quiz-form-grid">
+
+                            <label class="teacher-submission-field">
+                                <span>Quiz Title *</span>
+                                <input type="text"
+                                    id="teacherQuizTitleInput"
+                                    maxlength="150"
+                                    placeholder="e.g. Fractions Assessment"
+                                    required>
+                            </label>
+
+                            <label class="teacher-submission-field">
+                                <span>Subject Offering *</span>
+                                <select id="teacherQuizOfferingInput" required>
+                                    <option value="">Select Offering</option>
+                                </select>
+                            </label>
+
+                            <label class="teacher-submission-field full">
+                                <span>Instructions *</span>
+                                <textarea id="teacherQuizInstructions"
+                                    rows="3"
+                                    maxlength="2000"
+                                    placeholder="Write the instructions for Students..."
+                                    required></textarea>
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                    <!-- QUIZ SETTINGS -->
+                    <div class="teacher-quiz-form-section">
+
+                        <h6>
+                            <i class="bi bi-gear"></i>
+                            Quiz Settings
+                        </h6>
+
+                        <div class="teacher-quiz-form-grid">
+
+                            <label class="teacher-submission-field">
+                                <span>Time Limit (Minutes)</span>
+                                <input type="number"
+                                    id="teacherQuizTimeLimit"
+                                    min="1"
+                                    step="1"
+                                    placeholder="e.g. 30">
+                                <small>Leave blank if no time limit is configured.</small>
+                            </label>
+
+                            <label class="teacher-submission-field">
+                                <span>Maximum Attempts *</span>
+                                <input type="number"
+                                    id="teacherQuizAttemptLimit"
+                                    min="1"
+                                    step="1"
+                                    value="1"
+                                    required>
+                                <small>Configured for this Quiz Version.</small>
+                            </label>
+
+                            <label class="teacher-submission-field">
+                                <span>Availability Start</span>
+                                <input type="datetime-local"
+                                    id="teacherQuizStartDate">
+                            </label>
+
+                            <label class="teacher-submission-field">
+                                <span>Availability End</span>
+                                <input type="datetime-local"
+                                    id="teacherQuizEndDate">
+                            </label>
+
+                        </div>
+
+                        <div class="teacher-submission-modal-notice">
+                            <i class="bi bi-info-circle"></i>
+                            An attempt counts when the Student officially starts the quiz, even if it is abandoned or not submitted.
+                        </div>
+
+                    </div>
+
+                    <!-- QUESTION BUILDER -->
+                    <div class="teacher-quiz-form-section">
+
+                        <div class="teacher-quiz-question-heading">
+
+                            <div>
+                                <h6>
+                                    <i class="bi bi-list-ol"></i>
+                                    Quiz Questions
+                                </h6>
+
+                                <p>Add questions and their answer options.</p>
+                            </div>
+
+                            <button type="button"
+                                class="teacher-secondary-button"
+                                id="teacherQuizAddQuestion">
+                                <i class="bi bi-plus-lg"></i>
+                                Add Question
+                            </button>
+
+                        </div>
+
+                        <div id="teacherQuizQuestionList"></div>
+
+                        <div class="teacher-quiz-no-questions"
+                            id="teacherQuizNoQuestions">
+
+                            <i class="bi bi-file-earmark-plus"></i>
+                            <strong>No Questions Added</strong>
+                            <span>Click Add Question to begin building your quiz.</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="teacher-submission-modal-notice">
+                        <i class="bi bi-shield-check"></i>
+                        Each Quiz Version has its own questions and options. Published versions must remain unchanged; editing a published quiz will create a new version in the demonstration workflow.
+                    </div>
+
+                    <p class="teacher-submission-form-error"
+                        id="teacherQuizEditorError"
+                        role="alert"
+                        hidden></p>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button"
+                        class="teacher-modal-close"
+                        data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+
+                    <button type="button"
+                        class="teacher-secondary-button"
+                        id="teacherQuizSaveDraft">
+                        <i class="bi bi-file-earmark"></i>
+                        Save as Draft
+                    </button>
+
+                    <button type="submit"
+                        class="teacher-primary-button"
+                        id="teacherQuizSaveButton">
+                        <i class="bi bi-check2-circle"></i>
+                        Save Quiz
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!-- QUIZ DETAILS / PREVIEW MODAL -->
+<div class="modal fade"
+    id="teacherQuizDetailsModal"
+    tabindex="-1"
+    aria-labelledby="teacherQuizDetailsTitle"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+
+        <div class="modal-content teacher-details-modal">
+
+            <div class="modal-header">
+                <div>
+                    <span class="teacher-eyebrow">QUIZ DETAILS</span>
+                    <h5 class="modal-title" id="teacherQuizDetailsTitle">
+                        Quiz Preview
+                    </h5>
+                </div>
+
+                <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body" id="teacherQuizDetailsBody"></div>
+
+            <div class="modal-footer">
+
+                <button type="button"
+                    class="teacher-modal-close"
+                    data-bs-dismiss="modal">
+                    Close
+                </button>
+
+                <button type="button"
+                    class="teacher-secondary-button"
+                    id="teacherQuizEditFromDetails">
+                    <i class="bi bi-pencil"></i>
+                    Edit Quiz
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- BOOTSTRAP JAVASCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="../../assets/js/layout.js"></script>
+<script src="../../assets/js/teacher.js"></script>
+
+</body>
+</html>

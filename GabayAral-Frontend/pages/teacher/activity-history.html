@@ -1,0 +1,968 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+
+    <title>Activity History | GabayAral</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- INTER FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SHARED CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+
+    <!-- TEACHER CSS -->
+    <link rel="stylesheet" href="../../assets/css/teacher.css">
+
+</head>
+
+<body>
+
+<div class="app-shell teacher-app">
+
+    <!-- =========================================
+         TEACHER SIDEBAR
+    ========================================== -->
+
+    <aside class="sidebar teacher-sidebar" id="sidebar">
+
+        <div class="brand-block">
+
+            <a href="dashboard.html" class="brand">
+                <i class="bi bi-book-half"></i>
+                <span>GabayAral</span>
+            </a>
+
+            <span class="role-pill">Teacher Workspace</span>
+
+        </div>
+
+
+        <nav class="side-nav">
+
+            <!-- OVERVIEW -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Overview</p>
+
+                <a href="dashboard.html" class="side-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="my-offerings.html" class="side-link">
+                    <i class="bi bi-journal-bookmark"></i>
+                    <span>My Subject Offerings</span>
+                </a>
+
+                <a href="my-students.html" class="side-link">
+                    <i class="bi bi-people"></i>
+                    <span>My Students</span>
+                </a>
+
+            </div>
+
+
+            <!-- TEACHING AND LEARNING -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Teaching & Learning</p>
+
+                <a href="activities.html" class="side-link">
+                    <i class="bi bi-journal-text"></i>
+                    <span>Activities</span>
+                </a>
+
+                <a href="submissions.html" class="side-link">
+                    <i class="bi bi-inbox"></i>
+                    <span>Submissions & Revisions</span>
+                </a>
+
+                <a href="quizzes.html" class="side-link">
+                    <i class="bi bi-ui-checks"></i>
+                    <span>Quizzes</span>
+                </a>
+
+                <a href="grades.html" class="side-link">
+                    <i class="bi bi-clipboard-data"></i>
+                    <span>Grades & Feedback</span>
+                </a>
+
+                <a href="grade-reviews.html" class="side-link">
+                    <i class="bi bi-clipboard-check"></i>
+                    <span>Grade Review Cases</span>
+                </a>
+
+            </div>
+
+
+            <!-- COMMUNICATION -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Communication</p>
+
+                <a href="announcements.html" class="side-link">
+                    <i class="bi bi-megaphone"></i>
+                    <span>Announcements</span>
+                </a>
+
+                <a href="clearpost.html" class="side-link">
+                    <i class="bi bi-stars"></i>
+                    <span>ClearPost</span>
+                </a>
+
+                <a href="guardian-requests.html" class="side-link">
+                    <i class="bi bi-person-check"></i>
+                    <span>Guardian Requests</span>
+                </a>
+
+                <a href="parent-acknowledgments.html" class="side-link">
+                    <i class="bi bi-check2-square"></i>
+                    <span>Parent Acknowledgments</span>
+                </a>
+
+            </div>
+
+
+            <!-- PLANNING -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Planning</p>
+
+                <a href="teacher-calendar.html" class="side-link">
+                    <i class="bi bi-calendar3"></i>
+                    <span>Teacher Calendar</span>
+                </a>
+
+            </div>
+
+
+            <!-- WORKSPACE -->
+
+            <div class="nav-group">
+
+                <p class="nav-heading">Workspace</p>
+
+                <a href="notifications.html" class="side-link">
+                    <i class="bi bi-bell"></i>
+                    <span>Notifications</span>
+                </a>
+
+                <a href="activity-history.html"
+                   class="side-link active"
+                   aria-current="page">
+
+                    <i class="bi bi-clock-history"></i>
+                    <span>Activity History</span>
+
+                </a>
+
+                <a href="easyaccess.html" class="side-link">
+    <i class="bi bi-universal-access"></i>
+    <span>EasyAccess</span>
+</a>
+
+            </div>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+            <span class="footer-dot"></span>
+            Teacher Workspace
+        </div>
+
+    </aside>
+
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+
+    <!-- =========================================
+         MAIN AREA
+    ========================================== -->
+
+    <main class="main-area">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar teacher-topbar">
+
+            <button type="button"
+                class="icon-button-ga mobile-menu"
+                id="menuToggle"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+                <i class="bi bi-list"></i>
+
+            </button>
+
+
+            <!-- BREADCRUMB -->
+
+            <div class="breadcrumbs">
+
+                <i class="bi bi-house-door-fill"></i>
+
+                <span>Teacher Workspace</span>
+
+                <span>/</span>
+
+                <strong>Activity History</strong>
+
+            </div>
+
+
+            <div class="topbar-tools">
+
+
+                <!-- SCHOOL SELECTOR -->
+
+                <div class="school-selector-wrapper"
+                     id="teacherSchoolSelectorWrapper">
+
+                    <button type="button"
+                        class="school-select"
+                        id="teacherSchoolSelectButton"
+                        aria-label="Select school workspace"
+                        aria-expanded="false"
+                        aria-controls="teacherSchoolSelectMenu">
+
+                        <span class="school-select-current">
+
+                            <i class="bi bi-bank me-1"></i>
+
+                            <span id="teacherSchoolCurrentName">
+                                San Isidro National High School
+                            </span>
+
+                        </span>
+
+                        <i class="bi bi-chevron-down school-select-chevron"></i>
+
+                    </button>
+
+
+                    <div class="school-select-menu"
+                         id="teacherSchoolSelectMenu"
+                         role="menu"
+                         aria-label="Available school workspaces"
+                         hidden>
+
+                        <div class="school-select-menu-header">
+
+                            <strong>School Workspaces</strong>
+
+                            <span>Select an available workspace</span>
+
+                        </div>
+
+
+                        <button type="button"
+                            class="school-select-option active"
+                            data-school-id="school-001"
+                            data-school-name="San Isidro National High School"
+                            role="menuitemradio"
+                            aria-checked="true">
+
+                            <span class="school-option-icon">
+                                <i class="bi bi-bank"></i>
+                            </span>
+
+                            <span class="school-option-details">
+
+                                <strong>
+                                    San Isidro National High School
+                                </strong>
+
+                                <small>Current workspace</small>
+
+                            </span>
+
+                            <i class="bi bi-check-circle-fill school-option-check"></i>
+
+                        </button>
+
+
+                        <button type="button"
+                            class="school-select-option"
+                            data-school-id="demo-school-002"
+                            data-school-name="Sample School Workspace B"
+                            role="menuitemradio"
+                            aria-checked="false">
+
+                            <span class="school-option-icon">
+                                <i class="bi bi-building"></i>
+                            </span>
+
+                            <span class="school-option-details">
+
+                                <strong>Sample School Workspace B</strong>
+
+                                <small>Demonstration workspace only</small>
+
+                            </span>
+
+                        </button>
+
+
+                        <div class="school-select-menu-footer">
+
+                            <i class="bi bi-info-circle"></i>
+
+                            School switching is a frontend demonstration.
+                            Authorized memberships will be supplied by the Backend.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SEARCH -->
+
+                <label class="search-box teacher-dashboard-search">
+
+                    <i class="bi bi-search"></i>
+
+                    <input type="search"
+                        id="teacherActivityTopbarSearch"
+                        placeholder="Search activity history..."
+                        aria-label="Search activity history">
+
+                </label>
+
+
+                <!-- NOTIFICATIONS -->
+
+                <button type="button"
+                    class="icon-button-ga"
+                    id="teacherNotificationButton"
+                    aria-label="Open notifications">
+
+                    <i class="bi bi-bell"></i>
+
+                </button>
+
+
+                <!-- PROFILE -->
+
+                <div class="admin-profile-wrapper"
+                     id="teacherProfileWrapper">
+
+                    <button type="button"
+                        class="profile-button"
+                        id="teacherProfileButton"
+                        aria-label="Teacher account menu"
+                        aria-expanded="false"
+                        aria-controls="teacherProfileMenu">
+
+                        <span class="avatar">
+                            <i class="bi bi-person-fill"></i>
+                        </span>
+
+                        <span>Teacher</span>
+
+                        <i class="bi bi-chevron-down admin-profile-chevron"></i>
+
+                    </button>
+
+
+                    <div class="admin-profile-menu"
+                         id="teacherProfileMenu"
+                         aria-label="Teacher account options"
+                         hidden>
+
+                        <div class="admin-profile-menu-header">
+
+                            <span class="admin-profile-menu-avatar">
+                                <i class="bi bi-person-fill"></i>
+                            </span>
+
+                            <div>
+                                <strong>Teacher</strong>
+                                <small>Teacher Workspace</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="admin-profile-menu-divider"></div>
+
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="profile">
+
+                            <i class="bi bi-person-gear"></i>
+                            <span>Profile Settings</span>
+
+                        </button>
+
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="security">
+
+                            <i class="bi bi-shield-lock"></i>
+                            <span>Account Security</span>
+                            <small>Coming soon</small>
+
+                        </button>
+
+
+                        <button type="button"
+                            class="admin-profile-menu-item"
+                            data-profile-action="accessibility">
+
+                            <i class="bi bi-universal-access"></i>
+                            <span>EasyAccess</span>
+
+                        </button>
+
+
+                        <div class="admin-profile-menu-divider"></div>
+
+
+                        <button type="button"
+                            class="admin-profile-menu-item danger"
+                            data-profile-action="signout">
+
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span>Sign Out</span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================================
+             ACTIVITY HISTORY CONTENT
+        ========================================== -->
+
+        <section class="main-content teacher-content">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="teacher-history-heading">
+
+                <div>
+
+                    <span class="teacher-eyebrow">
+                        ACCOUNT TRANSPARENCY
+                    </span>
+
+                    <h1>Activity History</h1>
+
+                    <p>
+                        Review actions performed using your own
+                        Teacher account.
+                    </p>
+
+                </div>
+
+
+                <div class="teacher-history-heading-icon">
+
+                    <i class="bi bi-clock-history"></i>
+
+                </div>
+
+            </div>
+
+
+            <!-- PERMISSION NOTICE -->
+
+            <div class="teacher-history-notice" role="note">
+
+                <i class="bi bi-shield-lock-fill"></i>
+
+                <div>
+
+                    <strong>My Activity Only</strong>
+
+                    <span>
+                        This report displays only activity records
+                        performed by your authenticated Teacher account.
+                        You cannot view another user's activity or
+                        modify or delete audit records.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUMMARY CARDS -->
+
+            <div class="teacher-history-stats">
+
+
+                <!-- TOTAL ACTIVITIES -->
+
+                <article class="teacher-stat-card">
+
+                    <div class="teacher-stat-top">
+
+                        <span class="teacher-stat-icon blue">
+                            <i class="bi bi-activity"></i>
+                        </span>
+
+                        <span class="teacher-stat-label">
+                            Total Activities
+                        </span>
+
+                    </div>
+
+                    <strong class="teacher-stat-number"
+                        id="teacherActivityTotal">0</strong>
+
+                    <span class="teacher-stat-caption">
+                        Your recorded actions
+                    </span>
+
+                </article>
+
+
+                <!-- TODAY -->
+
+                <article class="teacher-stat-card">
+
+                    <div class="teacher-stat-top">
+
+                        <span class="teacher-stat-icon teal">
+                            <i class="bi bi-calendar-check"></i>
+                        </span>
+
+                        <span class="teacher-stat-label">
+                            Today
+                        </span>
+
+                    </div>
+
+                    <strong class="teacher-stat-number"
+                        id="teacherActivityToday">0</strong>
+
+                    <span class="teacher-stat-caption">
+                        Actions recorded today
+                    </span>
+
+                </article>
+
+
+                <!-- LAST 7 DAYS -->
+
+                <article class="teacher-stat-card">
+
+                    <div class="teacher-stat-top">
+
+                        <span class="teacher-stat-icon amber">
+                            <i class="bi bi-calendar-week"></i>
+                        </span>
+
+                        <span class="teacher-stat-label">
+                            Last 7 Days
+                        </span>
+
+                    </div>
+
+                    <strong class="teacher-stat-number"
+                        id="teacherActivityLast7Days">0</strong>
+
+                    <span class="teacher-stat-caption">
+                        Recent recorded actions
+                    </span>
+
+                </article>
+
+
+                <!-- TARGET RECORDS -->
+
+                <article class="teacher-stat-card">
+
+                    <div class="teacher-stat-top">
+
+                        <span class="teacher-stat-icon purple">
+                            <i class="bi bi-diagram-3"></i>
+                        </span>
+
+                        <span class="teacher-stat-label">
+                            Target Records
+                        </span>
+
+                    </div>
+
+                    <strong class="teacher-stat-number"
+                        id="teacherActivityTargets">0</strong>
+
+                    <span class="teacher-stat-caption">
+                        Distinct records involved
+                    </span>
+
+                </article>
+
+            </div>
+
+
+            <!-- ACTIVITY DIRECTORY -->
+
+            <section class="teacher-panel teacher-history-directory">
+
+
+                <!-- PANEL HEADING -->
+
+                <div class="teacher-history-directory-heading">
+
+                    <div>
+
+                        <h2>My Activity Records</h2>
+
+                        <p>
+                            Review the actions recorded under your account.
+                        </p>
+
+                    </div>
+
+
+                    <span class="teacher-record-count"
+                        id="teacherActivityRecordCount"
+                        aria-live="polite">
+
+                        0 records
+
+                    </span>
+
+                </div>
+
+
+                <!-- FILTERS -->
+
+                <div class="teacher-history-filters">
+
+
+                    <!-- SEARCH -->
+
+                    <label class="teacher-filter-control">
+
+                        <span>Search Activities</span>
+
+                        <div class="teacher-filter-input">
+
+                            <i class="bi bi-search"></i>
+
+                            <input type="search"
+                                id="teacherActivitySearch"
+                                placeholder="Search action, target or reason...">
+
+                        </div>
+
+                    </label>
+
+
+                    <!-- DATE FROM -->
+
+                    <label class="teacher-filter-control">
+
+                        <span>From Date</span>
+
+                        <input type="date"
+                            class="teacher-history-date-filter"
+                            id="teacherActivityDateFrom">
+
+                    </label>
+
+
+                    <!-- DATE TO -->
+
+                    <label class="teacher-filter-control">
+
+                        <span>To Date</span>
+
+                        <input type="date"
+                            class="teacher-history-date-filter"
+                            id="teacherActivityDateTo">
+
+                    </label>
+
+
+                    <!-- CLEAR FILTERS -->
+
+                    <button type="button"
+                        class="teacher-clear-filter"
+                        id="teacherActivityClearFilters">
+
+                        <i class="bi bi-arrow-counterclockwise"></i>
+
+                        Clear Filters
+
+                    </button>
+
+                </div>
+
+
+                <!-- TABLE -->
+
+                <div class="teacher-table-wrapper">
+
+                    <table class="teacher-history-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th scope="col">Date & Time</th>
+
+                                <th scope="col">Action</th>
+
+                                <th scope="col">Target Type</th>
+
+                                <th scope="col">Target ID</th>
+
+                                <th scope="col">Reason</th>
+
+                                <th scope="col">Action Details</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="teacherActivityTableBody">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- EMPTY STATE -->
+
+                <div class="teacher-history-empty"
+                    id="teacherActivityEmpty"
+                    hidden>
+
+                    <i class="bi bi-clock-history"></i>
+
+                    <strong>No activity records found</strong>
+
+                    <span>
+                        Try changing your search or date filters.
+                    </span>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- AUDIT RULES -->
+
+            <section class="teacher-history-policy">
+
+                <div class="teacher-history-policy-icon">
+
+                    <i class="bi bi-shield-check"></i>
+
+                </div>
+
+
+                <div>
+
+                    <strong>Activity History and Audit Rules</strong>
+
+                    <ul>
+
+                        <li>
+                            Only actions performed by your own Teacher
+                            account are included in this report.
+                        </li>
+
+                        <li>
+                            Each record identifies the action,
+                            target, reason and recorded timestamp.
+                        </li>
+
+                        <li>
+                            Activity History is read-only.
+                        </li>
+
+                        <li>
+                            Audit records cannot be edited or deleted
+                            through the Teacher Workspace.
+                        </li>
+
+                        <li>
+                            Access to the underlying audit records
+                            is enforced by the Backend.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+            <!-- STATUS MESSAGE -->
+
+            <div id="teacherActivityMessage"
+                class="teacher-history-message"
+                role="status"
+                aria-live="polite"
+                hidden>
+            </div>
+
+
+            <!-- FOOTER NOTE -->
+
+            <p class="teacher-footer-note">
+
+                <i class="bi bi-info-circle me-1"></i>
+
+                Frontend demonstration only. Activity records are
+                not connected to official Django audit records
+                or PostgreSQL.
+
+            </p>
+
+
+        </section>
+
+
+        <!-- MAIN FOOTER -->
+
+        <footer class="main-footer">
+
+            GabayAral &copy;
+
+            <span id="teacherFooterYear">2026</span>
+
+            | Teacher Workspace
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- =========================================
+     ACTIVITY DETAILS MODAL
+========================================== -->
+
+<div class="modal fade"
+    id="teacherActivityDetailsModal"
+    tabindex="-1"
+    aria-labelledby="teacherActivityDetailsTitle"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+
+        <div class="modal-content teacher-history-modal">
+
+
+            <!-- HEADER -->
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="teacher-eyebrow">
+                        MY ACTIVITY RECORD
+                    </span>
+
+                    <h5 class="modal-title"
+                        id="teacherActivityDetailsTitle">
+
+                        Activity Details
+
+                    </h5>
+
+                </div>
+
+
+                <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close">
+                </button>
+
+            </div>
+
+
+            <!-- BODY -->
+
+            <div class="modal-body">
+
+                <div id="teacherActivityDetailsBody">
+
+                    <p class="text-secondary small">
+                        Select an activity record to view its details.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOTER -->
+
+            <div class="modal-footer">
+
+                <button type="button"
+                    class="teacher-history-modal-close"
+                    data-bs-dismiss="modal">
+
+                    Close
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- SHARED LAYOUT -->
+<script src="../../assets/js/layout.js"></script>
+
+<!-- TEACHER -->
+<script src="../../assets/js/teacher.js"></script>
+
+</body>
+</html>
