@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="#16324F" name="theme-color"/>
+        <title>
+            Child Connections | GabayAral Parent
+        </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com" rel="preconnect"/>
+        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+        <link href="../../assets/css/style.css" rel="stylesheet"/>
+        <link href="../../assets/css/components.css" rel="stylesheet"/>
+        <link href="../../assets/css/responsive.css" rel="stylesheet"/>
+        <link href="../../assets/css/layout.css" rel="stylesheet"/>
+        <link href="../../assets/css/parent.css" rel="stylesheet"/>
+    </head>
+    <body data-parent-page="connections">
+        <div class="app-shell parent-app">
+            <aside aria-label="Parent and Guardian navigation" class="sidebar parent-sidebar" id="sidebar">
+            </aside>
+            <div class="sidebar-backdrop" id="sidebarBackdrop">
+            </div>
+            <main class="main-area">
+                <header class="topbar parent-topbar">
+                    <button aria-expanded="false" aria-label="Open navigation" class="icon-button-ga mobile-menu" id="menuToggle" type="button">
+                        <i class="bi bi-list">
+                        </i>
+                    </button>
+                    <div class="breadcrumbs">
+                        <i class="bi bi-house-door-fill">
+                        </i>
+                        <a href="dashboard.html">
+                            Parent Workspace
+                        </a>
+                        <span>
+                            /
+                        </span>
+                        <strong>
+                            Child Connections
+                        </strong>
+                    </div>
+                    <div class="topbar-tools parent-topbar-tools">
+                        <div class="parent-school-label">
+                            <i class="bi bi-bank">
+                            </i>
+                            <span>
+                                Sample School Workspace
+                            </span>
+                            <span class="parent-demo-chip">
+                                DEMO
+                            </span>
+                        </div>
+                        <label class="search-box parent-search-box">
+                            <i class="bi bi-search">
+                            </i>
+                            <input aria-label="Search connection requests" id="parentConnectionSearch" placeholder="Search requests..." type="search"/>
+                        </label>
+                        <a aria-label="Notifications" class="icon-button-ga parent-notification-button" data-parent-demo-link="Notifications" href="#">
+                            <i class="bi bi-bell">
+                            </i>
+                            <span class="parent-notification-dot">
+                            </span>
+                        </a>
+                        <div class="parent-profile-wrapper" id="parentProfileWrapper">
+                            <button aria-controls="parentProfileMenu" aria-expanded="false" class="profile-button parent-profile-button" id="parentProfileButton" type="button">
+                                <span class="avatar">
+                                    <i class="bi bi-person-fill">
+                                    </i>
+                                </span>
+                                <span>
+                                    Parent
+                                </span>
+                                <i class="bi bi-chevron-down parent-profile-chevron">
+                                </i>
+                            </button>
+                            <div class="parent-profile-menu" hidden="" id="parentProfileMenu">
+                                <div class="parent-profile-menu-header">
+                                    <span class="parent-profile-menu-avatar">
+                                        <i class="bi bi-person-fill">
+                                        </i>
+                                    </span>
+                                    <div>
+                                        <strong>
+                                            Parent Account
+                                        </strong>
+                                        <small>
+                                            Demonstration profile
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="parent-profile-menu-divider">
+                                </div>
+                                <a class="parent-profile-menu-item" data-parent-demo-link="Profile Settings" href="#">
+                                    <i class="bi bi-person-gear">
+                                    </i>
+                                    <span>
+                                        Profile Settings
+                                    </span>
+                                </a>
+                                <a class="parent-profile-menu-item" data-parent-demo-link="Account Security" href="#">
+                                    <i class="bi bi-shield-lock">
+                                    </i>
+                                    <span>
+                                        Account Security
+                                    </span>
+                                </a>
+                                <a class="parent-profile-menu-item" data-parent-demo-link="EasyAccess" href="#">
+                                    <i class="bi bi-universal-access">
+                                    </i>
+                                    <span>
+                                        EasyAccess
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <section aria-labelledby="parentConnectionsHeading" class="main-content parent-content">
+                    <section class="parent-page-heading parent-searchable">
+                        <div>
+                            <span class="parent-eyebrow">
+                                FAMILY VERIFICATION
+                            </span>
+                            <h1 id="parentConnectionsHeading">
+                                Child Connections
+                            </h1>
+                            <p>
+                                Request a connection and submit the required verification documents.
+                            </p>
+                            <span class="parent-current-date" id="parentCurrentDate">
+                                Loading date...
+                            </span>
+                        </div>
+                        <span class="parent-page-heading-icon">
+                            <i class="bi bi-person-plus-fill">
+                            </i>
+                        </span>
+                    </section>
+                    <div class="parent-demo-notice" role="note">
+                        <i class="bi bi-shield-lock-fill">
+                        </i>
+                        <span>
+                            <strong>
+                                DEMO-ONLY:
+                            </strong>
+                            This page does not send documents to the school. Selected files are represented by browser-local metadata only. Use fictional sample files only.
+                        </span>
+                    </div>
+                    <section class="parent-connection-steps parent-panel">
+                        <div class="parent-connection-step active">
+                            <span>
+                                1
+                            </span>
+                            <div>
+                                <strong>
+                                    Request
+                                </strong>
+                                <small>
+                                    Enter section code
+                                </small>
+                            </div>
+                        </div>
+                        <div class="parent-connection-step">
+                            <span>
+                                2
+                            </span>
+                            <div>
+                                <strong>
+                                    Documents
+                                </strong>
+                                <small>
+                                    Provide evidence
+                                </small>
+                            </div>
+                        </div>
+                        <div class="parent-connection-step">
+                            <span>
+                                3
+                            </span>
+                            <div>
+                                <strong>
+                                    Verification
+                                </strong>
+                                <small>
+                                    Authorized review
+                                </small>
+                            </div>
+                        </div>
+                        <div class="parent-connection-step">
+                            <span>
+                                4
+                            </span>
+                            <div>
+                                <strong>
+                                    Decision
+                                </strong>
+                                <small>
+                                    Approval or other outcome
+                                </small>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="parent-connection-layout">
+                        <section class="parent-panel parent-searchable">
+                            <div class="parent-panel-header">
+                                <div>
+                                    <h2>
+                                        Request a Child Connection
+                                    </h2>
+                                    <p>
+                                        Enter the Parent Section Code supplied by the school.
+                                    </p>
+                                </div>
+                            </div>
+                            <form class="parent-form" id="parentConnectionForm" novalidate="">
+                                <label for="parentSectionCode">
+                                    Parent Section Code
+                                </label>
+                                <input autocomplete="off" id="parentSectionCode" maxlength="80" placeholder="Enter Parent Section Code" required="" type="text"/>
+                                <small>
+                                    Use the exact code provided by the school. Do not use a Student Join Code.
+                                </small>
+                                <div class="parent-form-info">
+                                    <i class="bi bi-info-circle-fill">
+                                    </i>
+                                    <span>
+                                        The code identifies the relevant Student Section placement. It does not independently prove your relationship with the child.
+                                    </span>
+                                </div>
+                                <h3 class="parent-form-subheading">
+                                    Verification Documents
+                                </h3>
+                                <div class="parent-document-field">
+                                    <label for="parentGuardianIdFile">
+                                        Parent/Guardian Identity Document
+                                    </label>
+                                    <input accept=".pdf,.jpg,.jpeg,.png" id="parentGuardianIdFile" required="" type="file"/>
+                                    <small>
+                                        Accepted demonstration formats: PDF, JPG, JPEG or PNG. Maximum 10 MB per file.
+                                    </small>
+                                    <div class="parent-document-file-info" id="parentGuardianIdFileInfo">
+                                    </div>
+                                </div>
+                                <div class="parent-document-field">
+                                    <label for="parentChildRelationshipFile">
+                                        Child Relationship Evidence
+                                    </label>
+                                    <input accept=".pdf,.jpg,.jpeg,.png" id="parentChildRelationshipFile" required="" type="file"/>
+                                    <small>
+                                        For example, a child's PSA birth certificate, subject to the school's approved requirements.
+                                    </small>
+                                    <div class="parent-document-file-info" id="parentChildRelationshipFileInfo">
+                                    </div>
+                                </div>
+                                <div class="parent-form-info parent-form-warning">
+                                    <i class="bi bi-shield-exclamation">
+                                    </i>
+                                    <span>
+                                        Do not upload actual personal documents in this demonstration. Use fictional sample files only.
+                                    </span>
+                                </div>
+                                <label class="parent-consent-label">
+                                    <input id="parentConnectionConsent" required="" type="checkbox"/>
+                                    <span>
+                                        I understand this is a demonstration request and document submission does not grant access until authorized verification and approval are completed.
+                                    </span>
+                                </label>
+                                <button class="parent-primary-button" id="parentConnectionSubmit" type="submit">
+                                    <i class="bi bi-send">
+                                    </i>
+                                    Submit Demonstration Request
+                                </button>
+                                <p aria-live="polite" class="parent-form-feedback" hidden="" id="parentConnectionFeedback" role="status">
+                                </p>
+                            </form>
+                        </section>
+                        <div class="parent-connection-side-column">
+                            <section class="parent-panel">
+                                <div class="parent-panel-header">
+                                    <div>
+                                        <h2>
+                                            Verification Guidelines
+                                        </h2>
+                                        <p>
+                                            Before submitting a request
+                                        </p>
+                                    </div>
+                                </div>
+                                <ul class="parent-guidelines-list">
+                                    <li>
+                                        Use the Parent Section Code issued by the school.
+                                    </li>
+                                    <li>
+                                        Provide the required identity and relationship evidence.
+                                    </li>
+                                    <li>
+                                        Ensure documents are clear and readable.
+                                    </li>
+                                    <li>
+                                        Wait for authorized staff verification.
+                                    </li>
+                                    <li>
+                                        A pending request does not grant child access.
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="parent-panel">
+                                <div class="parent-panel-header">
+                                    <div>
+                                        <h2>
+                                            Request Status Guide
+                                        </h2>
+                                        <p>
+                                            Understand each possible outcome
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="parent-status-guide">
+                                    <div>
+                                        <span class="parent-request-status pending">
+                                            Pending
+                                        </span>
+                                        <small>
+                                            Awaiting authorized review.
+                                        </small>
+                                    </div>
+                                    <div>
+                                        <span class="parent-request-status referred">
+                                            Referred
+                                        </span>
+                                        <small>
+                                            Needs further review by the authorized school office.
+                                        </small>
+                                    </div>
+                                    <div>
+                                        <span class="parent-request-status approved">
+                                            Approved
+                                        </span>
+                                        <small>
+                                            Connection verified; actual access is granted by the Backend.
+                                        </small>
+                                    </div>
+                                    <div>
+                                        <span class="parent-request-status rejected">
+                                            Rejected
+                                        </span>
+                                        <small>
+                                            Request was not approved.
+                                        </small>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <section class="parent-panel parent-searchable">
+                        <div class="parent-panel-header">
+                            <div>
+                                <h2>
+                                    Connection Request History
+                                </h2>
+                                <p>
+                                    Review your submitted demonstration requests.
+                                </p>
+                            </div>
+                            <span class="parent-record-count" id="parentConnectionHistoryCount">
+                                0 requests
+                            </span>
+                        </div>
+                        <div aria-live="polite" class="parent-connection-history" id="parentConnectionHistory">
+                        </div>
+                        <div class="parent-empty-state" id="parentConnectionHistoryEmpty">
+                            <i class="bi bi-folder2-open">
+                            </i>
+                            <strong>
+                                No connection requests yet
+                            </strong>
+                            <span>
+                                Your submitted demonstration requests will appear here.
+                            </span>
+                        </div>
+                    </section>
+                    <p class="parent-footer-note">
+                        <i class="bi bi-info-circle me-1">
+                        </i>
+                        Actual identity verification, document storage and approval are handled by the Backend and authorized school personnel.
+                    </p>
+                    <p class="parent-search-empty" hidden="" id="parentConnectionSearchEmpty">
+                        No matching requests found.
+                    </p>
+                </section>
+                <footer class="main-footer">
+                    GabayAral &copy;
+                    <span id="parentFooterYear">
+                        2026
+                    </span>
+                    | Parent/Guardian Workspace
+                </footer>
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+        </script>
+        <script src="../../assets/js/layout.js">
+        </script>
+        <script src="../../assets/js/parent.js">
+        </script>
+    </body>
+</html>

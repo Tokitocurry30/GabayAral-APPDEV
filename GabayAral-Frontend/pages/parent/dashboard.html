@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="#16324F" name="theme-color"/>
+        <title>
+            Parent Dashboard | GabayAral
+        </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com" rel="preconnect"/>
+        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+        <link href="../../assets/css/style.css" rel="stylesheet"/>
+        <link href="../../assets/css/components.css" rel="stylesheet"/>
+        <link href="../../assets/css/responsive.css" rel="stylesheet"/>
+        <link href="../../assets/css/layout.css" rel="stylesheet"/>
+        <link href="../../assets/css/parent.css" rel="stylesheet"/>
+    </head>
+    <body data-parent-page="dashboard">
+        <div class="app-shell parent-app">
+            <aside aria-label="Parent and Guardian navigation" class="sidebar parent-sidebar" id="sidebar">
+            </aside>
+            <div class="sidebar-backdrop" id="sidebarBackdrop">
+            </div>
+            <main class="main-area">
+                <header class="topbar parent-topbar">
+                    <button aria-expanded="false" aria-label="Open navigation" class="icon-button-ga mobile-menu" id="menuToggle" type="button">
+                        <i class="bi bi-list">
+                        </i>
+                    </button>
+                    <div class="breadcrumbs">
+                        <i class="bi bi-house-door-fill">
+                        </i>
+                        <span>
+                            Parent/Guardian Workspace
+                        </span>
+                        <span>
+                            /
+                        </span>
+                        <strong>
+                            Dashboard
+                        </strong>
+                    </div>
+                    <div class="topbar-tools parent-topbar-tools">
+                        <div class="parent-school-label">
+                            <i class="bi bi-bank">
+                            </i>
+                            <span>
+                                Sample School Workspace
+                            </span>
+                            <span class="parent-demo-chip">
+                                DEMO
+                            </span>
+                        </div>
+                        <label class="search-box parent-search-box">
+                            <i aria-hidden="true" class="bi bi-search">
+                            </i>
+                            <input aria-label="Search Parent Dashboard" id="parentDashboardSearch" placeholder="Search dashboard..." type="search"/>
+                        </label>
+                        <a aria-label="Open notifications" class="icon-button-ga parent-notification-button" data-parent-demo-link="Notifications" href="#">
+                            <i class="bi bi-bell">
+                            </i>
+                            <span class="parent-notification-dot">
+                            </span>
+                        </a>
+                        <div class="parent-profile-wrapper" id="parentProfileWrapper">
+                            <button aria-controls="parentProfileMenu" aria-expanded="false" aria-label="Parent account menu" class="profile-button parent-profile-button" id="parentProfileButton" type="button">
+                                <span class="avatar">
+                                    <i class="bi bi-person-fill">
+                                    </i>
+                                </span>
+                                <span>
+                                    Parent
+                                </span>
+                                <i class="bi bi-chevron-down parent-profile-chevron">
+                                </i>
+                            </button>
+                            <div class="parent-profile-menu" hidden="" id="parentProfileMenu">
+                                <div class="parent-profile-menu-header">
+                                    <span class="parent-profile-menu-avatar">
+                                        <i class="bi bi-person-fill">
+                                        </i>
+                                    </span>
+                                    <div>
+                                        <strong>
+                                            Parent Account
+                                        </strong>
+                                        <small>
+                                            Demonstration profile
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="parent-profile-menu-divider">
+                                </div>
+                                <a class="parent-profile-menu-item" data-parent-demo-link="Profile Settings" href="#">
+                                    <i class="bi bi-person-gear">
+                                    </i>
+                                    <span>
+                                        Profile Settings
+                                    </span>
+                                </a>
+                                <a class="parent-profile-menu-item" data-parent-demo-link="Account Security" href="#">
+                                    <i class="bi bi-shield-lock">
+                                    </i>
+                                    <span>
+                                        Account Security
+                                    </span>
+                                </a>
+                                <a class="parent-profile-menu-item" data-parent-demo-link="EasyAccess" href="#">
+                                    <i class="bi bi-universal-access">
+                                    </i>
+                                    <span>
+                                        EasyAccess
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <section aria-labelledby="parentWelcomeHeading" class="main-content parent-content">
+                    <section class="parent-welcome parent-searchable">
+                        <div>
+                            <span class="parent-eyebrow">
+                                PARENT/GUARDIAN OVERVIEW
+                            </span>
+                            <h1 id="parentWelcomeHeading">
+                                Good day, Parent!
+                            </h1>
+                            <p>
+                                Stay connected with your verified children's learning progress, school activities and updates.
+                            </p>
+                            <span class="parent-current-date" id="parentCurrentDate">
+                                Loading date...
+                            </span>
+                        </div>
+                        <div class="parent-welcome-icon">
+                            <i class="bi bi-house-heart-fill">
+                            </i>
+                        </div>
+                    </section>
+                    <div class="parent-demo-notice" role="note">
+                        <i class="bi bi-info-circle-fill">
+                        </i>
+                        <span>
+                            <strong>
+                                DEMO-ONLY:
+                            </strong>
+                            All children, school records, announcements and academic information shown here are fictional. Only verified and approved child connections are represented as accessible.
+                        </span>
+                    </div>
+                    <section aria-label="Parent dashboard summary" class="parent-stats-grid">
+                        <article class="parent-stat-card parent-searchable">
+                            <div class="parent-stat-top">
+                                <span class="parent-stat-icon blue">
+                                    <i class="bi bi-people-fill">
+                                    </i>
+                                </span>
+                                <span class="parent-stat-label">
+                                    Linked Children
+                                </span>
+                            </div>
+                            <strong class="parent-stat-number" id="parentLinkedChildrenCount">
+                                02
+                            </strong>
+                            <span class="parent-stat-caption">
+                                Verified and approved connections
+                            </span>
+                        </article>
+                        <article class="parent-stat-card parent-searchable">
+                            <div class="parent-stat-top">
+                                <span class="parent-stat-icon amber">
+                                    <i class="bi bi-hourglass-split">
+                                    </i>
+                                </span>
+                                <span class="parent-stat-label">
+                                    Pending Requests
+                                </span>
+                            </div>
+                            <strong class="parent-stat-number" id="parentPendingRequestsCount">
+                                01
+                            </strong>
+                            <span class="parent-stat-caption">
+                                Awaiting authorized verification
+                            </span>
+                        </article>
+                        <article class="parent-stat-card parent-searchable">
+                            <div class="parent-stat-top">
+                                <span class="parent-stat-icon purple">
+                                    <i class="bi bi-calendar-event-fill">
+                                    </i>
+                                </span>
+                                <span class="parent-stat-label">
+                                    Upcoming Deadlines
+                                </span>
+                            </div>
+                            <strong class="parent-stat-number">
+                                03
+                            </strong>
+                            <span class="parent-stat-caption">
+                                Eligible activities and school dates
+                            </span>
+                        </article>
+                        <article class="parent-stat-card parent-searchable">
+                            <div class="parent-stat-top">
+                                <span class="parent-stat-icon teal">
+                                    <i class="bi bi-megaphone-fill">
+                                    </i>
+                                </span>
+                                <span class="parent-stat-label">
+                                    New Announcements
+                                </span>
+                            </div>
+                            <strong class="parent-stat-number" id="parentNewAnnouncementsCount">
+                                03
+                            </strong>
+                            <span class="parent-stat-caption">
+                                Eligible school announcements
+                            </span>
+                        </article>
+                    </section>
+                    <div class="parent-dashboard-grid">
+                        <div class="parent-dashboard-column">
+                            <section aria-labelledby="parentChildrenHeading" class="parent-panel parent-searchable">
+                                <div class="parent-panel-header">
+                                    <div>
+                                        <h2 id="parentChildrenHeading">
+                                            My Children
+                                        </h2>
+                                        <p>
+                                            Verified and approved child connections
+                                        </p>
+                                    </div>
+                                    <a class="parent-view-link" href="children.html">
+                                        View All
+                                        <i class="bi bi-arrow-right">
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="parent-child-list">
+                                    <article class="parent-child-card">
+                                        <span class="parent-child-avatar blue">
+                                            <i class="bi bi-person-fill">
+                                            </i>
+                                        </span>
+                                        <div class="parent-child-details">
+                                            <strong>
+                                                Mika Santos
+                                            </strong>
+                                            <span>
+                                                Grade 7 &middot; Sampaguita
+                                            </span>
+                                            <small>
+                                                Sample Student ID: STU-DEMO-001
+                                            </small>
+                                        </div>
+                                        <span class="parent-verified-status">
+                                            <i class="bi bi-patch-check-fill">
+                                            </i>
+                                            Verified
+                                        </span>
+                                    </article>
+                                    <article class="parent-child-card">
+                                        <span class="parent-child-avatar teal">
+                                            <i class="bi bi-person-fill">
+                                            </i>
+                                        </span>
+                                        <div class="parent-child-details">
+                                            <strong>
+                                                Liam Santos
+                                            </strong>
+                                            <span>
+                                                Grade 4 &middot; Mabini
+                                            </span>
+                                            <small>
+                                                Sample Student ID: STU-DEMO-002
+                                            </small>
+                                        </div>
+                                        <span class="parent-verified-status">
+                                            <i class="bi bi-patch-check-fill">
+                                            </i>
+                                            Verified
+                                        </span>
+                                    </article>
+                                </div>
+                                <p class="parent-privacy-note">
+                                    <i class="bi bi-shield-lock-fill">
+                                    </i>
+                                    Only verified children are displayed as accessible.
+                                </p>
+                            </section>
+                            <section aria-labelledby="parentAnnouncementsHeading" class="parent-panel parent-searchable">
+                                <div class="parent-panel-header">
+                                    <div>
+                                        <h2 id="parentAnnouncementsHeading">
+                                            Recent Announcements
+                                        </h2>
+                                        <p>
+                                            Eligible school updates
+                                        </p>
+                                    </div>
+                                    <a class="parent-view-link" href="announcements.html">
+                                        View All
+                                        <i class="bi bi-arrow-right">
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="parent-announcement-list">
+                                    <article class="parent-announcement-item">
+                                        <span class="parent-announcement-icon blue">
+                                            <i class="bi bi-megaphone-fill">
+                                            </i>
+                                        </span>
+                                        <div class="parent-announcement-details">
+                                            <strong>
+                                                Upcoming School Activities
+                                            </strong>
+                                            <span>
+                                                Sample announcement &middot; November 27
+                                            </span>
+                                            <small>
+                                                For eligible Parent/Guardian audience
+                                            </small>
+                                        </div>
+                                        <span class="parent-new-tag">
+                                            New
+                                        </span>
+                                    </article>
+                                    <article class="parent-announcement-item">
+                                        <span class="parent-announcement-icon teal">
+                                            <i class="bi bi-calendar-check-fill">
+                                            </i>
+                                        </span>
+                                        <div class="parent-announcement-details">
+                                            <strong>
+                                                Parent Orientation and Consultation Schedule
+                                            </strong>
+                                            <span>
+                                                Sample announcement &middot; November 26
+                                            </span>
+                                            <small>
+                                                For eligible Parent/Guardian audience
+                                            </small>
+                                        </div>
+                                        <span class="parent-new-tag">
+                                            New
+                                        </span>
+                                    </article>
+                                </div>
+                            </section>
+                            <section aria-labelledby="parentProgressHeading" class="parent-panel parent-searchable">
+                                <div class="parent-panel-header">
+                                    <div>
+                                        <h2 id="parentProgressHeading">
+                                            Child Learning Updates
+                                        </h2>
+                                        <p>
+                                            Permitted academic information from linked children
+                                        </p>
+                                    </div>
+                                    <a class="parent-view-link" href="child-progress.html">
+                                        View Progress
+                                        <i class="bi bi-arrow-right">
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="parent-progress-list">
+                                    <article class="parent-progress-item">
+                                        <span class="parent-progress-icon purple">
+                                            <i class="bi bi-award-fill">
+                                            </i>
+                                        </span>
+                                        <div>
+                                            <strong>
+                                                Mathematics &middot; Mika Santos
+                                            </strong>
+                                            <span>
+                                                Released sample grade: 92
+                                            </span>
+                                        </div>
+                                        <span class="parent-released-tag">
+                                            Released
+                                        </span>
+                                    </article>
+                                    <article class="parent-progress-item">
+                                        <span class="parent-progress-icon teal">
+                                            <i class="bi bi-file-earmark-check-fill">
+                                            </i>
+                                        </span>
+                                        <div>
+                                            <strong>
+                                                English &middot; Liam Santos
+                                            </strong>
+                                            <span>
+                                                Sample submission status: Submitted
+                                            </span>
+                                        </div>
+                                        <span class="parent-released-tag">
+                                            Status
+                                        </span>
+                                    </article>
+                                </div>
+                                <p class="parent-privacy-note">
+                                    <i class="bi bi-lock-fill">
+                                    </i>
+                                    Only released grades, feedback and permitted status information are shown. Student work files and private Teacher notes are not accessible.
+                                </p>
+                            </section>
+                        </div>
+                        <div class="parent-dashboard-column">
+                            <section aria-labelledby="parentQuickActionsHeading" class="parent-panel parent-quick-actions parent-searchable">
+                                <div class="parent-panel-header">
+                                    <div>
+                                        <h2 id="parentQuickActionsHeading">
+                                            Quick Actions
+                                        </h2>
+                                        <p>
+                                            Frequently used Parent features
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="parent-quick-actions-grid">
+                                    <a class="parent-quick-action" href="connections.html">
+                                        <i class="bi bi-person-plus-fill">
+                                        </i>
+                                        <span>
+                                            Connect a Child
+                                        </span>
+                                    </a>
+                                    <a class="parent-quick-action" href="acknowledgments.html">
+                                        <i class="bi bi-check2-square">
+                                        </i>
+                                        <span>
+                                            View Acknowledgments
+                                        </span>
+                                    </a>
+                                    <a class="parent-quick-action" href="child-progress.html">
+                                        <i class="bi bi-graph-up-arrow">
+                                        </i>
+                                        <span>
+                                            View Child Progress
+                                        </span>
+                                    </a>
+                                    <a class="parent-quick-action" href="calendar.html">
+                                        <i class="bi bi-calendar3">
+                                        </i>
+                                        <span>
+                                            Open Calendar
+                                        </span>
+                                    </a>
+                                </div>
+                            </section>
+                            <section aria-labelledby="parentConnectionHeading" class="parent-panel parent-searchable">
+                                <div class="parent-panel-header">
+                                    <div>
+                                        <h2 id="parentConnectionHeading">
+                                            Connection Request
+                                        </h2>
+                                        <p>
+                                            Guardian verification status
+                                        </p>
+                                    </div>
+                                    <span class="parent-demo-chip">
+                                        DEMO
+                                    </span>
+                                </div>
+                                <div class="parent-connection-status-card">
+                                    <span class="parent-connection-icon">
+                                        <i class="bi bi-hourglass-split">
+                                        </i>
+                                    </span>
+                                    <div>
+                                        <strong>
+                                            Request Under Verification
+                                        </strong>
+                                        <span>
+                                            Reference: DEMO-PCR-001
+                                        </span>
+                                        <small>
+                                            Sample request awaiting authorized review.
+                                        </small>
+                                    </div>
+                                    <span class="parent-pending-status">
+                                        Pending
+                                    </span>
+                                </div>
+                                <p class="parent-privacy-note">
+                                    <i class="bi bi-shield-lock-fill">
+                                    </i>
+                                    A pending request does not provide access to a child's academic records.
+                                </p>
+                                <a class="parent-view-link parent-full-link" href="connections.html">
+                                    View Connection Requests
+                                    <i class="bi bi-arrow-right">
+                                    </i>
+                                </a>
+                            </section>
+                            <section aria-labelledby="parentDeadlinesHeading" class="parent-panel parent-searchable">
+                                <div class="parent-panel-header">
+                                    <div>
+                                        <h2 id="parentDeadlinesHeading">
+                                            Upcoming Deadlines
+                                        </h2>
+                                        <p>
+                                            Permitted activity and school dates
+                                        </p>
+                                    </div>
+                                    <a class="parent-view-link" href="calendar.html">
+                                        Calendar
+                                        <i class="bi bi-arrow-right">
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="parent-deadline-list">
+                                    <article class="parent-deadline-item">
+                                        <span class="parent-deadline-date">
+                                            <strong>
+                                                29
+                                            </strong>
+                                            <small>
+                                                NOV
+                                            </small>
+                                        </span>
+                                        <div class="parent-deadline-details">
+                                            <strong>
+                                                Mathematics Worksheet 3
+                                            </strong>
+                                            <span>
+                                                Mika Santos &middot; Grade 7
+                                            </span>
+                                        </div>
+                                        <span class="parent-deadline-indicator upcoming">
+                                            Upcoming
+                                        </span>
+                                    </article>
+                                    <article class="parent-deadline-item">
+                                        <span class="parent-deadline-date">
+                                            <strong>
+                                                30
+                                            </strong>
+                                            <small>
+                                                NOV
+                                            </small>
+                                        </span>
+                                        <div class="parent-deadline-details">
+                                            <strong>
+                                                School Activity
+                                            </strong>
+                                            <span>
+                                                Eligible school event
+                                            </span>
+                                        </div>
+                                        <span class="parent-deadline-indicator event">
+                                            Event
+                                        </span>
+                                    </article>
+                                    <article class="parent-deadline-item">
+                                        <span class="parent-deadline-date">
+                                            <strong>
+                                                01
+                                            </strong>
+                                            <small>
+                                                DEC
+                                            </small>
+                                        </span>
+                                        <div class="parent-deadline-details">
+                                            <strong>
+                                                Reading Reflection
+                                            </strong>
+                                            <span>
+                                                Mika Santos &middot; Grade 7
+                                            </span>
+                                        </div>
+                                        <span class="parent-deadline-indicator upcoming">
+                                            Upcoming
+                                        </span>
+                                    </article>
+                                </div>
+                            </section>
+                            <section aria-labelledby="parentAcknowledgmentHeading" class="parent-panel parent-searchable">
+                                <div class="parent-panel-header">
+                                    <div>
+                                        <h2 id="parentAcknowledgmentHeading">
+                                            Acknowledgment Summary
+                                        </h2>
+                                        <p>
+                                            Exact-version announcement acknowledgments
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="parent-acknowledgment-summary">
+                                    <div class="parent-ack-stat">
+                                        <strong id="parentAcknowledgmentRequiredCount">
+                                            02
+                                        </strong>
+                                        <span>
+                                            Required
+                                        </span>
+                                    </div>
+                                    <div class="parent-ack-stat">
+                                        <strong id="parentAcknowledgmentCompletedCount">
+                                            00
+                                        </strong>
+                                        <span>
+                                            Completed
+                                        </span>
+                                    </div>
+                                    <div class="parent-ack-stat">
+                                        <strong id="parentAcknowledgmentPendingCount">
+                                            02
+                                        </strong>
+                                        <span>
+                                            Pending
+                                        </span>
+                                    </div>
+                                </div>
+                                <a class="parent-view-link parent-full-link" href="acknowledgments.html">
+                                    Review Acknowledgments
+                                    <i class="bi bi-arrow-right">
+                                    </i>
+                                </a>
+                            </section>
+                        </div>
+                    </div>
+                    <p class="parent-footer-note">
+                        <i class="bi bi-info-circle me-1">
+                        </i>
+                        Demonstration interface only. Sample records are not live school information and are not connected to PostgreSQL.
+                    </p>
+                    <p class="parent-search-empty" hidden="" id="parentSearchEmpty">
+                        No matching dashboard information found.
+                    </p>
+                </section>
+                <footer class="main-footer">
+                    GabayAral &copy;
+                    <span id="parentFooterYear">
+                        2026
+                    </span>
+                    | Parent/Guardian Workspace
+                </footer>
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+        </script>
+        <script src="../../assets/js/layout.js">
+        </script>
+        <script src="../../assets/js/parent.js">
+        </script>
+    </body>
+</html>

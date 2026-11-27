@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+    <title>EasyAccess &amp; Profile | GabayAral Student</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/student.css">
+</head>
+<body>
+<div class="app-shell student-app">
+<aside class="sidebar student-sidebar" id="sidebar">
+  <div class="brand-block">
+    <a href="dashboard.html" class="brand" aria-label="GabayAral Student Dashboard"><i class="bi bi-book-half"></i><span>GabayAral</span></a>
+    <span class="role-pill">Student Workspace</span>
+  </div>
+  <nav class="side-nav" aria-label="Student workspace navigation">
+    <div class="nav-group"><p class="nav-heading">Overview</p>
+        <a href="dashboard.html" class="side-link"><i class="bi bi-grid-1x2-fill"></i><span>Dashboard</span></a>
+        <a href="my-offerings.html" class="side-link"><i class="bi bi-journal-bookmark"></i><span>My Subject Offerings</span></a>
+        <a href="my-tasks.html" class="side-link"><i class="bi bi-list-check"></i><span>MyTasks</span></a>
+    </div>
+    <div class="nav-group"><p class="nav-heading">Learning</p>
+        <a href="activities.html" class="side-link"><i class="bi bi-journal-text"></i><span>Activities</span></a>
+        <a href="submissions.html" class="side-link"><i class="bi bi-file-earmark-arrow-up"></i><span>Submissions &amp; Revisions</span></a>
+        <a href="quizzes.html" class="side-link"><i class="bi bi-ui-checks"></i><span>Quizzes</span></a>
+        <a href="grades.html" class="side-link"><i class="bi bi-clipboard-data"></i><span>Grades &amp; Feedback</span></a>
+        <a href="grade-reviews.html" class="side-link"><i class="bi bi-clipboard-check"></i><span>Grade Review Requests</span></a>
+    </div>
+    <div class="nav-group"><p class="nav-heading">Communication</p>
+        <a href="announcements.html" class="side-link"><i class="bi bi-megaphone"></i><span>Announcements</span></a>
+        <a href="calendar.html" class="side-link"><i class="bi bi-calendar3"></i><span>Calendar</span></a>
+        <a href="notifications.html" class="side-link"><i class="bi bi-bell"></i><span>Notifications</span></a>
+    </div>
+    <div class="nav-group"><p class="nav-heading">Personal</p>
+        <a href="settings.html" class="side-link active" aria-current="page"><i class="bi bi-universal-access"></i><span>EasyAccess &amp; Profile</span></a>
+    </div>
+</nav>
+  <div class="sidebar-footer"><span class="footer-dot"></span>Student Workspace</div>
+</aside>
+<div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+<main class="main-area">
+<header class="topbar student-topbar">
+    <button type="button" class="icon-button-ga mobile-menu" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><i class="bi bi-list"></i></button>
+    <div class="breadcrumbs" aria-label="Breadcrumb"><i class="bi bi-house-door-fill"></i><a href="dashboard.html">Student Workspace</a><span>/</span><strong>EasyAccess &amp; Profile</strong></div>
+    <div class="topbar-tools student-topbar-tools">
+        <div class="student-school-label" aria-label="Demonstration school workspace"><i class="bi bi-bank"></i><span>Sample School Workspace</span><span class="student-demo-chip">DEMO</span></div>
+        <label class="search-box student-search-box"><i class="bi bi-search" aria-hidden="true"></i><input type="search" id="studentPageSearch" placeholder="Search EasyAccess settings..." aria-label="Search EasyAccess settings..."></label>
+        <a href="notifications.html" class="icon-button-ga student-notification-button" aria-label="Open notifications" title="Notifications"><i class="bi bi-bell"></i><span class="student-notification-dot" aria-hidden="true"></span></a>
+        <div class="student-profile-wrapper" id="studentProfileWrapper">
+            <button type="button" class="profile-button student-profile-button" id="studentProfileButton" aria-label="Student account menu" aria-expanded="false" aria-controls="studentProfileMenu"><span class="avatar"><i class="bi bi-person-fill"></i></span><span>Student</span><i class="bi bi-chevron-down student-profile-chevron"></i></button>
+            <div class="student-profile-menu" id="studentProfileMenu" hidden>
+                <div class="student-profile-menu-header"><span class="student-profile-menu-avatar"><i class="bi bi-person-fill"></i></span><div><strong>Student Account</strong><small>Demonstration profile</small></div></div>
+                <div class="student-profile-menu-divider"></div>
+                <a href="settings.html" class="student-profile-menu-item"><i class="bi bi-person-gear"></i><span>Profile &amp; Preferences</span></a>
+                <a href="settings.html#studentSecurityPanel" class="student-profile-menu-item"><i class="bi bi-shield-lock"></i><span>Account Security</span></a>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="main-content student-content student-ea-page" aria-labelledby="studentEasyAccessPageHeading">
+
+    <div class="student-ea-heading student-searchable">
+        <div><span class="student-eyebrow">ACCESSIBILITY AND PERSONALIZATION</span><h1 id="studentEasyAccessPageHeading">EasyAccess</h1><p>Adjust your display, reading and language preferences to make GabayAral easier to use.</p></div>
+        <span class="student-ea-personal-badge"><i class="bi bi-person-lock"></i> Personal Settings</span>
+    </div>
+
+    <div class="student-ea-notice" role="note"><i class="bi bi-universal-access"></i><div><strong>Your Accessibility Preferences</strong><span>Preview your changes, save your preferences in this browser, and restore the default settings whenever you want. Saved display preferences also apply to other Student Workspace pages in this browser.</span></div></div>
+
+    <div class="student-ea-layout">
+        <div class="student-ea-settings-column">
+
+            <section class="student-ea-card student-searchable" id="studentEaDisplaySettings" data-ea-searchable="font text size display typography">
+                <div class="student-ea-card-heading"><span class="student-ea-card-icon blue"><i class="bi bi-type"></i></span><div><h2>Display and Text</h2><p>Adjust how text appears on your screen.</p></div></div>
+                <div class="student-ea-setting-row"><div class="student-ea-setting-description"><strong>Font Family</strong><p>Choose a font that is comfortable to read.</p></div><label class="student-ea-control"><span class="visually-hidden">Font family</span><select id="studentEaFontFamily"><option value="inter">Inter (Default)</option><option value="arial">Arial</option><option value="verdana">Verdana</option></select></label></div>
+                <div class="student-ea-divider"></div>
+                <fieldset class="student-ea-setting-fieldset"><legend>Text Size</legend><p class="student-ea-helper">Select the text size that works best for you.</p><div class="student-ea-choice-group">
+                    <label class="student-ea-choice"><input type="radio" name="studentEaTextSize" value="normal"><span class="student-ea-choice-preview normal">Aa</span><span>Normal</span></label>
+                    <label class="student-ea-choice"><input type="radio" name="studentEaTextSize" value="large"><span class="student-ea-choice-preview large">Aa</span><span>Large</span></label>
+                    <label class="student-ea-choice"><input type="radio" name="studentEaTextSize" value="extra-large"><span class="student-ea-choice-preview extra-large">Aa</span><span>Extra Large</span></label>
+                </div></fieldset>
+            </section>
+
+            <section class="student-ea-card student-searchable" id="studentEaAppearanceSettings" data-ea-searchable="color contrast simplified display motion">
+                <div class="student-ea-card-heading"><span class="student-ea-card-icon purple"><i class="bi bi-palette"></i></span><div><h2>Color and Display</h2><p>Improve visibility and reduce distractions.</p></div></div>
+                <div class="student-ea-setting-row"><div class="student-ea-setting-description"><strong>High Contrast</strong><p>Use stronger borders and darker text for improved visibility.</p></div><label class="student-ea-switch"><input type="checkbox" id="studentEaHighContrast"><span class="student-ea-switch-track"></span><span class="visually-hidden">Enable high contrast</span></label></div>
+                <div class="student-ea-divider"></div>
+                <div class="student-ea-setting-row"><div class="student-ea-setting-description"><strong>Simplified Display</strong><p>Reduce decorative visual effects and card shadows.</p></div><label class="student-ea-switch"><input type="checkbox" id="studentEaSimplified"><span class="student-ea-switch-track"></span><span class="visually-hidden">Enable simplified display</span></label></div>
+                <div class="student-ea-divider"></div>
+                <div class="student-ea-setting-row"><div class="student-ea-setting-description"><strong>Reduce Motion</strong><p>Reduce animations and transition effects throughout the Student Workspace.</p></div><label class="student-ea-switch"><input type="checkbox" id="studentEaReduceMotion"><span class="student-ea-switch-track"></span><span class="visually-hidden">Enable reduced motion</span></label></div>
+            </section>
+
+            <section class="student-ea-card student-searchable" id="studentEaLanguageSettings" data-ea-searchable="language english filipino cebuano ilocano">
+                <div class="student-ea-card-heading"><span class="student-ea-card-icon teal"><i class="bi bi-translate"></i></span><div><h2>Language Preference</h2><p>Select your preferred language.</p></div></div>
+                <div class="student-ea-setting-row"><div class="student-ea-setting-description"><strong>Preferred Language</strong><p>Your selected language preference will be saved to your settings.</p></div><label class="student-ea-control"><span class="visually-hidden">Preferred language</span><select id="studentEaLanguage"><option value="en">English</option><option value="fil">Filipino</option><option value="ceb">Cebuano</option><option value="ilo">Ilocano</option></select></label></div>
+                <div class="student-ea-language-note"><i class="bi bi-info-circle"></i><span>Automatic translation of every screen requires approved language resources. Selecting a language here saves your preference but does not yet translate all interface content.</span></div>
+            </section>
+
+            <section class="student-ea-card student-searchable" id="studentEaSpeechSettings" data-ea-searchable="speech text to speech reading voice speed audio">
+                <div class="student-ea-card-heading"><span class="student-ea-card-icon amber"><i class="bi bi-volume-up"></i></span><div><h2>Text-to-Speech</h2><p>Configure your reading and speech preferences.</p></div></div>
+                <div class="student-ea-setting-row"><div class="student-ea-setting-description"><strong>Enable Text-to-Speech</strong><p>Allow the reading preview to speak using your browser or device.</p></div><label class="student-ea-switch"><input type="checkbox" id="studentEaSpeechEnabled"><span class="student-ea-switch-track"></span><span class="visually-hidden">Enable text-to-speech</span></label></div>
+                <div class="student-ea-divider"></div>
+                <div class="student-ea-setting-block"><div class="student-ea-setting-description"><strong>Speech Voice</strong><p>Choose an available voice installed in your browser or device.</p></div><label class="student-ea-control full-width"><span class="visually-hidden">Speech voice</span><select id="studentEaTtsVoice"><option value="">Default Device Voice</option></select></label><small class="student-ea-helper" id="studentEaVoiceStatus">Available voices depend on your browser and device.</small></div>
+                <div class="student-ea-divider"></div>
+                <div class="student-ea-setting-block"><div class="student-ea-setting-description"><strong>Speech Speed</strong><p>Adjust how quickly the reading preview speaks.</p></div><div class="student-ea-range-wrapper"><input type="range" id="studentEaSpeechSpeed" min="0.5" max="2" step="0.1" value="1"><div class="student-ea-range-labels"><span>Slower</span><strong id="studentEaSpeechSpeedValue">1.0x</strong><span>Faster</span></div></div></div>
+                <div class="student-ea-speech-status" id="studentEaSpeechStatus" role="status" aria-live="polite">Checking browser speech support...</div>
+                <button type="button" class="student-ea-read-button" id="studentEaReadPreview"><i class="bi bi-play-circle"></i> Play Reading Preview</button>
+                <button type="button" class="student-ea-stop-button" id="studentEaStopPreview"><i class="bi bi-stop-circle"></i> Stop Reading</button>
+            </section>
+
+            <section class="student-ea-actions-card student-searchable">
+                <div class="student-ea-save-information"><i class="bi bi-shield-check"></i><span>Your settings are personal to this demonstration Student account and do not change another user's preferences.</span></div>
+                <div class="student-ea-actions">
+                    <button type="button" class="student-ea-reset-button" id="studentEaResetButton"><i class="bi bi-arrow-counterclockwise"></i> Restore Defaults</button>
+                    <button type="button" class="student-ea-save-button" id="studentEaSaveButton"><i class="bi bi-check2-circle"></i> Save Preferences</button>
+                </div>
+                <div id="studentEaSaveMessage" class="student-ea-save-message" role="status" aria-live="polite" hidden></div>
+            </section>
+        </div>
+
+        <aside class="student-ea-preview-column">
+            <section class="student-ea-card student-searchable">
+                <div class="student-ea-card-heading"><span class="student-ea-card-icon blue"><i class="bi bi-eye"></i></span><div><h2>Accessibility Preview</h2><p>Preview your selected display settings.</p></div></div>
+                <div class="student-ea-preview-sample" id="studentEaPreview"><span class="student-ea-preview-label">SAMPLE CONTENT</span><h3>Welcome to GabayAral</h3><p>This is a sample paragraph. You can use your accessibility settings to adjust text size, font and display appearance.</p><div class="student-ea-preview-example"><strong>Learning Reminder</strong><p>Review your activities and announcements regularly to stay updated.</p></div><button type="button" class="student-ea-preview-sample-button" disabled>Sample Button</button></div>
+                <p class="student-ea-preview-caption"><i class="bi bi-info-circle"></i> Preview changes here before saving your settings.</p>
+            </section>
+            <section class="student-ea-card student-searchable">
+                <div class="student-ea-card-heading"><span class="student-ea-card-icon teal"><i class="bi bi-universal-access"></i></span><div><h2>Accessibility Guide</h2><p>What each setting helps you do.</p></div></div>
+                <div class="student-ea-guide-list">
+                    <div><i class="bi bi-type"></i><span>Readable Text<small>Adjust the font and text size.</small></span></div>
+                    <div><i class="bi bi-eye"></i><span>Better Visibility<small>Improve contrast and simplify the display.</small></span></div>
+                    <div><i class="bi bi-translate"></i><span>Language Preference<small>Save your preferred language.</small></span></div>
+                    <div><i class="bi bi-volume-up"></i><span>Reading Assistance<small>Use supported browser/device speech synthesis.</small></span></div>
+                </div>
+            </section>
+            <section class="student-ea-card student-ea-summary-card student-searchable"><h2><i class="bi bi-lock-fill"></i> Personal Settings</h2><p>Your preferences are stored separately from other users' settings.</p><ul><li>Settings apply to your Student Workspace in this browser.</li><li>Browser storage is used in this frontend demonstration.</li><li>Account-wide synchronization requires Django and PostgreSQL integration.</li></ul></section>
+        </aside>
+    </div>
+
+    <div id="studentEasyAccessMessage" class="student-ea-global-message" role="status" aria-live="polite" hidden></div>
+
+    <div class="student-ea-account-grid">
+        <section class="student-ea-card student-searchable" aria-labelledby="studentProfileSettingsHeading">
+            <div class="student-ea-card-heading"><span class="student-ea-card-icon blue"><i class="bi bi-person-circle"></i></span><div><h2 id="studentProfileSettingsHeading">Student Profile</h2><p>Demonstration account information</p></div></div>
+            <div class="student-profile-summary"><span class="student-profile-large-avatar"><i class="bi bi-person-fill"></i></span><div><strong>Student Account</strong><span>Sample School Workspace</span><small>Student role · Demonstration profile</small></div></div>
+            <div class="student-profile-fields"><label>Display name<input type="text" value="Student" readonly></label><label>School workspace<input type="text" value="Sample School Workspace" readonly></label><label>Role<input type="text" value="Student" readonly></label></div>
+            <p class="student-join-boundary-note">Profile identity and school membership are managed by authenticated account services. This page does not edit account identity.</p>
+        </section>
+        <section class="student-ea-card student-searchable" id="studentSecurityPanel" aria-labelledby="studentSecurityHeading">
+            <div class="student-ea-card-heading"><span class="student-ea-card-icon teal"><i class="bi bi-shield-lock"></i></span><div><h2 id="studentSecurityHeading">Account Security</h2><p>Security controls for the authenticated Student account</p></div></div>
+            <div class="student-security-notice"><i class="bi bi-shield-check"></i><div><strong>Protected account access</strong><p>Password changes, sign-in verification, active sessions and recovery options must be handled by the authenticated account service. They are not simulated as real security operations in this frontend demonstration.</p></div></div>
+        </section>
+    </div>
+
+    <section class="student-ea-card student-searchable" aria-labelledby="studentAccommodationHeading">
+        <div class="student-ea-card-heading"><span class="student-ea-card-icon purple"><i class="bi bi-chat-square-heart"></i></span><div><h2 id="studentAccommodationHeading">Accommodation Support</h2><p>Prepare a demonstration request for authorized school follow-up.</p></div></div>
+        <form id="studentAccommodationForm" class="student-form" novalidate><label for="studentAccommodationMessage">Your concern</label><textarea id="studentAccommodationMessage" rows="3" placeholder="Describe the accommodation support you would like to discuss..." required></textarea><button type="submit" class="student-ea-save-button"><i class="bi bi-file-earmark-text"></i> Prepare Demonstration Report</button><p class="student-form-feedback" id="studentAccommodationFeedback" role="status" aria-live="polite" hidden></p></form>
+        <p class="student-ea-helper">This form only demonstrates the interface. It does not send a report or store sensitive information.</p>
+    </section>
+
+    <p class="student-footer-note"><i class="bi bi-info-circle me-1"></i>Frontend demonstration only. Accessibility preferences are saved locally in this browser. Official account-wide persistence will be handled by the Backend.</p>
+    <p id="studentSearchEmpty" class="student-search-empty" hidden><i class="bi bi-search" aria-hidden="true"></i>No matching EasyAccess settings found.</p>
+</section>
+<footer class="main-footer">GabayAral &copy; <span id="studentFooterYear">2026</span> | Student Workspace</footer>
+</main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/layout.js"></script>
+<script src="../../assets/js/student.js"></script>
+</body>
+</html>

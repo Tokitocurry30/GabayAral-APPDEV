@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+    <title>Parent Calendar | GabayAral</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- INTER FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SHARED PROJECT STYLES -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/parent.css">
+</head>
+<body data-parent-page="calendar">
+<div class="app-shell parent-app">
+
+    <!-- SHARED PARENT SIDEBAR IS RENDERED BY parent.js -->
+    <aside class="sidebar parent-sidebar" id="sidebar" aria-label="Parent and Guardian navigation"></aside>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <main class="main-area">
+
+        <!-- TOPBAR -->
+        <header class="topbar parent-topbar">
+            <button type="button" class="icon-button-ga mobile-menu" id="menuToggle"
+                    aria-label="Open navigation" aria-expanded="false">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="breadcrumbs" aria-label="Breadcrumb">
+                <i class="bi bi-house-door-fill"></i>
+                <a href="dashboard.html">Parent/Guardian Workspace</a>
+                <span>/</span>
+                <strong>Calendar</strong>
+            </div>
+
+            <div class="topbar-tools parent-topbar-tools">
+                <div class="parent-school-label">
+                    <i class="bi bi-bank"></i>
+                    <span>Sample School Workspace</span>
+                    <span class="parent-demo-chip">DEMO</span>
+                </div>
+
+                <label class="search-box parent-search-box">
+                    <i class="bi bi-search" aria-hidden="true"></i>
+                    <input type="search" id="parentCalendarSearch"
+                           placeholder="Search calendar events..."
+                           aria-label="Search Parent Calendar">
+                </label>
+
+                <a href="#" class="icon-button-ga parent-notification-button"
+                   data-parent-demo-link="Notifications" aria-label="Open notifications">
+                    <i class="bi bi-bell"></i>
+                    <span class="parent-notification-dot" aria-hidden="true"></span>
+                </a>
+
+                <div class="parent-profile-wrapper" id="parentProfileWrapper">
+                    <button type="button" class="profile-button parent-profile-button"
+                            id="parentProfileButton" aria-label="Parent account menu"
+                            aria-expanded="false" aria-controls="parentProfileMenu">
+                        <span class="avatar"><i class="bi bi-person-fill"></i></span>
+                        <span>Parent</span>
+                        <i class="bi bi-chevron-down parent-profile-chevron"></i>
+                    </button>
+
+                    <div class="parent-profile-menu" id="parentProfileMenu" hidden>
+                        <div class="parent-profile-menu-header">
+                            <span class="parent-profile-menu-avatar"><i class="bi bi-person-fill"></i></span>
+                            <div>
+                                <strong>Parent Account</strong>
+                                <small>Demonstration profile</small>
+                            </div>
+                        </div>
+                        <div class="parent-profile-menu-divider"></div>
+                        <a href="#" class="parent-profile-menu-item" data-parent-demo-link="Profile Settings">
+                            <i class="bi bi-person-gear"></i><span>Profile Settings</span>
+                        </a>
+                        <a href="#" class="parent-profile-menu-item" data-parent-demo-link="Account Security">
+                            <i class="bi bi-shield-lock"></i><span>Account Security</span>
+                        </a>
+                        <a href="#" class="parent-profile-menu-item" data-parent-demo-link="EasyAccess">
+                            <i class="bi bi-universal-access"></i><span>EasyAccess</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- CALENDAR CONTENT -->
+        <section class="main-content parent-content" aria-labelledby="parentCalendarHeading">
+
+            <section class="parent-page-heading parent-calendar-page-heading">
+                <div>
+                    <span class="parent-eyebrow">FAMILY PLANNING AND SCHEDULING</span>
+                    <h1 id="parentCalendarHeading">Parent Calendar</h1>
+                    <p>View eligible school events and learning deadlines for your verified children.</p>
+                    <span id="parentCurrentDate" class="parent-current-date">Loading date...</span>
+                </div>
+                <span class="parent-page-heading-icon" aria-hidden="true">
+                    <i class="bi bi-calendar3"></i>
+                </span>
+            </section>
+
+            <div class="parent-demo-notice" role="note">
+                <i class="bi bi-shield-lock-fill" aria-hidden="true"></i>
+                <span>
+                    <strong>DEMO-ONLY:</strong>
+                    Calendar entries are fictional sample records. Only Parent/Guardian-visible school events and learning deadlines for verified linked children are represented. Private Teacher events, private notes and unrelated Student records are excluded.
+                </span>
+            </div>
+
+            <!-- SUMMARY CARDS -->
+            <section class="parent-stats-grid parent-calendar-stats" aria-label="Calendar summary">
+                <article class="parent-stat-card">
+                    <div class="parent-stat-top">
+                        <span class="parent-stat-icon blue"><i class="bi bi-calendar-event"></i></span>
+                        <span class="parent-stat-label">Visible Events</span>
+                    </div>
+                    <strong class="parent-stat-number" id="parentCalendarTotal">00</strong>
+                    <span class="parent-stat-caption">Events matching your filters</span>
+                </article>
+
+                <article class="parent-stat-card">
+                    <div class="parent-stat-top">
+                        <span class="parent-stat-icon teal"><i class="bi bi-building"></i></span>
+                        <span class="parent-stat-label">School Events</span>
+                    </div>
+                    <strong class="parent-stat-number" id="parentCalendarSchool">00</strong>
+                    <span class="parent-stat-caption">Eligible school activities</span>
+                </article>
+
+                <article class="parent-stat-card">
+                    <div class="parent-stat-top">
+                        <span class="parent-stat-icon purple"><i class="bi bi-journal-check"></i></span>
+                        <span class="parent-stat-label">Learning Deadlines</span>
+                    </div>
+                    <strong class="parent-stat-number" id="parentCalendarLearning">00</strong>
+                    <span class="parent-stat-caption">Verified children only</span>
+                </article>
+
+                <article class="parent-stat-card">
+                    <div class="parent-stat-top">
+                        <span class="parent-stat-icon amber"><i class="bi bi-clock-history"></i></span>
+                        <span class="parent-stat-label">Upcoming Events</span>
+                    </div>
+                    <strong class="parent-stat-number" id="parentCalendarUpcoming">00</strong>
+                    <span class="parent-stat-caption">Today or later</span>
+                </article>
+            </section>
+
+            <!-- CALENDAR PANEL -->
+            <section class="parent-panel parent-calendar-panel" aria-labelledby="parentCalendarOverviewHeading">
+                <div class="parent-calendar-toolbar">
+                    <div class="parent-panel-header parent-calendar-panel-heading">
+                        <div>
+                            <h2 id="parentCalendarOverviewHeading">Calendar Overview</h2>
+                            <p>Browse permitted school schedules and linked-child learning deadlines.</p>
+                        </div>
+                    </div>
+
+                    <div class="parent-calendar-view-controls" role="group" aria-label="Calendar view">
+                        <button type="button" class="parent-calendar-view-button active"
+                                data-parent-calendar-view="month" aria-pressed="true">Month</button>
+                        <button type="button" class="parent-calendar-view-button"
+                                data-parent-calendar-view="week" aria-pressed="false">Week</button>
+                        <button type="button" class="parent-calendar-view-button"
+                                data-parent-calendar-view="list" aria-pressed="false">List</button>
+                    </div>
+                </div>
+
+                <!-- DATE NAVIGATION -->
+                <div class="parent-calendar-navigation">
+                    <div class="parent-calendar-navigation-left">
+                        <button type="button" class="parent-calendar-nav-button"
+                                id="parentCalendarPrevious" aria-label="Previous period">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+                        <button type="button" class="parent-calendar-nav-button"
+                                id="parentCalendarNext" aria-label="Next period">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                        <button type="button" class="parent-calendar-today-button"
+                                id="parentCalendarToday">Today</button>
+                    </div>
+
+                    <h3 id="parentCalendarCurrentLabel">Calendar</h3>
+
+                    <div class="parent-calendar-navigation-right">
+                        <label class="parent-calendar-date-picker">
+                            <i class="bi bi-calendar3" aria-hidden="true"></i>
+                            <input type="date" id="parentCalendarJumpDate" aria-label="Go to date">
+                        </label>
+                    </div>
+                </div>
+
+                <!-- FILTERS -->
+                <div class="parent-calendar-filters">
+                    <label class="parent-calendar-filter-control">
+                        <span>Linked Child</span>
+                        <select id="parentCalendarChildFilter">
+                            <option value="all">All verified children</option>
+                            <option value="child-demo-001">Mika Santos</option>
+                            <option value="child-demo-002">Liam Santos</option>
+                        </select>
+                    </label>
+
+                    <label class="parent-calendar-filter-control">
+                        <span>Event Type</span>
+                        <select id="parentCalendarTypeFilter">
+                            <option value="all">All visible events</option>
+                            <option value="school">School events</option>
+                            <option value="learning">Learning deadlines</option>
+                        </select>
+                    </label>
+
+                    <button type="button" class="parent-calendar-clear-button"
+                            id="parentCalendarClearFilters">
+                        <i class="bi bi-arrow-counterclockwise"></i>
+                        Clear Filters
+                    </button>
+                </div>
+
+                <!-- LEGEND -->
+                <div class="parent-calendar-legend">
+                    <span><i class="parent-calendar-legend-dot school"></i>School Event</span>
+                    <span><i class="parent-calendar-legend-dot learning"></i>Learning Deadline</span>
+                </div>
+
+                <!-- MONTH VIEW -->
+                <div class="parent-calendar-view-content" id="parentCalendarMonthView">
+                    <div class="parent-calendar-month-grid" id="parentCalendarMonthGrid"></div>
+                </div>
+
+                <!-- WEEK VIEW -->
+                <div class="parent-calendar-view-content" id="parentCalendarWeekView" hidden>
+                    <div class="parent-calendar-week-grid" id="parentCalendarWeekGrid"></div>
+                </div>
+
+                <!-- LIST VIEW -->
+                <div class="parent-calendar-view-content" id="parentCalendarListView" hidden>
+                    <div class="parent-calendar-event-list" id="parentCalendarEventList"></div>
+                </div>
+
+                <div class="parent-calendar-empty" id="parentCalendarEmpty" hidden>
+                    <i class="bi bi-calendar2-x"></i>
+                    <strong>No events found</strong>
+                    <span>Try another date or change your filters.</span>
+                </div>
+
+                <div class="parent-calendar-count" id="parentCalendarVisibleCount" aria-live="polite">
+                    0 visible events
+                </div>
+            </section>
+
+            <!-- VISIBILITY POLICY -->
+            <section class="parent-calendar-policy">
+                <span class="parent-calendar-policy-icon"><i class="bi bi-shield-lock-fill"></i></span>
+                <div>
+                    <strong>Parent/Guardian Calendar Visibility</strong>
+                    <p>School events are shown only when intended for the Parent/Guardian audience. Learning deadlines are limited to verified linked children. The Parent calendar is read-only and does not expose private Teacher events, Student work files or private Teacher notes. Backend authorization must enforce these rules.</p>
+                </div>
+            </section>
+
+            <p class="parent-footer-note">
+                <i class="bi bi-info-circle me-1"></i>
+                Demonstration interface only. Sample calendar entries are not connected to live school records or PostgreSQL.
+            </p>
+        </section>
+
+        <footer class="main-footer">
+            GabayAral &copy; <span id="parentFooterYear">2026</span> | Parent/Guardian Workspace
+        </footer>
+    </main>
+</div>
+
+<!-- EVENT DETAILS -->
+<dialog class="parent-calendar-event-dialog" id="parentCalendarEventDialog"
+        aria-labelledby="parentCalendarEventTitle">
+    <div class="parent-calendar-dialog-inner">
+        <header class="parent-calendar-dialog-header">
+            <div>
+                <span class="parent-eyebrow">CALENDAR EVENT DETAILS</span>
+                <h2 id="parentCalendarEventTitle">Event Details</h2>
+                <p id="parentCalendarEventSubtitle">Parent/Guardian-visible event</p>
+            </div>
+            <button type="button" class="parent-calendar-dialog-close"
+                    id="parentCalendarEventClose" aria-label="Close event details">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </header>
+
+        <div class="parent-calendar-dialog-body" id="parentCalendarEventBody"></div>
+
+        <footer class="parent-calendar-dialog-footer">
+            <button type="button" class="parent-primary-button" id="parentCalendarEventDone">Done</button>
+        </footer>
+    </div>
+</dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/layout.js"></script>
+<script src="../../assets/js/parent.js"></script>
+</body>
+</html>

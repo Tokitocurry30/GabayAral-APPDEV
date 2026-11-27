@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+    <title>EasyAccess &amp; Profile | GabayAral Parent</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- INTER FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SHARED STYLES -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/parent.css">
+</head>
+<body data-parent-page="settings">
+<div class="app-shell parent-app">
+
+    <!-- SHARED PARENT SIDEBAR IS RENDERED BY parent.js -->
+    <aside class="sidebar parent-sidebar" id="sidebar" aria-label="Parent and Guardian navigation"></aside>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <main class="main-area">
+        <!-- TOPBAR -->
+        <header class="topbar parent-topbar">
+            <button type="button"
+                    class="icon-button-ga mobile-menu"
+                    id="menuToggle"
+                    aria-label="Open navigation"
+                    aria-expanded="false">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="breadcrumbs" aria-label="Breadcrumb">
+                <i class="bi bi-house-door-fill"></i>
+                <a href="dashboard.html">Parent/Guardian Workspace</a>
+                <span>/</span>
+                <strong>EasyAccess &amp; Profile</strong>
+            </div>
+
+            <div class="topbar-tools parent-topbar-tools">
+                <div class="parent-school-label">
+                    <i class="bi bi-bank"></i>
+                    <span>Sample School Workspace</span>
+                    <span class="parent-demo-chip">DEMO</span>
+                </div>
+
+                <label class="search-box parent-search-box">
+                    <i class="bi bi-search" aria-hidden="true"></i>
+                    <input type="search"
+                           id="parentEasyAccessSearch"
+                           placeholder="Search settings..."
+                           aria-label="Search EasyAccess and Profile settings">
+                </label>
+
+                <a href="notifications.html"
+                   class="icon-button-ga parent-notification-button"
+                   aria-label="Open notifications"
+                   title="Notifications">
+                    <i class="bi bi-bell"></i>
+                    <span class="parent-notification-dot" aria-hidden="true"></span>
+                </a>
+
+                <div class="parent-profile-wrapper" id="parentProfileWrapper">
+                    <button type="button"
+                            class="profile-button parent-profile-button"
+                            id="parentProfileButton"
+                            aria-label="Parent account menu"
+                            aria-expanded="false"
+                            aria-controls="parentProfileMenu">
+                        <span class="avatar"><i class="bi bi-person-fill"></i></span>
+                        <span>Parent</span>
+                        <i class="bi bi-chevron-down parent-profile-chevron"></i>
+                    </button>
+
+                    <div class="parent-profile-menu" id="parentProfileMenu" hidden>
+                        <div class="parent-profile-menu-header">
+                            <span class="parent-profile-menu-avatar"><i class="bi bi-person-fill"></i></span>
+                            <div>
+                                <strong>Parent Account</strong>
+                                <small>Demonstration profile</small>
+                            </div>
+                        </div>
+                        <div class="parent-profile-menu-divider"></div>
+                        <a href="settings.html" class="parent-profile-menu-item">
+                            <i class="bi bi-person-gear"></i>
+                            <span>Profile Settings</span>
+                        </a>
+                        <a href="settings.html#parentSecurityPanel" class="parent-profile-menu-item">
+                            <i class="bi bi-shield-lock"></i>
+                            <span>Account Security</span>
+                        </a>
+                        <a href="settings.html#parentAccessibilitySettings" class="parent-profile-menu-item">
+                            <i class="bi bi-universal-access"></i>
+                            <span>EasyAccess</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- PAGE CONTENT -->
+        <section class="main-content parent-content parent-ea-page"
+                 aria-labelledby="parentEasyAccessHeading">
+
+            <section class="parent-ea-heading parent-ea-searchable">
+                <div>
+                    <span class="parent-eyebrow">ACCESSIBILITY AND PERSONALIZATION</span>
+                    <h1 id="parentEasyAccessHeading">EasyAccess &amp; Profile</h1>
+                    <p>Manage your personal display, reading, language and account preferences.</p>
+                    <span id="parentCurrentDate" class="parent-current-date">Loading date...</span>
+                </div>
+                <span class="parent-ea-personal-badge">
+                    <i class="bi bi-person-lock"></i>
+                    Personal Settings
+                </span>
+            </section>
+
+            <div class="parent-ea-notice" role="note">
+                <i class="bi bi-universal-access"></i>
+                <div>
+                    <strong>Your Accessibility Preferences</strong>
+                    <span>Preview your changes, save your preferences in this browser and restore the defaults whenever you want. Saved display preferences also apply to other Parent/Guardian Workspace pages in this browser.</span>
+                </div>
+            </div>
+
+            <div class="parent-ea-layout" id="parentAccessibilitySettings">
+                <!-- LEFT: SETTINGS -->
+                <div class="parent-ea-settings-column">
+
+                    <section class="parent-ea-card parent-ea-searchable"
+                             id="parentEaDisplaySettings"
+                             data-parent-ea-searchable="font text size display typography">
+                        <div class="parent-ea-card-heading">
+                            <span class="parent-ea-card-icon blue"><i class="bi bi-type"></i></span>
+                            <div>
+                                <h2>Display and Text</h2>
+                                <p>Adjust how text appears on your screen.</p>
+                            </div>
+                        </div>
+
+                        <div class="parent-ea-setting-row">
+                            <div class="parent-ea-setting-description">
+                                <strong>Font Family</strong>
+                                <p>Choose a font that is comfortable to read.</p>
+                            </div>
+                            <label class="parent-ea-control">
+                                <span class="visually-hidden">Font family</span>
+                                <select id="parentEaFontFamily">
+                                    <option value="inter">Inter (Default)</option>
+                                    <option value="arial">Arial</option>
+                                    <option value="verdana">Verdana</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <div class="parent-ea-divider"></div>
+
+                        <fieldset class="parent-ea-setting-fieldset">
+                            <legend>Text Size</legend>
+                            <p class="parent-ea-helper">Select the text size that works best for you.</p>
+                            <div class="parent-ea-choice-group">
+                                <label class="parent-ea-choice">
+                                    <input type="radio" name="parentEaTextSize" value="normal">
+                                    <span class="parent-ea-choice-preview normal">Aa</span>
+                                    <span>Normal</span>
+                                </label>
+                                <label class="parent-ea-choice">
+                                    <input type="radio" name="parentEaTextSize" value="large">
+                                    <span class="parent-ea-choice-preview large">Aa</span>
+                                    <span>Large</span>
+                                </label>
+                                <label class="parent-ea-choice">
+                                    <input type="radio" name="parentEaTextSize" value="extra-large">
+                                    <span class="parent-ea-choice-preview extra-large">Aa</span>
+                                    <span>Extra Large</span>
+                                </label>
+                            </div>
+                        </fieldset>
+                    </section>
+
+                    <section class="parent-ea-card parent-ea-searchable"
+                             id="parentEaAppearanceSettings"
+                             data-parent-ea-searchable="color contrast simplified display motion">
+                        <div class="parent-ea-card-heading">
+                            <span class="parent-ea-card-icon purple"><i class="bi bi-palette"></i></span>
+                            <div>
+                                <h2>Color and Display</h2>
+                                <p>Improve visibility and reduce distractions.</p>
+                            </div>
+                        </div>
+
+                        <div class="parent-ea-setting-row">
+                            <div class="parent-ea-setting-description">
+                                <strong>High Contrast</strong>
+                                <p>Use stronger borders and darker text for improved visibility.</p>
+                            </div>
+                            <label class="parent-ea-switch">
+                                <input type="checkbox" id="parentEaHighContrast">
+                                <span class="parent-ea-switch-track"></span>
+                                <span class="visually-hidden">Enable high contrast</span>
+                            </label>
+                        </div>
+
+                        <div class="parent-ea-divider"></div>
+
+                        <div class="parent-ea-setting-row">
+                            <div class="parent-ea-setting-description">
+                                <strong>Simplified Display</strong>
+                                <p>Reduce decorative visual effects and card shadows.</p>
+                            </div>
+                            <label class="parent-ea-switch">
+                                <input type="checkbox" id="parentEaSimplified">
+                                <span class="parent-ea-switch-track"></span>
+                                <span class="visually-hidden">Enable simplified display</span>
+                            </label>
+                        </div>
+
+                        <div class="parent-ea-divider"></div>
+
+                        <div class="parent-ea-setting-row">
+                            <div class="parent-ea-setting-description">
+                                <strong>Reduce Motion</strong>
+                                <p>Reduce animations and transition effects throughout the Parent/Guardian Workspace.</p>
+                            </div>
+                            <label class="parent-ea-switch">
+                                <input type="checkbox" id="parentEaReduceMotion">
+                                <span class="parent-ea-switch-track"></span>
+                                <span class="visually-hidden">Enable reduced motion</span>
+                            </label>
+                        </div>
+                    </section>
+
+                    <section class="parent-ea-card parent-ea-searchable"
+                             id="parentEaLanguageSettings"
+                             data-parent-ea-searchable="language english filipino cebuano ilocano">
+                        <div class="parent-ea-card-heading">
+                            <span class="parent-ea-card-icon teal"><i class="bi bi-translate"></i></span>
+                            <div>
+                                <h2>Language Preference</h2>
+                                <p>Select your preferred language.</p>
+                            </div>
+                        </div>
+
+                        <div class="parent-ea-setting-row">
+                            <div class="parent-ea-setting-description">
+                                <strong>Preferred Language</strong>
+                                <p>Your selected language preference will be saved to your settings.</p>
+                            </div>
+                            <label class="parent-ea-control">
+                                <span class="visually-hidden">Preferred language</span>
+                                <select id="parentEaLanguage">
+                                    <option value="en">English</option>
+                                    <option value="fil">Filipino</option>
+                                    <option value="ceb">Cebuano</option>
+                                    <option value="ilo">Ilocano</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <div class="parent-ea-language-note">
+                            <i class="bi bi-info-circle"></i>
+                            <span>Language selection saves your preference. Full translation of every interface screen requires approved language resources.</span>
+                        </div>
+                    </section>
+
+                    <section class="parent-ea-card parent-ea-searchable"
+                             id="parentEaSpeechSettings"
+                             data-parent-ea-searchable="speech text to speech reading voice speed audio">
+                        <div class="parent-ea-card-heading">
+                            <span class="parent-ea-card-icon amber"><i class="bi bi-volume-up"></i></span>
+                            <div>
+                                <h2>Text-to-Speech</h2>
+                                <p>Configure your reading and speech preferences.</p>
+                            </div>
+                        </div>
+
+                        <div class="parent-ea-setting-row">
+                            <div class="parent-ea-setting-description">
+                                <strong>Enable Text-to-Speech</strong>
+                                <p>Allow the reading preview to speak using your browser or device.</p>
+                            </div>
+                            <label class="parent-ea-switch">
+                                <input type="checkbox" id="parentEaSpeechEnabled">
+                                <span class="parent-ea-switch-track"></span>
+                                <span class="visually-hidden">Enable text-to-speech</span>
+                            </label>
+                        </div>
+
+                        <div class="parent-ea-divider"></div>
+
+                        <div class="parent-ea-setting-block">
+                            <div class="parent-ea-setting-description">
+                                <strong>Speech Voice</strong>
+                                <p>Choose an available voice installed in your browser or device.</p>
+                            </div>
+                            <label class="parent-ea-control full-width">
+                                <span class="visually-hidden">Speech voice</span>
+                                <select id="parentEaTtsVoice">
+                                    <option value="">Default Device Voice</option>
+                                </select>
+                            </label>
+                            <small class="parent-ea-helper" id="parentEaVoiceStatus">Available voices depend on your browser and device.</small>
+                        </div>
+
+                        <div class="parent-ea-divider"></div>
+
+                        <div class="parent-ea-setting-block">
+                            <div class="parent-ea-setting-description">
+                                <strong>Speech Speed</strong>
+                                <p>Adjust how quickly the reading preview speaks.</p>
+                            </div>
+                            <div class="parent-ea-range-wrapper">
+                                <input type="range" id="parentEaSpeechSpeed" min="0.5" max="2" step="0.1" value="1">
+                                <div class="parent-ea-range-labels">
+                                    <span>Slower</span>
+                                    <strong id="parentEaSpeechSpeedValue">1.0x</strong>
+                                    <span>Faster</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="parent-ea-speech-status" id="parentEaSpeechStatus" role="status" aria-live="polite">
+                            Checking browser speech support...
+                        </div>
+
+                        <div class="parent-ea-speech-actions">
+                            <button type="button" class="parent-ea-read-button" id="parentEaReadPreview">
+                                <i class="bi bi-play-circle"></i> Play Reading Preview
+                            </button>
+                            <button type="button" class="parent-ea-stop-button" id="parentEaStopPreview">
+                                <i class="bi bi-stop-circle"></i> Stop Reading
+                            </button>
+                        </div>
+                    </section>
+
+                    <section class="parent-ea-actions-card parent-ea-searchable">
+                        <div class="parent-ea-save-information">
+                            <i class="bi bi-shield-check"></i>
+                            <span>Your settings are personal to this demonstration Parent/Guardian account and do not change another user's preferences.</span>
+                        </div>
+                        <div class="parent-ea-actions">
+                            <button type="button" class="parent-ea-reset-button" id="parentEaResetButton">
+                                <i class="bi bi-arrow-counterclockwise"></i> Restore Defaults
+                            </button>
+                            <button type="button" class="parent-ea-save-button" id="parentEaSaveButton">
+                                <i class="bi bi-check2-circle"></i> Save Preferences
+                            </button>
+                        </div>
+                        <div id="parentEaSaveMessage" class="parent-ea-save-message" role="status" aria-live="polite" hidden></div>
+                    </section>
+                </div>
+
+                <!-- RIGHT: PREVIEW AND GUIDE -->
+                <aside class="parent-ea-preview-column">
+                    <section class="parent-ea-card parent-ea-searchable">
+                        <div class="parent-ea-card-heading">
+                            <span class="parent-ea-card-icon blue"><i class="bi bi-eye"></i></span>
+                            <div>
+                                <h2>Accessibility Preview</h2>
+                                <p>Preview your selected display settings.</p>
+                            </div>
+                        </div>
+
+                        <div class="parent-ea-preview-sample" id="parentEaPreview">
+                            <span class="parent-ea-preview-label">SAMPLE CONTENT</span>
+                            <h3>Welcome to GabayAral</h3>
+                            <p>This is a sample paragraph. You can use your accessibility settings to adjust text size, font and display appearance.</p>
+                            <div class="parent-ea-preview-example">
+                                <strong>Family Learning Reminder</strong>
+                                <p>Review eligible school announcements and your verified children's updates regularly.</p>
+                            </div>
+                            <button type="button" class="parent-ea-preview-sample-button" disabled>Sample Button</button>
+                        </div>
+
+                        <p class="parent-ea-preview-caption">
+                            <i class="bi bi-info-circle"></i>
+                            Preview changes here before saving your settings.
+                        </p>
+                    </section>
+
+                    <section class="parent-ea-card parent-ea-searchable">
+                        <div class="parent-ea-card-heading">
+                            <span class="parent-ea-card-icon teal"><i class="bi bi-universal-access"></i></span>
+                            <div>
+                                <h2>Accessibility Guide</h2>
+                                <p>What each setting helps you do.</p>
+                            </div>
+                        </div>
+
+                        <div class="parent-ea-guide-list">
+                            <div><i class="bi bi-type"></i><span>Readable Text<small>Adjust the font and text size.</small></span></div>
+                            <div><i class="bi bi-eye"></i><span>Better Visibility<small>Improve contrast and simplify the display.</small></span></div>
+                            <div><i class="bi bi-translate"></i><span>Language Preference<small>Save your preferred language.</small></span></div>
+                            <div><i class="bi bi-volume-up"></i><span>Reading Assistance<small>Use supported browser or device speech synthesis.</small></span></div>
+                        </div>
+                    </section>
+
+                    <section class="parent-ea-card parent-ea-summary-card parent-ea-searchable">
+                        <h2><i class="bi bi-lock-fill"></i> Personal Settings</h2>
+                        <p>Your preferences are stored separately from other users' settings.</p>
+                        <ul>
+                            <li>Settings apply to your Parent/Guardian Workspace in this browser.</li>
+                            <li>Browser storage is used in this frontend demonstration.</li>
+                            <li>Account-wide synchronization requires Django and PostgreSQL integration.</li>
+                        </ul>
+                    </section>
+                </aside>
+            </div>
+
+            <div id="parentEaGlobalMessage" class="parent-ea-global-message" role="status" aria-live="polite" hidden></div>
+
+            <!-- PROFILE AND SECURITY -->
+            <div class="parent-ea-account-grid">
+                <section class="parent-ea-card parent-ea-searchable" aria-labelledby="parentProfileHeading">
+                    <div class="parent-ea-card-heading">
+                        <span class="parent-ea-card-icon blue"><i class="bi bi-person-circle"></i></span>
+                        <div>
+                            <h2 id="parentProfileHeading">Parent/Guardian Profile</h2>
+                            <p>Demonstration account information.</p>
+                        </div>
+                    </div>
+
+                    <div class="parent-ea-profile-summary">
+                        <span class="parent-ea-profile-avatar"><i class="bi bi-person-fill"></i></span>
+                        <div>
+                            <strong>Parent Account</strong>
+                            <span>Sample School Workspace</span>
+                            <small>Parent/Guardian role - Demonstration profile</small>
+                        </div>
+                    </div>
+
+                    <div class="parent-ea-profile-fields">
+                        <label>Display Name<input type="text" value="Parent Account" readonly></label>
+                        <label>Email Address<input type="text" value="parent.demo@example.test" readonly></label>
+                        <label>Contact Number<input type="text" value="09XX XXX XXXX" readonly></label>
+                        <label>Account Role<input type="text" value="Parent/Guardian" readonly></label>
+                    </div>
+
+                    <p class="parent-ea-boundary-note">Profile identity and verified contact details are managed by authenticated account services. This frontend demonstration does not edit account identity.</p>
+                </section>
+
+                <section class="parent-ea-card parent-ea-searchable" id="parentSecurityPanel" aria-labelledby="parentSecurityHeading">
+                    <div class="parent-ea-card-heading">
+                        <span class="parent-ea-card-icon teal"><i class="bi bi-shield-lock"></i></span>
+                        <div>
+                            <h2 id="parentSecurityHeading">Account Security</h2>
+                            <p>Security information for the authenticated Parent/Guardian account.</p>
+                        </div>
+                    </div>
+
+                    <div class="parent-ea-security-notice">
+                        <i class="bi bi-shield-check"></i>
+                        <div>
+                            <strong>Protected account access</strong>
+                            <p>Password changes, sign-in verification, active sessions and account recovery must be handled by the authenticated account service. They are not simulated as real security operations in this frontend demonstration.</p>
+                        </div>
+                    </div>
+
+                    <div class="parent-ea-security-links">
+                        <a href="connections.html"><i class="bi bi-person-check"></i><span>View Guardian verification requests</span><i class="bi bi-arrow-right"></i></a>
+                        <a href="children.html"><i class="bi bi-people"></i><span>View approved child connections</span><i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </section>
+            </div>
+
+            <p class="parent-footer-note">
+                <i class="bi bi-info-circle me-1"></i>
+                Frontend demonstration only. Accessibility preferences are saved locally in this browser. Official account-wide persistence and security operations will be handled by the Backend.
+            </p>
+
+            <p id="parentEasyAccessSearchEmpty" class="parent-search-empty" hidden>
+                <i class="bi bi-search" aria-hidden="true"></i>
+                No matching EasyAccess or Profile settings found.
+            </p>
+        </section>
+
+        <footer class="main-footer">
+            GabayAral &copy; <span id="parentFooterYear">2026</span> | Parent/Guardian Workspace
+        </footer>
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/layout.js"></script>
+<script src="../../assets/js/parent.js"></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+    <title>Child Progress | GabayAral Parent</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- INTER FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SHARED AND PARENT STYLES -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/parent.css">
+</head>
+<body data-parent-page="child-progress">
+<div class="app-shell parent-app">
+
+    <!-- SHARED PARENT SIDEBAR IS RENDERED BY parent.js -->
+    <aside class="sidebar parent-sidebar" id="sidebar" aria-label="Parent and Guardian navigation"></aside>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <main class="main-area">
+        <!-- TOPBAR -->
+        <header class="topbar parent-topbar">
+            <button type="button" class="icon-button-ga mobile-menu" id="menuToggle"
+                    aria-label="Open navigation" aria-expanded="false">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="breadcrumbs" aria-label="Breadcrumb">
+                <i class="bi bi-house-door-fill"></i>
+                <a href="dashboard.html">Parent/Guardian Workspace</a>
+                <span>/</span>
+                <strong>Child Progress</strong>
+            </div>
+
+            <div class="topbar-tools parent-topbar-tools">
+                <div class="parent-school-label">
+                    <i class="bi bi-bank"></i>
+                    <span>Sample School Workspace</span>
+                    <span class="parent-demo-chip">DEMO</span>
+                </div>
+
+                <label class="search-box parent-search-box">
+                    <i class="bi bi-search" aria-hidden="true"></i>
+                    <input type="search" id="parentProgressSearch"
+                           placeholder="Search child progress..." aria-label="Search child progress">
+                </label>
+
+                <a href="#" class="icon-button-ga parent-notification-button"
+                   data-parent-demo-link="Notifications" aria-label="Open notifications">
+                    <i class="bi bi-bell"></i>
+                    <span class="parent-notification-dot" aria-hidden="true"></span>
+                </a>
+
+                <div class="parent-profile-wrapper" id="parentProfileWrapper">
+                    <button type="button" class="profile-button parent-profile-button"
+                            id="parentProfileButton" aria-label="Parent account menu"
+                            aria-expanded="false" aria-controls="parentProfileMenu">
+                        <span class="avatar"><i class="bi bi-person-fill"></i></span>
+                        <span>Parent</span>
+                        <i class="bi bi-chevron-down parent-profile-chevron"></i>
+                    </button>
+
+                    <div class="parent-profile-menu" id="parentProfileMenu" hidden>
+                        <div class="parent-profile-menu-header">
+                            <span class="parent-profile-menu-avatar"><i class="bi bi-person-fill"></i></span>
+                            <div>
+                                <strong>Parent Account</strong>
+                                <small>Demonstration profile</small>
+                            </div>
+                        </div>
+                        <div class="parent-profile-menu-divider"></div>
+                        <a href="#" class="parent-profile-menu-item" data-parent-demo-link="Profile Settings">
+                            <i class="bi bi-person-gear"></i><span>Profile Settings</span>
+                        </a>
+                        <a href="#" class="parent-profile-menu-item" data-parent-demo-link="Account Security">
+                            <i class="bi bi-shield-lock"></i><span>Account Security</span>
+                        </a>
+                        <a href="#" class="parent-profile-menu-item" data-parent-demo-link="EasyAccess">
+                            <i class="bi bi-universal-access"></i><span>EasyAccess</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- CHILD PROGRESS CONTENT -->
+        <section class="main-content parent-content" aria-labelledby="parentProgressHeading">
+            <section class="parent-page-heading parent-progress-page-heading">
+                <div>
+                    <span class="parent-eyebrow">ACADEMIC MONITORING</span>
+                    <h1 id="parentProgressHeading">Child Progress</h1>
+                    <p>Review permitted activity statuses, deadlines and released academic results for your verified child.</p>
+                    <span id="parentCurrentDate" class="parent-current-date">Loading date...</span>
+                </div>
+                <span class="parent-page-heading-icon" aria-hidden="true">
+                    <i class="bi bi-graph-up-arrow"></i>
+                </span>
+            </section>
+
+            <div class="parent-demo-notice" role="note">
+                <i class="bi bi-shield-lock-fill" aria-hidden="true"></i>
+                <span>
+                    <strong>DEMO-ONLY:</strong> All child progress records are fictional. Only verified sample children are selectable. This page displays statuses and released results only; it does not expose Student work files, private Teacher notes or unreleased grades and feedback.
+                </span>
+            </div>
+
+            <!-- VERIFIED CHILD SELECTOR -->
+            <section class="parent-panel parent-progress-child-selector" aria-labelledby="parentProgressChildHeading">
+                <div class="parent-progress-selector-copy">
+                    <span class="parent-eyebrow">VERIFIED CHILD</span>
+                    <h2 id="parentProgressChildHeading">Select a Child</h2>
+                    <p>Only approved Parent/Guardian connections are available here.</p>
+                </div>
+
+                <div class="parent-progress-selector-control">
+                    <label for="parentProgressChildSelect">Linked child</label>
+                    <select id="parentProgressChildSelect">
+                        <option value="child-demo-001">Mika Santos · Grade 7 · Sampaguita</option>
+                        <option value="child-demo-002">Liam Santos · Grade 4 · Mabini</option>
+                    </select>
+                    <span class="parent-verified-status"><i class="bi bi-patch-check-fill"></i> Verified and Approved</span>
+                </div>
+            </section>
+
+            <!-- CHILD SUMMARY -->
+            <section class="parent-stats-grid parent-progress-stats" aria-label="Selected child progress summary">
+                <article class="parent-stat-card">
+                    <div class="parent-stat-top">
+                        <span class="parent-stat-icon blue"><i class="bi bi-calendar-event"></i></span>
+                        <span class="parent-stat-label">Upcoming Deadlines</span>
+                    </div>
+                    <strong class="parent-stat-number" id="parentProgressUpcomingCount">02</strong>
+                    <span class="parent-stat-caption">Activities and revision dates</span>
+                </article>
+
+                <article class="parent-stat-card">
+                    <div class="parent-stat-top">
+                        <span class="parent-stat-icon teal"><i class="bi bi-file-earmark-check"></i></span>
+                        <span class="parent-stat-label">Submitted</span>
+                    </div>
+                    <strong class="parent-stat-number" id="parentProgressSubmittedCount">02</strong>
+                    <span class="parent-stat-caption">Recorded submission statuses</span>
+                </article>
+
+                <article class="parent-stat-card">
+                    <div class="parent-stat-top">
+                        <span class="parent-stat-icon amber"><i class="bi bi-arrow-repeat"></i></span>
+                        <span class="parent-stat-label">Revision Required</span>
+                    </div>
+                    <strong class="parent-stat-number" id="parentProgressRevisionCount">01</strong>
+                    <span class="parent-stat-caption">Revision status records</span>
+                </article>
+
+                <article class="parent-stat-card">
+                    <div class="parent-stat-top">
+                        <span class="parent-stat-icon purple"><i class="bi bi-award"></i></span>
+                        <span class="parent-stat-label">Released Grades</span>
+                    </div>
+                    <strong class="parent-stat-number" id="parentProgressReleasedGradeCount">04</strong>
+                    <span class="parent-stat-caption">Assessment results released</span>
+                </article>
+            </section>
+
+            <!-- VIEW FILTERS -->
+            <section class="parent-panel parent-progress-view-panel" aria-label="Child progress views">
+                <div class="parent-panel-header">
+                    <div>
+                        <h2 id="parentProgressSelectedName">Mika Santos</h2>
+                        <p id="parentProgressSelectedPlacement">Grade 7 · Sampaguita · Sample School Workspace</p>
+                    </div>
+                    <span class="parent-verified-status"><i class="bi bi-patch-check-fill"></i> Verified</span>
+                </div>
+
+                <div class="parent-progress-view-controls" role="group" aria-label="Filter progress sections">
+                    <button type="button" class="parent-progress-view-button active" data-progress-view="overview" aria-pressed="true">Overview</button>
+                    <button type="button" class="parent-progress-view-button" data-progress-view="activities" aria-pressed="false">Activities &amp; Deadlines</button>
+                    <button type="button" class="parent-progress-view-button" data-progress-view="submissions" aria-pressed="false">Submissions &amp; Revisions</button>
+                    <button type="button" class="parent-progress-view-button" data-progress-view="grades" aria-pressed="false">Released Grades</button>
+                </div>
+            </section>
+
+            <!-- ACTIVITIES AND DEADLINES -->
+            <section class="parent-panel parent-progress-section" data-progress-section="activities"
+                     aria-labelledby="parentProgressActivitiesHeading">
+                <div class="parent-panel-header">
+                    <div>
+                        <h2 id="parentProgressActivitiesHeading">Activities &amp; Deadlines</h2>
+                        <p>Permitted activity status and applicable deadlines.</p>
+                    </div>
+                    <span class="parent-record-count" id="parentProgressActivityCount">0 activities</span>
+                </div>
+                <div class="parent-progress-card-list" id="parentProgressActivitiesList" aria-live="polite"></div>
+                <div class="parent-empty-state" id="parentProgressActivitiesEmpty" hidden>
+                    <i class="bi bi-calendar-check"></i>
+                    <strong>No activity records available</strong>
+                    <span>No eligible activity information is currently available for this child.</span>
+                </div>
+            </section>
+
+            <!-- SUBMISSIONS AND REVISIONS -->
+            <section class="parent-panel parent-progress-section" data-progress-section="submissions"
+                     aria-labelledby="parentProgressSubmissionsHeading">
+                <div class="parent-panel-header">
+                    <div>
+                        <h2 id="parentProgressSubmissionsHeading">Submissions &amp; Revisions</h2>
+                        <p>Submission and revision statuses only. Student files are not available to Parents.</p>
+                    </div>
+                    <span class="parent-record-count" id="parentProgressSubmissionCount">0 records</span>
+                </div>
+                <div class="parent-progress-card-list" id="parentProgressSubmissionsList" aria-live="polite"></div>
+                <div class="parent-empty-state" id="parentProgressSubmissionsEmpty" hidden>
+                    <i class="bi bi-file-earmark-check"></i>
+                    <strong>No submission status records</strong>
+                    <span>No permitted submission status is currently available for this child.</span>
+                </div>
+            </section>
+
+            <!-- RELEASED GRADES AND FEEDBACK -->
+            <section class="parent-panel parent-progress-section" data-progress-section="grades"
+                     aria-labelledby="parentProgressGradesHeading">
+                <div class="parent-panel-header">
+                    <div>
+                        <h2 id="parentProgressGradesHeading">Released Grades &amp; Feedback</h2>
+                        <p>Only grades and feedback officially marked as released are displayed.</p>
+                    </div>
+                    <span class="parent-record-count" id="parentProgressGradeCount">0 results</span>
+                </div>
+
+                <div class="parent-progress-subject-grades" id="parentProgressSubjectGrades"></div>
+                <div class="parent-progress-grade-list" id="parentProgressGradesList" aria-live="polite"></div>
+                <div class="parent-empty-state" id="parentProgressGradesEmpty" hidden>
+                    <i class="bi bi-award"></i>
+                    <strong>No released grades available</strong>
+                    <span>There are no released grade records available for this child.</span>
+                </div>
+            </section>
+
+            <div class="parent-progress-privacy-note">
+                <i class="bi bi-shield-lock-fill" aria-hidden="true"></i>
+                <span>Parent access is limited to approved child connections and permitted information. This page does not provide Student submission downloads, answer sheets, private Teacher notes or unreleased academic records.</span>
+            </div>
+
+            <p id="parentProgressSearchEmpty" class="parent-search-empty" hidden>
+                <i class="bi bi-search" aria-hidden="true"></i>
+                No matching progress information found.
+            </p>
+
+            <p class="parent-footer-note">
+                <i class="bi bi-info-circle me-1"></i>
+                Demonstration interface only. Actual academic records and release permissions must be supplied and enforced by the Backend.
+            </p>
+        </section>
+
+        <footer class="main-footer">
+            GabayAral &copy; <span id="parentFooterYear">2026</span> | Parent/Guardian Workspace
+        </footer>
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/layout.js"></script>
+<script src="../../assets/js/parent.js"></script>
+</body>
+</html>

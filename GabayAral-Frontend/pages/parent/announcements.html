@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="#16324F" name="theme-color"/>
+        <title>
+            Announcements | GabayAral Parent
+        </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com" rel="preconnect"/>
+        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+        <link href="../../assets/css/style.css" rel="stylesheet"/>
+        <link href="../../assets/css/components.css" rel="stylesheet"/>
+        <link href="../../assets/css/responsive.css" rel="stylesheet"/>
+        <link href="../../assets/css/layout.css" rel="stylesheet"/>
+        <link href="../../assets/css/parent.css" rel="stylesheet"/>
+    </head>
+    <body data-parent-page="announcements">
+        <div class="app-shell parent-app">
+            <aside aria-label="Parent and Guardian navigation" class="sidebar parent-sidebar" id="sidebar">
+            </aside>
+            <div class="sidebar-backdrop" id="sidebarBackdrop">
+            </div>
+            <main class="main-area">
+                <header class="topbar parent-topbar">
+                    <button aria-expanded="false" aria-label="Open navigation" class="icon-button-ga mobile-menu" id="menuToggle" type="button">
+                        <i class="bi bi-list">
+                        </i>
+                    </button>
+                    <div class="breadcrumbs">
+                        <i class="bi bi-house-door-fill">
+                        </i>
+                        <a href="dashboard.html">
+                            Parent Workspace
+                        </a>
+                        <span>
+                            /
+                        </span>
+                        <strong>
+                            Announcements
+                        </strong>
+                    </div>
+                    <div class="topbar-tools parent-topbar-tools">
+                        <div class="parent-school-label">
+                            <i class="bi bi-bank">
+                            </i>
+                            <span>
+                                Sample School Workspace
+                            </span>
+                            <span class="parent-demo-chip">
+                                DEMO
+                            </span>
+                        </div>
+                        <label class="search-box parent-search-box">
+                            <i aria-hidden="true" class="bi bi-search">
+                            </i>
+                            <input aria-label="Search announcements..." id="parentAnnouncementSearch" placeholder="Search announcements..." type="search"/>
+                        </label>
+                        <a aria-label="Open notifications" class="icon-button-ga parent-notification-button" data-parent-demo-link="Notifications" href="#">
+                            <i class="bi bi-bell">
+                            </i>
+                            <span class="parent-notification-dot">
+                            </span>
+                        </a>
+                        <div class="parent-profile-wrapper" id="parentProfileWrapper">
+                            <button aria-controls="parentProfileMenu" aria-expanded="false" class="profile-button parent-profile-button" id="parentProfileButton" type="button">
+                                <span class="avatar">
+                                    <i class="bi bi-person-fill">
+                                    </i>
+                                </span>
+                                <span>
+                                    Parent
+                                </span>
+                                <i class="bi bi-chevron-down parent-profile-chevron">
+                                </i>
+                            </button>
+                            <div class="parent-profile-menu" hidden="" id="parentProfileMenu">
+                                <div class="parent-profile-menu-header">
+                                    <span class="parent-profile-menu-avatar">
+                                        <i class="bi bi-person-fill">
+                                        </i>
+                                    </span>
+                                    <div>
+                                        <strong>
+                                            Parent Account
+                                        </strong>
+                                        <small>
+                                            Demonstration profile
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="parent-profile-menu-divider">
+                                </div>
+                                <a class="parent-profile-menu-item" data-parent-demo-link="Profile Settings" href="#">
+                                    <i class="bi bi-person-gear">
+                                    </i>
+                                    <span>
+                                        Profile Settings
+                                    </span>
+                                </a>
+                                <a class="parent-profile-menu-item" data-parent-demo-link="Account Security" href="#">
+                                    <i class="bi bi-shield-lock">
+                                    </i>
+                                    <span>
+                                        Account Security
+                                    </span>
+                                </a>
+                                <a class="parent-profile-menu-item" data-parent-demo-link="EasyAccess" href="#">
+                                    <i class="bi bi-universal-access">
+                                    </i>
+                                    <span>
+                                        EasyAccess
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <section aria-labelledby="parentPageHeading" class="main-content parent-content">
+                    <section class="parent-page-heading parent-searchable">
+                        <div>
+                            <span class="parent-eyebrow">
+                                SCHOOL COMMUNICATION
+                            </span>
+                            <h1 id="parentPageHeading">
+                                Announcements
+                            </h1>
+                            <p>
+                                Read school updates intended for Parents and Guardians.
+                            </p>
+                            <span class="parent-current-date" id="parentCurrentDate">
+                                Loading date...
+                            </span>
+                        </div>
+                        <span class="parent-page-heading-icon">
+                            <i class="bi bi-megaphone-fill">
+                            </i>
+                        </span>
+                    </section>
+                    <div class="parent-demo-notice" role="note">
+                        <i class="bi bi-info-circle-fill">
+                        </i>
+                        <span>
+                            <strong>
+                                DEMO-ONLY:
+                            </strong>
+                            These are fictional Parent/Guardian announcements. Audience filtering and publication records are demonstrations, not live school communications.
+                        </span>
+                    </div>
+                    <section aria-label="Announcement summary" class="parent-stats-grid parent-announcement-stats">
+                        <article class="parent-stat-card">
+                            <div class="parent-stat-top">
+                                <span class="parent-stat-icon blue">
+                                    <i class="bi bi-megaphone">
+                                    </i>
+                                </span>
+                                <span class="parent-stat-label">
+                                    Eligible Announcements
+                                </span>
+                            </div>
+                            <strong class="parent-stat-number" id="parentEligibleAnnouncementCount">
+                                03
+                            </strong>
+                            <span class="parent-stat-caption">
+                                Parent/Guardian audience
+                            </span>
+                        </article>
+                        <article class="parent-stat-card">
+                            <div class="parent-stat-top">
+                                <span class="parent-stat-icon amber">
+                                    <i class="bi bi-check2-square">
+                                    </i>
+                                </span>
+                                <span class="parent-stat-label">
+                                    Require Acknowledgment
+                                </span>
+                            </div>
+                            <strong class="parent-stat-number" id="parentAnnouncementRequiredCount">
+                                02
+                            </strong>
+                            <span class="parent-stat-caption">
+                                Exact versions requiring confirmation
+                            </span>
+                        </article>
+                        <article class="parent-stat-card">
+                            <div class="parent-stat-top">
+                                <span class="parent-stat-icon teal">
+                                    <i class="bi bi-check-circle">
+                                    </i>
+                                </span>
+                                <span class="parent-stat-label">
+                                    Acknowledged
+                                </span>
+                            </div>
+                            <strong class="parent-stat-number" id="parentAnnouncementAcknowledgedCount">
+                                00
+                            </strong>
+                            <span class="parent-stat-caption">
+                                Your recorded acknowledgments
+                            </span>
+                        </article>
+                    </section>
+                    <section aria-labelledby="parentAnnouncementListHeading" class="parent-panel parent-searchable">
+                        <div class="parent-panel-header">
+                            <div>
+                                <h2 id="parentAnnouncementListHeading">
+                                    Published Announcements
+                                </h2>
+                                <p>
+                                    Only announcements intended for Parent/Guardian audiences are shown.
+                                </p>
+                            </div>
+                            <span class="parent-record-count" id="parentAnnouncementListCount">
+                                3 announcements
+                            </span>
+                        </div>
+                        <div class="parent-announcement-filters">
+                            <label>
+                                <span>
+                                    Category
+                                </span>
+                                <select id="parentAnnouncementCategoryFilter">
+                                    <option value="all">
+                                        All categories
+                                    </option>
+                                    <option value="School Activities">
+                                        School Activities
+                                    </option>
+                                    <option value="School Advisory">
+                                        School Advisory
+                                    </option>
+                                    <option value="Important Notice">
+                                        Important Notice
+                                    </option>
+                                </select>
+                            </label>
+                            <label>
+                                <span>
+                                    Acknowledgment
+                                </span>
+                                <select id="parentAnnouncementAckFilter">
+                                    <option value="all">
+                                        All announcements
+                                    </option>
+                                    <option value="required">
+                                        Requires acknowledgment
+                                    </option>
+                                    <option value="not-required">
+                                        No acknowledgment required
+                                    </option>
+                                    <option value="pending">
+                                        Awaiting my acknowledgment
+                                    </option>
+                                    <option value="acknowledged">
+                                        Already acknowledged
+                                    </option>
+                                </select>
+                            </label>
+                        </div>
+                        <div aria-live="polite" class="parent-announcements-list" id="parentAnnouncementsList">
+                        </div>
+                        <div class="parent-empty-state" hidden="" id="parentAnnouncementsEmpty">
+                            <i class="bi bi-megaphone">
+                            </i>
+                            <strong>
+                                No matching announcements
+                            </strong>
+                            <span>
+                                Try changing your search or filters.
+                            </span>
+                        </div>
+                    </section>
+                    <p class="parent-footer-note">
+                        <i class="bi bi-info-circle me-1">
+                        </i>
+                        Announcements are demonstration records. Acknowledgment confirms receipt or awareness, not agreement with the content.
+                    </p>
+                    <p class="parent-search-empty" hidden="" id="parentAnnouncementSearchEmpty">
+                        No matching announcements found.
+                    </p>
+                </section>
+                <footer class="main-footer">
+                    GabayAral &copy;
+                    <span id="parentFooterYear">
+                        2026
+                    </span>
+                    | Parent/Guardian Workspace
+                </footer>
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+        </script>
+        <script src="../../assets/js/layout.js">
+        </script>
+        <script src="../../assets/js/parent.js">
+        </script>
+    </body>
+</html>

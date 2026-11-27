@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+    <title>Notifications | GabayAral Parent</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- INTER FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SHARED PROJECT STYLES -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/parent.css">
+</head>
+<body data-parent-page="notifications">
+<div class="app-shell parent-app">
+
+    <!-- SHARED PARENT SIDEBAR IS RENDERED BY parent.js -->
+    <aside class="sidebar parent-sidebar" id="sidebar" aria-label="Parent and Guardian navigation"></aside>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <main class="main-area">
+        <header class="topbar parent-topbar">
+            <button type="button" class="icon-button-ga mobile-menu" id="menuToggle"
+                    aria-label="Open navigation" aria-expanded="false">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="breadcrumbs" aria-label="Breadcrumb">
+                <i class="bi bi-house-door-fill"></i>
+                <a href="dashboard.html">Parent/Guardian Workspace</a>
+                <span>/</span>
+                <strong>Notifications</strong>
+            </div>
+
+            <div class="topbar-tools parent-topbar-tools">
+                <div class="parent-school-label">
+                    <i class="bi bi-bank"></i>
+                    <span>Sample School Workspace</span>
+                    <span class="parent-demo-chip">DEMO</span>
+                </div>
+
+                <label class="search-box parent-search-box">
+                    <i class="bi bi-search" aria-hidden="true"></i>
+                    <input type="search" id="parentNotificationsSearch"
+                           placeholder="Search notifications..."
+                           aria-label="Search Parent notifications">
+                </label>
+
+                <a href="notifications.html"
+                   class="icon-button-ga parent-notification-button"
+                   aria-label="Open notifications" title="Notifications">
+                    <i class="bi bi-bell"></i>
+                    <span class="parent-notification-dot" aria-hidden="true"></span>
+                </a>
+
+                <div class="parent-profile-wrapper" id="parentProfileWrapper">
+                    <button type="button" class="profile-button parent-profile-button"
+                            id="parentProfileButton" aria-label="Parent account menu"
+                            aria-expanded="false" aria-controls="parentProfileMenu">
+                        <span class="avatar"><i class="bi bi-person-fill"></i></span>
+                        <span>Parent</span>
+                        <i class="bi bi-chevron-down parent-profile-chevron"></i>
+                    </button>
+
+                    <div class="parent-profile-menu" id="parentProfileMenu" hidden>
+                        <div class="parent-profile-menu-header">
+                            <span class="parent-profile-menu-avatar"><i class="bi bi-person-fill"></i></span>
+                            <div>
+                                <strong>Parent Account</strong>
+                                <small>Demonstration profile</small>
+                            </div>
+                        </div>
+                        <div class="parent-profile-menu-divider"></div>
+                        <a href="#" class="parent-profile-menu-item" data-parent-demo-link="Profile Settings">
+                            <i class="bi bi-person-gear"></i><span>Profile Settings</span>
+                        </a>
+                        <a href="#" class="parent-profile-menu-item" data-parent-demo-link="Account Security">
+                            <i class="bi bi-shield-lock"></i><span>Account Security</span>
+                        </a>
+                        <a href="#" class="parent-profile-menu-item" data-parent-demo-link="EasyAccess">
+                            <i class="bi bi-universal-access"></i><span>EasyAccess</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="main-content parent-content parent-notifications-content"
+                 aria-labelledby="parentNotificationsHeading">
+
+            <section class="parent-page-heading parent-searchable">
+                <div>
+                    <span class="parent-eyebrow">PARENT/GUARDIAN UPDATES</span>
+                    <h1 id="parentNotificationsHeading">Notifications</h1>
+                    <p>Review updates related to your Parent account and verified linked children.</p>
+                    <span id="parentCurrentDate" class="parent-current-date">Loading date...</span>
+                </div>
+                <span class="parent-page-heading-icon" aria-hidden="true">
+                    <i class="bi bi-bell-fill"></i>
+                </span>
+            </section>
+
+            <div class="parent-demo-notice" role="note">
+                <i class="bi bi-info-circle-fill" aria-hidden="true"></i>
+                <span>
+                    <strong>DEMO-ONLY:</strong>
+                    These are fictional Parent/Guardian notifications stored in this browser.
+                    They are not delivered by a school server or connected to PostgreSQL.
+                    Child-related notices refer only to the fictional verified children in this demonstration.
+                </span>
+            </div>
+
+            <!-- SUMMARY -->
+            <section class="parent-stats-grid" aria-label="Notification summary">
+                <article class="parent-stat-card">
+                    <div class="parent-stat-top">
+                        <span class="parent-stat-icon blue"><i class="bi bi-bell-fill"></i></span>
+                        <span class="parent-stat-label">Total Notifications</span>
+                    </div>
+                    <strong class="parent-stat-number" id="parentNotificationTotalCount">08</strong>
+                    <span class="parent-stat-caption">Available demo records</span>
+                </article>
+
+                <article class="parent-stat-card">
+                    <div class="parent-stat-top">
+                        <span class="parent-stat-icon amber"><i class="bi bi-envelope-exclamation-fill"></i></span>
+                        <span class="parent-stat-label">Unread</span>
+                    </div>
+                    <strong class="parent-stat-number" id="parentNotificationUnreadCount">04</strong>
+                    <span class="parent-stat-caption">Require your attention</span>
+                </article>
+
+                <article class="parent-stat-card">
+                    <div class="parent-stat-top">
+                        <span class="parent-stat-icon teal"><i class="bi bi-envelope-check-fill"></i></span>
+                        <span class="parent-stat-label">Read</span>
+                    </div>
+                    <strong class="parent-stat-number" id="parentNotificationReadCount">04</strong>
+                    <span class="parent-stat-caption">Already reviewed</span>
+                </article>
+            </section>
+
+            <!-- NOTIFICATION LIST -->
+            <section class="parent-panel parent-searchable" aria-labelledby="parentNotificationInboxHeading">
+                <div class="parent-panel-header">
+                    <div>
+                        <h2 id="parentNotificationInboxHeading">Notification Inbox</h2>
+                        <p>Updates intended for your Parent/Guardian account.</p>
+                    </div>
+                    <span class="parent-record-count" id="parentNotificationResultsCount">8 notifications</span>
+                </div>
+
+                <div class="parent-notifications-toolbar">
+                    <div class="parent-notification-filters">
+                        <label>
+                            <span>Category</span>
+                            <select id="parentNotificationCategoryFilter">
+                                <option value="all">All categories</option>
+                                <option value="Announcements">Announcements</option>
+                                <option value="Acknowledgments">Acknowledgments</option>
+                                <option value="Connections">Connections</option>
+                                <option value="Learning">Learning</option>
+                                <option value="Grades">Grades</option>
+                                <option value="Calendar">Calendar</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            <span>Read Status</span>
+                            <select id="parentNotificationStatusFilter">
+                                <option value="all">All notifications</option>
+                                <option value="unread">Unread only</option>
+                                <option value="read">Read only</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <button type="button" class="parent-mark-all-button" id="parentMarkAllNotificationsRead">
+                        <i class="bi bi-check2-all"></i>
+                        Mark All as Read
+                    </button>
+                </div>
+
+                <div class="parent-notifications-list" id="parentNotificationsList" aria-live="polite"></div>
+
+                <div class="parent-notifications-empty" id="parentNotificationsEmpty" hidden>
+                    <i class="bi bi-inbox"></i>
+                    <strong>No notifications found</strong>
+                    <span id="parentNotificationsEmptyMessage">No notifications match your search or selected filters.</span>
+                </div>
+            </section>
+
+            <p class="parent-footer-note">
+                <i class="bi bi-shield-check me-1"></i>
+                Notifications are personal to the Parent account. Child-related content is limited to information the Guardian is authorized to view.
+            </p>
+        </section>
+
+        <footer class="main-footer">
+            GabayAral &copy; <span id="parentFooterYear">2026</span> | Parent/Guardian Workspace
+        </footer>
+    </main>
+</div>
+
+<!-- NOTIFICATION DETAILS DIALOG -->
+<dialog class="parent-notification-dialog" id="parentNotificationDetailsDialog"
+        aria-labelledby="parentNotificationDetailsTitle">
+    <div class="parent-notification-dialog-inner">
+        <header class="parent-notification-dialog-header">
+            <div>
+                <span class="parent-eyebrow">NOTIFICATION DETAILS</span>
+                <h2 id="parentNotificationDetailsTitle">Notification</h2>
+                <p id="parentNotificationDetailsMeta"></p>
+            </div>
+            <button type="button" class="student-icon-close"
+                    id="parentNotificationDetailsClose" aria-label="Close notification details">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </header>
+
+        <div class="parent-notification-details-body" id="parentNotificationDetailsBody"></div>
+        <span class="parent-notification-detail-status unread" id="parentNotificationDetailsStatus">Unread</span>
+
+        <footer class="parent-notification-dialog-actions">
+            <button type="button" class="parent-secondary-button" id="parentNotificationDetailsMarkRead">
+                Mark as Read
+            </button>
+            <a href="announcements.html" id="parentNotificationDetailsOpenLink">Open Related Page</a>
+            <button type="button" class="parent-secondary-button" id="parentNotificationDetailsDone">
+                Close
+            </button>
+        </footer>
+    </div>
+</dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/layout.js"></script>
+<script src="../../assets/js/parent.js"></script>
+</body>
+</html>

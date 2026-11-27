@@ -1,0 +1,4629 @@
+/* =====================================================
+   GABAYARAL - STUDENT WORKSPACE
+   F11.2 - STUDENT DASHBOARD
+   FRONTEND DEMONSTRATION ONLY
+   ===================================================== */
+
+.student-app {
+    min-height: 100vh;
+    background: var(--background, #F8FAFC);
+    font-family: "Inter", sans-serif;
+}
+
+/* TOPBAR */
+
+.student-topbar {
+    gap: 16px;
+}
+
+.student-topbar-tools {
+    gap: 10px;
+}
+
+.student-school-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 36px;
+    padding: 7px 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #334155;
+    font-size: 11px;
+    font-weight: 650;
+    white-space: nowrap;
+}
+
+.student-school-label > i {
+    color: var(--teal);
+    font-size: 14px;
+}
+
+.student-demo-chip {
+    padding: 3px 5px;
+    border-radius: 4px;
+    background: #EFF6FF;
+    color: #1D4ED8;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .4px;
+}
+
+.student-search-box {
+    width: min(240px, 20vw);
+    min-height: 37px;
+}
+
+.student-notification-button {
+    position: relative;
+}
+
+.student-notification-dot {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 7px;
+    height: 7px;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    background: #DC2626;
+}
+
+.student-profile-wrapper {
+    position: relative;
+    z-index: 1300;
+}
+
+.student-profile-button {
+    min-height: 38px;
+    padding: 2px 4px;
+}
+
+.student-profile-chevron {
+    color: #64748B;
+    font-size: 10px;
+}
+
+.student-profile-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    z-index: 1400;
+    width: 245px;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    background: #FFFFFF;
+    box-shadow: 0 12px 28px rgba(15, 35, 55, .14);
+}
+
+.student-profile-menu[hidden] {
+    display: none !important;
+}
+
+.student-profile-menu-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 6px 11px;
+}
+
+.student-profile-menu-avatar {
+    display: grid;
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+    place-items: center;
+    border-radius: 50%;
+    background: #E7F1FF;
+    color: #2563EB;
+    font-size: 18px;
+}
+
+.student-profile-menu-header > div {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.student-profile-menu-header strong {
+    color: #16324F;
+    font-size: 11px;
+}
+
+.student-profile-menu-header small {
+    color: #94A3B8;
+    font-size: 9px;
+}
+
+.student-profile-menu-divider {
+    height: 1px;
+    margin: 4px 0;
+    background: #E2E8F0;
+}
+
+.student-profile-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 38px;
+    padding: 8px;
+    border-radius: 7px;
+    color: #334155;
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.student-profile-menu-item:hover {
+    background: #F1F5F9;
+    color: #16324F;
+}
+
+.student-profile-menu-item i {
+    width: 17px;
+    color: #64748B;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* PAGE CONTENT */
+
+.student-content {
+    padding: 20px 24px;
+}
+
+.student-welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 21px 23px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(15, 35, 55, .035);
+}
+
+.student-eyebrow {
+    display: inline-block;
+    margin-bottom: 7px;
+    color: #0F766E;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.student-welcome h1 {
+    margin: 0;
+    color: #16324F;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.student-welcome p {
+    margin: 7px 0;
+    color: #64748B;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.student-current-date {
+    color: #64748B;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.student-welcome-icon {
+    display: grid;
+    width: 65px;
+    height: 65px;
+    flex: 0 0 65px;
+    place-items: center;
+    border-radius: 12px;
+    background: #E4F7F4;
+    color: #0F766E;
+    font-size: 31px;
+}
+
+.student-demo-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    padding: 11px 13px;
+    margin-bottom: 15px;
+    border: 1px solid #BFDBFE;
+    border-radius: 9px;
+    background: #EFF6FF;
+    color: #1E40AF;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.student-demo-notice > i {
+    flex: 0 0 auto;
+    margin-top: 1px;
+    font-size: 14px;
+}
+
+/* SUMMARY CARDS */
+
+.student-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 13px;
+    margin-bottom: 15px;
+}
+
+.student-stat-card {
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(15, 35, 55, .035);
+}
+
+.student-stat-top {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 13px;
+}
+
+.student-stat-icon,
+.student-subject-icon {
+    display: grid;
+    width: 35px;
+    height: 35px;
+    flex: 0 0 35px;
+    place-items: center;
+    border-radius: 9px;
+    font-size: 16px;
+}
+
+.student-stat-icon.blue,
+.student-subject-icon.blue {
+    background: #E7F1FF;
+    color: #2563EB;
+}
+
+.student-stat-icon.teal,
+.student-subject-icon.teal {
+    background: #E4F7F4;
+    color: #0F766E;
+}
+
+.student-stat-icon.amber,
+.student-subject-icon.amber {
+    background: #FFF7ED;
+    color: #C2410C;
+}
+
+.student-stat-icon.purple,
+.student-subject-icon.purple {
+    background: #F3E8FF;
+    color: #7C3AED;
+}
+
+.student-stat-label {
+    color: #64748B;
+    font-size: 11px;
+    font-weight: 650;
+}
+
+.student-stat-number {
+    display: block;
+    margin-bottom: 5px;
+    color: #16324F;
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.student-stat-caption {
+    color: #94A3B8;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   DASHBOARD GRID AND PANELS
+   F11.2 - COMPACT TWO-COLUMN LAYOUT
+===================================================== */
+
+.student-dashboard-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    column-gap: 14px;
+    align-items: start;
+}
+
+/* Independent vertical columns */
+.student-dashboard-column {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Dashboard panel cards */
+.student-panel {
+    min-width: 0;
+    padding: 17px;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(15, 35, 55, .035);
+}
+
+/* Panel heading */
+.student-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.student-panel-header h2 {
+    margin: 0;
+    color: #16324F;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.student-panel-header p {
+    margin: 4px 0 0;
+    color: #94A3B8;
+    font-size: 10px;
+}
+
+
+.student-view-link {
+    color: #0F766E;
+    font-size: 10px;
+    font-weight: 750;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.student-view-link:hover {
+    color: #115E59;
+}
+
+/* SUBJECT OFFERINGS */
+
+.student-offering-list,
+.student-task-list,
+.student-deadline-list,
+.student-announcement-list,
+.student-recent-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.student-offering-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    padding: 11px 0;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.student-offering-item:last-child,
+.student-task-item:last-child,
+.student-deadline-item:last-child,
+.student-announcement:last-child,
+.student-recent-item:last-child {
+    border-bottom: 0;
+}
+
+.student-offering-details,
+.student-task-details {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.student-offering-details strong,
+.student-task-details strong {
+    color: #14243B;
+    font-size: 11px;
+    font-weight: 750;
+}
+
+.student-offering-details span,
+.student-task-details span {
+    color: #64748B;
+    font-size: 10px;
+}
+
+.student-offering-details small {
+    color: #94A3B8;
+    font-size: 9px;
+}
+
+.student-status {
+    padding: 4px 8px;
+    border-radius: 20px;
+    background: #DCFCE7;
+    color: #166534;
+    font-size: 9px;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+/* QUICK ACTIONS */
+
+.student-quick-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+}
+
+.student-quick-action {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 48px;
+    padding: 10px;
+    border: 1px solid #CDE9E4;
+    border-radius: 8px;
+    background: #F8FFFE;
+    color: #16324F;
+    font-size: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background .15s ease, border-color .15s ease;
+}
+
+.student-quick-action:hover {
+    border-color: #0F766E;
+    background: #EAF8F5;
+    color: #0F766E;
+}
+
+.student-quick-action i {
+    color: #0F766E;
+    font-size: 16px;
+}
+
+/* TASKS */
+
+.student-task-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 0;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.student-task-icon,
+.student-announcement-icon,
+.student-recent-icon {
+    display: grid;
+    width: 35px;
+    height: 35px;
+    flex: 0 0 35px;
+    place-items: center;
+    border-radius: 9px;
+    background: #EFF6FF;
+    color: #2563EB;
+    font-size: 15px;
+}
+
+.student-task-icon.amber {
+    background: #FFF7ED;
+    color: #C2410C;
+}
+
+.student-task-icon.purple {
+    background: #F3E8FF;
+    color: #7C3AED;
+}
+
+.student-task-status {
+    padding: 4px 7px;
+    border-radius: 20px;
+    font-size: 9px;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+.student-task-status.pending {
+    background: #FFF7ED;
+    color: #9A3412;
+}
+
+.student-task-status.revision {
+    background: #F3E8FF;
+    color: #6B21A8;
+}
+
+/* DEADLINES */
+
+.student-deadline-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 0;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.student-date-box {
+    display: flex;
+    width: 43px;
+    height: 45px;
+    flex: 0 0 43px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #E4F7F4;
+    color: #0F766E;
+}
+
+.student-date-box strong {
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.student-date-box span {
+    font-size: 9px;
+    font-weight: 750;
+}
+
+.student-deadline-item > div {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.student-deadline-item > div strong {
+    color: #14243B;
+    font-size: 11px;
+}
+
+.student-deadline-item > div span {
+    color: #94A3B8;
+    font-size: 9px;
+}
+
+.student-deadline-label {
+    font-size: 9px;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+.student-deadline-label.soon {
+    color: #C2410C;
+}
+
+.student-deadline-label.upcoming {
+    color: #2563EB;
+}
+
+/* ANNOUNCEMENTS AND RECENT ACTIVITY */
+
+.student-announcement,
+.student-recent-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 11px 0;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.student-announcement-icon.teal {
+    background: #E4F7F4;
+    color: #0F766E;
+}
+
+.student-announcement > div,
+.student-recent-item > div {
+    min-width: 0;
+}
+
+.student-announcement strong,
+.student-recent-item strong {
+    color: #14243B;
+    font-size: 11px;
+    font-weight: 750;
+}
+
+.student-announcement p {
+    margin: 4px 0;
+    color: #64748B;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.student-announcement small,
+.student-recent-item span {
+    color: #94A3B8;
+    font-size: 9px;
+}
+
+.student-recent-icon.green {
+    background: #DCFCE7;
+    color: #15803D;
+}
+
+.student-recent-icon.purple {
+    background: #F3E8FF;
+    color: #7C3AED;
+}
+
+.student-recent-item > div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* FOOTER BANNER AND SEARCH */
+
+.student-bottom-banner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+    padding: 15px 17px;
+    border: 1px solid #CDE9E4;
+    border-radius: 11px;
+    background: #F0F8F7;
+}
+
+.student-banner-icon {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    place-items: center;
+    border-radius: 9px;
+    background: #DDF3EF;
+    color: #0F766E;
+    font-size: 18px;
+}
+
+.student-bottom-banner strong {
+    color: #16324F;
+    font-size: 12px;
+}
+
+.student-bottom-banner p {
+    margin: 4px 0 0;
+    color: #64748B;
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+.student-footer-note {
+    margin-top: 12px;
+    color: #94A3B8;
+    font-size: 10px;
+}
+
+.student-search-empty {
+    padding: 30px 15px;
+    margin: 15px 0;
+    border: 1px dashed #CBD5E1;
+    border-radius: 10px;
+    background: #FFFFFF;
+    color: #64748B;
+    font-size: 12px;
+    text-align: center;
+}
+
+.student-search-empty[hidden] {
+    display: none !important;
+}
+
+.student-app .student-searchable[hidden] {
+    display: none !important;
+}
+
+/* ACCESSIBLE FOCUS */
+
+.student-app button:focus-visible,
+.student-app a:focus-visible,
+.student-app input:focus-visible {
+    outline: 3px solid rgba(15, 118, 110, .30);
+    outline-offset: 2px;
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+    .student-stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .student-school-label {
+        max-width: 220px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+
+/* =====================================================
+   TABLET AND MOBILE LAYOUT
+===================================================== */
+
+@media (max-width: 900px) {
+
+    /* Stack dashboard columns vertically */
+    .student-dashboard-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .student-dashboard-column {
+        width: 100%;
+        gap: 14px;
+    }
+
+    .student-content {
+        padding: 16px;
+    }
+
+    .student-topbar {
+        flex-wrap: wrap;
+    }
+
+    .student-topbar-tools {
+        width: 100%;
+        order: 3;
+    }
+
+    .student-search-box {
+        flex: 1;
+        width: auto;
+        min-width: 0;
+    }
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 650px) {
+    .student-content {
+        padding: 14px 12px;
+    }
+
+    .student-welcome {
+        padding: 16px;
+    }
+
+    .student-welcome h1 {
+        font-size: 23px;
+    }
+
+    .student-welcome-icon {
+        width: 50px;
+        height: 50px;
+        flex-basis: 50px;
+        font-size: 25px;
+    }
+
+    .student-panel {
+        padding: 13px;
+    }
+
+    .student-school-label {
+        max-width: 175px;
+        min-width: 0;
+        font-size: 9px;
+    }
+
+    .student-topbar-tools {
+        gap: 7px;
+    }
+
+    .student-profile-menu {
+        right: 0;
+        width: min(245px, calc(100vw - 24px));
+    }
+}
+
+@media (max-width: 380px) {
+    .student-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .student-stat-card {
+        padding: 14px;
+    }
+
+    .student-quick-actions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .student-topbar .breadcrumbs {
+        gap: 6px;
+        font-size: 10px;
+    }
+}
+
+/* =====================================================
+   F11.3 - MY SUBJECT OFFERINGS
+===================================================== */
+.student-page-heading{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:20px 22px;margin-bottom:15px;border:1px solid var(--border);border-radius:12px;background:#fff;box-shadow:0 2px 8px rgba(15,35,55,.035)}
+.student-page-heading h1{margin:0;color:#16324F;font-size:25px;font-weight:800}
+.student-page-heading p{margin:7px 0;color:#64748B;font-size:12px;line-height:1.6}
+.student-page-heading-icon{display:grid;width:54px;height:54px;flex:0 0 54px;place-items:center;border-radius:12px;background:#E4F7F4;color:#0F766E;font-size:25px}
+.student-page-action,.student-primary-button{display:inline-flex;min-height:39px;align-items:center;justify-content:center;gap:8px;padding:9px 13px;border:1px solid #0F766E;border-radius:8px;background:#0F766E;color:#fff;font-size:11px;font-weight:750;text-decoration:none;cursor:pointer;transition:background .15s ease,border-color .15s ease}
+.student-page-action:hover,.student-primary-button:hover{border-color:#115E59;background:#115E59;color:#fff}
+.student-secondary-button{display:inline-flex;min-height:34px;align-items:center;justify-content:center;gap:7px;padding:7px 10px;border:1px solid #CDE9E4;border-radius:7px;background:#F8FFFE;color:#0F766E;font-size:10px;font-weight:750;text-decoration:none;cursor:pointer}
+.student-secondary-button:hover{border-color:#0F766E;background:#EAF8F5;color:#0F766E}
+.student-offerings-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+.student-offerings-layout,.student-module-two-column,.student-settings-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(290px,.85fr);align-items:start;gap:14px}
+.student-offerings-main-column,.student-offerings-side-column{display:flex;min-width:0;flex-direction:column;gap:14px}
+.student-placement-details{display:flex;align-items:center;gap:12px;padding:4px 0 13px}
+.student-placement-icon,.student-profile-large-avatar{display:grid;width:43px;height:43px;flex:0 0 43px;place-items:center;border-radius:10px;background:#E4F7F4;color:#0F766E;font-size:19px}
+.student-placement-details>div,.student-offering-card-details{display:flex;min-width:0;flex-direction:column;gap:4px}
+.student-placement-details strong{color:#16324F;font-size:13px;font-weight:800}
+.student-placement-details span,.student-placement-details small{color:#64748B;font-size:10px}
+.student-placement-details small{color:#94A3B8}
+.student-placement-note,.student-my-tasks-guidance{display:flex;align-items:flex-start;gap:8px;padding:10px 11px;margin:0;border:1px solid #CDE9E4;border-radius:8px;background:#F0F8F7;color:#45636A;font-size:10px;line-height:1.6}
+.student-placement-note i,.student-my-tasks-guidance>i{flex:0 0 auto;margin-top:1px;color:#0F766E}
+.student-enrolled-offerings-list,.student-module-list{display:flex;flex-direction:column;gap:9px}
+.student-offering-card{display:flex;min-width:0;align-items:center;gap:11px;padding:11px;border:1px solid #E8EEF4;border-radius:9px;background:#fff}
+.student-offering-card-details{flex:1}
+.student-offering-card-details strong{color:#14243B;font-size:11px;font-weight:750}
+.student-offering-card-details span{color:#64748B;font-size:10px}
+.student-offering-card-details small{color:#94A3B8;font-size:9px}
+.student-record-count{color:#64748B;font-size:10px;font-weight:700;white-space:nowrap}
+.student-join-form,.student-form{display:flex;flex-direction:column;gap:9px}
+.student-join-form>label,.student-form>label{color:#334155;font-size:11px;font-weight:750}
+.student-join-input-wrap{display:flex;min-height:43px;align-items:center;gap:9px;padding:0 11px;border:1px solid #CBD5E1;border-radius:8px;background:#fff;color:#64748B}
+.student-join-input-wrap:focus-within{border-color:#0F766E;box-shadow:0 0 0 3px rgba(15,118,110,.12)}
+.student-join-input-wrap input{width:100%;min-width:0;border:0;outline:0;background:transparent;color:#16324F;font:inherit;font-size:11px}
+.student-form input:not([type=radio]):not([type=checkbox]),.student-form select,.student-form textarea{width:100%;min-height:39px;padding:9px 10px;border:1px solid #CBD5E1;border-radius:7px;background:#fff;color:#334155;font:inherit;font-size:11px}
+.student-form textarea{resize:vertical}
+.student-form input:focus,.student-form select:focus,.student-form textarea:focus,.student-my-tasks-filters select:focus{border-color:#0F766E;outline:0;box-shadow:0 0 0 3px rgba(15,118,110,.12)}
+.student-join-help,.student-form small{margin:0;color:#94A3B8;font-size:9px;line-height:1.5}
+.student-join-feedback,.student-form-feedback{padding:9px 10px;margin:2px 0 0;border:1px solid transparent;border-radius:7px;font-size:10px;line-height:1.5}
+.student-join-feedback[hidden],.student-form-feedback[hidden]{display:none!important}
+.student-join-feedback.error,.student-form-feedback.error{border-color:#FECACA;background:#FEF2F2;color:#991B1B}
+.student-join-feedback.success,.student-form-feedback.success{border-color:#BBF7D0;background:#F0FDF4;color:#166534}
+.student-join-feedback.info,.student-form-feedback.info{border-color:#BFDBFE;background:#EFF6FF;color:#1E40AF}
+.student-demo-code-box{display:flex;flex-direction:column;gap:5px;padding:11px;margin-top:14px;border:1px dashed #CBD5E1;border-radius:8px;background:#F8FAFC}
+.student-demo-code-label{color:#64748B;font-size:8px;font-weight:800;letter-spacing:.7px}
+.student-demo-code-box code{width:fit-content;padding:4px 7px;border-radius:5px;background:#E7F1FF;color:#1D4ED8;font-size:11px;font-weight:800;letter-spacing:.4px}
+.student-demo-code-box>span:last-child{color:#64748B;font-size:9px}
+.student-join-boundary-note{margin:11px 0 0;color:#94A3B8;font-size:9px;line-height:1.6}
+.student-join-steps,.student-guidance-list{display:flex;flex-direction:column;gap:13px;padding:0;margin:0;list-style:none}
+.student-join-steps li{display:flex;align-items:flex-start;gap:10px}
+.student-join-steps li>span{display:grid;width:25px;height:25px;flex:0 0 25px;place-items:center;border-radius:50%;background:#E4F7F4;color:#0F766E;font-size:10px;font-weight:800}
+.student-join-steps li>div{display:flex;min-width:0;flex-direction:column;gap:3px}
+.student-join-steps strong,.student-guidance-list li{color:#16324F;font-size:10px;font-weight:700}
+.student-join-steps small{color:#94A3B8;font-size:9px;line-height:1.5}
+.student-loading-message,.student-offerings-empty{padding:18px 10px;margin:0;color:#94A3B8;font-size:10px;text-align:center}
+.student-offerings-empty[hidden]{display:none!important}
+.student-offerings-empty i{display:block;margin-bottom:6px;font-size:20px}
+
+/* =====================================================
+   F11.4 - MYTASKS
+===================================================== */
+.student-my-tasks-stats,.student-module-stats{grid-template-columns:repeat(4,minmax(0,1fr))}
+.student-my-tasks-panel{padding:18px}
+.student-my-tasks-panel-header{margin-bottom:15px}
+.student-my-tasks-filters,.student-module-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:13px;margin-bottom:14px;border:1px solid #E8EEF4;border-radius:9px;background:#F8FAFC}
+.student-my-tasks-filters label,.student-module-filters label{display:flex;min-width:0;flex-direction:column;gap:6px}
+.student-my-tasks-filters label>span,.student-module-filters label>span{color:#64748B;font-size:10px;font-weight:750}
+.student-my-tasks-filters select,.student-module-filters select,.student-inline-filter select{width:100%;min-height:38px;padding:7px 9px;border:1px solid #CBD5E1;border-radius:7px;background:#fff;color:#334155;font:inherit;font-size:10px}
+.student-my-tasks-list{display:flex;flex-direction:column;gap:10px}
+.student-my-task-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(180px,.55fr) auto;align-items:center;gap:15px;padding:14px;border:1px solid #E2E8F0;border-radius:10px;background:#fff;transition:border-color .15s ease,box-shadow .15s ease}
+.student-my-task-card:hover{border-color:#CDE9E4;box-shadow:0 3px 10px rgba(15,35,55,.045)}
+.student-my-task-main{display:flex;min-width:0;align-items:center;gap:11px}
+.student-my-task-icon,.student-module-card-icon{display:grid;width:38px;height:38px;flex:0 0 38px;place-items:center;border-radius:9px;background:#EFF6FF;color:#2563EB;font-size:16px}
+.student-my-task-icon.pending{background:#FFF7ED;color:#C2410C}.student-my-task-icon.overdue{background:#FEF2F2;color:#B91C1C}.student-my-task-icon.submitted{background:#DCFCE7;color:#15803D}.student-my-task-icon.revision_required{background:#F3E8FF;color:#7C3AED}
+.student-my-task-details{display:flex;min-width:0;flex-direction:column;align-items:flex-start;gap:4px}
+.student-my-task-details h3{margin:0;color:#14243B;font-size:12px;font-weight:800;line-height:1.4}
+.student-my-task-subject{color:#64748B;font-size:10px;line-height:1.5}
+.student-my-task-status,.student-task-status{display:inline-flex;width:fit-content;padding:4px 8px;border-radius:20px;font-size:9px;font-weight:800;white-space:nowrap}
+.student-my-task-status.pending,.student-task-status.pending{background:#FFF7ED;color:#9A3412}.student-my-task-status.overdue{background:#FEE2E2;color:#991B1B}.student-my-task-status.submitted,.student-task-status.submitted{background:#DCFCE7;color:#166534}.student-my-task-status.revision_required,.student-task-status.revision{background:#F3E8FF;color:#6B21A8}
+.student-my-task-deadline-info{display:flex;min-width:0;flex-direction:column;gap:4px}.student-my-task-deadline-info p{margin:0;color:#334155;font-size:10px;font-weight:700}.student-my-task-deadline-info small{color:#94A3B8;font-size:9px;line-height:1.5}.student-my-task-deadline-info .student-my-task-revision-deadline{color:#6B21A8}.student-my-task-deadline-info .student-my-task-overdue-note{color:#B91C1C}
+.student-my-task-actions{display:flex;justify-content:flex-end}.student-my-task-action{display:inline-flex;min-height:34px;align-items:center;justify-content:center;padding:7px 10px;border:1px solid #CDE9E4;border-radius:7px;background:#F8FFFE;color:#0F766E;font-size:9px;font-weight:750;line-height:1.3;text-align:center;text-decoration:none;white-space:nowrap;transition:background .15s ease,border-color .15s ease}.student-my-task-action:hover{border-color:#0F766E;background:#EAF8F5;color:#0F766E}.student-my-task-action:focus-visible{outline:3px solid rgba(15,118,110,.3);outline-offset:2px}
+.student-my-tasks-empty,.student-module-empty,.student-calendar-empty{display:flex;min-height:130px;align-items:center;justify-content:center;flex-direction:column;gap:7px;padding:22px;color:#64748B;text-align:center;font-size:10px}.student-my-tasks-empty[hidden],.student-module-empty[hidden],.student-calendar-empty[hidden]{display:none!important}.student-my-tasks-empty>i,.student-module-empty>i{color:#0F766E;font-size:25px}.student-my-tasks-empty strong,.student-module-empty strong{color:#16324F;font-size:12px}
+.student-my-tasks-guidance{margin-top:14px;border-color:#BFDBFE;background:#EFF6FF;color:#1E40AF}.student-my-tasks-guidance>i{color:#1D4ED8}.student-my-tasks-guidance p{margin:0;font-size:10px;line-height:1.6}
+
+/* =====================================================
+   SHARED STUDENT MODULE COMPONENTS
+===================================================== */
+.student-module-two-column{grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:14px}
+.student-module-filters{grid-template-columns:repeat(2,minmax(0,1fr))}
+.student-module-list{display:flex;flex-direction:column;gap:10px}
+.student-module-card{display:flex;min-width:0;align-items:center;gap:12px;padding:13px;border:1px solid #E2E8F0;border-radius:10px;background:#fff}
+.student-module-card-icon.blue{background:#E7F1FF;color:#2563EB}.student-module-card-icon.teal{background:#E4F7F4;color:#0F766E}.student-module-card-icon.purple{background:#F3E8FF;color:#7C3AED}.student-module-card-icon.amber{background:#FFF7ED;color:#C2410C}
+.student-module-card-body{display:flex;min-width:0;flex:1;flex-direction:column;gap:4px}.student-module-card-body h3{margin:0;color:#16324F;font-size:12px;font-weight:800}.student-module-card-body p{margin:0;color:#64748B;font-size:10px}.student-module-card-body small{color:#94A3B8;font-size:9px;line-height:1.5}
+.student-table-wrap{width:100%;overflow-x:auto}.student-data-table{width:100%;border-collapse:collapse;font-size:10px}.student-data-table th{padding:11px 10px;background:#F8FAFC;color:#64748B;font-size:9px;font-weight:800;text-align:left;white-space:nowrap}.student-data-table td{padding:12px 10px;border-top:1px solid #E8EEF4;color:#334155;vertical-align:middle}.student-data-table td:first-child{color:#16324F;font-weight:700}
+.student-inline-filter{display:flex;align-items:center;gap:8px;color:#64748B;font-size:10px}.student-inline-filter select{min-width:125px}
+.student-method-fieldset{display:flex;align-items:center;gap:15px;padding:10px;margin:0;border:1px solid #E2E8F0;border-radius:8px}.student-method-fieldset legend{float:none;width:auto;padding:0 4px;margin:0;color:#334155;font-size:10px;font-weight:750}.student-method-fieldset label{display:flex;align-items:center;gap:5px;color:#334155;font-size:10px}.student-form fieldset input{accent-color:#0F766E}
+.student-revision-context{display:flex;flex-direction:column;gap:6px;padding:12px;margin-bottom:12px;border:1px solid #E8D5FA;border-radius:8px;background:#FCF9FF}.student-revision-context strong{color:#16324F;font-size:11px}.student-revision-context span,.student-revision-context small{color:#64748B;font-size:9px;line-height:1.5}.student-revision-context .student-revision-deadline{color:#6B21A8;font-weight:750}
+.student-announcement-card{padding:14px;border:1px solid #E2E8F0;border-radius:10px;background:#fff}.student-announcement-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.student-announcement-card h3{margin:0 0 6px;color:#16324F;font-size:13px;font-weight:800}.student-announcement-card p{margin:0 0 10px;color:#64748B;font-size:10px;line-height:1.6}.student-announcement-meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:10px;color:#94A3B8;font-size:9px}
+.student-calendar-list{display:flex;flex-direction:column;gap:9px}.student-calendar-event{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #E8EEF4;border-radius:9px}.student-calendar-date{display:flex;width:43px;height:46px;flex:0 0 43px;align-items:center;justify-content:center;flex-direction:column;border-radius:8px;background:#E4F7F4;color:#0F766E}.student-calendar-date strong{font-size:16px;line-height:1.2}.student-calendar-date small{font-size:9px;font-weight:800}.student-calendar-event>div{display:flex;min-width:0;flex:1;flex-direction:column;gap:4px}.student-calendar-event>div strong{color:#16324F;font-size:11px}.student-calendar-event>div span{color:#64748B;font-size:9px}.student-calendar-kind{padding:4px 7px;border-radius:20px;font-size:9px;font-weight:750}.student-calendar-kind.school{background:#E7F1FF;color:#1D4ED8}.student-calendar-kind.learning{background:#FFF7ED;color:#9A3412}
+.student-notification-item{display:flex;align-items:center;gap:11px;padding:13px;border:1px solid #E2E8F0;border-radius:9px;background:#fff}.student-notification-item.unread{border-left:3px solid #0F766E;background:#FBFEFD}.student-notification-item-icon{display:grid;width:35px;height:35px;flex:0 0 35px;place-items:center;border-radius:9px;background:#E4F7F4;color:#0F766E}.student-notification-item>div{display:flex;min-width:0;flex:1;flex-direction:column;gap:4px}.student-notification-item strong{color:#16324F;font-size:11px}.student-notification-item p{margin:0;color:#64748B;font-size:10px;line-height:1.5}.student-notification-item small{color:#94A3B8;font-size:9px}
+.student-guidance-list{padding-left:17px;list-style:disc}.student-guidance-list li{font-weight:500;line-height:1.6}
+.student-settings-grid{margin-bottom:14px}.student-profile-summary{display:flex;align-items:center;gap:12px;padding:4px 0 15px}.student-profile-large-avatar{width:48px;height:48px;flex-basis:48px;font-size:22px}.student-profile-summary>div{display:flex;flex-direction:column;gap:4px}.student-profile-summary strong{color:#16324F;font-size:12px}.student-profile-summary span,.student-profile-summary small{color:#64748B;font-size:10px}.student-profile-fields{display:grid;grid-template-columns:1fr;gap:9px}.student-profile-fields label,.student-form label{display:flex;flex-direction:column;gap:5px;color:#334155;font-size:10px;font-weight:700}.student-profile-fields input{min-height:36px;padding:8px 9px;border:1px solid #E2E8F0;border-radius:7px;background:#F8FAFC;color:#64748B;font-size:10px}
+.student-setting-toggle{display:flex!important;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #E8EEF4}.student-setting-toggle span{display:flex;flex-direction:column;gap:4px}.student-setting-toggle strong{color:#16324F;font-size:10px}.student-setting-toggle small{color:#94A3B8;font-size:9px;font-weight:400}.student-setting-toggle input{width:17px;height:17px;accent-color:#0F766E}.student-security-icon{color:#0F766E;font-size:20px}.student-security-notice{display:flex;gap:11px;padding:13px;border:1px solid #CDE9E4;border-radius:9px;background:#F0F8F7;color:#0F766E}.student-security-notice>i{font-size:20px}.student-security-notice strong{color:#16324F;font-size:11px}.student-security-notice p{margin:5px 0 0;color:#64748B;font-size:10px;line-height:1.6}
+.student-quiz-dialog{width:min(620px,calc(100% - 28px));max-width:620px;padding:0;border:1px solid #E2E8F0;border-radius:13px;box-shadow:0 20px 60px rgba(15,35,55,.25)}.student-quiz-dialog::backdrop{background:rgba(15,35,55,.48)}.student-quiz-dialog-inner{padding:20px}.student-icon-close{width:32px;height:32px;border:0;border-radius:7px;background:#F1F5F9;color:#475569}.student-quiz-question{padding:13px 0;border-bottom:1px solid #E8EEF4}.student-quiz-question h3{font-size:12px;color:#16324F}.student-quiz-option{display:flex;align-items:center;gap:8px;padding:6px 0;color:#475569;font-size:10px}.student-quiz-option input{accent-color:#0F766E}.student-dialog-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:14px}
+@media(max-width:1100px){.student-my-tasks-stats,.student-module-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.student-my-task-card{grid-template-columns:minmax(0,1fr) minmax(150px,.55fr)}.student-my-task-actions{grid-column:1/-1;justify-content:flex-start}}
+@media(max-width:900px){.student-offerings-layout,.student-module-two-column,.student-settings-grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:650px){.student-page-heading{align-items:flex-start;flex-direction:column;padding:16px}.student-page-heading h1{font-size:22px}.student-page-action{width:100%}.student-offerings-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.student-my-tasks-panel{padding:13px}.student-my-tasks-filters,.student-module-filters{grid-template-columns:1fr;gap:9px;padding:11px}.student-my-task-card{grid-template-columns:minmax(0,1fr);gap:11px;padding:12px}.student-my-task-actions{grid-column:auto}.student-my-task-action{width:100%}.student-module-card,.student-notification-item{align-items:flex-start;flex-wrap:wrap}.student-module-card .student-primary-button,.student-notification-item .student-secondary-button{width:100%}.student-inline-filter{align-items:flex-start;flex-direction:column}.student-inline-filter select{width:100%}.student-calendar-event{align-items:flex-start;flex-wrap:wrap}.student-calendar-event>div{flex-basis:calc(100% - 60px)}.student-calendar-kind{margin-left:55px}}
+@media(max-width:380px){.student-offerings-stats,.student-my-tasks-stats,.student-module-stats{grid-template-columns:1fr}.student-dialog-actions{flex-direction:column}.student-dialog-actions button{width:100%}}
+
+/* EASYACCESS PREVIEW PREFERENCES - PAGE-LOCAL DEMO */
+.student-app.student-text-large .student-content{font-size:1.06em}
+.student-app.student-text-large .student-content p,.student-app.student-text-large .student-content span,.student-app.student-text-large .student-content label{font-size:1.06em}
+.student-app.student-text-larger .student-content{font-size:1.12em}
+.student-app.student-text-larger .student-content p,.student-app.student-text-larger .student-content span,.student-app.student-text-larger .student-content label{font-size:1.12em}
+.student-app.student-high-contrast{--border:#64748B;color:#0F172A}
+.student-app.student-high-contrast .student-panel,.student-app.student-high-contrast .student-stat-card,.student-app.student-high-contrast .student-page-heading{border-color:#64748B}
+.student-app.student-high-contrast .student-content p,.student-app.student-high-contrast .student-content small,.student-app.student-high-contrast .student-content span{color:#334155}
+.student-app.student-reduce-motion *{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+.student-accessibility-actions{display:flex;flex-wrap:wrap;gap:8px}.student-app.student-simplified-view .student-page-heading-icon,.student-app.student-simplified-view .student-welcome-icon{display:none}.student-app.student-simplified-view .student-panel,.student-app.student-simplified-view .student-stat-card{box-shadow:none}.student-app.student-text-large .student-content{font-size:1.06em}.student-app.student-text-large .student-content p,.student-app.student-text-large .student-content span,.student-app.student-text-large .student-content label{font-size:1.06em}.student-app.student-text-larger .student-content{font-size:1.12em}.student-app.student-text-larger .student-content p,.student-app.student-text-larger .student-content span,.student-app.student-text-larger .student-content label{font-size:1.12em}.student-app.student-high-contrast{--border:#64748B;color:#0F172A}.student-app.student-high-contrast .student-panel,.student-app.student-high-contrast .student-stat-card,.student-app.student-high-contrast .student-page-heading{border-color:#64748B}.student-app.student-high-contrast .student-content p,.student-app.student-high-contrast .student-content small,.student-app.student-high-contrast .student-content span{color:#334155}.student-app.student-reduce-motion *{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+.student-topbar .breadcrumbs a{color:inherit;text-decoration:none}.student-topbar .breadcrumbs a:hover{color:var(--teal)}.student-notification-button{text-decoration:none}
+
+
+/* =====================================================
+   F11.11 - STUDENT CALENDAR (MATCHES TEACHER CALENDAR DESIGN)
+===================================================== */
+.student-app .student-calendar-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.student-app .student-calendar-heading h1 {
+    margin: 0;
+    color: #16324F;
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.student-app .student-calendar-heading p {
+    margin: 7px 0 0;
+    color: #64748B;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.student-app .student-calendar-add-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 40px;
+    padding: 10px 15px;
+    color: #FFFFFF;
+    background: #0F766E;
+    border: 1px solid #0F766E;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.student-app .student-calendar-add-button:hover {
+    background: #115E59;
+    border-color: #115E59;
+}
+
+.student-app .student-calendar-add-button:focus-visible {
+    outline: 3px solid rgba(15, 118, 110, .2);
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   2. PRIVACY NOTICE
+   ========================================================= */
+
+.student-app .student-calendar-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    padding: 13px 15px;
+    margin-bottom: 16px;
+    color: #1E40AF;
+    background: #EFF6FF;
+    border: 1px solid #BFDBFE;
+    border-radius: 9px;
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+.student-app .student-calendar-notice > i {
+    flex-shrink: 0;
+    margin-top: 2px;
+    font-size: 16px;
+}
+
+.student-app .student-calendar-notice strong {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 11px;
+    font-weight: 750;
+}
+
+.student-app .student-calendar-notice span {
+    display: block;
+    color: #1E40AF;
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   3. SUMMARY CARDS
+   ========================================================= */
+
+.student-app .student-calendar-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 13px;
+    margin-bottom: 16px;
+}
+
+.student-app .student-calendar-stats .student-stat-card {
+    min-width: 0;
+    padding: 16px;
+    transition: transform .2s ease,
+                box-shadow .2s ease;
+}
+
+.student-app .student-calendar-stats .student-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(15, 35, 55, .07);
+}
+
+
+/* =========================================================
+   4. MAIN CALENDAR PANEL
+   ========================================================= */
+
+.student-app .student-calendar-panel {
+    min-width: 0;
+    margin-bottom: 16px;
+}
+
+.student-app .student-calendar-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 19px;
+}
+
+.student-app .student-calendar-toolbar-title h2 {
+    margin: 0;
+    color: #16324F;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.student-app .student-calendar-toolbar-title p {
+    margin: 5px 0 0;
+    color: #64748B;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   5. MONTH / WEEK / LIST VIEW BUTTONS
+   ========================================================= */
+
+.student-app .student-calendar-view-controls {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 4px;
+    background: #F1F5F9;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+}
+
+.student-app .student-calendar-view-button {
+    min-height: 31px;
+    padding: 7px 13px;
+    color: #64748B;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 650;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.student-app .student-calendar-view-button:hover {
+    color: #16324F;
+    background: #FFFFFF;
+}
+
+.student-app .student-calendar-view-button.active {
+    color: #0F766E;
+    background: #FFFFFF;
+    border-color: #CCFBF1;
+    box-shadow: 0 1px 3px rgba(15, 35, 55, .05);
+}
+
+.student-app .student-calendar-view-button:focus-visible {
+    outline: 2px solid #0F766E;
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   6. CALENDAR DATE NAVIGATION
+   ========================================================= */
+
+.student-app .student-calendar-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 0;
+    margin-bottom: 16px;
+    border-top: 1px solid #F1F5F9;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.student-app .student-calendar-navigation-left,
+.student-app .student-calendar-navigation-right {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.student-app .student-calendar-navigation-right {
+    justify-content: flex-end;
+}
+
+.student-app .student-calendar-navigation h3 {
+    margin: 0;
+    color: #16324F;
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.student-app .student-calendar-nav-button {
+    display: grid;
+    width: 32px;
+    height: 32px;
+    place-items: center;
+    color: #475569;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.student-app .student-calendar-nav-button:hover {
+    color: #0F766E;
+    background: #F0FDFA;
+    border-color: #99F6E4;
+}
+
+.student-app .student-calendar-today-button {
+    min-height: 32px;
+    padding: 6px 12px;
+    color: #0F766E;
+    background: #F0FDFA;
+    border: 1px solid #CCFBF1;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.student-app .student-calendar-today-button:hover {
+    color: #FFFFFF;
+    background: #0F766E;
+}
+
+.student-app .student-calendar-date-picker {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 33px;
+    padding: 5px 9px;
+    color: #64748B;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 7px;
+}
+
+.student-app .student-calendar-date-picker i {
+    font-size: 12px;
+}
+
+.student-app .student-calendar-date-picker input {
+    width: 125px;
+    min-width: 0;
+    color: #475569;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 9px;
+    outline: none;
+}
+
+
+/* =========================================================
+   7. CALENDAR SEARCH AND FILTERS
+   ========================================================= */
+
+.student-app .student-calendar-filters {
+    display: grid;
+    grid-template-columns:
+        minmax(200px, 1.5fr)
+        minmax(170px, 1fr)
+        auto;
+    align-items: end;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.student-app .student-calendar-filters
+.student-filter-control {
+    min-width: 0;
+}
+
+.student-app .student-calendar-filters
+.student-filter-control select {
+    width: 100%;
+    min-height: 40px;
+    padding: 0 11px;
+    color: #334155;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 11px;
+    outline: none;
+    transition: border-color .2s ease,
+                box-shadow .2s ease;
+}
+
+.student-app .student-calendar-filters
+.student-filter-control select:focus {
+    border-color: #0F766E;
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, .09);
+}
+
+.student-app .student-calendar-filters
+.student-clear-filter {
+    min-height: 40px;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   8. EVENT LEGEND
+   ========================================================= */
+
+.student-app .student-calendar-legend {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 11px 0;
+    margin-bottom: 13px;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.student-app .student-calendar-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #64748B;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.student-app .student-calendar-legend-dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    flex: 0 0 9px;
+    border-radius: 50%;
+}
+
+.student-app .student-calendar-legend-dot.academic {
+    background: #2563EB;
+}
+
+.student-app .student-calendar-legend-dot.personal {
+    background: #7C3AED;
+}
+
+
+/* =========================================================
+   9. CALENDAR VIEW CONTAINERS
+   ========================================================= */
+
+.student-app .student-calendar-view-content {
+    width: 100%;
+    min-width: 0;
+}
+
+.student-app .student-calendar-view-content[hidden] {
+    display: none !important;
+}
+
+
+/* =========================================================
+   10. MONTH VIEW
+   ========================================================= */
+
+.student-app .student-calendar-month-view,
+.student-app .student-calendar-view-content:has(.student-calendar-month-grid) {
+    width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+}
+
+.student-app .student-calendar-month-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    min-width: 700px;
+    border-top: 1px solid #E2E8F0;
+    border-left: 1px solid #E2E8F0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+/* WEEKDAY HEADERS */
+
+.student-app .student-calendar-weekday {
+    min-height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 4px;
+    color: #64748B;
+    background: #F8FAFC;
+    border-right: 1px solid #E2E8F0;
+    border-bottom: 1px solid #E2E8F0;
+    font-size: 9px;
+    font-weight: 750;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+}
+
+
+/* DAY CELLS */
+
+.student-app .student-calendar-day-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+    min-height: 112px;
+    padding: 9px 7px;
+    background: #FFFFFF;
+    border-right: 1px solid #E2E8F0;
+    border-bottom: 1px solid #E2E8F0;
+    transition: background .15s ease;
+}
+
+.student-app .student-calendar-day-cell:hover {
+    background: #F8FAFC;
+}
+
+.student-app .student-calendar-day-cell.is-outside-month {
+    background: #F8FAFC;
+}
+
+.student-app .student-calendar-day-cell.is-outside-month
+.student-calendar-day-number {
+    color: #CBD5E1;
+}
+
+.student-app .student-calendar-day-cell.is-today {
+    background: #F0FDFA;
+}
+
+.student-app .student-calendar-day-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    color: #475569;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.student-app .student-calendar-day-cell.is-today
+.student-calendar-day-number {
+    color: #FFFFFF;
+    background: #0F766E;
+}
+
+.student-app .student-calendar-day-events {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+
+/* EVENT CHIPS */
+
+.student-app .student-calendar-event-chip {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 5px 6px;
+    overflow: hidden;
+    color: #1D4ED8;
+    background: #EFF6FF;
+    border: 0;
+    border-left: 3px solid #2563EB;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 8px;
+    font-weight: 650;
+    line-height: 1.4;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.student-app .student-calendar-event-chip.personal {
+    color: #6D28D9;
+    background: #F3E8FF;
+    border-left-color: #7C3AED;
+}
+
+.student-app .student-calendar-event-chip:hover {
+    filter: brightness(.96);
+}
+
+.student-app .student-calendar-event-chip:focus-visible {
+    outline: 2px solid #0F766E;
+    outline-offset: 2px;
+}
+
+.student-app .student-calendar-more-events {
+    display: inline-block;
+    padding: 3px 5px;
+    color: #64748B;
+    font-size: 8px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   11. WEEK VIEW
+   ========================================================= */
+
+.student-app .student-calendar-week-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    min-width: 700px;
+    border-top: 1px solid #E2E8F0;
+    border-left: 1px solid #E2E8F0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.student-app .student-calendar-week-day {
+    min-width: 0;
+    min-height: 260px;
+    padding: 10px 7px;
+    background: #FFFFFF;
+    border-right: 1px solid #E2E8F0;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.student-app .student-calendar-week-day.is-today {
+    background: #F0FDFA;
+}
+
+.student-app .student-calendar-week-day-heading {
+    padding-bottom: 9px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #F1F5F9;
+    text-align: center;
+}
+
+.student-app .student-calendar-week-day-heading strong {
+    display: block;
+    color: #64748B;
+    font-size: 9px;
+    font-weight: 750;
+    text-transform: uppercase;
+}
+
+.student-app .student-calendar-week-day-heading span {
+    display: block;
+    margin-top: 5px;
+    color: #16324F;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.student-app .student-calendar-week-events {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+
+/* =========================================================
+   12. LIST VIEW
+   ========================================================= */
+
+.student-app .student-calendar-event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.student-app .student-calendar-list-date-heading {
+    margin: 12px 0 3px;
+    color: #16324F;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.student-app .student-calendar-list-item {
+    display: grid;
+    grid-template-columns: 60px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 13px;
+    padding: 13px;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-left: 4px solid #2563EB;
+    border-radius: 9px;
+    transition: background .15s ease,
+                border-color .15s ease;
+}
+
+.student-app .student-calendar-list-item.personal {
+    border-left-color: #7C3AED;
+}
+
+.student-app .student-calendar-list-item:hover {
+    background: #F8FAFC;
+}
+
+.student-app .student-calendar-list-date {
+    color: #64748B;
+    font-size: 9px;
+    font-weight: 650;
+    line-height: 1.5;
+}
+
+.student-app .student-calendar-list-date strong {
+    display: block;
+    color: #16324F;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.student-app .student-calendar-list-info {
+    min-width: 0;
+}
+
+.student-app .student-calendar-list-info strong {
+    display: block;
+    color: #16324F;
+    font-size: 11px;
+    font-weight: 750;
+    line-height: 1.5;
+}
+
+.student-app .student-calendar-list-info small {
+    display: block;
+    margin-top: 4px;
+    color: #64748B;
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.student-app .student-calendar-list-action {
+    display: grid;
+    width: 32px;
+    height: 32px;
+    place-items: center;
+    color: #0F766E;
+    background: #F0FDFA;
+    border: 1px solid #CCFBF1;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   13. CALENDAR EMPTY STATE AND COUNTER
+   ========================================================= */
+
+.student-app .student-calendar-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 190px;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.student-app .student-calendar-empty > i {
+    color: #94A3B8;
+    font-size: 34px;
+}
+
+.student-app .student-calendar-empty strong {
+    color: #16324F;
+    font-size: 12px;
+    font-weight: 750;
+}
+
+.student-app .student-calendar-empty span {
+    color: #94A3B8;
+    font-size: 10px;
+}
+
+.student-app .student-calendar-empty[hidden] {
+    display: none !important;
+}
+
+.student-app .student-calendar-count {
+    padding-top: 13px;
+    margin-top: 15px;
+    color: #94A3B8;
+    border-top: 1px solid #F1F5F9;
+    font-size: 9px;
+    text-align: right;
+}
+
+
+/* =========================================================
+   14. CALENDAR PRIVACY POLICY
+   ========================================================= */
+
+.student-app .student-calendar-policy {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    margin-bottom: 14px;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+}
+
+.student-app .student-calendar-policy-icon {
+    display: grid;
+    width: 37px;
+    height: 37px;
+    flex: 0 0 37px;
+    place-items: center;
+    color: #7C3AED;
+    background: #F3E8FF;
+    border-radius: 9px;
+    font-size: 16px;
+}
+
+.student-app .student-calendar-policy strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #16324F;
+    font-size: 11px;
+    font-weight: 750;
+}
+
+.student-app .student-calendar-policy p {
+    margin: 0;
+    color: #64748B;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   15. STATUS MESSAGE
+   ========================================================= */
+
+.student-app .student-calendar-message {
+    padding: 12px 14px;
+    margin: 12px 0;
+    color: #1E40AF;
+    background: #EFF6FF;
+    border: 1px solid #BFDBFE;
+    border-radius: 8px;
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+.student-app .student-calendar-message[hidden] {
+    display: none !important;
+}
+
+
+/* =========================================================
+   16. CALENDAR MODALS
+   IMPORTANT: MODALS ARE OUTSIDE .student-app
+   ========================================================= */
+
+#studentCalendarEventDetailsModal .modal-dialog {
+    max-width: 700px;
+    margin: 1.25rem auto;
+}
+
+#studentCalendarEventDetailsModal .modal-content {
+    overflow: hidden;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 15px;
+    box-shadow: 0 18px 55px rgba(15, 35, 55, .18);
+}
+
+
+/* MODAL HEADER */
+
+#studentCalendarEventDetailsModal .modal-header {
+    padding: 20px 24px;
+    background: #F8FAFC;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+#studentCalendarEventDetailsModal .student-eyebrow {
+    display: block;
+    margin-bottom: 5px;
+    color: #0F766E;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+#studentCalendarEventDetailsModal .modal-title {
+    margin: 0;
+    color: #16324F;
+    font-size: 18px;
+    font-weight: 750;
+}
+
+
+/* MODAL BODY */
+
+#studentCalendarEventDetailsModal .modal-body {
+    padding: 23px 24px;
+    background: #FFFFFF;
+}
+
+
+/* =========================================================
+   17. EVENT DETAILS MODAL
+   ========================================================= */
+
+#studentCalendarEventDetailsModal
+.student-calendar-detail-section {
+    margin-bottom: 18px;
+}
+
+#studentCalendarEventDetailsModal
+.student-calendar-detail-title {
+    margin: 0 0 12px;
+    color: #16324F;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+#studentCalendarEventDetailsModal
+.student-calendar-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px;
+}
+
+#studentCalendarEventDetailsModal
+.student-calendar-detail-item {
+    min-width: 0;
+    padding: 12px;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+}
+
+#studentCalendarEventDetailsModal
+.student-calendar-detail-item small {
+    display: block;
+    margin-bottom: 5px;
+    color: #94A3B8;
+    font-size: 9px;
+    font-weight: 650;
+}
+
+#studentCalendarEventDetailsModal
+.student-calendar-detail-item strong {
+    display: block;
+    color: #16324F;
+    font-size: 11px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+#studentCalendarEventDetailsModal
+.student-calendar-detail-description {
+    padding: 14px;
+    color: #475569;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 9px;
+    font-size: 11px;
+    line-height: 1.8;
+    white-space: pre-line;
+}
+
+#studentCalendarEventDetailsModal
+.student-calendar-visibility-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    color: #1D4ED8;
+    background: #EFF6FF;
+    border-radius: 20px;
+    font-size: 9px;
+    font-weight: 750;
+}
+
+#studentCalendarEventDetailsModal
+.student-calendar-visibility-badge.personal {
+    color: #6D28D9;
+    background: #F3E8FF;
+}
+
+
+
+/* Student calendar category accents */
+.student-app .student-calendar-event-chip.learning,
+.student-app .student-calendar-list-item.learning { color:#9A3412; background:#FFF7ED; border-left-color:#C2410C; }
+.student-app .student-calendar-legend-dot.learning { background:#C2410C; }
+.student-app .student-calendar-filter-input { display:flex; align-items:center; gap:8px; min-height:40px; padding:0 11px; border:1px solid #E2E8F0; border-radius:8px; background:#FFFFFF; color:#64748B; }
+.student-app .student-calendar-filter-input input { width:100%; min-width:0; border:0; outline:0; background:transparent; color:#334155; font:inherit; font-size:11px; }
+.student-app .student-calendar-filter-input:focus-within { border-color:#0F766E; box-shadow:0 0 0 3px rgba(15,118,110,.09); }
+
+
+/* =====================================================
+   F11.13 - STUDENT EASYACCESS (MATCHES TEACHER EASYACCESS DESIGN)
+===================================================== */
+.student-app .student-ea-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.student-app .student-ea-heading h1 {
+    margin: 0;
+    color: #16324F;
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.student-app .student-ea-heading p {
+    margin: 7px 0 0;
+    color: #64748B;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.student-app .student-ea-personal-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 12px;
+    color: #0F766E;
+    background: #F0FDFA;
+    border: 1px solid #CCFBF1;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   2. INFORMATION NOTICE
+   ========================================================= */
+
+.student-app .student-ea-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px;
+    margin-bottom: 17px;
+    color: #365E5A;
+    background: #F0F8F7;
+    border: 1px solid #CDE9E4;
+    border-left: 4px solid #0F766E;
+    border-radius: 10px;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.student-app .student-ea-notice > i {
+    flex-shrink: 0;
+    color: #0F766E;
+    font-size: 21px;
+}
+
+.student-app .student-ea-notice strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #16324F;
+    font-size: 11px;
+    font-weight: 750;
+}
+
+.student-app .student-ea-notice span {
+    display: block;
+    color: #426A67;
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   3. MAIN SETTINGS LAYOUT
+   ========================================================= */
+
+.student-app .student-ea-layout {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(280px, .85fr);
+    gap: 15px;
+    align-items: start;
+}
+
+.student-app .student-ea-settings-column,
+.student-app .student-ea-preview-column {
+    display: grid;
+    gap: 14px;
+    min-width: 0;
+}
+
+
+/* =========================================================
+   4. SETTINGS CARDS
+   ========================================================= */
+
+.student-app .student-ea-card {
+    min-width: 0;
+    padding: 18px;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(15, 35, 55, .035);
+}
+
+.student-app .student-ea-card-heading {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 18px;
+}
+
+.student-app .student-ea-card-heading h2 {
+    margin: 0 0 4px;
+    color: #16324F;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.student-app .student-ea-card-heading p {
+    margin: 0;
+    color: #64748B;
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+
+/* CARD ICONS */
+
+.student-app .student-ea-card-icon {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    place-items: center;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+.student-app .student-ea-card-icon.blue {
+    color: #2563EB;
+    background: #DBEAFE;
+}
+
+.student-app .student-ea-card-icon.purple {
+    color: #7C3AED;
+    background: #F3E8FF;
+}
+
+.student-app .student-ea-card-icon.teal {
+    color: #0F766E;
+    background: #CCFBF1;
+}
+
+.student-app .student-ea-card-icon.amber {
+    color: #B45309;
+    background: #FEF3C7;
+}
+
+
+/* =========================================================
+   5. SETTING ROWS
+   ========================================================= */
+
+.student-app .student-ea-setting-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    min-width: 0;
+    padding: 5px 0;
+}
+
+.student-app .student-ea-setting-description {
+    flex: 1;
+    min-width: 0;
+}
+
+.student-app .student-ea-setting-description strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #16324F;
+    font-size: 11px;
+    font-weight: 750;
+    line-height: 1.5;
+}
+
+.student-app .student-ea-setting-description p {
+    margin: 0;
+    color: #64748B;
+    font-size: 10px;
+    line-height: 1.65;
+}
+
+.student-app .student-ea-divider {
+    height: 1px;
+    margin: 15px 0;
+    background: #F1F5F9;
+}
+
+
+/* =========================================================
+   6. SELECT CONTROLS
+   ========================================================= */
+
+.student-app .student-ea-control {
+    display: block;
+    width: 185px;
+    max-width: 48%;
+    flex-shrink: 0;
+}
+
+.student-app .student-ea-control select {
+    width: 100%;
+    min-height: 39px;
+    padding: 0 11px;
+    color: #334155;
+    background: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: border-color .2s ease,
+                box-shadow .2s ease;
+}
+
+.student-app .student-ea-control select:focus {
+    border-color: #0F766E;
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, .10);
+}
+
+.student-app .student-ea-control.full-width {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 11px;
+}
+
+
+/* =========================================================
+   7. TEXT SIZE CHOICES
+   ========================================================= */
+
+.student-app .student-ea-setting-fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.student-app .student-ea-setting-fieldset legend {
+    margin-bottom: 5px;
+    color: #16324F;
+    font-size: 11px;
+    font-weight: 750;
+}
+
+.student-app .student-ea-helper {
+    display: block;
+    margin-top: 5px;
+    color: #94A3B8;
+    font-size: 9px;
+    line-height: 1.6;
+}
+
+.student-app .student-ea-choice-group {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 9px;
+    margin-top: 13px;
+}
+
+.student-app .student-ea-choice {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-width: 0;
+    min-height: 91px;
+    padding: 11px 7px;
+    color: #64748B;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 9px;
+    font-size: 9px;
+    font-weight: 650;
+    text-align: center;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.student-app .student-ea-choice:hover {
+    background: #F8FAFC;
+    border-color: #99F6E4;
+}
+
+.student-app .student-ea-choice:has(input:checked) {
+    color: #0F766E;
+    background: #F0FDFA;
+    border: 1px solid #0F766E;
+    box-shadow: 0 0 0 2px rgba(15, 118, 110, .07);
+}
+
+.student-app .student-ea-choice input {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 13px;
+    height: 13px;
+    margin: 0;
+    accent-color: #0F766E;
+}
+
+.student-app .student-ea-choice:focus-within {
+    outline: 3px solid rgba(15, 118, 110, .15);
+    outline-offset: 2px;
+}
+
+.student-app .student-ea-choice-preview {
+    display: block;
+    color: #16324F;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.student-app .student-ea-choice-preview.normal {
+    font-size: 19px;
+}
+
+.student-app .student-ea-choice-preview.large {
+    font-size: 25px;
+}
+
+.student-app .student-ea-choice-preview.extra-large {
+    font-size: 31px;
+}
+
+
+/* =========================================================
+   8. CUSTOM TOGGLE SWITCHES
+   ========================================================= */
+
+.student-app .student-ea-switch {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+    width: 44px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.student-app .student-ea-switch input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.student-app .student-ea-switch-track {
+    position: absolute;
+    inset: 0;
+    background: #CBD5E1;
+    border-radius: 30px;
+    transition: background .2s ease;
+}
+
+.student-app .student-ea-switch-track::before {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 19px;
+    height: 19px;
+    content: "";
+    background: #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+    transition: transform .2s ease;
+}
+
+.student-app .student-ea-switch input:checked +
+.student-ea-switch-track {
+    background: #0F766E;
+}
+
+.student-app .student-ea-switch input:checked +
+.student-ea-switch-track::before {
+    transform: translateX(19px);
+}
+
+.student-app .student-ea-switch input:focus-visible +
+.student-ea-switch-track {
+    outline: 3px solid rgba(15, 118, 110, .22);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   9. LANGUAGE NOTE
+   ========================================================= */
+
+.student-app .student-ea-language-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    padding: 11px 12px;
+    margin-top: 15px;
+    color: #1E40AF;
+    background: #EFF6FF;
+    border: 1px solid #DBEAFE;
+    border-radius: 8px;
+    font-size: 9px;
+    line-height: 1.7;
+}
+
+.student-app .student-ea-language-note i {
+    flex-shrink: 0;
+    margin-top: 2px;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   10. TEXT TO SPEECH SETTINGS
+   ========================================================= */
+
+.student-app .student-ea-setting-block {
+    display: grid;
+    gap: 10px;
+}
+
+.student-app .student-ea-range-wrapper {
+    width: 100%;
+    padding: 4px 0;
+}
+
+.student-app .student-ea-range-wrapper input[type="range"] {
+    display: block;
+    width: 100%;
+    height: 6px;
+    accent-color: #0F766E;
+    cursor: pointer;
+}
+
+.student-app .student-ea-range-wrapper input[type="range"]:focus-visible {
+    outline: 3px solid rgba(15, 118, 110, .2);
+    outline-offset: 4px;
+    border-radius: 5px;
+}
+
+.student-app .student-ea-range-labels {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 9px;
+    color: #94A3B8;
+    font-size: 9px;
+}
+
+.student-app .student-ea-range-labels strong {
+    color: #0F766E;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+/* SPEECH STATUS */
+
+.student-app .student-ea-speech-status {
+    padding: 11px 12px;
+    margin-top: 14px;
+    color: #475569;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    font-size: 9px;
+    line-height: 1.7;
+}
+
+.student-app .student-ea-speech-status.is-enabled {
+    color: #166534;
+    background: #F0FDF4;
+    border-color: #BBF7D0;
+}
+
+.student-app .student-ea-speech-status.is-warning {
+    color: #92400E;
+    background: #FFFBEB;
+    border-color: #FDE68A;
+}
+
+
+/* SPEECH BUTTONS */
+
+.student-app .student-ea-read-button,
+.student-app .student-ea-stop-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 38px;
+    padding: 9px 13px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.student-app .student-ea-read-button {
+    color: #FFFFFF;
+    background: #0F766E;
+    border: 1px solid #0F766E;
+}
+
+.student-app .student-ea-read-button:hover {
+    background: #115E59;
+    border-color: #115E59;
+}
+
+.student-app .student-ea-stop-button {
+    color: #475569;
+    background: #FFFFFF;
+    border: 1px solid #CBD5E1;
+}
+
+.student-app .student-ea-stop-button:hover {
+    color: #16324F;
+    background: #F1F5F9;
+}
+
+.student-app .student-ea-read-button:focus-visible,
+.student-app .student-ea-stop-button:focus-visible {
+    outline: 3px solid rgba(15, 118, 110, .2);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   11. SAVE AND RESET ACTIONS
+   ========================================================= */
+
+.student-app .student-ea-actions-card {
+    padding: 16px 18px;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 11px;
+}
+
+.student-app .student-ea-save-information {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    color: #64748B;
+    font-size: 9px;
+    line-height: 1.7;
+}
+
+.student-app .student-ea-save-information i {
+    flex-shrink: 0;
+    color: #0F766E;
+    font-size: 14px;
+}
+
+.student-app .student-ea-actions {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 9px;
+    padding-top: 15px;
+}
+
+.student-app .student-ea-reset-button,
+.student-app .student-ea-save-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 39px;
+    padding: 9px 14px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.student-app .student-ea-reset-button {
+    color: #475569;
+    background: #FFFFFF;
+    border: 1px solid #CBD5E1;
+}
+
+.student-app .student-ea-reset-button:hover {
+    color: #16324F;
+    background: #F1F5F9;
+}
+
+.student-app .student-ea-save-button {
+    color: #FFFFFF;
+    background: #0F766E;
+    border: 1px solid #0F766E;
+}
+
+.student-app .student-ea-save-button:hover {
+    background: #115E59;
+    border-color: #115E59;
+}
+
+.student-app .student-ea-reset-button:focus-visible,
+.student-app .student-ea-save-button:focus-visible {
+    outline: 3px solid rgba(15, 118, 110, .2);
+    outline-offset: 3px;
+}
+
+
+/* SAVE MESSAGE */
+
+.student-app .student-ea-save-message {
+    margin-top: 12px;
+    padding: 10px 12px;
+    color: #166534;
+    background: #F0FDF4;
+    border: 1px solid #BBF7D0;
+    border-radius: 8px;
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+.student-app .student-ea-save-message[hidden] {
+    display: none !important;
+}
+
+.student-app .student-ea-save-message.is-error {
+    color: #991B1B;
+    background: #FEF2F2;
+    border-color: #FECACA;
+}
+
+
+/* =========================================================
+   12. ACCESSIBILITY PREVIEW
+   ========================================================= */
+
+.student-app .student-ea-preview-sample {
+    padding: 17px;
+    color: #475569;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    transition: background .2s ease,
+                color .2s ease,
+                border-color .2s ease;
+}
+
+.student-app .student-ea-preview-label {
+    display: inline-block;
+    padding: 5px 8px;
+    color: #0F766E;
+    background: #CCFBF1;
+    border-radius: 5px;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .7px;
+}
+
+.student-app .student-ea-preview-sample h3 {
+    margin: 12px 0 8px;
+    color: #16324F;
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.student-app .student-ea-preview-sample > p {
+    margin: 0 0 13px;
+    color: #475569;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.student-app .student-ea-preview-example {
+    padding: 12px;
+    margin: 12px 0;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+}
+
+.student-app .student-ea-preview-example strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #16324F;
+    font-size: 10px;
+    font-weight: 750;
+}
+
+.student-app .student-ea-preview-example p {
+    margin: 0;
+    color: #64748B;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+.student-app .student-ea-preview-sample-button {
+    min-height: 34px;
+    padding: 7px 11px;
+    color: #FFFFFF;
+    background: #0F766E;
+    border: 1px solid #0F766E;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 9px;
+    font-weight: 700;
+    opacity: .85;
+    cursor: not-allowed;
+}
+
+.student-app .student-ea-preview-caption {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    margin: 12px 0 0;
+    color: #94A3B8;
+    font-size: 9px;
+    line-height: 1.6;
+}
+
+.student-app .student-ea-preview-caption i {
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+
+/* =========================================================
+   13. ACCESSIBILITY GUIDE
+   ========================================================= */
+
+.student-app .student-ea-guide-list {
+    display: grid;
+    gap: 15px;
+}
+
+.student-app .student-ea-guide-list > div {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+.student-app .student-ea-guide-list > div > i {
+    display: grid;
+    width: 33px;
+    height: 33px;
+    flex: 0 0 33px;
+    place-items: center;
+    color: #0F766E;
+    background: #F0FDFA;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.student-app .student-ea-guide-list > div > span {
+    display: block;
+    color: #16324F;
+    font-size: 10px;
+    font-weight: 750;
+    line-height: 1.5;
+}
+
+.student-app .student-ea-guide-list small {
+    display: block;
+    margin-top: 3px;
+    color: #64748B;
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   14. PERSONAL SETTINGS SUMMARY
+   ========================================================= */
+
+.student-app .student-ea-summary-card h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 9px;
+    color: #16324F;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.student-app .student-ea-summary-card h2 i {
+    color: #0F766E;
+}
+
+.student-app .student-ea-summary-card > p {
+    margin: 0;
+    color: #64748B;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+.student-app .student-ea-summary-card ul {
+    display: grid;
+    gap: 7px;
+    margin: 12px 0 0;
+    padding-left: 17px;
+    color: #64748B;
+    font-size: 9px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   15. GLOBAL STATUS MESSAGE
+   ========================================================= */
+
+.student-app .student-ea-global-message {
+    padding: 12px 14px;
+    margin: 14px 0;
+    color: #166534;
+    background: #F0FDF4;
+    border: 1px solid #BBF7D0;
+    border-radius: 8px;
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+.student-app .student-ea-global-message[hidden] {
+    display: none !important;
+}
+
+.student-app .student-ea-global-message.is-error {
+    color: #991B1B;
+    background: #FEF2F2;
+    border-color: #FECACA;
+}
+
+
+/* =========================================================
+   16. ACCESSIBILITY PREVIEW EFFECTS
+   ========================================================= */
+
+/* FONT FAMILY */
+
+html[data-student-ea-font-family="arial"] .student-app {
+    font-family: Arial, sans-serif !important;
+}
+
+html[data-student-ea-font-family="verdana"] .student-app {
+    font-family: Verdana, sans-serif !important;
+}
+
+html[data-student-ea-font-family="inter"] .student-app {
+    font-family: Inter, sans-serif;
+}
+
+
+
+/* HIGH CONTRAST */
+
+html[data-student-ea-contrast="high"] .student-app .student-content {
+    color: #111827;
+}
+
+html[data-student-ea-contrast="high"] .student-app .student-ea-card,
+html[data-student-ea-contrast="high"] .student-app .student-panel,
+html[data-student-ea-contrast="high"] .student-app .student-stat-card {
+    border: 2px solid #334155;
+}
+
+html[data-student-ea-contrast="high"] .student-app .student-ea-card-heading p,
+html[data-student-ea-contrast="high"] .student-app .student-ea-setting-description p,
+html[data-student-ea-contrast="high"] .student-app .student-ea-helper,
+html[data-student-ea-contrast="high"] .student-app .student-ea-preview-sample > p {
+    color: #334155;
+}
+
+html[data-student-ea-contrast="high"] .student-app input,
+html[data-student-ea-contrast="high"] .student-app select,
+html[data-student-ea-contrast="high"] .student-app textarea {
+    border: 2px solid #334155;
+}
+
+html[data-student-ea-contrast="high"] .student-app .student-ea-preview-sample {
+    color: #111827;
+    background: #FFFFFF;
+    border: 2px solid #111827;
+}
+
+html[data-student-ea-contrast="high"] .student-app .student-ea-preview-sample h3,
+html[data-student-ea-contrast="high"] .student-app .student-ea-preview-example strong {
+    color: #111827;
+}
+
+
+/* SIMPLIFIED DISPLAY */
+
+html[data-student-ea-simplified="true"] .student-app .student-ea-card,
+html[data-student-ea-simplified="true"] .student-app .student-panel,
+html[data-student-ea-simplified="true"] .student-app .student-stat-card {
+    box-shadow: none !important;
+}
+
+html[data-student-ea-simplified="true"] .student-app .student-ea-card-icon {
+    border-radius: 6px;
+}
+
+
+/* REDUCED MOTION */
+
+html[data-student-ea-motion="reduced"] .student-app *,
+html[data-student-ea-motion="reduced"] .student-app *::before,
+html[data-student-ea-motion="reduced"] .student-app *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+}
+
+
+/* =========================================================
+   17. TABLET RESPONSIVENESS
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .student-app .student-ea-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .student-app .student-ea-preview-column {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .student-app .student-ea-preview-column
+    .student-ea-summary-card {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =========================================================
+   18. MOBILE RESPONSIVENESS
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .student-app .student-ea-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .student-app .student-ea-heading h1 {
+        font-size: 23px;
+    }
+
+    .student-app .student-ea-heading p {
+        font-size: 11px;
+    }
+
+    .student-app .student-ea-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .student-app .student-ea-preview-column {
+        grid-template-columns: 1fr;
+    }
+
+    .student-app .student-ea-preview-column
+    .student-ea-summary-card {
+        grid-column: auto;
+    }
+
+    .student-app .student-ea-card {
+        padding: 14px;
+    }
+
+    .student-app .student-ea-setting-row {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .student-app .student-ea-control {
+        width: 145px;
+    }
+
+    .student-app .student-ea-choice-group {
+        gap: 6px;
+    }
+
+    .student-app .student-ea-choice {
+        min-height: 85px;
+        padding: 9px 5px;
+    }
+
+    .student-app .student-ea-actions {
+        flex-direction: column-reverse;
+    }
+
+    .student-app .student-ea-actions button {
+        width: 100%;
+    }
+
+    .student-app .student-ea-read-button,
+    .student-app .student-ea-stop-button {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   19. VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .student-app .student-ea-card-heading {
+        align-items: flex-start;
+    }
+
+    .student-app .student-ea-setting-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .student-app .student-ea-control {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .student-app .student-ea-switch {
+        align-self: flex-start;
+    }
+
+    .student-app .student-ea-choice-group {
+        grid-template-columns: 1fr;
+    }
+
+    .student-app .student-ea-choice {
+        min-height: 65px;
+    }
+
+}
+
+
+/* STUDENT EASYACCESS GLOBAL PREFERENCES */
+html[data-student-ea-font-family="arial"] .student-app { font-family: Arial, sans-serif !important; }
+html[data-student-ea-font-family="verdana"] .student-app { font-family: Verdana, sans-serif !important; }
+html[data-student-ea-font-family="inter"] .student-app { font-family: Inter, sans-serif; }
+html[data-student-ea-contrast="high"] .student-app .student-panel, html[data-student-ea-contrast="high"] .student-app .student-stat-card, html[data-student-ea-contrast="high"] .student-app .student-page-heading { border:2px solid #334155; }
+html[data-student-ea-contrast="high"] .student-app .student-content p, html[data-student-ea-contrast="high"] .student-app .student-content small, html[data-student-ea-contrast="high"] .student-app .student-content span { color:#334155; }
+html[data-student-ea-simplified="true"] .student-app .student-panel, html[data-student-ea-simplified="true"] .student-app .student-stat-card, html[data-student-ea-simplified="true"] .student-app .student-ea-card { box-shadow:none !important; }
+html[data-student-ea-motion="reduced"] .student-app *, html[data-student-ea-motion="reduced"] .student-app *::before, html[data-student-ea-motion="reduced"] .student-app *::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+.student-app .student-ea-account-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin:16px 0; }
+.student-app .student-ea-account-grid .student-ea-card { min-width:0; }
+.student-app .student-ea-card .student-form { display:flex; flex-direction:column; gap:9px; }
+.student-app .student-ea-card .student-form label { display:flex; flex-direction:column; gap:6px; color:#334155; font-size:10px; font-weight:700; }
+.student-app .student-ea-card .student-form textarea { width:100%; padding:10px; border:1px solid #E2E8F0; border-radius:8px; font:inherit; font-size:10px; }
+.student-app .student-ea-card .student-form-feedback { padding:10px; border-radius:7px; font-size:10px; }
+.student-app .student-ea-card .student-form-feedback.success { background:#F0FDF4; color:#166534; }
+.student-app .student-ea-card .student-form-feedback.error { background:#FEF2F2; color:#991B1B; }
+.student-app .student-ea-card .student-form-feedback.info { background:#EFF6FF; color:#1E40AF; }
+.student-app .student-ea-preview-sample[data-preview-size="large"] { font-size:1.06em; }
+.student-app .student-ea-preview-sample[data-preview-size="extra-large"] { font-size:1.12em; }
+.student-app .student-ea-preview-sample[data-preview-contrast="high"] { border:2px solid #111827; color:#111827; }
+.student-app .student-ea-preview-sample[data-preview-simplified="true"] { box-shadow:none; }
+@media (max-width:900px) { .student-app .student-ea-account-grid { grid-template-columns:1fr; } }
+
+
+/* STUDENT CALENDAR FILTER CONTROLS - MATCH TEACHER CALENDAR */
+.student-app .student-filter-control { display:flex; min-width:0; flex-direction:column; gap:6px; }
+.student-app .student-filter-control > span { color:#334155; font-size:11px; font-weight:700; }
+.student-app .student-filter-control select { width:100%; min-height:40px; padding:0 11px; border:1px solid #E2E8F0; border-radius:8px; background:#FFFFFF; color:#334155; font-family:inherit; font-size:11px; outline:none; }
+.student-app .student-filter-control select:focus { border-color:#0F766E; box-shadow:0 0 0 3px rgba(15,118,110,.09); }
+.student-app .student-clear-filter { min-height:40px; display:inline-flex; align-items:center; justify-content:center; gap:7px; padding:8px 12px; border:1px solid #E2E8F0; border-radius:8px; background:#FFFFFF; color:#475569; font-size:10px; font-weight:700; white-space:nowrap; }
+.student-app .student-clear-filter:hover { background:#F1F5F9; color:#0F766E; }
+.student-app .student-calendar-visibility-badge.learning { color:#9A3412; background:#FFF7ED; }
+
+@media (max-width:900px) {
+    .student-app .student-calendar-stats { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .student-app .student-calendar-filters { grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
+    .student-app .student-calendar-filters .student-clear-filter { grid-column:1 / -1; justify-self:start; }
+}
+@media (max-width:650px) {
+    .student-app .student-calendar-heading { align-items:flex-start; flex-direction:column; }
+    .student-app .student-calendar-navigation { grid-template-columns:1fr; justify-items:stretch; }
+    .student-app .student-calendar-navigation h3 { grid-row:1; }
+    .student-app .student-calendar-navigation-left,.student-app .student-calendar-navigation-right { justify-content:center; }
+    .student-app .student-calendar-filters { grid-template-columns:1fr; }
+    .student-app .student-calendar-filters .student-clear-filter { grid-column:auto; justify-self:stretch; }
+}
+@media (max-width:380px) {
+    .student-app .student-calendar-stats { grid-template-columns:1fr; }
+}
+
+
+/* F11.5 - ACTIVITY DETAILS MODAL */
+.student-activity-details-modal{border:1px solid #E2E8F0;border-radius:13px;box-shadow:0 18px 50px rgba(15,35,55,.18)}
+.student-activity-details-modal .modal-header{align-items:flex-start;border-bottom:1px solid #E8EEF4}
+.student-activity-details-modal .modal-title{margin:5px 0 0;color:#16324F;font-weight:800}
+.student-activity-details-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0}
+.student-activity-details-list>div{min-width:0;padding:10px;border:1px solid #E8EEF4;border-radius:8px;background:#F8FAFC}
+.student-activity-details-list dt{margin-bottom:5px;color:#94A3B8;font-size:9px;font-weight:750}
+.student-activity-details-list dd{margin:0;color:#16324F;font-size:11px;font-weight:700}
+.student-activity-details-summary{margin:14px 0 0;color:#475569;font-size:11px;line-height:1.6}
+.student-activity-details-note{margin:12px 0 0;padding:10px;border-radius:8px;background:#EFF6FF;color:#1E40AF;font-size:9px;line-height:1.6}
+@media(max-width:480px){.student-activity-details-list{grid-template-columns:1fr}.student-activity-details-modal .modal-footer>*{width:100%;text-align:center}}
+
+
+/* =====================================================
+   F11.5 - ACTIVITY ATTACHMENTS
+===================================================== */
+.student-activity-attachments {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid #E8EEF4;
+}
+.student-activity-attachments-heading,
+.student-activity-attachment-preview-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.student-activity-attachments-heading h3 {
+    margin: 0;
+    color: #16324F;
+    font-size: 12px;
+    font-weight: 800;
+}
+.student-activity-attachments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.student-activity-attachment-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    background: #FFFFFF;
+}
+.student-activity-attachment-icon {
+    display: grid;
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    place-items: center;
+    border-radius: 8px;
+    background: #E7F1FF;
+    color: #2563EB;
+}
+.student-activity-attachment-details {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    flex-direction: column;
+    gap: 3px;
+}
+.student-activity-attachment-details strong {
+    overflow-wrap: anywhere;
+    color: #16324F;
+    font-size: 10px;
+}
+.student-activity-attachment-details small {
+    color: #94A3B8;
+    font-size: 9px;
+}
+.student-activity-attachment-actions {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 6px;
+}
+.student-activity-attachment-actions .student-secondary-button,
+.student-activity-attachment-preview-heading .student-secondary-button {
+    min-height: 30px;
+    padding: 5px 8px;
+    font-size: 9px;
+}
+.student-activity-attachment-preview {
+    margin-top: 10px;
+    padding: 11px;
+    border: 1px solid #BFDBFE;
+    border-radius: 8px;
+    background: #F8FAFC;
+}
+.student-activity-attachment-preview[hidden] {
+    display: none !important;
+}
+.student-activity-attachment-preview-heading strong {
+    overflow-wrap: anywhere;
+    color: #16324F;
+    font-size: 10px;
+}
+.student-activity-attachment-preview pre {
+    max-height: 220px;
+    overflow: auto;
+    margin: 0;
+    padding: 10px;
+    border-radius: 6px;
+    background: #FFFFFF;
+    color: #334155;
+    font: 10px/1.6 "Inter", sans-serif;
+    white-space: pre-wrap;
+}
+.student-activity-no-attachments {
+    margin: 0;
+    color: #94A3B8;
+    font-size: 10px;
+}
+@media (max-width: 480px) {
+    .student-activity-attachment-row {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .student-activity-attachment-actions {
+        width: 100%;
+        padding-left: 44px;
+    }
+    .student-activity-attachment-actions button {
+        flex: 1;
+    }
+}
+
+
+
+
+
+
+
+/* =====================================================
+   F11.6 - SUBMISSIONS AND REVISIONS ENHANCEMENTS
+===================================================== */
+
+.student-submission-workspace {
+    align-items: start;
+}
+
+.student-submission-deadline-info {
+    padding: 8px 10px;
+    margin: 0;
+    border: 1px solid #BFDBFE;
+    border-radius: 7px;
+    background: #EFF6FF;
+    color: #1E40AF;
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.student-submission-deadline-info.is-closed {
+    border-color: #FECACA;
+    background: #FEF2F2;
+    color: #991B1B;
+}
+
+.student-selected-files {
+    margin-top: 5px;
+}
+
+.student-selected-file-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.student-selected-file-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 7px 9px;
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    background: #F8FAFC;
+    color: #334155;
+    font-size: 9px;
+}
+
+.student-selected-file-list li span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.student-selected-file-list li small {
+    flex: 0 0 auto;
+    color: #64748B;
+    font-size: 9px;
+}
+
+.student-submission-history-panel,
+.student-revision-history-panel {
+    margin-bottom: 14px;
+}
+
+.student-submission-table {
+    min-width: 760px;
+}
+
+.student-submission-status {
+    display: inline-flex;
+    width: fit-content;
+    padding: 4px 8px;
+    border-radius: 20px;
+    background: #DCFCE7;
+    color: #166534;
+    font-size: 9px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.student-submission-status.revision {
+    background: #F3E8FF;
+    color: #6B21A8;
+}
+
+.student-revision-history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.student-revision-history-item {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 12px;
+    border: 1px solid #E8D5FA;
+    border-radius: 9px;
+    background: #FCF9FF;
+}
+
+.student-revision-history-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.student-revision-history-heading strong {
+    color: #16324F;
+    font-size: 11px;
+}
+
+.student-revision-history-item > small {
+    color: #64748B;
+    font-size: 9px;
+    overflow-wrap: anywhere;
+}
+
+.student-revision-history-item p {
+    margin: 0;
+    color: #334155;
+    font-size: 10px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.student-revision-history-panel .student-module-empty[hidden],
+.student-submission-history-panel .student-module-empty[hidden] {
+    display: none !important;
+}
+
+.student-form button:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+}
+
+@media (max-width: 650px) {
+    .student-revision-history-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .student-selected-file-list li {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 3px;
+    }
+}
+
+
+
+
+
+
+
+/* =====================================================
+   F11.7 - QUIZ ATTEMPT WORKFLOW
+===================================================== */
+
+.student-quiz-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.student-quiz-card[hidden] {
+    display: none !important;
+}
+
+.student-quiz-dialog {
+    width: min(720px, calc(100% - 28px));
+    max-width: 720px;
+    max-height: min(88vh, 900px);
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    background: #FFFFFF;
+    color: #334155;
+    box-shadow: 0 20px 60px rgba(15, 35, 55, .25);
+}
+
+.student-quiz-dialog::backdrop {
+    background: rgba(15, 35, 55, .52);
+    backdrop-filter: blur(2px);
+}
+
+.student-quiz-dialog-inner {
+    display: flex;
+    max-height: min(88vh, 900px);
+    flex-direction: column;
+    padding: 20px;
+    overflow: auto;
+}
+
+.student-quiz-dialog-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid #E8EEF4;
+}
+
+.student-quiz-dialog-header h2 {
+    margin: 3px 0 4px;
+    color: #16324F;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.student-quiz-dialog-header p {
+    margin: 0;
+    color: #64748B;
+    font-size: 10px;
+}
+
+.student-quiz-stage {
+    min-width: 0;
+    padding-top: 15px;
+}
+
+.student-quiz-instruction-summary,
+.student-quiz-review-summary,
+.student-quiz-confirmation-card {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 13px;
+    border: 1px solid #CDE9E4;
+    border-radius: 9px;
+    background: #F0F8F7;
+}
+
+.student-quiz-instruction-summary strong,
+.student-quiz-review-summary strong,
+.student-quiz-confirmation-card strong {
+    color: #16324F;
+    font-size: 12px;
+}
+
+.student-quiz-instruction-summary span,
+.student-quiz-review-summary span,
+.student-quiz-confirmation-card p,
+.student-quiz-confirmation-card small {
+    margin: 0;
+    color: #526B70;
+    font-size: 10px;
+    line-height: 1.55;
+}
+
+.student-quiz-section-heading {
+    margin: 16px 0 9px;
+    color: #16324F;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.student-quiz-instructions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 22px;
+    margin: 0;
+    color: #475569;
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+.student-quiz-instruction-note,
+.student-quiz-navigation-note {
+    margin: 13px 0 0;
+    color: #94A3B8;
+    font-size: 9px;
+    line-height: 1.6;
+}
+
+.student-quiz-progress-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 15px;
+}
+
+.student-quiz-progress-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    color: #64748B;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.student-quiz-progress-track {
+    height: 7px;
+    overflow: hidden;
+    border-radius: 99px;
+    background: #E8EEF4;
+}
+
+.student-quiz-progress-track span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: #0F766E;
+    transition: width .15s ease;
+}
+
+.student-quiz-active-question {
+    padding: 15px;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    background: #FFFFFF;
+}
+
+.student-quiz-question-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #0F766E;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .7px;
+}
+
+.student-quiz-active-question h3 {
+    margin: 0 0 14px;
+    color: #16324F;
+    font-size: 15px;
+    font-weight: 750;
+    line-height: 1.5;
+}
+
+.student-quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.student-quiz-option {
+    display: flex;
+    min-height: 42px;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #475569;
+    font-size: 11px;
+    cursor: pointer;
+    transition: border-color .15s ease, background .15s ease;
+}
+
+.student-quiz-option:hover,
+.student-quiz-option.selected {
+    border-color: #0F766E;
+    background: #F0F8F7;
+}
+
+.student-quiz-option input {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
+    margin: 0;
+    accent-color: #0F766E;
+}
+
+.student-quiz-question-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 15px;
+}
+
+.student-quiz-question-number {
+    display: grid;
+    width: 32px;
+    height: 32px;
+    place-items: center;
+    border: 1px solid #CBD5E1;
+    border-radius: 7px;
+    background: #FFFFFF;
+    color: #475569;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.student-quiz-question-number.answered {
+    border-color: #A7D8CE;
+    background: #E4F7F4;
+    color: #0F766E;
+}
+
+.student-quiz-question-number.current {
+    outline: 2px solid #0F766E;
+    outline-offset: 2px;
+}
+
+.student-quiz-review-item,
+.student-quiz-result-item {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 12px 0;
+    border-bottom: 1px solid #E8EEF4;
+}
+
+.student-quiz-review-item strong,
+.student-quiz-result-item strong {
+    color: #16324F;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.student-quiz-review-item p,
+.student-quiz-result-item p {
+    margin: 0;
+    color: #64748B;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.student-quiz-review-item p.unanswered,
+.student-quiz-result-item p.incorrect-answer {
+    color: #B91C1C;
+}
+
+.student-quiz-result-summary {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    padding: 18px;
+    border: 1px solid #CDE9E4;
+    border-radius: 10px;
+    background: #F0F8F7;
+    text-align: center;
+}
+
+.student-quiz-result-summary span {
+    color: #0F766E;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .8px;
+}
+
+.student-quiz-result-summary strong {
+    color: #16324F;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.student-quiz-result-summary p {
+    margin: 0;
+    color: #0F766E;
+    font-size: 12px;
+    font-weight: 750;
+}
+
+.student-quiz-result-summary small {
+    color: #64748B;
+    font-size: 9px;
+}
+
+.student-quiz-result-item p.correct-answer {
+    color: #166534;
+}
+
+.student-quiz-result-item p.student-quiz-correct-answer {
+    color: #166534;
+    font-weight: 700;
+}
+
+.student-quiz-result-item small {
+    color: #64748B;
+    font-size: 9px;
+    line-height: 1.6;
+}
+
+.student-quiz-result-status {
+    display: inline-flex;
+    padding: 4px 8px;
+    border-radius: 20px;
+    background: #DCFCE7;
+    color: #166534;
+    font-size: 9px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.student-quiz-history-panel {
+    margin-top: 14px;
+}
+
+.student-quiz-history-table {
+    min-width: 650px;
+}
+
+.student-quiz-history-table .student-secondary-button {
+    min-height: 30px;
+    padding: 5px 9px;
+    font-size: 9px;
+}
+
+.student-quiz-dialog .student-dialog-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+    padding-top: 15px;
+    margin-top: 14px;
+    border-top: 1px solid #E8EEF4;
+}
+
+.student-quiz-dialog .student-dialog-actions button {
+    min-height: 36px;
+}
+
+.student-quiz-dialog button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .student-quiz-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
+    .student-quiz-dialog-inner {
+        padding: 14px;
+    }
+
+    .student-quiz-dialog .student-dialog-actions {
+        flex-direction: column;
+    }
+
+    .student-quiz-dialog .student-dialog-actions button {
+        width: 100%;
+    }
+
+    .student-quiz-active-question h3 {
+        font-size: 13px;
+    }
+}
+
+/* VERY SMALL MOBILE */
+@media (max-width: 380px) {
+    .student-quiz-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+/* =====================================================
+   F11.8 - GRADES AND FEEDBACK
+===================================================== */
+
+.student-grade-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* FILTERS */
+
+.student-grade-filters {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 220px));
+    gap: 12px;
+    padding: 13px;
+    margin-bottom: 14px;
+    border: 1px solid #E8EEF4;
+    border-radius: 9px;
+    background: #F8FAFC;
+}
+
+.student-grade-filters label {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.student-grade-filters label > span {
+    color: #64748B;
+    font-size: 10px;
+    font-weight: 750;
+}
+
+.student-grade-filters select {
+    width: 100%;
+    min-height: 38px;
+    padding: 7px 9px;
+    border: 1px solid #CBD5E1;
+    border-radius: 7px;
+    background: #FFFFFF;
+    color: #334155;
+    font: inherit;
+    font-size: 10px;
+}
+
+/* SUBJECT GRADE OVERVIEW */
+
+.student-subject-grade-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.student-subject-grade-card {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    background: #FFFFFF;
+}
+
+.student-subject-grade-header {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.student-subject-grade-icon {
+    display: grid;
+    width: 35px;
+    height: 35px;
+    flex: 0 0 35px;
+    place-items: center;
+    border-radius: 9px;
+    background: #E4F7F4;
+    color: #0F766E;
+    font-size: 15px;
+}
+
+.student-subject-grade-name {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.student-subject-grade-name strong {
+    color: #16324F;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.student-subject-grade-name small {
+    color: #94A3B8;
+    font-size: 9px;
+}
+
+.student-subject-grade-value {
+    color: #16324F;
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.student-subject-grade-caption {
+    color: #64748B;
+    font-size: 9px;
+}
+
+/* ASSESSMENT TABLE */
+
+.student-grade-table {
+    min-width: 900px;
+}
+
+.student-grade-table td {
+    font-size: 10px;
+}
+
+.student-grade-score {
+    display: block;
+    color: #16324F;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.student-grade-percentage {
+    display: block;
+    margin-top: 3px;
+    color: #64748B;
+    font-size: 9px;
+}
+
+.student-grade-panel-header {
+    margin-bottom: 14px;
+}
+
+.student-grade-privacy-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 12px;
+    margin: 13px 0 0;
+    border: 1px solid #CDE9E4;
+    border-radius: 8px;
+    background: #F0F8F7;
+    color: #45636A;
+    font-size: 9px;
+    line-height: 1.6;
+}
+
+.student-grade-privacy-note i {
+    flex: 0 0 auto;
+    color: #0F766E;
+}
+
+/* GRADE DETAILS DIALOG */
+
+.student-grade-details-dialog {
+    width: min(620px, calc(100% - 28px));
+    max-width: 620px;
+    max-height: min(85vh, 800px);
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #E2E8F0;
+    border-radius: 13px;
+    background: #FFFFFF;
+    color: #334155;
+    box-shadow: 0 20px 60px rgba(15, 35, 55, .25);
+}
+
+.student-grade-details-dialog::backdrop {
+    background: rgba(15, 35, 55, .52);
+    backdrop-filter: blur(2px);
+}
+
+.student-grade-details-inner {
+    display: flex;
+    max-height: min(85vh, 800px);
+    flex-direction: column;
+    padding: 19px;
+    overflow: auto;
+}
+
+.student-grade-details-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid #E8EEF4;
+}
+
+.student-grade-details-header h2 {
+    margin: 4px 0;
+    color: #16324F;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.student-grade-details-header p {
+    margin: 0;
+    color: #64748B;
+    font-size: 10px;
+}
+
+.student-grade-details-body {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 15px 0;
+}
+
+.student-grade-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+}
+
+.student-grade-detail-item {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 5px;
+    padding: 11px;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    background: #F8FAFC;
+}
+
+.student-grade-detail-item span {
+    color: #64748B;
+    font-size: 9px;
+}
+
+.student-grade-detail-item strong {
+    overflow-wrap: anywhere;
+    color: #16324F;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.student-grade-detail-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 12px;
+    border: 1px solid #E8EEF4;
+    border-radius: 8px;
+}
+
+.student-grade-detail-section h3 {
+    margin: 0;
+    color: #16324F;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.student-grade-feedback-content,
+.student-grade-feedback-unavailable {
+    margin: 0;
+    color: #475569;
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+.student-grade-feedback-unavailable {
+    color: #94A3B8;
+}
+
+.student-grade-details-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 12px;
+    border-top: 1px solid #E8EEF4;
+}
+
+.student-grade-details-footer button {
+    min-width: 100px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .student-subject-grade-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    .student-grade-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .student-grade-filters {
+        grid-template-columns: 1fr;
+    }
+
+    .student-subject-grade-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .student-grade-details-inner {
+        padding: 14px;
+    }
+}
+
+/* VERY SMALL MOBILE */
+
+@media (max-width: 380px) {
+    .student-grade-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .student-grade-detail-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+/* =====================================================
+   F11.9 - GRADE REVIEW REQUESTS
+===================================================== */
+
+.student-review-stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.student-grade-review-layout {
+    align-items: start;
+    margin-bottom: 14px;
+}
+
+.student-grade-review-layout .student-panel {
+    min-width: 0;
+}
+
+/* SELECTED RELEASED GRADE */
+
+.student-review-selected-grade {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 11px;
+    border: 1px solid #CDE9E4;
+    border-radius: 8px;
+    background: #F0F8F7;
+}
+
+.student-review-selected-grade[hidden] {
+    display: none !important;
+}
+
+.student-review-selected-grade strong {
+    color: #16324F;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.student-review-selected-grade span {
+    color: #45636A;
+    font-size: 9px;
+}
+
+.student-review-duplicate-note {
+    color: #B45309 !important;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* REQUEST HISTORY */
+
+.student-grade-review-history {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.student-grade-review-request-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    background: #FFFFFF;
+}
+
+.student-review-request-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.student-review-request-header > div {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.student-review-request-header strong {
+    color: #16324F;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.student-review-request-header small {
+    color: #94A3B8;
+    font-size: 9px;
+}
+
+/* REQUEST STATUS */
+
+.student-review-status {
+    display: inline-flex;
+    width: fit-content;
+    flex: 0 0 auto;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 9px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.student-review-status.submitted {
+    background: #E7F1FF;
+    color: #1D4ED8;
+}
+
+.student-review-status.under_review {
+    background: #FFF7ED;
+    color: #9A3412;
+}
+
+.student-review-status.responded {
+    background: #E4F7F4;
+    color: #0F766E;
+}
+
+.student-review-status.closed {
+    background: #F1F5F9;
+    color: #475569;
+}
+
+/* REQUEST DETAILS */
+
+.student-review-request-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px 15px;
+    padding: 10px 0;
+    border-top: 1px solid #E8EEF4;
+    border-bottom: 1px solid #E8EEF4;
+}
+
+.student-review-request-details span {
+    color: #64748B;
+    font-size: 9px;
+}
+
+.student-review-request-reason,
+.student-review-staff-response {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 11px;
+    border: 1px solid #E8EEF4;
+    border-radius: 8px;
+    background: #F8FAFC;
+}
+
+.student-review-request-reason strong,
+.student-review-staff-response strong {
+    color: #16324F;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.student-review-request-reason p,
+.student-review-staff-response p {
+    margin: 0;
+    color: #475569;
+    font-size: 10px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.student-review-staff-response {
+    border-color: #CDE9E4;
+    background: #F0F8F7;
+}
+
+.student-review-staff-response small {
+    color: #64748B;
+    font-size: 9px;
+}
+
+.student-review-response-pending {
+    color: #94A3B8 !important;
+    font-style: italic;
+}
+
+/* REQUEST TIMELINE */
+
+.student-review-timeline {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 7px;
+    padding: 9px 0;
+}
+
+.student-review-timeline-step {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+}
+
+.student-review-timeline-dot {
+    display: grid;
+    width: 25px;
+    height: 25px;
+    place-items: center;
+    border: 1px solid #CBD5E1;
+    border-radius: 50%;
+    background: #FFFFFF;
+    color: #94A3B8;
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.student-review-timeline-step.completed .student-review-timeline-dot {
+    border-color: #0F766E;
+    background: #E4F7F4;
+    color: #0F766E;
+}
+
+.student-review-timeline-step small {
+    color: #94A3B8;
+    font-size: 8px;
+    line-height: 1.3;
+}
+
+.student-review-timeline-step.completed small {
+    color: #0F766E;
+    font-weight: 750;
+}
+
+/* REQUEST FOOTER */
+
+.student-review-request-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 9px;
+    padding-top: 10px;
+    border-top: 1px solid #E8EEF4;
+}
+
+.student-review-request-footer > small {
+    color: #94A3B8;
+    font-size: 9px;
+}
+
+.student-review-request-footer button {
+    min-height: 32px;
+    padding: 6px 10px;
+    font-size: 9px;
+}
+
+.student-review-closed-note {
+    color: #64748B;
+    font-size: 9px;
+    font-weight: 750;
+}
+
+/* DEMONSTRATION SIMULATOR */
+
+.student-review-demo-panel {
+    margin-top: 14px;
+    border-style: dashed;
+}
+
+.student-review-demo-description {
+    margin: 0;
+    color: #64748B;
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+    .student-review-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .student-grade-review-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .student-review-request-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .student-review-request-footer {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .student-review-request-footer button {
+        width: 100%;
+    }
+
+    .student-review-timeline {
+        gap: 3px;
+    }
+
+    .student-review-timeline-step small {
+        font-size: 7px;
+    }
+
+    .student-review-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 380px) {
+    .student-review-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .student-review-request-card {
+        padding: 11px;
+    }
+}
+
+
+
+
+
+
+
+
+/* =========================================================
+   F12.1A - STUDENT CALENDAR DESIGN ALIGNMENT
+   Reference: Teacher Calendar
+   Purpose: Match layout, spacing and responsive behavior.
+   Student permissions and event controls remain unchanged.
+========================================================= */
+
+/* CALENDAR HEADING */
+
+.student-app .student-calendar-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.student-app .student-calendar-heading h1 {
+    margin: 0;
+    color: #16324F;
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.student-app .student-calendar-heading p {
+    margin: 7px 0 0;
+    color: #64748B;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* SUMMARY CARDS */
+
+.student-app .student-calendar-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 13px;
+    margin-bottom: 16px;
+}
+
+.student-app .student-calendar-stats .student-stat-card {
+    min-width: 0;
+    padding: 16px;
+    transition: transform .2s ease,
+                box-shadow .2s ease;
+}
+
+.student-app .student-calendar-stats .student-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(15, 35, 55, .07);
+}
+
+/* MAIN CALENDAR PANEL */
+
+.student-app .student-calendar-panel {
+    min-width: 0;
+    margin-bottom: 16px;
+}
+
+.student-app .student-calendar-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 19px;
+}
+
+.student-app .student-calendar-toolbar-title h2 {
+    margin: 0;
+    color: #16324F;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.student-app .student-calendar-toolbar-title p {
+    margin: 5px 0 0;
+    color: #64748B;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+/* TABLET - MATCH TEACHER BREAKPOINT */
+
+@media (max-width: 1100px) {
+
+    .student-app .student-calendar-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .student-app .student-calendar-filters {
+        grid-template-columns:
+            minmax(180px, 1.4fr)
+            minmax(160px, 1fr)
+            auto;
+    }
+
+    .student-app .student-calendar-day-cell {
+        min-height: 100px;
+    }
+}
+
+/* MOBILE - MATCH TEACHER LAYOUT */
+
+@media (max-width: 650px) {
+
+    .student-app .student-calendar-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .student-app .student-calendar-heading h1 {
+        font-size: 23px;
+    }
+
+    .student-app .student-calendar-heading p {
+        font-size: 11px;
+    }
+
+    .student-app .student-calendar-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+    }
+
+    .student-app .student-calendar-stats .student-stat-card {
+        padding: 13px;
+    }
+
+    .student-app .student-calendar-panel {
+        padding: 14px;
+    }
+
+    .student-app .student-calendar-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .student-app .student-calendar-view-controls {
+        width: 100%;
+    }
+
+    .student-app .student-calendar-view-button {
+        flex: 1;
+    }
+
+    .student-app .student-calendar-navigation {
+        grid-template-columns: 1fr auto;
+        row-gap: 12px;
+    }
+
+    .student-app .student-calendar-navigation h3 {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        text-align: left;
+    }
+
+    .student-app .student-calendar-navigation-left {
+        grid-column: 1;
+        grid-row: 2;
+        justify-content: flex-start;
+    }
+
+    .student-app .student-calendar-navigation-right {
+        grid-column: 2;
+        grid-row: 2;
+        justify-content: flex-end;
+    }
+
+    .student-app .student-calendar-filters {
+        grid-template-columns: 1fr;
+    }
+
+    .student-app .student-calendar-filters .student-clear-filter {
+        width: 100%;
+    }
+
+    .student-app .student-calendar-legend {
+        gap: 11px;
+    }
+
+    .student-app .student-calendar-policy {
+        padding: 12px;
+    }
+
+    .student-app .student-calendar-list-item {
+        grid-template-columns: 48px minmax(0, 1fr) auto;
+        gap: 9px;
+        padding: 10px;
+    }
+
+    #studentCalendarEventDetailsModal .modal-dialog {
+        margin: 10px;
+    }
+
+    #studentCalendarEventDetailsModal .modal-header,
+    #studentCalendarEventDetailsModal .modal-body {
+        padding: 16px;
+    }
+
+    #studentCalendarEventDetailsModal .student-calendar-detail-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* VERY SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+    .student-app .student-calendar-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .student-app .student-calendar-date-picker input {
+        width: 105px;
+    }
+
+    .student-app .student-calendar-policy {
+        gap: 8px;
+        padding: 10px;
+    }
+}
