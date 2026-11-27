@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+
+    <title>Release Management | GabayAral</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/platform-developer.css">
+</head>
+
+<body>
+<div class="app-shell platform-developer-app" data-pdev-page="release-management">
+
+    <div id="pdevSidebarMount"></div>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <main class="main-area">
+        <div id="pdevTopbarMount"></div>
+
+        <section class="main-content pdev-content">
+            <div class="pdev-page">
+
+                <header class="pdev-page-header">
+                    <div>
+                        <span class="pdev-eyebrow">RELEASE AND DEPLOYMENT / PDEV-04</span>
+                        <h1 class="pdev-page-title">Release Management</h1>
+                        <p class="pdev-page-description">
+                            Prepare release candidates, document validation
+                            results and submit production deployment requests.
+                        </p>
+                        <div class="pdev-page-meta">
+                            <span><i class="bi bi-calendar3"></i><span data-pdev-date></span></span>
+                            <span><i class="bi bi-box-seam"></i>Release Coordination</span>
+                        </div>
+                    </div>
+                    <span class="pdev-header-icon"><i class="bi bi-box-seam"></i></span>
+                </header>
+
+
+                <div class="pdev-demo-notice">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <div>
+                        <strong>Release management demonstration</strong>
+                        <p>
+                            Release records and validation results are fictional.
+                            No repository, staging service or production deployment
+                            provider is connected.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- SECTION A -->
+
+                <section class="pdev-page-section" data-pdev-section>
+                    <div class="pdev-section-heading">
+                        <div>
+                            <span class="pdev-section-kicker">SECTION A</span>
+                            <h2>Release Overview</h2>
+                            <p>Summary of sample release preparation records.</p>
+                        </div>
+                    </div>
+
+                    <div class="pdev-stat-grid">
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+                            <div class="pdev-stat-top">
+                                <span class="pdev-stat-icon pdev-icon-blue"><i class="bi bi-box"></i></span>
+                                Release Candidates
+                            </div>
+                            <strong class="pdev-stat-value">03</strong>
+                            <span class="pdev-stat-caption">Fictional records</span>
+                        </article>
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+                            <div class="pdev-stat-top">
+                                <span class="pdev-stat-icon pdev-icon-amber"><i class="bi bi-eye"></i></span>
+                                Under Validation
+                            </div>
+                            <strong class="pdev-stat-value">01</strong>
+                            <span class="pdev-stat-caption">Sample validation record</span>
+                        </article>
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+                            <div class="pdev-stat-top">
+                                <span class="pdev-stat-icon pdev-icon-purple"><i class="bi bi-shield-check"></i></span>
+                                Awaiting Authorization
+                            </div>
+                            <strong class="pdev-stat-value">01</strong>
+                            <span class="pdev-stat-caption">Sample authorization request</span>
+                        </article>
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+                            <div class="pdev-stat-top">
+                                <span class="pdev-stat-icon pdev-icon-teal"><i class="bi bi-check-circle"></i></span>
+                                Approved Samples
+                            </div>
+                            <strong class="pdev-stat-value">01</strong>
+                            <span class="pdev-stat-caption">Fictional approval record</span>
+                        </article>
+
+                    </div>
+                </section>
+
+
+                <!-- SECTION B -->
+
+                <section class="pdev-page-section" data-pdev-section>
+                    <div class="pdev-section-heading">
+                        <div>
+                            <span class="pdev-section-kicker">SECTION B</span>
+                            <h2>Release Candidate Register</h2>
+                            <p>Review sample release candidates and their readiness.</p>
+                        </div>
+                    </div>
+
+                    <article class="pdev-panel" data-pdev-searchable>
+
+                        <div class="pdev-panel-header">
+                            <div>
+                                <h3>Release Candidates</h3>
+                                <p>Fictional demonstration records.</p>
+                            </div>
+                            <span class="pdev-badge pdev-badge-info">Demo Only</span>
+                        </div>
+
+                        <div class="pdev-toolbar">
+
+                            <div class="pdev-field flex-grow-1">
+                                <label for="releaseSearch">Search Releases</label>
+                                <input type="search" class="form-control" id="releaseSearch"
+                                       data-pdev-table-search="releases"
+                                       placeholder="Search release reference or version...">
+                            </div>
+
+                            <div class="pdev-field">
+                                <label for="releaseStatus">Status</label>
+                                <select class="form-select" id="releaseStatus"
+                                        data-pdev-filter="status" data-pdev-target="releases">
+                                    <option value="all">All Statuses</option>
+                                    <option value="Draft">Draft</option>
+                                    <option value="Validating">Validating</option>
+                                    <option value="Awaiting Approval">Awaiting Approval</option>
+                                    <option value="Approved">Approved</option>
+                                </select>
+                            </div>
+
+                            <button type="button" class="pdev-btn pdev-btn-secondary"
+                                    data-pdev-clear-table="releases">
+                                <i class="bi bi-arrow-counterclockwise"></i> Clear
+                            </button>
+
+                        </div>
+
+                        <div class="pdev-panel-body">
+                            <span class="pdev-pagination-info" data-pdev-result-count="releases"></span>
+                        </div>
+
+                        <div class="pdev-table-wrap" data-pdev-table-wrapper>
+                            <table class="pdev-table" data-pdev-table="releases">
+                                <thead>
+                                    <tr>
+                                        <th>Release Reference</th>
+                                        <th>Version</th>
+                                        <th>Validation</th>
+                                        <th>Rollback Plan</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr data-pdev-row data-status="Validating">
+                                        <td><span class="pdev-code">DEMO-REL-001</span></td>
+                                        <td>0.9.1</td>
+                                        <td>In Progress</td>
+                                        <td>Prepared</td>
+                                        <td><span class="pdev-badge pdev-badge-info">Validating</span></td>
+                                        <td><button type="button" class="pdev-btn pdev-btn-secondary"
+                                            data-pdev-action="review">Review</button></td>
+                                    </tr>
+
+                                    <tr data-pdev-row data-status="Awaiting Approval">
+                                        <td><span class="pdev-code">DEMO-REL-002</span></td>
+                                        <td>0.9.0</td>
+                                        <td>Passed</td>
+                                        <td>Prepared</td>
+                                        <td><span class="pdev-badge pdev-badge-warning">Awaiting Approval</span></td>
+                                        <td><button type="button" class="pdev-btn pdev-btn-secondary"
+                                            data-pdev-action="review">View</button></td>
+                                    </tr>
+
+                                    <tr data-pdev-row data-status="Approved">
+                                        <td><span class="pdev-code">DEMO-REL-003</span></td>
+                                        <td>0.8.5</td>
+                                        <td>Passed</td>
+                                        <td>Prepared</td>
+                                        <td><span class="pdev-badge pdev-badge-success">Approved</span></td>
+                                        <td><button type="button" class="pdev-btn pdev-btn-secondary"
+                                            data-pdev-action="review">View</button></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="pdev-empty" data-pdev-table-empty="releases" hidden>
+                            <span class="pdev-empty-icon"><i class="bi bi-box-seam"></i></span>
+                            <strong>No matching release candidates.</strong>
+                            <p>Change your search or status filter.</p>
+                        </div>
+
+                        <div class="pdev-panel-footer">
+                            <span class="pdev-pagination-info">Sample release records</span>
+                            <div class="pdev-pagination-controls" data-pdev-pagination="releases"></div>
+                        </div>
+
+                    </article>
+                </section>
+
+
+                <!-- SECTION C -->
+
+                <section class="pdev-page-section" data-pdev-section>
+                    <div class="pdev-section-heading">
+                        <div>
+                            <span class="pdev-section-kicker">SECTION C</span>
+                            <h2>Release Readiness Requirements</h2>
+                        </div>
+                    </div>
+
+                    <div class="pdev-grid-2">
+
+                        <article class="pdev-panel" data-pdev-searchable>
+                            <div class="pdev-panel-body">
+                                <span class="pdev-stat-icon pdev-icon-blue mb-3"><i class="bi bi-code-square"></i></span>
+                                <h3 class="h6 fw-bold">Code Review</h3>
+                                <p class="small text-secondary">
+                                    Code changes must receive independent review
+                                    before production release consideration.
+                                </p>
+                                <span class="pdev-badge pdev-badge-success">Required</span>
+                            </div>
+                        </article>
+
+                        <article class="pdev-panel" data-pdev-searchable>
+                            <div class="pdev-panel-body">
+                                <span class="pdev-stat-icon pdev-icon-teal mb-3"><i class="bi bi-check2-square"></i></span>
+                                <h3 class="h6 fw-bold">Testing Results</h3>
+                                <p class="small text-secondary">
+                                    Functional, integration and security validation
+                                    results must be documented.
+                                </p>
+                                <span class="pdev-badge pdev-badge-success">Required</span>
+                            </div>
+                        </article>
+
+                        <article class="pdev-panel" data-pdev-searchable>
+                            <div class="pdev-panel-body">
+                                <span class="pdev-stat-icon pdev-icon-purple mb-3"><i class="bi bi-arrow-counterclockwise"></i></span>
+                                <h3 class="h6 fw-bold">Rollback Plan</h3>
+                                <p class="small text-secondary">
+                                    Document a safe recovery path before submitting
+                                    a production deployment request.
+                                </p>
+                                <span class="pdev-badge pdev-badge-success">Required</span>
+                            </div>
+                        </article>
+
+                        <article class="pdev-panel" data-pdev-searchable>
+                            <div class="pdev-panel-body">
+                                <span class="pdev-stat-icon pdev-icon-amber mb-3"><i class="bi bi-person-check"></i></span>
+                                <h3 class="h6 fw-bold">Independent Authorization</h3>
+                                <p class="small text-secondary">
+                                    Production deployment requires the applicable
+                                    independent authorization.
+                                </p>
+                                <span class="pdev-badge pdev-badge-warning">Approval Required</span>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+
+                <!-- SECTION D -->
+
+                <section class="pdev-page-section" data-pdev-section>
+                    <div class="pdev-section-heading">
+                        <div>
+                            <span class="pdev-section-kicker">SECTION D</span>
+                            <h2>Prepare Release Candidate</h2>
+                            <p>Document a proposed release candidate.</p>
+                        </div>
+                    </div>
+
+                    <article class="pdev-panel">
+                        <div class="pdev-panel-body">
+
+                            <form data-pdev-demo-form
+                                  data-pdev-success-message="Release candidate proposal prepared locally. No release was published or deployed.">
+
+                                <div class="pdev-form-grid">
+
+                                    <div class="pdev-field">
+                                        <label for="releaseReference">Release Reference <span class="pdev-required">*</span></label>
+                                        <input type="text" class="form-control" id="releaseReference"
+                                               maxlength="100" required placeholder="Enter release reference">
+                                    </div>
+
+                                    <div class="pdev-field">
+                                        <label for="releaseVersion">Version <span class="pdev-required">*</span></label>
+                                        <input type="text" class="form-control" id="releaseVersion"
+                                               maxlength="40" required placeholder="Example: 1.0.0">
+                                    </div>
+
+                                    <div class="pdev-field">
+                                        <label for="releaseEnvironment">Target Environment <span class="pdev-required">*</span></label>
+                                        <select class="form-select" id="releaseEnvironment" required>
+                                            <option value="">Select environment</option>
+                                            <option>Testing</option>
+                                            <option>Staging</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="pdev-field">
+                                        <label for="releaseRollback">Rollback Plan</label>
+                                        <select class="form-select" id="releaseRollback">
+                                            <option value="">Select status</option>
+                                            <option>Prepared</option>
+                                            <option>Requires Preparation</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="pdev-field" style="grid-column:1/-1">
+                                        <label for="releaseDescription">Release Description <span class="pdev-required">*</span></label>
+                                        <textarea class="form-control" id="releaseDescription"
+                                                  rows="4" maxlength="1500" required></textarea>
+                                    </div>
+
+                                    <div class="pdev-field" style="grid-column:1/-1">
+                                        <label for="releaseTesting">Testing Summary <span class="pdev-required">*</span></label>
+                                        <textarea class="form-control" id="releaseTesting"
+                                                  rows="3" maxlength="1000" required></textarea>
+                                    </div>
+
+                                </div>
+
+                                <div class="pdev-notice warning mt-3">
+                                    <i class="bi bi-shield-exclamation"></i>
+                                    Production deployment is not authorized by this form.
+                                    Submit the completed release through the independent
+                                    authorization process.
+                                </div>
+
+                                <div class="pdev-form-actions">
+                                    <button type="reset" class="pdev-btn pdev-btn-secondary">Clear</button>
+                                    <button type="submit" class="pdev-btn pdev-btn-primary">
+                                        <i class="bi bi-file-earmark-plus"></i>
+                                        Prepare Release Candidate
+                                    </button>
+                                </div>
+
+                                <div class="pdev-notice success mt-3" data-pdev-form-result hidden></div>
+
+                            </form>
+
+                        </div>
+                    </article>
+                </section>
+
+
+                <p class="pdev-footer-note">
+                    <i class="bi bi-shield-lock"></i>
+                    The Developer may prepare and submit a release candidate
+                    but cannot independently authorize their own production release.
+                </p>
+
+            </div>
+        </section>
+
+        <footer class="main-footer pdev-footer">
+            <span>GabayAral &copy; <span data-pdev-year></span> | Platform Developer</span>
+            <span data-pdev-last-updated></span>
+        </footer>
+
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/platform-developer.js"></script>
+<script src="../../assets/js/layout.js"></script>
+
+</body>
+</html>

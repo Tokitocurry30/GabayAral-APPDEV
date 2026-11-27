@@ -1,0 +1,709 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+
+    <title>Platform Settings | GabayAral</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SHARED STYLES -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+
+    <!-- PLATFORM ADMIN -->
+    <link rel="stylesheet" href="../../assets/css/platform-admin.css">
+</head>
+
+<body>
+
+<div class="app-shell platform-admin-app"
+     data-pa-page="platform-settings">
+
+    <!-- SIDEBAR -->
+    <div id="paSidebarMount"></div>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+
+    <!-- MAIN AREA -->
+    <main class="main-area">
+
+        <!-- TOPBAR -->
+        <div id="paTopbarMount"></div>
+
+
+        <section class="main-content pa-content">
+
+            <div class="pa-page">
+
+
+                <!-- PAGE HEADER -->
+                <header class="pa-page-header">
+
+                    <div class="pa-page-header-copy">
+
+                        <span class="pa-eyebrow">
+                            SECURITY AND OPERATIONS / PA-14
+                        </span>
+
+                        <h1 class="pa-page-title">
+                            Platform Settings
+                        </h1>
+
+                        <p class="pa-page-description">
+                            Review and prepare authorized platform-wide
+                            configuration changes and administrative settings.
+                        </p>
+
+                        <div class="pa-page-meta">
+
+                            <span>
+                                <i class="bi bi-calendar3"></i>
+                                <span data-pa-date></span>
+                            </span>
+
+                            <span>
+                                <i class="bi bi-gear"></i>
+                                Platform Configuration
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <span class="pa-page-header-icon">
+                        <i class="bi bi-gear"></i>
+                    </span>
+
+                </header>
+
+
+                <!-- DEMONSTRATION NOTICE -->
+                <div class="pa-demo-notice">
+
+                    <i class="bi bi-info-circle-fill"></i>
+
+                    <div>
+
+                        <strong>
+                            Configuration demonstration
+                        </strong>
+
+                        <span>
+                            The settings shown here are illustrative.
+                            No production configuration is changed or saved.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SECTION A: CONFIGURATION OVERVIEW -->
+                <section class="pa-page-section"
+                         data-pa-section>
+
+                    <div class="pa-section-heading">
+
+                        <div>
+
+                            <span class="pa-section-kicker">
+                                SECTION A
+                            </span>
+
+                            <h2>Configuration Overview</h2>
+
+                            <p>
+                                Overview of platform configuration categories.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pa-stat-grid">
+
+
+                        <article class="pa-stat-card"
+                                 data-pa-searchable>
+
+                            <div class="pa-stat-top">
+
+                                <span class="pa-stat-icon pa-icon-blue">
+                                    <i class="bi bi-sliders"></i>
+                                </span>
+
+                                Configuration Areas
+
+                            </div>
+
+                            <strong class="pa-stat-value">
+                                04
+                            </strong>
+
+                            <span class="pa-stat-caption">
+                                Illustrative configuration categories
+                            </span>
+
+                        </article>
+
+
+                        <article class="pa-stat-card"
+                                 data-pa-searchable>
+
+                            <div class="pa-stat-top">
+
+                                <span class="pa-stat-icon pa-icon-teal">
+                                    <i class="bi bi-check-circle"></i>
+                                </span>
+
+                                Approved Changes
+
+                            </div>
+
+                            <strong class="pa-stat-value">
+                                00
+                            </strong>
+
+                            <span class="pa-stat-caption">
+                                No live configuration source
+                            </span>
+
+                        </article>
+
+
+                        <article class="pa-stat-card"
+                                 data-pa-searchable>
+
+                            <div class="pa-stat-top">
+
+                                <span class="pa-stat-icon pa-icon-amber">
+                                    <i class="bi bi-clock"></i>
+                                </span>
+
+                                Pending Changes
+
+                            </div>
+
+                            <strong class="pa-stat-value">
+                                00
+                            </strong>
+
+                            <span class="pa-stat-caption">
+                                No actual change requests
+                            </span>
+
+                        </article>
+
+
+                        <article class="pa-stat-card"
+                                 data-pa-searchable>
+
+                            <div class="pa-stat-top">
+
+                                <span class="pa-stat-icon pa-icon-purple">
+                                    <i class="bi bi-journal-text"></i>
+                                </span>
+
+                                Configuration History
+
+                            </div>
+
+                            <strong class="pa-stat-value">
+                                N/A
+                            </strong>
+
+                            <span class="pa-stat-caption">
+                                Audit integration unavailable
+                            </span>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SECTION B: CONFIGURATION CATEGORIES -->
+                <section class="pa-page-section"
+                         data-pa-section>
+
+                    <div class="pa-section-heading">
+
+                        <div>
+
+                            <span class="pa-section-kicker">
+                                SECTION B
+                            </span>
+
+                            <h2>Platform Configuration Areas</h2>
+
+                            <p>
+                                Review the scope of platform-wide
+                                administrative settings.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pa-grid-2">
+
+
+                        <!-- GENERAL -->
+                        <article class="pa-panel"
+                                 data-pa-searchable>
+
+                            <div class="pa-panel-body">
+
+                                <span class="pa-stat-icon pa-icon-blue mb-3">
+                                    <i class="bi bi-globe2"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    General Platform Configuration
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Platform-wide configuration items within
+                                    the approved administrative authority.
+                                </p>
+
+                                <span class="pa-badge pa-badge-neutral">
+                                    Not Connected
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- SECURITY -->
+                        <article class="pa-panel"
+                                 data-pa-searchable>
+
+                            <div class="pa-panel-body">
+
+                                <span class="pa-stat-icon pa-icon-purple mb-3">
+                                    <i class="bi bi-shield-lock"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Security Configuration
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Review authorized platform security
+                                    configuration and access policies.
+                                </p>
+
+                                <span class="pa-badge pa-badge-neutral">
+                                    Not Connected
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- NOTIFICATIONS -->
+                        <article class="pa-panel"
+                                 data-pa-searchable>
+
+                            <div class="pa-panel-body">
+
+                                <span class="pa-stat-icon pa-icon-teal mb-3">
+                                    <i class="bi bi-bell"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Platform Notifications
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Review platform-wide notification
+                                    and service announcement settings.
+                                </p>
+
+                                <a href="maintenance-announcements.html"
+                                   class="pa-btn-link">
+
+                                    Open Announcements
+                                    <i class="bi bi-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- MAINTENANCE -->
+                        <article class="pa-panel"
+                                 data-pa-searchable>
+
+                            <div class="pa-panel-body">
+
+                                <span class="pa-stat-icon pa-icon-amber mb-3">
+                                    <i class="bi bi-tools"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Maintenance Configuration
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Coordinate approved maintenance
+                                    settings and notices.
+                                </p>
+
+                                <a href="maintenance-announcements.html"
+                                   class="pa-btn-link">
+
+                                    Open Maintenance
+                                    <i class="bi bi-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SECTION C: CHANGE PROPOSAL -->
+                <section class="pa-page-section"
+                         data-pa-section>
+
+                    <div class="pa-section-heading">
+
+                        <div>
+
+                            <span class="pa-section-kicker">
+                                SECTION C
+                            </span>
+
+                            <h2>Prepare Configuration Change</h2>
+
+                            <p>
+                                Document a proposed change within
+                                authorized scope.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <article class="pa-panel">
+
+                        <div class="pa-panel-header">
+
+                            <div>
+
+                                <h3>
+                                    Configuration Change Proposal
+                                </h3>
+
+                                <p>
+                                    Prepare a local demonstration proposal.
+                                </p>
+
+                            </div>
+
+                            <span class="pa-badge pa-badge-info">
+                                Demo Only
+                            </span>
+
+                        </div>
+
+
+                        <div class="pa-panel-body">
+
+                            <form
+                                data-pa-demo-form
+                                data-pa-success-message="Configuration change proposal prepared locally. No live configuration was changed."
+                            >
+
+
+                                <div class="pa-form-grid">
+
+
+                                    <!-- CONFIGURATION AREA -->
+                                    <div class="pa-field">
+
+                                        <label for="configArea">
+                                            Configuration Area
+                                            <span class="pa-required">*</span>
+                                        </label>
+
+                                        <select
+                                            class="form-select"
+                                            id="configArea"
+                                            required
+                                        >
+
+                                            <option value="">
+                                                Select configuration area
+                                            </option>
+
+                                            <option>
+                                                General Platform Configuration
+                                            </option>
+
+                                            <option>
+                                                Security Configuration
+                                            </option>
+
+                                            <option>
+                                                Platform Notifications
+                                            </option>
+
+                                            <option>
+                                                Maintenance Configuration
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <!-- REFERENCE -->
+                                    <div class="pa-field">
+
+                                        <label for="configReference">
+                                            Change Reference
+                                        </label>
+
+                                        <input
+                                            class="form-control"
+                                            id="configReference"
+                                            maxlength="100"
+                                            placeholder="Non-sensitive reference"
+                                        >
+
+                                    </div>
+
+
+                                    <!-- PROPOSED CHANGE -->
+                                    <div class="pa-field"
+                                         style="grid-column: 1 / -1;">
+
+                                        <label for="configDescription">
+                                            Proposed Change
+                                            <span class="pa-required">*</span>
+                                        </label>
+
+                                        <textarea
+                                            class="form-control"
+                                            id="configDescription"
+                                            rows="4"
+                                            maxlength="1500"
+                                            required
+                                            placeholder="Describe the proposed platform configuration change..."
+                                        ></textarea>
+
+                                    </div>
+
+
+                                    <!-- REASON -->
+                                    <div class="pa-field"
+                                         style="grid-column: 1 / -1;">
+
+                                        <label for="configReason">
+                                            Reason
+                                            <span class="pa-required">*</span>
+                                        </label>
+
+                                        <textarea
+                                            class="form-control"
+                                            id="configReason"
+                                            rows="3"
+                                            maxlength="1000"
+                                            required
+                                            placeholder="Explain the purpose and expected effect..."
+                                        ></textarea>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- FORM ACTIONS -->
+                                <div class="pa-form-actions">
+
+                                    <button
+                                        type="reset"
+                                        class="pa-btn pa-btn-secondary"
+                                    >
+
+                                        Clear
+
+                                    </button>
+
+
+                                    <button
+                                        type="submit"
+                                        class="pa-btn pa-btn-primary"
+                                    >
+
+                                        <i class="bi bi-file-earmark-check"></i>
+
+                                        Prepare Change Proposal
+
+                                    </button>
+
+                                </div>
+
+
+                                <!-- FORM RESULT -->
+                                <div
+                                    class="pa-notice success mt-3"
+                                    data-pa-form-result
+                                    hidden
+                                ></div>
+
+
+                            </form>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- SECTION D: CONFIGURATION RESPONSIBILITY -->
+                <section class="pa-page-section"
+                         data-pa-section>
+
+                    <div class="pa-section-heading">
+
+                        <div>
+
+                            <span class="pa-section-kicker">
+                                SECTION D
+                            </span>
+
+                            <h2>Configuration Responsibilities</h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <article class="pa-panel">
+
+                        <div class="pa-table-wrap">
+
+                            <table class="pa-table">
+
+                                <thead>
+
+                                    <tr>
+                                        <th>Activity</th>
+                                        <th>Platform Administrator</th>
+                                        <th>Platform Developer</th>
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>Review configuration requirements</td>
+                                        <td>Responsible within authority</td>
+                                        <td>Technical consultation</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Prepare technical implementation</td>
+                                        <td>Coordinate</td>
+                                        <td>Responsible</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Authorize platform-wide changes</td>
+                                        <td>Authorize within authority</td>
+                                        <td>No self-approval</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Record administrative decisions</td>
+                                        <td>Oversee</td>
+                                        <td>Provide technical records</td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <p class="pa-footer-note">
+
+                    <i class="bi bi-shield-lock"></i>
+
+                    Technical configuration changes outside Platform
+                    Administrator authority must be referred to an
+                    authorized Platform Developer.
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="main-footer pa-footer">
+
+            <span>
+                GabayAral &copy;
+                <span data-pa-year></span>
+                | Platform Administration
+            </span>
+
+            <span data-pa-last-updated></span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="../../assets/js/platform-admin.js"></script>
+
+<script src="../../assets/js/layout.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1828 @@
+
+/* ============================================================
+   GABAYARAL
+   PLATFORM ADMINISTRATOR SHARED DESIGN SYSTEM
+
+   Frontend: HTML5, CSS3, Bootstrap 5, Bootstrap Icons
+   Role: Platform Administrator
+
+   PAGE SCOPE:
+   PA-02 to PA-18
+
+   This stylesheet uses the existing GabayAral global
+   design tokens and shared layout structure.
+============================================================ */
+
+
+/* ============================================================
+   01. PLATFORM ADMINISTRATOR VARIABLES
+============================================================ */
+
+.platform-admin-app {
+    --pa-navy: #16324F;
+    --pa-dark-navy: #102E49;
+    --pa-teal: #0F766E;
+    --pa-turquoise: #19C5B7;
+
+    --pa-blue: #2563EB;
+    --pa-green: #15803D;
+    --pa-purple: #7C3AED;
+    --pa-amber: #B45309;
+    --pa-red: #B91C1C;
+
+    --pa-bg: #F8FAFC;
+    --pa-white: #FFFFFF;
+    --pa-gray: #F1F5F9;
+
+    --pa-ink: #14243B;
+    --pa-muted: #64748B;
+    --pa-border: #E2E8F0;
+
+    --pa-radius: 12px;
+    --pa-shadow: 0 2px 8px rgba(15, 35, 55, .045);
+
+    min-height: 100vh;
+    background: var(--pa-bg);
+    color: var(--pa-ink);
+    font-family: "Inter", sans-serif;
+}
+
+.platform-admin-app *,
+.platform-admin-app *::before,
+.platform-admin-app *::after {
+    box-sizing: border-box;
+}
+
+.platform-admin-app button,
+.platform-admin-app input,
+.platform-admin-app select,
+.platform-admin-app textarea {
+    font: inherit;
+}
+
+
+/* ============================================================
+   02. SIDEBAR
+============================================================ */
+
+.platform-admin-app .pa-sidebar {
+    background: linear-gradient(
+        180deg,
+        #102E49,
+        #0E2A43
+    );
+
+    color: #FFFFFF;
+}
+
+.platform-admin-app .pa-sidebar .brand-block {
+    padding: 20px 18px 16px;
+    margin: 0 12px;
+}
+
+.platform-admin-app .pa-sidebar .brand {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.platform-admin-app .pa-sidebar .brand i {
+    color: var(--pa-turquoise);
+}
+
+.platform-admin-app .pa-sidebar .role-pill {
+    margin-left: 37px;
+    font-size: 10px;
+    padding: 5px 9px;
+}
+
+.platform-admin-app .pa-sidebar .side-nav {
+    padding: 10px 11px 16px;
+}
+
+.platform-admin-app .pa-sidebar .nav-group {
+    padding: 9px 0;
+}
+
+.platform-admin-app .pa-sidebar .nav-heading {
+    font-size: 9px;
+    letter-spacing: .7px;
+}
+
+.platform-admin-app .pa-sidebar .side-link {
+    min-height: 39px;
+    gap: 10px;
+    padding: 9px 11px;
+    font-size: 11px;
+    border-radius: 7px;
+}
+
+.platform-admin-app .pa-sidebar .side-link i {
+    width: 18px;
+    font-size: 15px;
+}
+
+.platform-admin-app .pa-sidebar .side-link.active {
+    background: var(--pa-teal);
+    color: #FFFFFF;
+}
+
+.platform-admin-app .pa-sidebar .sidebar-footer {
+    font-size: 10px;
+}
+
+
+/* ============================================================
+   03. TOPBAR
+============================================================ */
+
+.platform-admin-app .pa-topbar {
+    min-height: 64px;
+    padding: 0 22px;
+    background: #FFFFFF;
+    border-bottom: 1px solid var(--pa-border);
+}
+
+.platform-admin-app .pa-topbar-tools {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.platform-admin-app .pa-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-width: 0;
+
+    color: var(--pa-muted);
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.platform-admin-app .pa-breadcrumbs i {
+    color: var(--pa-blue);
+}
+
+.platform-admin-app .pa-breadcrumbs strong {
+    color: var(--pa-ink);
+}
+
+.platform-admin-app .pa-icon-button {
+    position: relative;
+
+    display: inline-grid;
+    width: 37px;
+    height: 37px;
+
+    flex: 0 0 37px;
+
+    place-items: center;
+
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    background: #FFFFFF;
+    color: #475569;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: .15s ease;
+}
+
+.platform-admin-app .pa-icon-button:hover {
+    border-color: var(--pa-border);
+    background: #F8FAFC;
+    color: var(--pa-teal);
+}
+
+.platform-admin-app .pa-icon-button:focus-visible {
+    outline: 3px solid rgba(15, 118, 110, .2);
+    outline-offset: 2px;
+}
+
+.platform-admin-app .pa-search-box {
+    width: min(260px, 23vw);
+    min-height: 37px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 7px 10px;
+
+    border: 1px solid var(--pa-border);
+    border-radius: 8px;
+
+    background: #FFFFFF;
+    color: var(--pa-muted);
+}
+
+.platform-admin-app .pa-search-box input {
+    width: 100%;
+    min-width: 0;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+    color: var(--pa-ink);
+
+    font-size: 10px;
+}
+
+.platform-admin-app .pa-search-box:focus-within {
+    border-color: #80C5B8;
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, .08);
+}
+
+.platform-admin-app .pa-notification-dot {
+    position: absolute;
+    top: 6px;
+    right: 7px;
+
+    width: 7px;
+    height: 7px;
+
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+
+    background: #EF4444;
+}
+
+
+/* ============================================================
+   04. PROFILE MENU
+============================================================ */
+
+.platform-admin-app .pa-profile-wrapper {
+    position: relative;
+}
+
+.platform-admin-app .pa-profile-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    min-height: 39px;
+
+    padding: 3px 5px;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: transparent;
+    color: var(--pa-ink);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.platform-admin-app .pa-profile-button:hover {
+    background: #F8FAFC;
+}
+
+.platform-admin-app .pa-avatar {
+    display: grid;
+
+    width: 32px;
+    height: 32px;
+
+    flex: 0 0 32px;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--pa-navy);
+    color: #FFFFFF;
+
+    font-size: 15px;
+}
+
+.platform-admin-app .pa-profile-chevron {
+    color: var(--pa-muted);
+    font-size: 10px;
+}
+
+.platform-admin-app .pa-profile-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+
+    z-index: 1100;
+
+    width: 245px;
+
+    padding: 8px;
+
+    border: 1px solid var(--pa-border);
+    border-radius: 11px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0 12px 35px rgba(15, 35, 55, .13);
+}
+
+.platform-admin-app .pa-profile-menu[hidden] {
+    display: none !important;
+}
+
+.platform-admin-app .pa-profile-menu-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px;
+}
+
+.platform-admin-app .pa-profile-menu-avatar {
+    display: grid;
+
+    width: 38px;
+    height: 38px;
+
+    flex: 0 0 38px;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #E4F7F4;
+    color: var(--pa-teal);
+
+    font-size: 17px;
+}
+
+.platform-admin-app .pa-profile-menu-header div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.platform-admin-app .pa-profile-menu-header strong {
+    color: var(--pa-navy);
+    font-size: 10px;
+}
+
+.platform-admin-app .pa-profile-menu-header small {
+    color: var(--pa-muted);
+    font-size: 9px;
+}
+
+.platform-admin-app .pa-profile-divider {
+    height: 1px;
+    margin: 5px 0;
+    background: var(--pa-border);
+}
+
+.platform-admin-app .pa-profile-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    width: 100%;
+    min-height: 37px;
+
+    padding: 8px 10px;
+
+    border: 0;
+    border-radius: 7px;
+
+    background: transparent;
+    color: #475569;
+
+    font-size: 10px;
+    text-align: left;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.platform-admin-app .pa-profile-menu-item:hover {
+    background: #F1F5F9;
+    color: var(--pa-teal);
+}
+
+.platform-admin-app .pa-profile-menu-item.danger {
+    color: var(--pa-red);
+}
+
+
+/* ============================================================
+   05. MAIN CONTENT
+============================================================ */
+
+.platform-admin-app .pa-content {
+    width: 100%;
+    max-width: 1800px;
+
+    padding: 21px 24px;
+    margin: 0 auto;
+}
+
+.platform-admin-app .pa-page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.platform-admin-app .pa-page-section {
+    min-width: 0;
+}
+
+.platform-admin-app .pa-page-section[hidden] {
+    display: none !important;
+}
+
+.platform-admin-app .pa-page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 18px;
+
+    padding: 22px;
+
+    border: 1px solid var(--pa-border);
+    border-radius: var(--pa-radius);
+
+    background: #FFFFFF;
+    box-shadow: var(--pa-shadow);
+}
+
+.platform-admin-app .pa-page-header-copy {
+    min-width: 0;
+}
+
+.platform-admin-app .pa-eyebrow {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--pa-teal);
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .9px;
+}
+
+.platform-admin-app .pa-page-title {
+    margin: 0;
+
+    color: var(--pa-navy);
+
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -.4px;
+}
+
+.platform-admin-app .pa-page-description {
+    max-width: 750px;
+
+    margin: 7px 0 0;
+
+    color: var(--pa-muted);
+
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+.platform-admin-app .pa-page-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 9px 15px;
+
+    margin-top: 12px;
+
+    color: var(--pa-muted);
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.platform-admin-app .pa-page-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.platform-admin-app .pa-page-meta i {
+    color: var(--pa-teal);
+}
+
+.platform-admin-app .pa-page-header-icon {
+    display: grid;
+
+    width: 58px;
+    height: 58px;
+
+    flex: 0 0 58px;
+
+    place-items: center;
+
+    border-radius: 12px;
+
+    background: #E4F7F4;
+    color: var(--pa-teal);
+
+    font-size: 26px;
+}
+
+
+/* ============================================================
+   06. DEMONSTRATION NOTICE
+============================================================ */
+
+.platform-admin-app .pa-demo-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    padding: 12px 15px;
+
+    border: 1px solid #BFDBFE;
+    border-radius: 9px;
+
+    background: #EFF6FF;
+    color: #1E40AF;
+
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+.platform-admin-app .pa-demo-notice > i {
+    flex: 0 0 auto;
+    margin-top: 2px;
+    font-size: 15px;
+}
+
+.platform-admin-app .pa-demo-notice > div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.platform-admin-app .pa-demo-notice strong {
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.platform-admin-app .pa-demo-notice span {
+    color: #1E40AF;
+}
+
+
+/* ============================================================
+   07. SECTION HEADINGS
+============================================================ */
+
+.platform-admin-app .pa-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 11px;
+}
+
+.platform-admin-app .pa-section-kicker {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--pa-teal);
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .8px;
+}
+
+.platform-admin-app .pa-section-heading h2 {
+    margin: 0;
+
+    color: var(--pa-navy);
+
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.platform-admin-app .pa-section-heading p {
+    margin: 4px 0 0;
+
+    color: var(--pa-muted);
+
+    font-size: 9px;
+    line-height: 1.55;
+}
+
+
+/* ============================================================
+   08. SUMMARY CARDS
+============================================================ */
+
+.platform-admin-app .pa-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.platform-admin-app .pa-stat-card {
+    display: flex;
+    min-width: 0;
+    min-height: 145px;
+
+    flex-direction: column;
+
+    padding: 15px;
+
+    border: 1px solid var(--pa-border);
+    border-radius: 11px;
+
+    background: #FFFFFF;
+    box-shadow: var(--pa-shadow);
+
+    transition: .15s ease;
+}
+
+.platform-admin-app .pa-stat-card:hover {
+    border-color: #B8DCD5;
+    transform: translateY(-2px);
+}
+
+.platform-admin-app .pa-stat-top {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 13px;
+
+    color: var(--pa-muted);
+
+    font-size: 9px;
+    font-weight: 750;
+}
+
+.platform-admin-app .pa-stat-icon {
+    display: grid;
+
+    width: 35px;
+    height: 35px;
+
+    flex: 0 0 35px;
+
+    place-items: center;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+}
+
+.platform-admin-app .pa-icon-blue {
+    background: #EFF6FF;
+    color: #2563EB;
+}
+
+.platform-admin-app .pa-icon-teal {
+    background: #E4F7F4;
+    color: #0F766E;
+}
+
+.platform-admin-app .pa-icon-amber {
+    background: #FFF7ED;
+    color: #B45309;
+}
+
+.platform-admin-app .pa-icon-purple {
+    background: #F3E8FF;
+    color: #7C3AED;
+}
+
+.platform-admin-app .pa-icon-red {
+    background: #FEF2F2;
+    color: #B91C1C;
+}
+
+.platform-admin-app .pa-icon-gray {
+    background: #F1F5F9;
+    color: #64748B;
+}
+
+.platform-admin-app .pa-stat-value {
+    display: block;
+
+    color: var(--pa-navy);
+
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.platform-admin-app .pa-stat-caption {
+    margin-top: auto;
+    padding-top: 8px;
+
+    color: #94A3B8;
+
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   09. GRID LAYOUTS
+============================================================ */
+
+.platform-admin-app .pa-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.platform-admin-app .pa-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.platform-admin-app .pa-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.platform-admin-app .pa-grid-main-side {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(270px, .8fr);
+    gap: 14px;
+    align-items: start;
+}
+
+
+/* ============================================================
+   10. PANELS AND CARDS
+============================================================ */
+
+.platform-admin-app .pa-panel {
+    min-width: 0;
+    overflow: hidden;
+
+    border: 1px solid var(--pa-border);
+    border-radius: 11px;
+
+    background: #FFFFFF;
+    box-shadow: var(--pa-shadow);
+}
+
+.platform-admin-app .pa-panel-body {
+    padding: 16px;
+}
+
+.platform-admin-app .pa-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 15px 16px;
+
+    border-bottom: 1px solid var(--pa-border);
+}
+
+.platform-admin-app .pa-panel-header h3 {
+    margin: 0;
+
+    color: var(--pa-navy);
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.platform-admin-app .pa-panel-header p {
+    margin: 4px 0 0;
+
+    color: var(--pa-muted);
+
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.platform-admin-app .pa-panel-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    padding: 12px 16px;
+
+    border-top: 1px solid var(--pa-border);
+    background: #FAFCFE;
+}
+
+
+/* ============================================================
+   11. BUTTONS
+============================================================ */
+
+.platform-admin-app .pa-btn {
+    display: inline-flex;
+
+    min-height: 36px;
+
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    padding: 8px 12px;
+
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 750;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: .15s ease;
+}
+
+.platform-admin-app .pa-btn:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.platform-admin-app .pa-btn-primary {
+    border-color: var(--pa-teal);
+    background: var(--pa-teal);
+    color: #FFFFFF;
+}
+
+.platform-admin-app .pa-btn-primary:hover {
+    border-color: #115E59;
+    background: #115E59;
+    color: #FFFFFF;
+}
+
+.platform-admin-app .pa-btn-secondary {
+    border-color: var(--pa-border);
+    background: #FFFFFF;
+    color: #475569;
+}
+
+.platform-admin-app .pa-btn-secondary:hover {
+    background: #F1F5F9;
+    color: var(--pa-navy);
+}
+
+.platform-admin-app .pa-btn-danger {
+    border-color: #FECACA;
+    background: #FEF2F2;
+    color: #B91C1C;
+}
+
+.platform-admin-app .pa-btn-danger:hover {
+    background: #FEE2E2;
+}
+
+.platform-admin-app .pa-btn-warning {
+    border-color: #FDE2B8;
+    background: #FFFBEB;
+    color: #92400E;
+}
+
+.platform-admin-app .pa-btn-link {
+    padding: 5px 0;
+    border: 0;
+    background: transparent;
+    color: var(--pa-teal);
+    text-decoration: none;
+}
+
+.platform-admin-app .pa-btn-link:hover {
+    color: #115E59;
+    text-decoration: underline;
+}
+
+.platform-admin-app .pa-btn:focus-visible {
+    outline: 3px solid rgba(15, 118, 110, .2);
+    outline-offset: 2px;
+}
+
+
+/* ============================================================
+   12. STATUS BADGES
+============================================================ */
+
+.platform-admin-app .pa-badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 8px;
+    font-weight: 800;
+    line-height: 1.4;
+
+    white-space: nowrap;
+}
+
+.platform-admin-app .pa-badge-success {
+    background: #DCFCE7;
+    color: #166534;
+}
+
+.platform-admin-app .pa-badge-warning {
+    background: #FFF7ED;
+    color: #9A3412;
+}
+
+.platform-admin-app .pa-badge-danger {
+    background: #FEE2E2;
+    color: #991B1B;
+}
+
+.platform-admin-app .pa-badge-info {
+    background: #DBEAFE;
+    color: #1D4ED8;
+}
+
+.platform-admin-app .pa-badge-purple {
+    background: #F3E8FF;
+    color: #6B21A8;
+}
+
+.platform-admin-app .pa-badge-neutral {
+    background: #F1F5F9;
+    color: #64748B;
+}
+
+
+/* ============================================================
+   13. TABLES
+============================================================ */
+
+.platform-admin-app .pa-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.platform-admin-app .pa-table {
+    width: 100%;
+    min-width: 720px;
+
+    margin: 0;
+
+    border-collapse: collapse;
+    background: #FFFFFF;
+}
+
+.platform-admin-app .pa-table th {
+    padding: 12px 13px;
+
+    border-bottom: 1px solid var(--pa-border);
+
+    background: #F8FAFC;
+    color: #64748B;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: .3px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.platform-admin-app .pa-table td {
+    padding: 13px;
+
+    border-bottom: 1px solid #F1F5F9;
+
+    color: #475569;
+
+    font-size: 10px;
+    vertical-align: middle;
+}
+
+.platform-admin-app .pa-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.platform-admin-app .pa-table tbody tr:hover {
+    background: #FAFCFE;
+}
+
+.platform-admin-app .pa-table-primary {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.platform-admin-app .pa-table-primary strong {
+    color: var(--pa-navy);
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.platform-admin-app .pa-table-primary small {
+    color: #94A3B8;
+    font-size: 9px;
+}
+
+.platform-admin-app .pa-code {
+    display: inline-flex;
+
+    padding: 5px 8px;
+
+    border: 1px solid var(--pa-border);
+    border-radius: 6px;
+
+    background: #F8FAFC;
+    color: #475569;
+
+    font-family: monospace;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+
+/* ============================================================
+   14. TOOLBARS AND FILTERS
+============================================================ */
+
+.platform-admin-app .pa-toolbar {
+    display: flex;
+
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    padding: 13px 16px;
+
+    border-bottom: 1px solid var(--pa-border);
+}
+
+.platform-admin-app .pa-field {
+    display: flex;
+    min-width: 0;
+
+    flex-direction: column;
+    gap: 6px;
+}
+
+.platform-admin-app .pa-field label {
+    color: #475569;
+    font-size: 9px;
+    font-weight: 750;
+}
+
+.platform-admin-app .pa-field .form-control,
+.platform-admin-app .pa-field .form-select {
+    min-height: 38px;
+
+    padding: 8px 10px;
+
+    border: 1px solid #DCE3EB;
+    border-radius: 8px;
+
+    color: var(--pa-ink);
+    font-family: inherit;
+    font-size: 10px;
+
+    box-shadow: none;
+}
+
+.platform-admin-app .pa-field .form-control:focus,
+.platform-admin-app .pa-field .form-select:focus {
+    border-color: #80C5B8;
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, .08);
+}
+
+.platform-admin-app .pa-field-help {
+    color: #94A3B8;
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.platform-admin-app .pa-required {
+    color: #DC2626;
+}
+
+
+/* ============================================================
+   15. EMPTY STATES
+============================================================ */
+
+.platform-admin-app .pa-empty {
+    display: flex;
+
+    min-height: 190px;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+    gap: 9px;
+
+    padding: 25px;
+
+    color: var(--pa-muted);
+    text-align: center;
+}
+
+.platform-admin-app .pa-empty-icon {
+    display: grid;
+
+    width: 46px;
+    height: 46px;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #F1F5F9;
+    color: #64748B;
+
+    font-size: 20px;
+}
+
+.platform-admin-app .pa-empty strong {
+    color: var(--pa-navy);
+    font-size: 11px;
+}
+
+.platform-admin-app .pa-empty p {
+    max-width: 360px;
+    margin: 0;
+    font-size: 9px;
+    line-height: 1.6;
+}
+
+
+/* ============================================================
+   16. FORMS
+============================================================ */
+
+.platform-admin-app .pa-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.platform-admin-app .pa-form-section {
+    padding: 16px;
+
+    border: 1px solid var(--pa-border);
+    border-radius: 10px;
+
+    background: #FFFFFF;
+}
+
+.platform-admin-app .pa-form-section h3 {
+    margin: 0 0 5px;
+    color: var(--pa-navy);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.platform-admin-app .pa-form-section > p {
+    margin: 0 0 14px;
+    color: var(--pa-muted);
+    font-size: 9px;
+    line-height: 1.55;
+}
+
+.platform-admin-app .pa-form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 9px;
+
+    padding-top: 13px;
+    margin-top: 13px;
+
+    border-top: 1px solid var(--pa-border);
+}
+
+
+/* ============================================================
+   17. DETAIL INFORMATION
+============================================================ */
+
+.platform-admin-app .pa-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.platform-admin-app .pa-detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    padding: 11px;
+
+    border: 1px solid #E8EDF3;
+    border-radius: 8px;
+
+    background: #FAFCFE;
+}
+
+.platform-admin-app .pa-detail-item span {
+    color: #94A3B8;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .4px;
+}
+
+.platform-admin-app .pa-detail-item strong {
+    color: var(--pa-navy);
+    font-size: 10px;
+    font-weight: 750;
+    overflow-wrap: anywhere;
+}
+
+
+/* ============================================================
+   18. TIMELINE
+============================================================ */
+
+.platform-admin-app .pa-timeline {
+    display: flex;
+    flex-direction: column;
+}
+
+.platform-admin-app .pa-timeline-item {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+
+    padding: 11px 0;
+}
+
+.platform-admin-app .pa-timeline-item:not(:last-child)::before {
+    content: "";
+
+    position: absolute;
+    top: 32px;
+    bottom: -5px;
+    left: 13px;
+
+    width: 1px;
+
+    background: #DCE5ED;
+}
+
+.platform-admin-app .pa-timeline-dot {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+
+    width: 27px;
+    height: 27px;
+
+    flex: 0 0 27px;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #E4F7F4;
+    color: var(--pa-teal);
+
+    font-size: 11px;
+}
+
+.platform-admin-app .pa-timeline-content {
+    min-width: 0;
+}
+
+.platform-admin-app .pa-timeline-content strong {
+    display: block;
+    color: var(--pa-navy);
+    font-size: 10px;
+}
+
+.platform-admin-app .pa-timeline-content p {
+    margin: 4px 0;
+    color: var(--pa-muted);
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.platform-admin-app .pa-timeline-content small {
+    color: #94A3B8;
+    font-size: 8px;
+}
+
+
+/* ============================================================
+   19. SETTINGS AND TOGGLES
+============================================================ */
+
+.platform-admin-app .pa-setting-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.platform-admin-app .pa-setting-row:last-child {
+    border-bottom: 0;
+}
+
+.platform-admin-app .pa-setting-info {
+    min-width: 0;
+}
+
+.platform-admin-app .pa-setting-info strong {
+    display: block;
+    color: var(--pa-navy);
+    font-size: 10px;
+    font-weight: 750;
+}
+
+.platform-admin-app .pa-setting-info small {
+    display: block;
+    margin-top: 4px;
+    color: var(--pa-muted);
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.platform-admin-app .pa-setting-row .form-check-input {
+    flex: 0 0 auto;
+    width: 34px;
+    height: 18px;
+    margin: 0;
+    cursor: pointer;
+    accent-color: var(--pa-teal);
+}
+
+
+/* ============================================================
+   20. NOTICES
+============================================================ */
+
+.platform-admin-app .pa-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+
+    padding: 12px;
+
+    border: 1px solid var(--pa-border);
+    border-radius: 9px;
+
+    background: #F8FAFC;
+
+    color: #475569;
+
+    font-size: 9px;
+    line-height: 1.6;
+}
+
+.platform-admin-app .pa-notice i {
+    flex: 0 0 auto;
+    margin-top: 1px;
+}
+
+.platform-admin-app .pa-notice.info {
+    border-color: #BFDBFE;
+    background: #EFF6FF;
+    color: #1E40AF;
+}
+
+.platform-admin-app .pa-notice.warning {
+    border-color: #FDE2B8;
+    background: #FFFBEB;
+    color: #92400E;
+}
+
+.platform-admin-app .pa-notice.success {
+    border-color: #BBF7D0;
+    background: #F0FDF4;
+    color: #166534;
+}
+
+.platform-admin-app .pa-notice.danger {
+    border-color: #FECACA;
+    background: #FEF2F2;
+    color: #991B1B;
+}
+
+
+/* ============================================================
+   21. PAGINATION
+============================================================ */
+
+.platform-admin-app .pa-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 13px 16px;
+
+    border-top: 1px solid var(--pa-border);
+}
+
+.platform-admin-app .pa-pagination-info {
+    color: var(--pa-muted);
+    font-size: 9px;
+}
+
+.platform-admin-app .pa-pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.platform-admin-app .pa-page-button {
+    display: grid;
+
+    min-width: 30px;
+    height: 30px;
+
+    place-items: center;
+
+    padding: 0 7px;
+
+    border: 1px solid var(--pa-border);
+    border-radius: 7px;
+
+    background: #FFFFFF;
+    color: #475569;
+
+    font-size: 9px;
+    font-weight: 750;
+
+    cursor: pointer;
+}
+
+.platform-admin-app .pa-page-button.active {
+    border-color: var(--pa-teal);
+    background: var(--pa-teal);
+    color: #FFFFFF;
+}
+
+.platform-admin-app .pa-page-button:disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+
+/* ============================================================
+   22. TOAST NOTIFICATION
+============================================================ */
+
+.platform-admin-app .pa-toast {
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    z-index: 2000;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    width: min(390px, calc(100% - 30px));
+
+    padding: 13px 15px;
+
+    border: 1px solid #CDE9E4;
+    border-radius: 10px;
+
+    background: #FFFFFF;
+    color: var(--pa-navy);
+
+    box-shadow: 0 12px 35px rgba(15, 35, 55, .15);
+
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+.platform-admin-app .pa-toast[hidden] {
+    display: none !important;
+}
+
+.platform-admin-app .pa-toast i {
+    color: var(--pa-teal);
+    font-size: 16px;
+}
+
+
+/* ============================================================
+   23. MODALS
+============================================================ */
+
+.platform-admin-app .pa-modal .modal-content {
+    overflow: hidden;
+
+    border: 1px solid var(--pa-border);
+    border-radius: 13px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0 18px 50px rgba(15, 35, 55, .18);
+}
+
+.platform-admin-app .pa-modal .modal-header {
+    padding: 17px 20px;
+    border-bottom: 1px solid var(--pa-border);
+}
+
+.platform-admin-app .pa-modal .modal-title {
+    color: var(--pa-navy);
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.platform-admin-app .pa-modal .modal-body {
+    padding: 19px 20px;
+}
+
+.platform-admin-app .pa-modal .modal-footer {
+    padding: 13px 20px;
+    border-top: 1px solid var(--pa-border);
+}
+
+.platform-admin-app .pa-modal .form-label {
+    color: #334155;
+    font-size: 10px;
+    font-weight: 750;
+}
+
+.platform-admin-app .pa-modal .form-control,
+.platform-admin-app .pa-modal .form-select {
+    min-height: 39px;
+    border-color: #DCE3EB;
+    border-radius: 8px;
+    font-size: 10px;
+}
+
+.platform-admin-app .pa-modal textarea.form-control {
+    min-height: 100px;
+}
+
+
+/* ============================================================
+   24. FOOTER
+============================================================ */
+
+.platform-admin-app .pa-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    padding: 14px 24px;
+
+    border-top: 1px solid var(--pa-border);
+
+    background: #FFFFFF;
+    color: var(--pa-muted);
+
+    font-size: 9px;
+}
+
+.platform-admin-app .pa-footer-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+
+    margin: 0;
+
+    color: #94A3B8;
+
+    font-size: 9px;
+    line-height: 1.6;
+}
+
+.platform-admin-app .pa-footer-note i {
+    color: var(--pa-teal);
+}
+
+
+/* ============================================================
+   25. SEARCH VISIBILITY
+============================================================ */
+
+.platform-admin-app [data-pa-searchable][hidden],
+.platform-admin-app [data-pa-section][hidden] {
+    display: none !important;
+}
+
+
+/* ============================================================
+   26. ACCESSIBILITY
+============================================================ */
+
+.platform-admin-app :focus-visible {
+    outline: 3px solid rgba(15, 118, 110, .2);
+    outline-offset: 2px;
+}
+
+.platform-admin-app .visually-hidden-focusable:not(:focus):not(:focus-within) {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+
+/* ============================================================
+   27. RESPONSIVE TABLET
+============================================================ */
+
+@media (max-width: 1100px) {
+
+    .platform-admin-app .pa-stat-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .platform-admin-app .pa-grid-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .platform-admin-app .pa-grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* ============================================================
+   28. RESPONSIVE MOBILE
+============================================================ */
+
+@media (max-width: 900px) {
+
+    .platform-admin-app .pa-content {
+        padding: 16px;
+    }
+
+    .platform-admin-app .pa-grid-main-side {
+        grid-template-columns: 1fr;
+    }
+
+    .platform-admin-app .pa-topbar {
+        flex-wrap: wrap;
+        padding: 10px 14px;
+    }
+
+    .platform-admin-app .pa-topbar-tools {
+        width: 100%;
+        order: 3;
+    }
+
+    .platform-admin-app .pa-search-box {
+        flex: 1;
+        width: auto;
+    }
+
+    .platform-admin-app .pa-page-header {
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .platform-admin-app .pa-content {
+        padding: 14px 12px;
+    }
+
+    .platform-admin-app .pa-page-header {
+        padding: 16px;
+    }
+
+    .platform-admin-app .pa-page-title {
+        font-size: 22px;
+    }
+
+    .platform-admin-app .pa-page-header-icon {
+        width: 46px;
+        height: 46px;
+        flex-basis: 46px;
+        font-size: 21px;
+    }
+
+    .platform-admin-app .pa-grid-2,
+    .platform-admin-app .pa-grid-3,
+    .platform-admin-app .pa-grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .platform-admin-app .pa-form-grid,
+    .platform-admin-app .pa-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .platform-admin-app .pa-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .platform-admin-app .pa-toolbar > * {
+        width: 100%;
+    }
+
+    .platform-admin-app .pa-pagination {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .platform-admin-app .pa-footer {
+        padding: 13px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .platform-admin-app .pa-stat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .platform-admin-app .pa-stat-card {
+        min-height: 125px;
+    }
+
+    .platform-admin-app .pa-page-header {
+        gap: 10px;
+    }
+
+    .platform-admin-app .pa-page-description {
+        font-size: 10px;
+    }
+
+    .platform-admin-app .pa-profile-label,
+    .platform-admin-app .pa-profile-chevron {
+        display: none;
+    }
+
+    .platform-admin-app .pa-page-header-icon {
+        width: 40px;
+        height: 40px;
+        flex-basis: 40px;
+        font-size: 18px;
+    }
+
+}
+
+
+/* ============================================================
+   29. REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .platform-admin-app *,
+    .platform-admin-app *::before,
+    .platform-admin-app *::after {
+
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: .01ms !important;
+
+        scroll-behavior: auto !important;
+
+    }
+
+}

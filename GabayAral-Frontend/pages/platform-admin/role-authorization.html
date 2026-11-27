@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Role Authorization | GabayAral</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/platform-admin.css">
+</head>
+
+<body>
+<div class="app-shell platform-admin-app" data-pa-page="role-authorization">
+
+    <div id="paSidebarMount"></div>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <main class="main-area">
+        <div id="paTopbarMount"></div>
+
+        <section class="main-content pa-content">
+            <div class="pa-page">
+
+                <header class="pa-page-header">
+                    <div class="pa-page-header-copy">
+                        <span class="pa-eyebrow">PLATFORM ACCESS / PA-10</span>
+                        <h1 class="pa-page-title">Role Authorization</h1>
+                        <p class="pa-page-description">
+                            Review platform-level role assignments and
+                            their approved authorization boundaries.
+                        </p>
+                    </div>
+                    <span class="pa-page-header-icon">
+                        <i class="bi bi-person-lock"></i>
+                    </span>
+                </header>
+
+
+                <div class="pa-demo-notice">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <div>
+                        <strong>Role authorization demonstration</strong>
+                        <span>
+                            Role information is fictional. Actual role assignments
+                            and permissions must be enforced by the Backend.
+                        </span>
+                    </div>
+                </div>
+
+
+                <!-- ROLE SUMMARY -->
+
+                <section class="pa-page-section" data-pa-section>
+                    <div class="pa-section-heading">
+                        <div>
+                            <span class="pa-section-kicker">SECTION A</span>
+                            <h2>Platform Role Overview</h2>
+                        </div>
+                    </div>
+
+                    <div class="pa-grid-2">
+
+                        <article class="pa-panel">
+                            <div class="pa-panel-body">
+                                <span class="pa-stat-icon pa-icon-blue mb-3">
+                                    <i class="bi bi-shield-check"></i>
+                                </span>
+                                <h3 class="h6 fw-bold">Platform Administrator</h3>
+                                <p class="small text-secondary">
+                                    Responsible for authorized platform-level
+                                    governance and operational administration.
+                                </p>
+                                <span class="pa-badge pa-badge-info">
+                                    Higher authority appointment
+                                </span>
+                            </div>
+                        </article>
+
+                        <article class="pa-panel">
+                            <div class="pa-panel-body">
+                                <span class="pa-stat-icon pa-icon-purple mb-3">
+                                    <i class="bi bi-code-slash"></i>
+                                </span>
+                                <h3 class="h6 fw-bold">Platform Developer</h3>
+                                <p class="small text-secondary">
+                                    Responsible for authorized technical
+                                    development, maintenance and support.
+                                </p>
+                                <span class="pa-badge pa-badge-success">
+                                    Administrator review required
+                                </span>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+
+                <!-- ROLE DIRECTORY -->
+
+                <section class="pa-page-section" data-pa-section>
+                    <div class="pa-section-heading">
+                        <div>
+                            <span class="pa-section-kicker">SECTION B</span>
+                            <h2>Platform Role Assignments</h2>
+                            <p>Review the platform-level roles and their access boundaries.</p>
+                        </div>
+                    </div>
+
+                    <article class="pa-panel">
+                        <div class="pa-table-wrap">
+                            <table class="pa-table">
+                                <thead>
+                                    <tr>
+                                        <th>Role</th>
+                                        <th>Purpose</th>
+                                        <th>Authorization Authority</th>
+                                        <th>Sample Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>
+                                            <div class="pa-table-primary">
+                                                <strong>Platform Administrator</strong>
+                                                <small>Platform governance</small>
+                                            </div>
+                                        </td>
+                                        <td>Platform operations and oversight</td>
+                                        <td>Higher authorized governance authority</td>
+                                        <td><span class="pa-badge pa-badge-success">Active</span></td>
+                                        <td>
+                                            <button type="button"
+                                                    class="pa-btn pa-btn-secondary"
+                                                    data-pa-demo-action="review"
+                                                    data-pa-success-message="Platform Administrator appointment requires higher authorized governance approval.">
+                                                Review Rule
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="pa-table-primary">
+                                                <strong>Platform Developer</strong>
+                                                <small>Technical development</small>
+                                            </div>
+                                        </td>
+                                        <td>Authorized technical work</td>
+                                        <td>Platform Administrator</td>
+                                        <td><span class="pa-badge pa-badge-success">Active</span></td>
+                                        <td>
+                                            <a href="developer-access-requests.html"
+                                               class="pa-btn pa-btn-secondary">
+                                                Review Access
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+                </section>
+
+
+                <!-- ROLE BOUNDARIES -->
+
+                <section class="pa-page-section" data-pa-section>
+                    <div class="pa-section-heading">
+                        <div>
+                            <span class="pa-section-kicker">SECTION C</span>
+                            <h2>Role Permission Boundaries</h2>
+                        </div>
+                    </div>
+
+                    <article class="pa-panel">
+                        <div class="pa-table-wrap">
+                            <table class="pa-table">
+                                <thead>
+                                    <tr>
+                                        <th>Function</th>
+                                        <th>Platform Administrator</th>
+                                        <th>Platform Developer</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>Platform-wide settings</td>
+                                        <td><span class="pa-badge pa-badge-success">Manage within authority</span></td>
+                                        <td><span class="pa-badge pa-badge-info">Implement approved changes</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Developer access approval</td>
+                                        <td><span class="pa-badge pa-badge-success">Authorize</span></td>
+                                        <td><span class="pa-badge pa-badge-danger">No self-approval</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Whole-school deactivation</td>
+                                        <td><span class="pa-badge pa-badge-success">Authorize</span></td>
+                                        <td><span class="pa-badge pa-badge-danger">Not authorized</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Production deployment</td>
+                                        <td><span class="pa-badge pa-badge-success">Authorize</span></td>
+                                        <td><span class="pa-badge pa-badge-info">Execute approved deployment</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Student academic records</td>
+                                        <td><span class="pa-badge pa-badge-danger">No routine access</span></td>
+                                        <td><span class="pa-badge pa-badge-danger">No routine access</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+                </section>
+
+
+                <!-- GOVERNANCE LEVEL -->
+
+                <section class="pa-page-section" data-pa-section>
+                    <div class="pa-section-heading">
+                        <div>
+                            <span class="pa-section-kicker">SECTION D</span>
+                            <h2>Governance Level</h2>
+                        </div>
+                    </div>
+
+                    <div class="pa-notice info">
+                        <i class="bi bi-bank"></i>
+                        <div>
+                            <strong>Senior Platform Administrator</strong>
+                            is a higher governance level within Platform Administration.
+                            It is not a seventh system role. Its directions and oversight
+                            process are managed separately in Governance Oversight.
+                            <a href="governance-oversight.html">Open Governance Oversight</a>.
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- SEPARATION OF DUTIES -->
+
+                <section class="pa-page-section" data-pa-section>
+                    <div class="pa-section-heading">
+                        <div>
+                            <span class="pa-section-kicker">SECTION E</span>
+                            <h2>Separation of Duties</h2>
+                        </div>
+                    </div>
+
+                    <article class="pa-panel">
+                        <div class="pa-panel-body">
+                            <div class="pa-timeline">
+
+                                <div class="pa-timeline-item">
+                                    <span class="pa-timeline-dot">
+                                        <i class="bi bi-person-check"></i>
+                                    </span>
+                                    <div class="pa-timeline-content">
+                                        <strong>Role request</strong>
+                                        <p>Identify the intended platform role and access scope.</p>
+                                    </div>
+                                </div>
+
+                                <div class="pa-timeline-item">
+                                    <span class="pa-timeline-dot">
+                                        <i class="bi bi-shield-check"></i>
+                                    </span>
+                                    <div class="pa-timeline-content">
+                                        <strong>Independent authorization</strong>
+                                        <p>Use the authorized approval authority for that role.</p>
+                                    </div>
+                                </div>
+
+                                <div class="pa-timeline-item">
+                                    <span class="pa-timeline-dot">
+                                        <i class="bi bi-journal-check"></i>
+                                    </span>
+                                    <div class="pa-timeline-content">
+                                        <strong>Record authorization</strong>
+                                        <p>Preserve the reason, decision, scope and audit history.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+            </div>
+        </section>
+
+        <footer class="main-footer pa-footer">
+            <span>GabayAral &copy; <span data-pa-year></span> | Platform Administration</span>
+            <span data-pa-last-updated></span>
+        </footer>
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/platform-admin.js"></script>
+<script src="../../assets/js/layout.js"></script>
+</body>
+</html>

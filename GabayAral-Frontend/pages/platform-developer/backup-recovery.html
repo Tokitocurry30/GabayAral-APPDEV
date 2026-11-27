@@ -1,0 +1,1208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+
+    <title>Backup and Recovery | GabayAral</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- INTER FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- GLOBAL CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+
+    <!-- DEVELOPER CSS -->
+    <link rel="stylesheet" href="../../assets/css/platform-developer.css">
+</head>
+
+
+<body>
+
+<div class="app-shell platform-developer-app" data-pdev-page="backup-recovery">
+
+    <!-- SIDEBAR -->
+    <div id="pdevSidebarMount"></div>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+
+    <!-- MAIN AREA -->
+    <main class="main-area">
+
+        <div id="pdevTopbarMount"></div>
+
+
+        <section class="main-content pdev-content">
+
+            <div class="pdev-page">
+
+
+                <!-- PAGE HEADER -->
+
+                <header class="pdev-page-header">
+
+                    <div>
+
+                        <span class="pdev-eyebrow">
+                            TECHNICAL OPERATIONS / PDEV-09
+                        </span>
+
+                        <h1 class="pdev-page-title">
+                            Backup and Recovery
+                        </h1>
+
+                        <p class="pdev-page-description">
+                            Investigate backup concerns, prepare authorized
+                            recovery plans and validate technical recovery results.
+                        </p>
+
+                        <div class="pdev-page-meta">
+
+                            <span>
+                                <i class="bi bi-calendar3"></i>
+                                <span data-pdev-date></span>
+                            </span>
+
+                            <span>
+                                <i class="bi bi-database-check"></i>
+                                Technical Recovery
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <span class="pdev-header-icon">
+                        <i class="bi bi-database-check"></i>
+                    </span>
+
+                </header>
+
+
+                <!-- DEMONSTRATION NOTICE -->
+
+                <div class="pdev-demo-notice">
+
+                    <i class="bi bi-info-circle-fill"></i>
+
+                    <div>
+
+                        <strong>
+                            Backup and Recovery Demonstration
+                        </strong>
+
+                        <p>
+                            No backup provider, database backup source,
+                            recovery system or live monitoring feed is
+                            connected to this demonstration.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     SECTION A - OVERVIEW
+                ================================================== -->
+
+                <section class="pdev-page-section" data-pdev-section>
+
+                    <div class="pdev-section-heading">
+
+                        <div>
+
+                            <span class="pdev-section-kicker">SECTION A</span>
+
+                            <h2>Backup and Recovery Overview</h2>
+
+                            <p>
+                                Summary of available recovery information.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pdev-stat-grid">
+
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+
+                            <div class="pdev-stat-top">
+
+                                <span class="pdev-stat-icon pdev-icon-blue">
+                                    <i class="bi bi-database"></i>
+                                </span>
+
+                                Backup Status
+
+                            </div>
+
+                            <strong class="pdev-stat-value fs-5">
+                                Unknown
+                            </strong>
+
+                            <span class="pdev-stat-caption">
+                                No live backup source
+                            </span>
+
+                        </article>
+
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+
+                            <div class="pdev-stat-top">
+
+                                <span class="pdev-stat-icon pdev-icon-amber">
+                                    <i class="bi bi-clock-history"></i>
+                                </span>
+
+                                Last Backup
+
+                            </div>
+
+                            <strong class="pdev-stat-value fs-5">
+                                N/A
+                            </strong>
+
+                            <span class="pdev-stat-caption">
+                                No verified timestamp
+                            </span>
+
+                        </article>
+
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+
+                            <div class="pdev-stat-top">
+
+                                <span class="pdev-stat-icon pdev-icon-purple">
+                                    <i class="bi bi-arrow-counterclockwise"></i>
+                                </span>
+
+                                Recovery Assignments
+
+                            </div>
+
+                            <strong class="pdev-stat-value fs-5">
+                                N/A
+                            </strong>
+
+                            <span class="pdev-stat-caption">
+                                No live assignment source
+                            </span>
+
+                        </article>
+
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+
+                            <div class="pdev-stat-top">
+
+                                <span class="pdev-stat-icon pdev-icon-teal">
+                                    <i class="bi bi-check-circle"></i>
+                                </span>
+
+                                Validated Recovery
+
+                            </div>
+
+                            <strong class="pdev-stat-value fs-5">
+                                N/A
+                            </strong>
+
+                            <span class="pdev-stat-caption">
+                                No recovery results connected
+                            </span>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION B - BACKUP MONITORING
+                ================================================== -->
+
+                <section class="pdev-page-section" data-pdev-section>
+
+                    <div class="pdev-section-heading">
+
+                        <div>
+
+                            <span class="pdev-section-kicker">SECTION B</span>
+
+                            <h2>Backup Monitoring</h2>
+
+                            <p>
+                                Review backup source availability and
+                                verification information.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pdev-grid-2">
+
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-header">
+
+                                <div>
+                                    <h3>Backup Source</h3>
+                                    <p>Backup provider information.</p>
+                                </div>
+
+                                <span class="pdev-badge pdev-badge-neutral">
+                                    Not Connected
+                                </span>
+
+                            </div>
+
+
+                            <div class="pdev-panel-body">
+
+                                <div class="pdev-empty">
+
+                                    <span class="pdev-empty-icon">
+                                        <i class="bi bi-database-x"></i>
+                                    </span>
+
+                                    <strong>
+                                        No backup provider connected
+                                    </strong>
+
+                                    <p>
+                                        Backup schedules, completion results
+                                        and retention information cannot
+                                        be verified.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-header">
+
+                                <div>
+                                    <h3>Recovery Source</h3>
+                                    <p>Recovery provider information.</p>
+                                </div>
+
+                                <span class="pdev-badge pdev-badge-neutral">
+                                    Unavailable
+                                </span>
+
+                            </div>
+
+
+                            <div class="pdev-panel-body">
+
+                                <div class="pdev-empty">
+
+                                    <span class="pdev-empty-icon">
+                                        <i class="bi bi-arrow-counterclockwise"></i>
+                                    </span>
+
+                                    <strong>
+                                        No recovery source connected
+                                    </strong>
+
+                                    <p>
+                                        No live restoration test,
+                                        recovery execution or recovery
+                                        result is available.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION C - RECOVERY REGISTER
+                ================================================== -->
+
+                <section class="pdev-page-section" data-pdev-section>
+
+                    <div class="pdev-section-heading">
+
+                        <div>
+
+                            <span class="pdev-section-kicker">SECTION C</span>
+
+                            <h2>Recovery Assignment Register</h2>
+
+                            <p>
+                                Review sample recovery requests
+                                and their authorization status.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <article class="pdev-panel" data-pdev-searchable>
+
+
+                        <div class="pdev-panel-header">
+
+                            <div>
+                                <h3>Recovery Requests</h3>
+                                <p>Fictional demonstration records.</p>
+                            </div>
+
+                            <span class="pdev-badge pdev-badge-info">
+                                Demo Only
+                            </span>
+
+                        </div>
+
+
+                        <div class="pdev-toolbar">
+
+
+                            <div class="pdev-field flex-grow-1">
+
+                                <label for="recoverySearch">
+                                    Search Recovery Requests
+                                </label>
+
+                                <input
+                                    type="search"
+                                    id="recoverySearch"
+                                    class="form-control"
+                                    data-pdev-table-search="recovery"
+                                    placeholder="Search recovery reference..."
+                                >
+
+                            </div>
+
+
+                            <div class="pdev-field">
+
+                                <label for="recoveryStatus">
+                                    Status
+                                </label>
+
+                                <select
+                                    id="recoveryStatus"
+                                    class="form-select"
+                                    data-pdev-filter="status"
+                                    data-pdev-target="recovery"
+                                >
+
+                                    <option value="all">All Statuses</option>
+                                    <option value="Assigned">Assigned</option>
+                                    <option value="Awaiting Authorization">Awaiting Authorization</option>
+                                    <option value="In Progress">In Progress</option>
+                                    <option value="Validated">Validated</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                class="pdev-btn pdev-btn-secondary"
+                                data-pdev-clear-table="recovery"
+                            >
+
+                                <i class="bi bi-arrow-counterclockwise"></i>
+                                Clear
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="pdev-panel-body">
+
+                            <span
+                                class="pdev-pagination-info"
+                                data-pdev-result-count="recovery"
+                            ></span>
+
+                        </div>
+
+
+                        <div class="pdev-table-wrap" data-pdev-table-wrapper>
+
+                            <table
+                                class="pdev-table"
+                                data-pdev-table="recovery"
+                            >
+
+                                <thead>
+
+                                    <tr>
+                                        <th>Recovery Reference</th>
+                                        <th>Concern</th>
+                                        <th>Environment</th>
+                                        <th>Authorization</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody>
+
+
+                                    <tr data-pdev-row data-status="Awaiting Authorization">
+
+                                        <td>
+                                            <span class="pdev-code">DEMO-REC-001</span>
+                                        </td>
+
+                                        <td>Sample backup failure</td>
+
+                                        <td>Staging</td>
+
+                                        <td>
+                                            <span class="pdev-badge pdev-badge-warning">
+                                                Required
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span class="pdev-badge pdev-badge-warning">
+                                                Awaiting Authorization
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <button type="button" class="pdev-btn pdev-btn-secondary"
+                                                data-pdev-action="review">
+                                                Review
+                                            </button>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr data-pdev-row data-status="Assigned">
+
+                                        <td>
+                                            <span class="pdev-code">DEMO-REC-002</span>
+                                        </td>
+
+                                        <td>Sample integrity validation</td>
+
+                                        <td>Testing</td>
+
+                                        <td>
+                                            <span class="pdev-badge pdev-badge-info">
+                                                Sample Assigned
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span class="pdev-badge pdev-badge-info">
+                                                Assigned
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <button type="button" class="pdev-btn pdev-btn-secondary"
+                                                data-pdev-action="review">
+                                                Review
+                                            </button>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr data-pdev-row data-status="Validated">
+
+                                        <td>
+                                            <span class="pdev-code">DEMO-REC-003</span>
+                                        </td>
+
+                                        <td>Sample recovery validation</td>
+
+                                        <td>Testing</td>
+
+                                        <td>
+                                            <span class="pdev-badge pdev-badge-success">
+                                                Sample Authorized
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span class="pdev-badge pdev-badge-success">
+                                                Validated
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <button type="button" class="pdev-btn pdev-btn-secondary"
+                                                data-pdev-action="review">
+                                                View
+                                            </button>
+                                        </td>
+
+                                    </tr>
+
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+
+                        <div class="pdev-empty" data-pdev-table-empty="recovery" hidden>
+
+                            <span class="pdev-empty-icon">
+                                <i class="bi bi-database-check"></i>
+                            </span>
+
+                            <strong>No matching recovery records.</strong>
+
+                            <p>Change your search or filter.</p>
+
+                        </div>
+
+
+                        <div class="pdev-panel-footer">
+
+                            <span class="pdev-pagination-info">
+                                Three sample recovery records
+                            </span>
+
+                            <div
+                                class="pdev-pagination-controls"
+                                data-pdev-pagination="recovery"
+                            ></div>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION D - RECOVERY PLAN
+                ================================================== -->
+
+                <section class="pdev-page-section" data-pdev-section>
+
+                    <div class="pdev-section-heading">
+
+                        <div>
+
+                            <span class="pdev-section-kicker">SECTION D</span>
+
+                            <h2>Prepare Recovery Plan</h2>
+
+                            <p>
+                                Document the proposed technical
+                                recovery and validation procedure.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <article class="pdev-panel">
+
+
+                        <div class="pdev-panel-header">
+
+                            <div>
+                                <h3>Recovery Plan Form</h3>
+                                <p>Local demonstration form.</p>
+                            </div>
+
+                            <span class="pdev-badge pdev-badge-info">
+                                Demo Only
+                            </span>
+
+                        </div>
+
+
+                        <div class="pdev-panel-body">
+
+
+                            <div class="pdev-notice warning mb-3">
+
+                                <i class="bi bi-shield-exclamation"></i>
+
+                                <span>
+                                    Recovery must follow an approved or
+                                    applicable pre-authorized procedure.
+                                    Do not begin restricted recovery operations
+                                    without authorization.
+                                </span>
+
+                            </div>
+
+
+                            <form
+                                data-pdev-demo-form
+                                data-pdev-success-message="Recovery plan prepared locally. No backup or recovery operation was executed."
+                            >
+
+                                <div class="pdev-form-grid">
+
+
+                                    <div class="pdev-field">
+
+                                        <label for="recoveryReference">
+                                            Recovery Reference
+                                            <span class="pdev-required">*</span>
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="recoveryReference"
+                                            maxlength="100"
+                                            required
+                                        >
+
+                                    </div>
+
+
+                                    <div class="pdev-field">
+
+                                        <label for="recoveryConcern">
+                                            Recovery Concern
+                                            <span class="pdev-required">*</span>
+                                        </label>
+
+                                        <select
+                                            class="form-select"
+                                            id="recoveryConcern"
+                                            required
+                                        >
+
+                                            <option value="">Select concern</option>
+                                            <option>Backup Failure</option>
+                                            <option>Data Recovery</option>
+                                            <option>Recovery Validation</option>
+                                            <option>Integrity Investigation</option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <div class="pdev-field">
+
+                                        <label for="recoveryEnvironment">
+                                            Environment
+                                            <span class="pdev-required">*</span>
+                                        </label>
+
+                                        <select
+                                            class="form-select"
+                                            id="recoveryEnvironment"
+                                            required
+                                        >
+
+                                            <option value="">Select environment</option>
+                                            <option>Development</option>
+                                            <option>Testing</option>
+                                            <option>Staging</option>
+                                            <option>Production</option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <div class="pdev-field">
+
+                                        <label for="recoveryAuthorization">
+                                            Authorization Status
+                                            <span class="pdev-required">*</span>
+                                        </label>
+
+                                        <select
+                                            class="form-select"
+                                            id="recoveryAuthorization"
+                                            required
+                                        >
+
+                                            <option value="">Select status</option>
+                                            <option>Awaiting Authorization</option>
+                                            <option>Authorized</option>
+                                            <option>Pre-Authorized Procedure</option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <div class="pdev-field">
+
+                                        <label for="recoveryBackupReference">
+                                            Backup Reference
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="recoveryBackupReference"
+                                            maxlength="100"
+                                            placeholder="Enter approved backup reference"
+                                        >
+
+                                    </div>
+
+
+                                    <div class="pdev-field">
+
+                                        <label for="recoveryPriority">
+                                            Priority
+                                            <span class="pdev-required">*</span>
+                                        </label>
+
+                                        <select
+                                            class="form-select"
+                                            id="recoveryPriority"
+                                            required
+                                        >
+
+                                            <option value="">Select priority</option>
+                                            <option>Critical</option>
+                                            <option>High</option>
+                                            <option>Medium</option>
+                                            <option>Low</option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <div class="pdev-field" style="grid-column: 1 / -1;">
+
+                                        <label for="recoveryPlan">
+                                            Technical Recovery Plan
+                                            <span class="pdev-required">*</span>
+                                        </label>
+
+                                        <textarea
+                                            class="form-control"
+                                            id="recoveryPlan"
+                                            rows="4"
+                                            maxlength="1500"
+                                            required
+                                        ></textarea>
+
+                                    </div>
+
+
+                                    <div class="pdev-field" style="grid-column: 1 / -1;">
+
+                                        <label for="recoveryValidation">
+                                            Integrity Validation Plan
+                                            <span class="pdev-required">*</span>
+                                        </label>
+
+                                        <textarea
+                                            class="form-control"
+                                            id="recoveryValidation"
+                                            rows="3"
+                                            maxlength="1000"
+                                            required
+                                        ></textarea>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="pdev-form-actions">
+
+                                    <button type="reset" class="pdev-btn pdev-btn-secondary">
+                                        Clear
+                                    </button>
+
+                                    <button type="submit" class="pdev-btn pdev-btn-primary">
+                                        <i class="bi bi-file-earmark-check"></i>
+                                        Prepare Recovery Plan
+                                    </button>
+
+                                </div>
+
+
+                                <div class="pdev-notice success mt-3" data-pdev-form-result hidden></div>
+
+                            </form>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION E - VALIDATION
+                ================================================== -->
+
+                <section class="pdev-page-section" data-pdev-section>
+
+                    <div class="pdev-section-heading">
+
+                        <div>
+
+                            <span class="pdev-section-kicker">SECTION E</span>
+
+                            <h2>Recovery Validation Requirements</h2>
+
+                            <p>
+                                Verify the integrity and operational
+                                condition of recovered resources.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pdev-grid-2">
+
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-body">
+
+                                <span class="pdev-stat-icon pdev-icon-blue mb-3">
+                                    <i class="bi bi-database-check"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Data Integrity
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Verify that restored data meets
+                                    the approved integrity requirements.
+                                </p>
+
+                                <span class="pdev-badge pdev-badge-success">
+                                    Required
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-body">
+
+                                <span class="pdev-stat-icon pdev-icon-teal mb-3">
+                                    <i class="bi bi-check2-circle"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Service Validation
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Confirm that restored application
+                                    services function as expected.
+                                </p>
+
+                                <span class="pdev-badge pdev-badge-success">
+                                    Required
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-body">
+
+                                <span class="pdev-stat-icon pdev-icon-purple mb-3">
+                                    <i class="bi bi-shield-check"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Access Validation
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Verify that recovered resources
+                                    retain the appropriate access boundaries.
+                                </p>
+
+                                <span class="pdev-badge pdev-badge-success">
+                                    Required
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-body">
+
+                                <span class="pdev-stat-icon pdev-icon-amber mb-3">
+                                    <i class="bi bi-journal-check"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Recovery Documentation
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Preserve authorization references,
+                                    recovery results and responsible actors.
+                                </p>
+
+                                <span class="pdev-badge pdev-badge-success">
+                                    Required
+                                </span>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION F - RECOVERY LIFECYCLE
+                ================================================== -->
+
+                <section class="pdev-page-section" data-pdev-section>
+
+                    <div class="pdev-section-heading">
+
+                        <div>
+                            <span class="pdev-section-kicker">SECTION F</span>
+                            <h2>Recovery Lifecycle</h2>
+                        </div>
+
+                    </div>
+
+
+                    <article class="pdev-panel">
+
+                        <div class="pdev-panel-body">
+
+                            <div class="pdev-timeline">
+
+
+                                <div class="pdev-timeline-item">
+
+                                    <span class="pdev-timeline-dot">
+                                        <i class="bi bi-exclamation-triangle"></i>
+                                    </span>
+
+                                    <div class="pdev-timeline-content">
+
+                                        <strong>01. Identify Recovery Concern</strong>
+
+                                        <p>
+                                            Document the backup failure
+                                            or recovery requirement.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="pdev-timeline-item">
+
+                                    <span class="pdev-timeline-dot">
+                                        <i class="bi bi-search"></i>
+                                    </span>
+
+                                    <div class="pdev-timeline-content">
+
+                                        <strong>02. Investigate Technical Cause</strong>
+
+                                        <p>
+                                            Review permitted evidence
+                                            and determine recovery requirements.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="pdev-timeline-item">
+
+                                    <span class="pdev-timeline-dot">
+                                        <i class="bi bi-person-check"></i>
+                                    </span>
+
+                                    <div class="pdev-timeline-content">
+
+                                        <strong>03. Obtain Authorization</strong>
+
+                                        <p>
+                                            Verify the applicable recovery
+                                            authorization and approved procedure.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="pdev-timeline-item">
+
+                                    <span class="pdev-timeline-dot">
+                                        <i class="bi bi-database-check"></i>
+                                    </span>
+
+                                    <div class="pdev-timeline-content">
+
+                                        <strong>04. Execute Approved Recovery</strong>
+
+                                        <p>
+                                            Perform the authorized technical
+                                            recovery procedure.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="pdev-timeline-item">
+
+                                    <span class="pdev-timeline-dot">
+                                        <i class="bi bi-check-circle"></i>
+                                    </span>
+
+                                    <div class="pdev-timeline-content">
+
+                                        <strong>05. Validate Restored Resources</strong>
+
+                                        <p>
+                                            Verify data integrity and
+                                            service functionality.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="pdev-timeline-item">
+
+                                    <span class="pdev-timeline-dot">
+                                        <i class="bi bi-journal-check"></i>
+                                    </span>
+
+                                    <div class="pdev-timeline-content">
+
+                                        <strong>06. Submit Recovery Report</strong>
+
+                                        <p>
+                                            Notify the Platform Administrator
+                                            and preserve the recovery history.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <p class="pdev-footer-note">
+
+                    <i class="bi bi-shield-lock"></i>
+
+                    Recovery execution requires applicable authorization,
+                    an approved procedure and documented validation.
+                    No live backup provider is assumed.
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+        <footer class="main-footer pdev-footer">
+
+            <span>
+                GabayAral &copy;
+                <span data-pdev-year></span>
+                | Platform Developer
+            </span>
+
+            <span data-pdev-last-updated></span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- SCRIPTS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="../../assets/js/platform-developer.js"></script>
+
+<script src="../../assets/js/layout.js"></script>
+
+</body>
+</html>

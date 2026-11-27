@@ -1,0 +1,1264 @@
+
+/* ============================================================
+   GABAYARAL - PLATFORM ADMINISTRATOR
+   F13.4.1 - SCHOOL WORKSPACE DIRECTORY
+
+   Dedicated PA-04 stylesheet.
+
+   Reuses:
+   - style.css
+   - components.css
+   - responsive.css
+   - layout.css
+   - platform-admin.css
+
+   Does not modify other workspaces.
+============================================================ */
+
+
+/* ============================================================
+   01. PAGE BASE
+============================================================ */
+
+.pa-workspaces-content {
+    padding: 20px 24px;
+    font-family: "Inter", sans-serif;
+    color: #14243B;
+}
+
+.pa-workspaces-content *,
+.pa-workspaces-content *::before,
+.pa-workspaces-content *::after {
+    box-sizing: border-box;
+}
+
+.pa-workspaces-section {
+    margin-bottom: 22px;
+}
+
+.pa-workspaces-section[hidden] {
+    display: none !important;
+}
+
+
+/* ============================================================
+   02. PAGE INTRODUCTION
+============================================================ */
+
+.pa-workspaces-welcome {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 23px;
+    margin-bottom: 15px;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0 2px 8px rgba(15, 35, 55, .035);
+}
+
+.pa-workspaces-welcome-copy {
+    min-width: 0;
+}
+
+.pa-workspaces-welcome h1 {
+    margin: 0;
+
+    color: #16324F;
+
+    font-size: 27px;
+    font-weight: 800;
+
+    letter-spacing: -.4px;
+}
+
+.pa-workspaces-welcome p {
+    max-width: 700px;
+
+    margin: 8px 0 12px;
+
+    color: #64748B;
+
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+.pa-workspaces-meta {
+    display: flex;
+
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 9px 16px;
+
+    color: #64748B;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.pa-workspaces-meta span {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 6px;
+}
+
+.pa-workspaces-meta i {
+    color: #0F766E;
+}
+
+.pa-workspaces-welcome-icon {
+    display: grid;
+
+    width: 62px;
+    height: 62px;
+
+    flex: 0 0 62px;
+
+    place-items: center;
+
+    border-radius: 13px;
+
+    background: #E4F7F4;
+    color: #0F766E;
+
+    font-size: 28px;
+}
+
+
+/* ============================================================
+   03. DEMONSTRATION NOTICE
+============================================================ */
+
+.pa-workspaces-demo-notice {
+    display: flex;
+
+    align-items: flex-start;
+    gap: 11px;
+
+    padding: 13px 15px;
+    margin-bottom: 21px;
+
+    border: 1px solid #BFDBFE;
+    border-radius: 10px;
+
+    background: #EFF6FF;
+    color: #1E40AF;
+
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+.pa-workspaces-demo-notice > i {
+    flex: 0 0 auto;
+
+    margin-top: 2px;
+
+    font-size: 16px;
+}
+
+.pa-workspaces-demo-notice > div {
+    display: flex;
+
+    flex-direction: column;
+    gap: 3px;
+}
+
+.pa-workspaces-demo-notice strong {
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.pa-workspaces-demo-notice span {
+    color: #1E40AF;
+}
+
+
+/* ============================================================
+   04. SECTION HEADINGS
+============================================================ */
+
+.pa-workspaces-section-heading {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 12px;
+}
+
+.pa-workspaces-kicker {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #0F766E;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: .9px;
+}
+
+.pa-workspaces-section-heading h2 {
+    margin: 0;
+
+    color: #16324F;
+
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.pa-workspaces-section-heading p {
+    margin: 5px 0 0;
+
+    color: #64748B;
+
+    font-size: 10px;
+    line-height: 1.55;
+}
+
+.pa-workspaces-demo-label {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 6px;
+
+    padding: 6px 10px;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 20px;
+
+    background: #F8FAFC;
+    color: #64748B;
+
+    font-size: 9px;
+    font-weight: 750;
+
+    white-space: nowrap;
+}
+
+
+/* ============================================================
+   05. SUMMARY CARDS
+============================================================ */
+
+.pa-workspaces-summary-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+.pa-workspaces-summary-card {
+    display: flex;
+
+    min-width: 0;
+    min-height: 145px;
+
+    flex-direction: column;
+
+    padding: 16px;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0 2px 8px rgba(15, 35, 55, .035);
+
+    transition:
+        transform .15s ease,
+        border-color .15s ease;
+}
+
+.pa-workspaces-summary-card:hover {
+    transform: translateY(-2px);
+    border-color: #B8DCD5;
+}
+
+.pa-workspaces-summary-top {
+    display: flex;
+
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 12px;
+
+    color: #64748B;
+
+    font-size: 10px;
+    font-weight: 750;
+}
+
+.pa-workspaces-summary-icon {
+    display: grid;
+
+    width: 36px;
+    height: 36px;
+
+    flex: 0 0 36px;
+
+    place-items: center;
+
+    border-radius: 9px;
+
+    font-size: 16px;
+}
+
+.pa-workspaces-summary-icon.is-blue {
+    background: #EFF6FF;
+    color: #2563EB;
+}
+
+.pa-workspaces-summary-icon.is-teal {
+    background: #E4F7F4;
+    color: #0F766E;
+}
+
+.pa-workspaces-summary-icon.is-amber {
+    background: #FFF7ED;
+    color: #B45309;
+}
+
+.pa-workspaces-summary-icon.is-gray {
+    background: #F1F5F9;
+    color: #64748B;
+}
+
+.pa-workspaces-summary-card > strong {
+    display: block;
+
+    color: #16324F;
+
+    font-size: 25px;
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+.pa-workspaces-summary-card > small {
+    margin-top: auto;
+    padding-top: 9px;
+
+    color: #94A3B8;
+
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   06. DIRECTORY PANEL
+============================================================ */
+
+.pa-workspaces-panel {
+    overflow: hidden;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0 2px 8px rgba(15, 35, 55, .035);
+}
+
+.pa-workspaces-panel-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 17px 18px;
+
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.pa-workspaces-panel-header h3 {
+    margin: 0;
+
+    color: #16324F;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.pa-workspaces-panel-header p {
+    margin: 5px 0 0;
+
+    color: #64748B;
+
+    font-size: 9px;
+    line-height: 1.55;
+}
+
+
+/* ============================================================
+   07. FILTER TOOLBAR
+============================================================ */
+
+.pa-workspaces-toolbar {
+    display: flex;
+
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    padding: 15px 18px;
+
+    border-bottom: 1px solid #E2E8F0;
+
+    background: #FFFFFF;
+}
+
+.pa-workspaces-filter {
+    display: flex;
+
+    min-width: 190px;
+
+    flex: 1;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.pa-workspaces-filter label {
+    color: #475569;
+
+    font-size: 9px;
+    font-weight: 750;
+}
+
+.pa-workspaces-filter .form-select {
+    min-height: 39px;
+
+    padding: 8px 32px 8px 10px;
+
+    border: 1px solid #DCE3EB;
+    border-radius: 8px;
+
+    background-color: #FFFFFF;
+    color: #14243B;
+
+    font-family: inherit;
+    font-size: 10px;
+
+    box-shadow: none;
+}
+
+.pa-workspaces-filter .form-select:focus {
+    border-color: #80C5B8;
+
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, .09);
+}
+
+
+/* CLEAR FILTERS */
+
+.pa-workspaces-clear-button {
+    display: inline-flex;
+
+    min-height: 39px;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 9px 12px;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+
+    background: #FFFFFF;
+    color: #475569;
+
+    font-family: inherit;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background .15s ease,
+        border-color .15s ease;
+}
+
+.pa-workspaces-clear-button:hover {
+    border-color: #B8DCD5;
+
+    background: #F0F8F7;
+    color: #0F766E;
+}
+
+
+/* ============================================================
+   08. TABLE TOOLBAR
+============================================================ */
+
+.pa-workspaces-table-toolbar {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 13px 18px;
+}
+
+.pa-workspaces-table-toolbar > span {
+    color: #64748B;
+
+    font-size: 9px;
+    font-weight: 650;
+}
+
+.pa-workspaces-page-size {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 8px;
+
+    color: #64748B;
+
+    font-size: 9px;
+    font-weight: 650;
+}
+
+.pa-workspaces-page-size .form-select {
+    width: 68px;
+    min-height: 32px;
+
+    padding: 5px 25px 5px 8px;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 7px;
+
+    background-color: #FFFFFF;
+
+    font-family: inherit;
+    font-size: 10px;
+
+    box-shadow: none;
+}
+
+
+/* ============================================================
+   09. DIRECTORY TABLE
+============================================================ */
+
+.pa-workspaces-table-wrap {
+    width: 100%;
+
+    overflow-x: auto;
+
+    border-top: 1px solid #E8EDF3;
+}
+
+.pa-workspaces-table-wrap[hidden] {
+    display: none !important;
+}
+
+.pa-workspaces-table {
+    width: 100%;
+    min-width: 930px;
+
+    margin: 0;
+
+    border-collapse: collapse;
+
+    background: #FFFFFF;
+}
+
+.pa-workspaces-table thead {
+    background: #F8FAFC;
+}
+
+.pa-workspaces-table th {
+    padding: 13px 14px;
+
+    border-bottom: 1px solid #E2E8F0;
+
+    color: #64748B;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: .35px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.pa-workspaces-table td {
+    padding: 13px 14px;
+
+    border-bottom: 1px solid #F1F5F9;
+
+    color: #475569;
+
+    font-size: 10px;
+
+    vertical-align: middle;
+}
+
+.pa-workspaces-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.pa-workspaces-table tbody tr:hover {
+    background: #FAFCFE;
+}
+
+
+/* SCHOOL NAME CELL */
+
+.pa-workspace-school-cell {
+    display: flex;
+
+    min-width: 180px;
+
+    align-items: center;
+    gap: 10px;
+}
+
+.pa-workspace-school-icon {
+    display: grid;
+
+    width: 36px;
+    height: 36px;
+
+    flex: 0 0 36px;
+
+    place-items: center;
+
+    border-radius: 9px;
+
+    background: #EFF6FF;
+    color: #2563EB;
+
+    font-size: 15px;
+}
+
+.pa-workspace-school-details {
+    display: flex;
+
+    min-width: 0;
+
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pa-workspace-school-details strong {
+    color: #16324F;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.pa-workspace-school-details small {
+    color: #94A3B8;
+
+    font-size: 9px;
+}
+
+
+/* WORKSPACE IDENTIFIER */
+
+.pa-workspace-id {
+    display: inline-flex;
+
+    padding: 5px 8px;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+
+    background: #F8FAFC;
+    color: #475569;
+
+    font-family: monospace;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* ============================================================
+   10. WORKSPACE STATUS
+============================================================ */
+
+.pa-workspace-status,
+.pa-workspace-request-status {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 6px 9px;
+
+    border-radius: 20px;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    line-height: 1.3;
+
+    white-space: nowrap;
+}
+
+.pa-workspace-status.is-active {
+    background: #DCFCE7;
+    color: #166534;
+}
+
+.pa-workspace-status.is-deactivated {
+    background: #F1F5F9;
+    color: #64748B;
+}
+
+.pa-workspace-request-status.is-none {
+    background: #F1F5F9;
+    color: #64748B;
+}
+
+.pa-workspace-request-status.is-deactivation-pending {
+    background: #FFF7ED;
+    color: #9A3412;
+}
+
+.pa-workspace-request-status.is-restoration-pending {
+    background: #FEF3C7;
+    color: #92400E;
+}
+
+
+/* LAST UPDATED */
+
+.pa-workspace-updated {
+    color: #64748B;
+
+    font-size: 9px;
+    white-space: nowrap;
+}
+
+
+/* VIEW DETAILS */
+
+.pa-workspace-view-link {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 7px 9px;
+
+    border: 1px solid #CDE9E4;
+    border-radius: 7px;
+
+    background: #F0F8F7;
+    color: #0F766E;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition:
+        background .15s ease,
+        border-color .15s ease;
+}
+
+.pa-workspace-view-link:hover {
+    border-color: #0F766E;
+
+    background: #E4F7F4;
+    color: #115E59;
+}
+
+
+/* ============================================================
+   11. EMPTY STATE
+============================================================ */
+
+.pa-workspaces-empty {
+    display: flex;
+
+    min-height: 230px;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+    padding: 28px 16px;
+
+    border-top: 1px solid #E8EDF3;
+
+    background: #FFFFFF;
+
+    text-align: center;
+}
+
+.pa-workspaces-empty[hidden] {
+    display: none !important;
+}
+
+.pa-workspaces-empty-icon {
+    display: grid;
+
+    width: 48px;
+    height: 48px;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #F1F5F9;
+    color: #64748B;
+
+    font-size: 21px;
+}
+
+.pa-workspaces-empty strong {
+    color: #16324F;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.pa-workspaces-empty p {
+    margin: 0;
+
+    color: #64748B;
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   12. PAGINATION
+============================================================ */
+
+.pa-workspaces-pagination {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 14px 18px;
+
+    border-top: 1px solid #E8EDF3;
+
+    background: #FFFFFF;
+}
+
+.pa-workspaces-pagination[hidden] {
+    display: none !important;
+}
+
+.pa-workspaces-pagination > span {
+    color: #64748B;
+
+    font-size: 9px;
+    font-weight: 650;
+}
+
+.pa-workspaces-pagination-controls {
+    display: flex;
+
+    align-items: center;
+    gap: 5px;
+}
+
+.pa-workspaces-page-numbers {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pa-workspaces-page-button,
+.pa-workspaces-page-number {
+    display: grid;
+
+    min-width: 31px;
+    height: 31px;
+
+    place-items: center;
+
+    padding: 0 7px;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 7px;
+
+    background: #FFFFFF;
+    color: #475569;
+
+    font-family: inherit;
+
+    font-size: 9px;
+    font-weight: 750;
+
+    cursor: pointer;
+
+    transition:
+        background .15s ease,
+        border-color .15s ease;
+}
+
+.pa-workspaces-page-button:hover:not(:disabled),
+.pa-workspaces-page-number:hover {
+    border-color: #B8DCD5;
+
+    background: #F0F8F7;
+    color: #0F766E;
+}
+
+.pa-workspaces-page-number.active {
+    border-color: #0F766E;
+
+    background: #0F766E;
+    color: #FFFFFF;
+}
+
+.pa-workspaces-page-button:disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+.pa-workspaces-page-button:focus-visible,
+.pa-workspaces-page-number:focus-visible,
+.pa-workspace-view-link:focus-visible,
+.pa-workspaces-clear-button:focus-visible {
+    outline: 3px solid rgba(15, 118, 110, .22);
+    outline-offset: 2px;
+}
+
+
+/* ============================================================
+   13. RELATED WORKSPACE OPERATIONS
+============================================================ */
+
+.pa-workspaces-shortcut-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 13px;
+}
+
+.pa-workspaces-shortcut-card {
+    display: flex;
+
+    min-width: 0;
+    min-height: 175px;
+
+    flex-direction: column;
+
+    padding: 17px;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0 2px 8px rgba(15, 35, 55, .035);
+}
+
+.pa-workspaces-shortcut-icon {
+    display: grid;
+
+    width: 39px;
+    height: 39px;
+
+    place-items: center;
+
+    margin-bottom: 13px;
+
+    border-radius: 9px;
+
+    font-size: 17px;
+}
+
+.pa-workspaces-shortcut-icon.is-blue {
+    background: #EFF6FF;
+    color: #2563EB;
+}
+
+.pa-workspaces-shortcut-icon.is-amber {
+    background: #FFF7ED;
+    color: #B45309;
+}
+
+.pa-workspaces-shortcut-card h3 {
+    margin: 0;
+
+    color: #16324F;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.pa-workspaces-shortcut-card p {
+    margin: 7px 0 13px;
+
+    color: #64748B;
+
+    font-size: 9px;
+    line-height: 1.65;
+}
+
+.pa-workspaces-shortcut-link {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 8px;
+
+    margin-top: auto;
+    padding-top: 10px;
+
+    border-top: 1px solid #F1F5F9;
+
+    color: #0F766E;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+.pa-workspaces-shortcut-link:hover {
+    color: #115E59;
+}
+
+
+/* ============================================================
+   14. SEARCH EMPTY STATE
+============================================================ */
+
+.pa-workspaces-search-empty {
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+
+    gap: 8px;
+
+    padding: 28px 15px;
+    margin: 12px 0;
+
+    border: 1px dashed #CBD5E1;
+    border-radius: 10px;
+
+    background: #FFFFFF;
+    color: #64748B;
+
+    text-align: center;
+}
+
+.pa-workspaces-search-empty[hidden] {
+    display: none !important;
+}
+
+.pa-workspaces-search-empty > i {
+    color: #94A3B8;
+    font-size: 25px;
+}
+
+.pa-workspaces-search-empty strong {
+    color: #16324F;
+    font-size: 12px;
+}
+
+.pa-workspaces-search-empty span {
+    font-size: 10px;
+}
+
+
+/* ============================================================
+   15. RESPONSIVE DESIGN
+============================================================ */
+
+
+/* TABLETS */
+
+@media (max-width: 1100px) {
+
+    .pa-workspaces-summary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* SMALL TABLETS */
+
+@media (max-width: 900px) {
+
+    .pa-workspaces-content {
+        padding: 16px;
+    }
+
+    .pa-workspaces-toolbar {
+        align-items: stretch;
+    }
+
+    .pa-workspaces-filter {
+        min-width: 180px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .pa-workspaces-content {
+        padding: 14px 12px;
+    }
+
+    .pa-workspaces-welcome {
+        padding: 16px;
+    }
+
+    .pa-workspaces-welcome h1 {
+        font-size: 23px;
+    }
+
+    .pa-workspaces-welcome-icon {
+        width: 48px;
+        height: 48px;
+
+        flex-basis: 48px;
+
+        font-size: 22px;
+    }
+
+    .pa-workspaces-meta {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .pa-workspaces-shortcut-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pa-workspaces-toolbar {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .pa-workspaces-filter {
+        min-width: 0;
+    }
+
+    .pa-workspaces-clear-button {
+        width: 100%;
+    }
+
+    .pa-workspaces-table-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .pa-workspaces-pagination {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .pa-workspaces-pagination-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+
+    .pa-workspaces-summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pa-workspaces-summary-card {
+        min-height: 125px;
+    }
+
+    .pa-workspaces-welcome {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .pa-workspaces-welcome-icon {
+        width: 40px;
+        height: 40px;
+
+        flex-basis: 40px;
+
+        font-size: 19px;
+    }
+
+    .pa-workspaces-section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .pa-workspaces-panel-header {
+        padding: 14px;
+    }
+
+    .pa-workspaces-pagination-controls {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .pa-workspaces-content *,
+    .pa-workspaces-content *::before,
+    .pa-workspaces-content *::after {
+
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: .01ms !important;
+
+    }
+
+}

@@ -1,0 +1,689 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+
+    <title>Backup and Recovery | GabayAral</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SHARED STYLES -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+
+    <!-- PLATFORM ADMIN -->
+    <link rel="stylesheet" href="../../assets/css/platform-admin.css">
+</head>
+
+<body>
+
+<div class="app-shell platform-admin-app"
+     data-pa-page="backup-recovery">
+
+    <!-- SIDEBAR -->
+    <div id="paSidebarMount"></div>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+
+    <!-- MAIN AREA -->
+    <main class="main-area">
+
+        <!-- TOPBAR -->
+        <div id="paTopbarMount"></div>
+
+
+        <section class="main-content pa-content">
+
+            <div class="pa-page">
+
+
+                <!-- PAGE HEADER -->
+                <header class="pa-page-header">
+
+                    <div class="pa-page-header-copy">
+
+                        <span class="pa-eyebrow">
+                            SECURITY AND OPERATIONS / PA-16
+                        </span>
+
+                        <h1 class="pa-page-title">
+                            Backup and Recovery
+                        </h1>
+
+                        <p class="pa-page-description">
+                            Monitor available backup and recovery information
+                            and coordinate authorized recovery procedures.
+                        </p>
+
+                        <div class="pa-page-meta">
+
+                            <span>
+                                <i class="bi bi-calendar3"></i>
+                                <span data-pa-date></span>
+                            </span>
+
+                            <span>
+                                <i class="bi bi-database-check"></i>
+                                Backup and Recovery Oversight
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <span class="pa-page-header-icon">
+                        <i class="bi bi-database-check"></i>
+                    </span>
+
+                </header>
+
+
+                <!-- DEMONSTRATION NOTICE -->
+                <div class="pa-demo-notice">
+
+                    <i class="bi bi-info-circle-fill"></i>
+
+                    <div>
+
+                        <strong>
+                            Backup monitoring source not connected
+                        </strong>
+
+                        <span>
+                            No backup vendor, recovery provider or live
+                            monitoring source has been selected or connected.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SECTION A: BACKUP OVERVIEW -->
+                <section class="pa-page-section"
+                         data-pa-section>
+
+                    <div class="pa-section-heading">
+
+                        <div>
+
+                            <span class="pa-section-kicker">
+                                SECTION A
+                            </span>
+
+                            <h2>Backup and Recovery Overview</h2>
+
+                            <p>
+                                High-level operational status information.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pa-stat-grid">
+
+
+                        <article class="pa-stat-card"
+                                 data-pa-searchable>
+
+                            <div class="pa-stat-top">
+
+                                <span class="pa-stat-icon pa-icon-blue">
+                                    <i class="bi bi-database"></i>
+                                </span>
+
+                                Backup Status
+
+                            </div>
+
+                            <strong class="pa-stat-value fs-5">
+                                Unknown
+                            </strong>
+
+                            <span class="pa-stat-caption">
+                                No live backup source
+                            </span>
+
+                            <span class="pa-badge pa-badge-neutral mt-3">
+                                Not Connected
+                            </span>
+
+                        </article>
+
+
+                        <article class="pa-stat-card"
+                                 data-pa-searchable>
+
+                            <div class="pa-stat-top">
+
+                                <span class="pa-stat-icon pa-icon-teal">
+                                    <i class="bi bi-clock-history"></i>
+                                </span>
+
+                                Last Backup
+
+                            </div>
+
+                            <strong class="pa-stat-value fs-5">
+                                N/A
+                            </strong>
+
+                            <span class="pa-stat-caption">
+                                No verified timestamp
+                            </span>
+
+                        </article>
+
+
+                        <article class="pa-stat-card"
+                                 data-pa-searchable>
+
+                            <div class="pa-stat-top">
+
+                                <span class="pa-stat-icon pa-icon-amber">
+                                    <i class="bi bi-exclamation-triangle"></i>
+                                </span>
+
+                                Backup Alerts
+
+                            </div>
+
+                            <strong class="pa-stat-value fs-5">
+                                N/A
+                            </strong>
+
+                            <span class="pa-stat-caption">
+                                Alert feed unavailable
+                            </span>
+
+                        </article>
+
+
+                        <article class="pa-stat-card"
+                                 data-pa-searchable>
+
+                            <div class="pa-stat-top">
+
+                                <span class="pa-stat-icon pa-icon-purple">
+                                    <i class="bi bi-arrow-counterclockwise"></i>
+                                </span>
+
+                                Recovery Cases
+
+                            </div>
+
+                            <strong class="pa-stat-value">
+                                00
+                            </strong>
+
+                            <span class="pa-stat-caption">
+                                No sample open cases
+                            </span>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SECTION B: BACKUP MONITORING -->
+                <section class="pa-page-section"
+                         data-pa-section>
+
+                    <div class="pa-section-heading">
+
+                        <div>
+
+                            <span class="pa-section-kicker">
+                                SECTION B
+                            </span>
+
+                            <h2>Backup Monitoring</h2>
+
+                            <p>
+                                Review backup source and monitoring availability.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pa-grid-2">
+
+
+                        <!-- BACKUP SOURCE -->
+                        <article class="pa-panel">
+
+                            <div class="pa-panel-header">
+
+                                <h3>Backup Source</h3>
+
+                                <span class="pa-badge pa-badge-neutral">
+                                    Not Configured
+                                </span>
+
+                            </div>
+
+
+                            <div class="pa-panel-body">
+
+                                <div class="pa-empty">
+
+                                    <span class="pa-empty-icon">
+                                        <i class="bi bi-database-x"></i>
+                                    </span>
+
+                                    <strong>
+                                        No backup provider connected
+                                    </strong>
+
+                                    <p>
+                                        Backup schedules, completion results
+                                        and retention details cannot be verified.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- RECOVERY SOURCE -->
+                        <article class="pa-panel">
+
+                            <div class="pa-panel-header">
+
+                                <h3>Recovery Monitoring</h3>
+
+                                <span class="pa-badge pa-badge-neutral">
+                                    Unavailable
+                                </span>
+
+                            </div>
+
+
+                            <div class="pa-panel-body">
+
+                                <div class="pa-empty">
+
+                                    <span class="pa-empty-icon">
+                                        <i class="bi bi-arrow-counterclockwise"></i>
+                                    </span>
+
+                                    <strong>
+                                        No recovery source connected
+                                    </strong>
+
+                                    <p>
+                                        No live recovery test or restoration
+                                        result is available for review.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SECTION C: RECOVERY COORDINATION -->
+                <section class="pa-page-section"
+                         data-pa-section>
+
+                    <div class="pa-section-heading">
+
+                        <div>
+
+                            <span class="pa-section-kicker">
+                                SECTION C
+                            </span>
+
+                            <h2>Recovery Coordination</h2>
+
+                            <p>
+                                Prepare a recovery investigation request when necessary.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <article class="pa-panel">
+
+
+                        <div class="pa-panel-header">
+
+                            <div>
+
+                                <h3>Recovery Investigation Request</h3>
+
+                                <p>
+                                    Document a recovery concern for authorized
+                                    technical investigation.
+                                </p>
+
+                            </div>
+
+                            <span class="pa-badge pa-badge-info">
+                                Demo Only
+                            </span>
+
+                        </div>
+
+
+                        <div class="pa-panel-body">
+
+
+                            <div class="pa-notice warning mb-3">
+
+                                <i class="bi bi-exclamation-triangle"></i>
+
+                                <span>
+                                    Recovery must be performed by an
+                                    authorized Developer under an approved
+                                    recovery procedure.
+                                </span>
+
+                            </div>
+
+
+                            <form
+                                data-pa-demo-form
+                                data-pa-success-message="Recovery coordination request prepared locally. No actual recovery was started."
+                            >
+
+
+                                <div class="pa-form-grid">
+
+
+                                    <div class="pa-field">
+
+                                        <label for="recoveryType">
+                                            Recovery Concern
+                                            <span class="pa-required">*</span>
+                                        </label>
+
+                                        <select
+                                            class="form-select"
+                                            id="recoveryType"
+                                            required
+                                        >
+
+                                            <option value="">
+                                                Select concern
+                                            </option>
+
+                                            <option>Backup Failure</option>
+
+                                            <option>Data Recovery Request</option>
+
+                                            <option>Recovery Validation</option>
+
+                                            <option>Other Technical Concern</option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <div class="pa-field">
+
+                                        <label for="recoveryPriority">
+                                            Requested Priority
+                                            <span class="pa-required">*</span>
+                                        </label>
+
+                                        <select
+                                            class="form-select"
+                                            id="recoveryPriority"
+                                            required
+                                        >
+
+                                            <option value="">
+                                                Select priority
+                                            </option>
+
+                                            <option>Routine</option>
+
+                                            <option>High</option>
+
+                                            <option>Critical</option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <div class="pa-field"
+                                         style="grid-column: 1 / -1;">
+
+                                        <label for="recoveryDescription">
+                                            Description
+                                            <span class="pa-required">*</span>
+                                        </label>
+
+                                        <textarea
+                                            class="form-control"
+                                            id="recoveryDescription"
+                                            rows="4"
+                                            maxlength="1500"
+                                            required
+                                            placeholder="Describe the backup or recovery concern..."
+                                        ></textarea>
+
+                                    </div>
+
+
+                                    <div class="pa-field"
+                                         style="grid-column: 1 / -1;">
+
+                                        <label for="recoveryReason">
+                                            Reason for Technical Investigation
+                                            <span class="pa-required">*</span>
+                                        </label>
+
+                                        <textarea
+                                            class="form-control"
+                                            id="recoveryReason"
+                                            rows="3"
+                                            maxlength="1000"
+                                            required
+                                            placeholder="Explain why technical investigation is required..."
+                                        ></textarea>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="pa-form-actions">
+
+                                    <button
+                                        type="reset"
+                                        class="pa-btn pa-btn-secondary"
+                                    >
+
+                                        Clear
+
+                                    </button>
+
+
+                                    <button
+                                        type="submit"
+                                        class="pa-btn pa-btn-primary"
+                                    >
+
+                                        <i class="bi bi-file-earmark-plus"></i>
+
+                                        Prepare Recovery Request
+
+                                    </button>
+
+                                </div>
+
+
+                                <div
+                                    class="pa-notice success mt-3"
+                                    data-pa-form-result
+                                    hidden
+                                ></div>
+
+
+                            </form>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- SECTION D: RESPONSIBILITIES -->
+                <section class="pa-page-section"
+                         data-pa-section>
+
+                    <div class="pa-section-heading">
+
+                        <div>
+
+                            <span class="pa-section-kicker">
+                                SECTION D
+                            </span>
+
+                            <h2>Recovery Responsibilities</h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <article class="pa-panel">
+
+                        <div class="pa-table-wrap">
+
+                            <table class="pa-table">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>Activity</th>
+
+                                        <th>Platform Administrator</th>
+
+                                        <th>Platform Developer</th>
+
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>Monitor backup status</td>
+                                        <td>Oversee</td>
+                                        <td>Technical status review</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Investigate backup failure</td>
+                                        <td>Coordinate</td>
+                                        <td>Investigate</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Prepare recovery plan</td>
+                                        <td>Review and authorize</td>
+                                        <td>Prepare</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Execute approved recovery</td>
+                                        <td>Oversee</td>
+                                        <td>Execute</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Review recovery result</td>
+                                        <td>Review and close</td>
+                                        <td>Report findings</td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <p class="pa-footer-note">
+
+                    <i class="bi bi-shield-lock"></i>
+
+                    No backup or recovery provider is assumed.
+                    Technical recovery requires an authorized procedure
+                    and approval.
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="main-footer pa-footer">
+
+            <span>
+                GabayAral &copy;
+                <span data-pa-year></span>
+                | Platform Administration
+            </span>
+
+            <span data-pa-last-updated></span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="../../assets/js/platform-admin.js"></script>
+
+<script src="../../assets/js/layout.js"></script>
+
+</body>
+</html>

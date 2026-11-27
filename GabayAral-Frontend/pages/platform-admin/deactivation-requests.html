@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Deactivation Requests | GabayAral</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/platform-admin.css">
+</head>
+
+<body>
+<div class="app-shell platform-admin-app" data-pa-page="deactivation-requests">
+
+    <div id="paSidebarMount"></div>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <main class="main-area">
+        <div id="paTopbarMount"></div>
+
+        <section class="main-content pa-content">
+            <div class="pa-page">
+
+                <header class="pa-page-header">
+                    <div class="pa-page-header-copy">
+                        <span class="pa-eyebrow">SCHOOL WORKSPACES / PA-06</span>
+                        <h1 class="pa-page-title">Deactivation Requests</h1>
+                        <p class="pa-page-description">
+                            Review whole-school workspace deactivation requests
+                            submitted by authorized School Administrators.
+                        </p>
+                        <div class="pa-page-meta">
+                            <span><i class="bi bi-calendar3"></i><span data-pa-date></span></span>
+                            <span><i class="bi bi-inbox"></i>Request inbox</span>
+                        </div>
+                    </div>
+                    <span class="pa-page-header-icon">
+                        <i class="bi bi-inbox"></i>
+                    </span>
+                </header>
+
+
+                <div class="pa-demo-notice">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <div>
+                        <strong>Demonstration request inbox</strong>
+                        <span>
+                            All request records and details are fictional.
+                            The actual authorization decision is handled in PA-07.
+                        </span>
+                    </div>
+                </div>
+
+
+                <!-- SUMMARY -->
+
+                <section class="pa-page-section" data-pa-section>
+                    <div class="pa-section-heading">
+                        <div>
+                            <span class="pa-section-kicker">SECTION A</span>
+                            <h2>Request Overview</h2>
+                        </div>
+                    </div>
+
+                    <div class="pa-stat-grid">
+
+                        <article class="pa-stat-card">
+                            <div class="pa-stat-top">
+                                <span class="pa-stat-icon pa-icon-blue">
+                                    <i class="bi bi-inbox"></i>
+                                </span>
+                                Total Requests
+                            </div>
+                            <strong class="pa-stat-value">04</strong>
+                            <span class="pa-stat-caption">Sample request records</span>
+                        </article>
+
+                        <article class="pa-stat-card">
+                            <div class="pa-stat-top">
+                                <span class="pa-stat-icon pa-icon-amber">
+                                    <i class="bi bi-clock"></i>
+                                </span>
+                                Pending Review
+                            </div>
+                            <strong class="pa-stat-value">03</strong>
+                            <span class="pa-stat-caption">Awaiting decision</span>
+                        </article>
+
+                        <article class="pa-stat-card">
+                            <div class="pa-stat-top">
+                                <span class="pa-stat-icon pa-icon-purple">
+                                    <i class="bi bi-arrow-return-left"></i>
+                                </span>
+                                Returned
+                            </div>
+                            <strong class="pa-stat-value">01</strong>
+                            <span class="pa-stat-caption">Additional information requested</span>
+                        </article>
+
+                        <article class="pa-stat-card">
+                            <div class="pa-stat-top">
+                                <span class="pa-stat-icon pa-icon-teal">
+                                    <i class="bi bi-check-circle"></i>
+                                </span>
+                                Completed
+                            </div>
+                            <strong class="pa-stat-value">00</strong>
+                            <span class="pa-stat-caption">Sample completed requests</span>
+                        </article>
+
+                    </div>
+                </section>
+
+
+                <!-- REQUEST TABLE -->
+
+                <section class="pa-page-section" data-pa-section>
+                    <div class="pa-section-heading">
+                        <div>
+                            <span class="pa-section-kicker">SECTION B</span>
+                            <h2>Workspace Deactivation Request Inbox</h2>
+                            <p>Review the request queue and open eligible records.</p>
+                        </div>
+                    </div>
+
+                    <article class="pa-panel">
+
+                        <div class="pa-panel-header">
+                            <div>
+                                <h3>Submitted Requests</h3>
+                                <p>Whole-school workspace lifecycle requests.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="pa-toolbar">
+
+                            <div class="pa-field flex-grow-1">
+                                <label for="deactivationSearch">Search Requests</label>
+                                <input type="search"
+                                       class="form-control"
+                                       id="deactivationSearch"
+                                       data-pa-table-search="deactivation"
+                                       placeholder="Search request ID or school name...">
+                            </div>
+
+                            <div class="pa-field">
+                                <label for="deactivationStatus">Request Status</label>
+                                <select class="form-select"
+                                        id="deactivationStatus"
+                                        data-pa-table-filter="status"
+                                        data-pa-target="deactivation">
+                                    <option value="all">All Statuses</option>
+                                    <option value="Pending">Pending</option>
+                                    <option value="Returned">Returned</option>
+                                    <option value="Approved">Approved</option>
+                                    <option value="Rejected">Rejected</option>
+                                </select>
+                            </div>
+
+                            <button type="button"
+                                    class="pa-btn pa-btn-secondary"
+                                    data-pa-clear-table="deactivation">
+                                <i class="bi bi-arrow-counterclockwise"></i> Clear
+                            </button>
+
+                        </div>
+
+
+                        <div class="pa-panel-body">
+                            <span class="pa-pagination-info"
+                                  data-pa-result-count="deactivation"></span>
+                        </div>
+
+
+                        <div class="pa-table-wrap" data-pa-table-wrapper>
+                            <table class="pa-table" data-pa-table="deactivation">
+
+                                <thead>
+                                    <tr>
+                                        <th>Request ID</th>
+                                        <th>School Workspace</th>
+                                        <th>Submitted By</th>
+                                        <th>Submission Date</th>
+                                        <th>Request Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr data-pa-row data-status="Pending">
+                                        <td><span class="pa-code">DEMO-REQ-001</span></td>
+                                        <td><strong>Demo School 002</strong></td>
+                                        <td>Demo School Administrator</td>
+                                        <td>Nov 26, 2026</td>
+                                        <td><span class="pa-badge pa-badge-warning">Pending</span></td>
+                                        <td>
+                                            <a href="deactivation-review.html?id=DEMO-REQ-001"
+                                               class="pa-btn pa-btn-primary">Review</a>
+                                        </td>
+                                    </tr>
+
+                                    <tr data-pa-row data-status="Pending">
+                                        <td><span class="pa-code">DEMO-REQ-002</span></td>
+                                        <td><strong>Demo School 007</strong></td>
+                                        <td>Demo School Administrator</td>
+                                        <td>Nov 22, 2026</td>
+                                        <td><span class="pa-badge pa-badge-warning">Pending</span></td>
+                                        <td>
+                                            <a href="deactivation-review.html?id=DEMO-REQ-002"
+                                               class="pa-btn pa-btn-primary">Review</a>
+                                        </td>
+                                    </tr>
+
+                                    <tr data-pa-row data-status="Returned">
+                                        <td><span class="pa-code">DEMO-REQ-003</span></td>
+                                        <td><strong>Demo School 004</strong></td>
+                                        <td>Demo School Administrator</td>
+                                        <td>Nov 20, 2026</td>
+                                        <td><span class="pa-badge pa-badge-info">Returned</span></td>
+                                        <td>
+                                            <a href="deactivation-review.html?id=DEMO-REQ-003"
+                                               class="pa-btn pa-btn-secondary">View</a>
+                                        </td>
+                                    </tr>
+
+                                    <tr data-pa-row data-status="Pending">
+                                        <td><span class="pa-code">DEMO-REQ-004</span></td>
+                                        <td><strong>Demo School 008</strong></td>
+                                        <td>Demo School Administrator</td>
+                                        <td>Nov 18, 2026</td>
+                                        <td><span class="pa-badge pa-badge-warning">Pending</span></td>
+                                        <td>
+                                            <a href="deactivation-review.html?id=DEMO-REQ-004"
+                                               class="pa-btn pa-btn-primary">Review</a>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                        </div>
+
+
+                        <div class="pa-empty" data-pa-table-empty="deactivation" hidden>
+                            <span class="pa-empty-icon"><i class="bi bi-inbox"></i></span>
+                            <strong>No matching requests found.</strong>
+                            <p>Try another search term or filter.</p>
+                        </div>
+
+
+                        <div class="pa-panel-footer">
+                            <span class="pa-pagination-info">Demonstration records</span>
+                            <div class="pa-pagination-controls"
+                                 data-pa-pagination="deactivation"></div>
+                        </div>
+
+                    </article>
+                </section>
+
+
+                <!-- PROCESS -->
+
+                <section class="pa-page-section" data-pa-section>
+                    <div class="pa-section-heading">
+                        <div>
+                            <span class="pa-section-kicker">SECTION C</span>
+                            <h2>Request Review Process</h2>
+                        </div>
+                    </div>
+
+                    <article class="pa-panel">
+                        <div class="pa-panel-body">
+                            <div class="pa-timeline">
+
+                                <div class="pa-timeline-item">
+                                    <span class="pa-timeline-dot">
+                                        <i class="bi bi-send"></i>
+                                    </span>
+                                    <div class="pa-timeline-content">
+                                        <strong>School Administrator submits request</strong>
+                                        <p>Provides the reason and supporting information.</p>
+                                    </div>
+                                </div>
+
+                                <div class="pa-timeline-item">
+                                    <span class="pa-timeline-dot">
+                                        <i class="bi bi-search"></i>
+                                    </span>
+                                    <div class="pa-timeline-content">
+                                        <strong>Platform Administrator reviews request</strong>
+                                        <p>Checks completeness, authority and operational impact.</p>
+                                    </div>
+                                </div>
+
+                                <div class="pa-timeline-item">
+                                    <span class="pa-timeline-dot">
+                                        <i class="bi bi-shield-check"></i>
+                                    </span>
+                                    <div class="pa-timeline-content">
+                                        <strong>Authorization decision</strong>
+                                        <p>Approved, rejected or returned with a recorded reason.</p>
+                                    </div>
+                                </div>
+
+                                <div class="pa-timeline-item">
+                                    <span class="pa-timeline-dot">
+                                        <i class="bi bi-clock-history"></i>
+                                    </span>
+                                    <div class="pa-timeline-content">
+                                        <strong>Record and notify</strong>
+                                        <p>Preserve the decision and notify the School Administrator.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+
+                <p class="pa-footer-note">
+                    <i class="bi bi-shield-lock"></i>
+                    Opening a request does not automatically deactivate a school.
+                    Authorization is handled separately in PA-07.
+                </p>
+
+            </div>
+        </section>
+
+        <footer class="main-footer pa-footer">
+            <span>GabayAral &copy; <span data-pa-year></span> | Platform Administration</span>
+            <span data-pa-last-updated></span>
+        </footer>
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/platform-admin.js"></script>
+<script src="../../assets/js/layout.js"></script>
+</body>
+</html>

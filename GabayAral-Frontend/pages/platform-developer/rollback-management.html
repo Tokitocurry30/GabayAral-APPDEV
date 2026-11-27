@@ -1,0 +1,1885 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+
+    <title>Rollback Management | GabayAral</title>
+
+    <!-- BOOTSTRAP -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- BOOTSTRAP ICONS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- INTER FONT -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- GLOBAL CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+
+    <!-- PLATFORM DEVELOPER CSS -->
+    <link rel="stylesheet" href="../../assets/css/platform-developer.css">
+
+</head>
+
+
+<body>
+
+<div
+    class="app-shell platform-developer-app"
+    data-pdev-page="rollback-management"
+>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <div id="pdevSidebarMount"></div>
+
+    <div
+        class="sidebar-backdrop"
+        id="sidebarBackdrop"
+    ></div>
+
+
+    <!-- =====================================================
+         MAIN AREA
+    ====================================================== -->
+
+    <main class="main-area">
+
+
+        <!-- TOPBAR -->
+
+        <div id="pdevTopbarMount"></div>
+
+
+        <!-- PAGE CONTENT -->
+
+        <section class="main-content pdev-content">
+
+            <div class="pdev-page">
+
+
+                <!-- =================================================
+                     PAGE HEADER
+                ================================================== -->
+
+                <header class="pdev-page-header">
+
+                    <div>
+
+                        <span class="pdev-eyebrow">
+                            RELEASE AND DEPLOYMENT / PDEV-06
+                        </span>
+
+                        <h1 class="pdev-page-title">
+                            Rollback Management
+                        </h1>
+
+                        <p class="pdev-page-description">
+                            Investigate failed deployments, prepare rollback
+                            plans, verify authorization and document recovery
+                            and validation results.
+                        </p>
+
+                        <div class="pdev-page-meta">
+
+                            <span>
+                                <i class="bi bi-calendar3"></i>
+                                <span data-pdev-date></span>
+                            </span>
+
+                            <span>
+                                <i class="bi bi-arrow-counterclockwise"></i>
+                                Deployment Recovery
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <span class="pdev-header-icon">
+                        <i class="bi bi-arrow-counterclockwise"></i>
+                    </span>
+
+                </header>
+
+
+                <!-- =================================================
+                     DEMONSTRATION NOTICE
+                ================================================== -->
+
+                <div class="pdev-demo-notice">
+
+                    <i class="bi bi-info-circle-fill"></i>
+
+                    <div>
+
+                        <strong>
+                            Rollback Management Demonstration
+                        </strong>
+
+                        <p>
+                            All deployment failures, rollback plans and
+                            recovery records displayed on this page are
+                            fictional. No actual deployment or rollback
+                            operation is performed.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     SECTION A
+                     ROLLBACK OVERVIEW
+                ================================================== -->
+
+                <section
+                    class="pdev-page-section"
+                    data-pdev-section
+                >
+
+                    <div class="pdev-section-heading">
+
+                        <div>
+
+                            <span class="pdev-section-kicker">
+                                SECTION A
+                            </span>
+
+                            <h2>
+                                Rollback Overview
+                            </h2>
+
+                            <p>
+                                Summary of the available demonstration
+                                deployment failure and recovery records.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pdev-stat-grid">
+
+
+                        <!-- TOTAL FAILURES -->
+
+                        <article
+                            class="pdev-stat-card"
+                            data-pdev-searchable
+                        >
+
+                            <div class="pdev-stat-top">
+
+                                <span class="pdev-stat-icon pdev-icon-red">
+                                    <i class="bi bi-exclamation-triangle"></i>
+                                </span>
+
+                                Failed Deployments
+
+                            </div>
+
+                            <strong class="pdev-stat-value">
+                                03
+                            </strong>
+
+                            <span class="pdev-stat-caption">
+                                Fictional failure records
+                            </span>
+
+                        </article>
+
+
+                        <!-- ROLLBACK PLANS -->
+
+                        <article
+                            class="pdev-stat-card"
+                            data-pdev-searchable
+                        >
+
+                            <div class="pdev-stat-top">
+
+                                <span class="pdev-stat-icon pdev-icon-amber">
+                                    <i class="bi bi-clipboard-check"></i>
+                                </span>
+
+                                Rollback Plans
+
+                            </div>
+
+                            <strong class="pdev-stat-value">
+                                02
+                            </strong>
+
+                            <span class="pdev-stat-caption">
+                                Sample prepared plans
+                            </span>
+
+                        </article>
+
+
+                        <!-- PENDING AUTHORIZATION -->
+
+                        <article
+                            class="pdev-stat-card"
+                            data-pdev-searchable
+                        >
+
+                            <div class="pdev-stat-top">
+
+                                <span class="pdev-stat-icon pdev-icon-purple">
+                                    <i class="bi bi-shield-lock"></i>
+                                </span>
+
+                                Awaiting Authorization
+
+                            </div>
+
+                            <strong class="pdev-stat-value">
+                                01
+                            </strong>
+
+                            <span class="pdev-stat-caption">
+                                Sample authorization request
+                            </span>
+
+                        </article>
+
+
+                        <!-- VALIDATED -->
+
+                        <article
+                            class="pdev-stat-card"
+                            data-pdev-searchable
+                        >
+
+                            <div class="pdev-stat-top">
+
+                                <span class="pdev-stat-icon pdev-icon-teal">
+                                    <i class="bi bi-check-circle"></i>
+                                </span>
+
+                                Validated Recovery
+
+                            </div>
+
+                            <strong class="pdev-stat-value">
+                                01
+                            </strong>
+
+                            <span class="pdev-stat-caption">
+                                Fictional validated recovery record
+                            </span>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION B
+                     FAILED DEPLOYMENT REGISTER
+                ================================================== -->
+
+                <section
+                    class="pdev-page-section"
+                    data-pdev-section
+                >
+
+                    <div class="pdev-section-heading">
+
+                        <div>
+
+                            <span class="pdev-section-kicker">
+                                SECTION B
+                            </span>
+
+                            <h2>
+                                Failed Deployment Register
+                            </h2>
+
+                            <p>
+                                Search, filter and review deployment
+                                failure and rollback records.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <article class="pdev-panel" data-pdev-searchable>
+
+
+                        <!-- PANEL HEADER -->
+
+                        <div class="pdev-panel-header">
+
+                            <div>
+
+                                <h3>
+                                    Deployment Failure Records
+                                </h3>
+
+                                <p>
+                                    Fictional demonstration records.
+                                </p>
+
+                            </div>
+
+                            <span class="pdev-badge pdev-badge-info">
+                                Demo Only
+                            </span>
+
+                        </div>
+
+
+                        <!-- FILTER TOOLBAR -->
+
+                        <div class="pdev-toolbar">
+
+
+                            <div class="pdev-field flex-grow-1">
+
+                                <label for="rollbackSearch">
+                                    Search Failures
+                                </label>
+
+                                <input
+                                    type="search"
+                                    class="form-control"
+                                    id="rollbackSearch"
+                                    data-pdev-table-search="rollbacks"
+                                    placeholder="Search failure reference or deployment..."
+                                >
+
+                            </div>
+
+
+                            <div class="pdev-field">
+
+                                <label for="rollbackStatus">
+                                    Rollback Status
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    id="rollbackStatus"
+                                    data-pdev-filter="status"
+                                    data-pdev-target="rollbacks"
+                                >
+
+                                    <option value="all">
+                                        All Statuses
+                                    </option>
+
+                                    <option value="Investigation">
+                                        Investigation
+                                    </option>
+
+                                    <option value="Awaiting Authorization">
+                                        Awaiting Authorization
+                                    </option>
+
+                                    <option value="Executed">
+                                        Executed
+                                    </option>
+
+                                    <option value="Validated">
+                                        Validated
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="pdev-field">
+
+                                <label for="rollbackEnvironment">
+                                    Environment
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    id="rollbackEnvironment"
+                                    data-pdev-filter="environment"
+                                    data-pdev-target="rollbacks"
+                                >
+
+                                    <option value="all">
+                                        All Environments
+                                    </option>
+
+                                    <option value="Development">
+                                        Development
+                                    </option>
+
+                                    <option value="Testing">
+                                        Testing
+                                    </option>
+
+                                    <option value="Staging">
+                                        Staging
+                                    </option>
+
+                                    <option value="Production">
+                                        Production
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                class="pdev-btn pdev-btn-secondary"
+                                data-pdev-clear-table="rollbacks"
+                            >
+
+                                <i class="bi bi-arrow-counterclockwise"></i>
+
+                                Clear Filters
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- TABLE INFORMATION -->
+
+                        <div class="pdev-panel-body d-flex justify-content-between align-items-center flex-wrap gap-2">
+
+                            <span
+                                class="pdev-pagination-info"
+                                data-pdev-result-count="rollbacks"
+                            ></span>
+
+
+                            <div class="pdev-field">
+
+                                <label for="rollbackPageSize">
+                                    Rows per page
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    id="rollbackPageSize"
+                                    data-pdev-page-size="rollbacks"
+                                >
+
+                                    <option value="5" selected>
+                                        5
+                                    </option>
+
+                                    <option value="10">
+                                        10
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- TABLE -->
+
+                        <div
+                            class="pdev-table-wrap"
+                            data-pdev-table-wrapper
+                        >
+
+                            <table
+                                class="pdev-table"
+                                data-pdev-table="rollbacks"
+                            >
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>Failure Reference</th>
+
+                                        <th>Deployment Reference</th>
+
+                                        <th>Environment</th>
+
+                                        <th>Failure Description</th>
+
+                                        <th>Priority</th>
+
+                                        <th>Rollback Status</th>
+
+                                        <th>Action</th>
+
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody>
+
+
+                                    <!-- RECORD 001 -->
+
+                                    <tr
+                                        data-pdev-row
+                                        data-status="Investigation"
+                                        data-environment="Staging"
+                                    >
+
+                                        <td>
+                                            <span class="pdev-code">
+                                                DEMO-RB-001
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            DEMO-DEP-003
+                                        </td>
+
+                                        <td>
+                                            Staging
+                                        </td>
+
+                                        <td>
+                                            Deployment validation failure
+                                        </td>
+
+                                        <td>
+                                            <span class="pdev-badge pdev-badge-danger">
+                                                High
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span class="pdev-badge pdev-badge-info">
+                                                Investigation
+                                            </span>
+                                        </td>
+
+                                        <td>
+
+                                            <button
+                                                type="button"
+                                                class="pdev-btn pdev-btn-secondary"
+                                                data-pdev-action="investigate"
+                                            >
+
+                                                Review
+
+                                            </button>
+
+                                        </td>
+
+                                    </tr>
+
+
+                                    <!-- RECORD 002 -->
+
+                                    <tr
+                                        data-pdev-row
+                                        data-status="Awaiting Authorization"
+                                        data-environment="Staging"
+                                    >
+
+                                        <td>
+                                            <span class="pdev-code">
+                                                DEMO-RB-002
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            DEMO-DEP-004
+                                        </td>
+
+                                        <td>
+                                            Staging
+                                        </td>
+
+                                        <td>
+                                            Application compatibility failure
+                                        </td>
+
+                                        <td>
+                                            <span class="pdev-badge pdev-badge-warning">
+                                                Medium
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span class="pdev-badge pdev-badge-warning">
+                                                Awaiting Authorization
+                                            </span>
+                                        </td>
+
+                                        <td>
+
+                                            <button
+                                                type="button"
+                                                class="pdev-btn pdev-btn-secondary"
+                                                data-pdev-action="review"
+                                            >
+
+                                                Review
+
+                                            </button>
+
+                                        </td>
+
+                                    </tr>
+
+
+                                    <!-- RECORD 003 -->
+
+                                    <tr
+                                        data-pdev-row
+                                        data-status="Validated"
+                                        data-environment="Testing"
+                                    >
+
+                                        <td>
+                                            <span class="pdev-code">
+                                                DEMO-RB-003
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            DEMO-DEP-005
+                                        </td>
+
+                                        <td>
+                                            Testing
+                                        </td>
+
+                                        <td>
+                                            Sample recovery validation completed
+                                        </td>
+
+                                        <td>
+                                            <span class="pdev-badge pdev-badge-low pdev-badge-neutral">
+                                                Low
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span class="pdev-badge pdev-badge-success">
+                                                Validated
+                                            </span>
+                                        </td>
+
+                                        <td>
+
+                                            <button
+                                                type="button"
+                                                class="pdev-btn pdev-btn-secondary"
+                                                data-pdev-action="review"
+                                            >
+
+                                                View
+
+                                            </button>
+
+                                        </td>
+
+                                    </tr>
+
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+
+                        <!-- EMPTY STATE -->
+
+                        <div
+                            class="pdev-empty"
+                            data-pdev-table-empty="rollbacks"
+                            hidden
+                        >
+
+                            <span class="pdev-empty-icon">
+                                <i class="bi bi-arrow-counterclockwise"></i>
+                            </span>
+
+                            <strong>
+                                No matching rollback records.
+                            </strong>
+
+                            <p>
+                                Change your search term or filters.
+                            </p>
+
+                        </div>
+
+
+                        <!-- PAGINATION -->
+
+                        <div class="pdev-panel-footer">
+
+                            <span class="pdev-pagination-info">
+                                Three fictional failure records
+                            </span>
+
+                            <div
+                                class="pdev-pagination-controls"
+                                data-pdev-pagination="rollbacks"
+                            ></div>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION C
+                     FAILURE INVESTIGATION
+                ================================================== -->
+
+                <section
+                    class="pdev-page-section"
+                    data-pdev-section
+                >
+
+                    <div class="pdev-section-heading">
+
+                        <div>
+
+                            <span class="pdev-section-kicker">
+                                SECTION C
+                            </span>
+
+                            <h2>
+                                Deployment Failure Investigation
+                            </h2>
+
+                            <p>
+                                Review the technical information required
+                                before preparing a rollback procedure.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pdev-grid-2">
+
+
+                        <!-- FAILURE ANALYSIS -->
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-header">
+
+                                <h3>
+                                    Failure Analysis
+                                </h3>
+
+                                <span class="pdev-stat-icon pdev-icon-red">
+                                    <i class="bi bi-search"></i>
+                                </span>
+
+                            </div>
+
+
+                            <div class="pdev-panel-body">
+
+                                <div class="pdev-list-row">
+
+                                    <div class="pdev-list-main">
+
+                                        <strong>
+                                            Identify failure point
+                                        </strong>
+
+                                        <small>
+                                            Determine the stage where deployment failed.
+                                        </small>
+
+                                    </div>
+
+                                    <span class="pdev-badge pdev-badge-success">
+                                        Required
+                                    </span>
+
+                                </div>
+
+
+                                <div class="pdev-list-row">
+
+                                    <div class="pdev-list-main">
+
+                                        <strong>
+                                            Review technical evidence
+                                        </strong>
+
+                                        <small>
+                                            Examine permitted logs and error references.
+                                        </small>
+
+                                    </div>
+
+                                    <span class="pdev-badge pdev-badge-success">
+                                        Required
+                                    </span>
+
+                                </div>
+
+
+                                <div class="pdev-list-row">
+
+                                    <div class="pdev-list-main">
+
+                                        <strong>
+                                            Identify affected components
+                                        </strong>
+
+                                        <small>
+                                            Document impacted application services.
+                                        </small>
+
+                                    </div>
+
+                                    <span class="pdev-badge pdev-badge-success">
+                                        Required
+                                    </span>
+
+                                </div>
+
+
+                                <div class="pdev-list-row">
+
+                                    <div class="pdev-list-main">
+
+                                        <strong>
+                                            Notify Platform Administrator
+                                        </strong>
+
+                                        <small>
+                                            Report failures requiring escalation.
+                                        </small>
+
+                                    </div>
+
+                                    <span class="pdev-badge pdev-badge-success">
+                                        Required
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- ROLLBACK ASSESSMENT -->
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-header">
+
+                                <h3>
+                                    Rollback Assessment
+                                </h3>
+
+                                <span class="pdev-stat-icon pdev-icon-amber">
+                                    <i class="bi bi-clipboard-check"></i>
+                                </span>
+
+                            </div>
+
+
+                            <div class="pdev-panel-body">
+
+                                <div class="pdev-list-row">
+
+                                    <div class="pdev-list-main">
+
+                                        <strong>
+                                            Previous stable version
+                                        </strong>
+
+                                        <small>
+                                            Identify the last validated release.
+                                        </small>
+
+                                    </div>
+
+                                    <span class="pdev-badge pdev-badge-neutral">
+                                        Verify
+                                    </span>
+
+                                </div>
+
+
+                                <div class="pdev-list-row">
+
+                                    <div class="pdev-list-main">
+
+                                        <strong>
+                                            Rollback dependencies
+                                        </strong>
+
+                                        <small>
+                                            Identify database and application dependencies.
+                                        </small>
+
+                                    </div>
+
+                                    <span class="pdev-badge pdev-badge-neutral">
+                                        Verify
+                                    </span>
+
+                                </div>
+
+
+                                <div class="pdev-list-row">
+
+                                    <div class="pdev-list-main">
+
+                                        <strong>
+                                            Authorization
+                                        </strong>
+
+                                        <small>
+                                            Verify approved or pre-authorized procedure.
+                                        </small>
+
+                                    </div>
+
+                                    <span class="pdev-badge pdev-badge-warning">
+                                        Required
+                                    </span>
+
+                                </div>
+
+
+                                <div class="pdev-list-row">
+
+                                    <div class="pdev-list-main">
+
+                                        <strong>
+                                            Recovery validation
+                                        </strong>
+
+                                        <small>
+                                            Prepare post-rollback verification steps.
+                                        </small>
+
+                                    </div>
+
+                                    <span class="pdev-badge pdev-badge-success">
+                                        Required
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION D
+                     ROLLBACK PLAN
+                ================================================== -->
+
+                <section
+                    class="pdev-page-section"
+                    data-pdev-section
+                >
+
+                    <div class="pdev-section-heading">
+
+                        <div>
+
+                            <span class="pdev-section-kicker">
+                                SECTION D
+                            </span>
+
+                            <h2>
+                                Prepare Rollback Plan
+                            </h2>
+
+                            <p>
+                                Document the proposed technical recovery procedure.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <article class="pdev-panel">
+
+
+                        <div class="pdev-panel-header">
+
+                            <div>
+
+                                <h3>
+                                    Rollback Plan Form
+                                </h3>
+
+                                <p>
+                                    Local demonstration form.
+                                </p>
+
+                            </div>
+
+                            <span class="pdev-badge pdev-badge-info">
+                                Demo Only
+                            </span>
+
+                        </div>
+
+
+                        <div class="pdev-panel-body">
+
+
+                            <div class="pdev-notice warning mb-3">
+
+                                <i class="bi bi-shield-exclamation"></i>
+
+                                <span>
+                                    Preparing a rollback plan does not
+                                    authorize its execution. Verify the
+                                    applicable authorization before any
+                                    actual recovery operation.
+                                </span>
+
+                            </div>
+
+
+                            <form
+                                id="pdevRollbackPlanForm"
+                                data-pdev-demo-form
+                                data-pdev-success-message="Rollback plan prepared locally. No rollback was executed and no Backend record was created."
+                            >
+
+                                <div class="pdev-form-grid">
+
+
+                                    <div class="pdev-field">
+
+                                        <label for="rollbackReference">
+
+                                            Rollback Reference
+                                            <span class="pdev-required">*</span>
+
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="rollbackReference"
+                                            name="rollbackReference"
+                                            maxlength="100"
+                                            required
+                                            placeholder="Enter rollback reference"
+                                        >
+
+                                    </div>
+
+
+                                    <div class="pdev-field">
+
+                                        <label for="rollbackDeployment">
+
+                                            Failed Deployment Reference
+                                            <span class="pdev-required">*</span>
+
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="rollbackDeployment"
+                                            name="deploymentReference"
+                                            maxlength="100"
+                                            required
+                                            placeholder="Enter deployment reference"
+                                        >
+
+                                    </div>
+
+
+                                    <div class="pdev-field">
+
+                                        <label for="rollbackEnvironment">
+
+                                            Environment
+                                            <span class="pdev-required">*</span>
+
+                                        </label>
+
+                                        <select
+                                            class="form-select"
+                                            id="rollbackEnvironment"
+                                            name="environment"
+                                            required
+                                        >
+
+                                            <option value="">
+                                                Select environment
+                                            </option>
+
+                                            <option>Development</option>
+
+                                            <option>Testing</option>
+
+                                            <option>Staging</option>
+
+                                            <option>Production</option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <div class="pdev-field">
+
+                                        <label for="rollbackPriority">
+
+                                            Priority
+                                            <span class="pdev-required">*</span>
+
+                                        </label>
+
+                                        <select
+                                            class="form-select"
+                                            id="rollbackPriority"
+                                            name="priority"
+                                            required
+                                        >
+
+                                            <option value="">
+                                                Select priority
+                                            </option>
+
+                                            <option>Critical</option>
+
+                                            <option>High</option>
+
+                                            <option>Medium</option>
+
+                                            <option>Low</option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <div class="pdev-field">
+
+                                        <label for="rollbackStableVersion">
+
+                                            Previous Stable Version
+                                            <span class="pdev-required">*</span>
+
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="rollbackStableVersion"
+                                            name="stableVersion"
+                                            maxlength="50"
+                                            required
+                                            placeholder="Enter verified version"
+                                        >
+
+                                    </div>
+
+
+                                    <div class="pdev-field">
+
+                                        <label for="rollbackAuthorization">
+
+                                            Authorization Status
+                                            <span class="pdev-required">*</span>
+
+                                        </label>
+
+                                        <select
+                                            class="form-select"
+                                            id="rollbackAuthorization"
+                                            name="authorization"
+                                            required
+                                        >
+
+                                            <option value="">
+                                                Select authorization
+                                            </option>
+
+                                            <option>
+                                                Authorization Required
+                                            </option>
+
+                                            <option>
+                                                Awaiting Authorization
+                                            </option>
+
+                                            <option>
+                                                Authorized
+                                            </option>
+
+                                            <option>
+                                                Pre-Authorized Procedure
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <div
+                                        class="pdev-field"
+                                        style="grid-column: 1 / -1;"
+                                    >
+
+                                        <label for="rollbackCause">
+
+                                            Failure Cause
+                                            <span class="pdev-required">*</span>
+
+                                        </label>
+
+                                        <textarea
+                                            class="form-control"
+                                            id="rollbackCause"
+                                            name="failureCause"
+                                            rows="3"
+                                            maxlength="1200"
+                                            required
+                                            placeholder="Describe the identified deployment failure..."
+                                        ></textarea>
+
+                                    </div>
+
+
+                                    <div
+                                        class="pdev-field"
+                                        style="grid-column: 1 / -1;"
+                                    >
+
+                                        <label for="rollbackProcedure">
+
+                                            Proposed Rollback Procedure
+                                            <span class="pdev-required">*</span>
+
+                                        </label>
+
+                                        <textarea
+                                            class="form-control"
+                                            id="rollbackProcedure"
+                                            name="rollbackProcedure"
+                                            rows="4"
+                                            maxlength="2000"
+                                            required
+                                            placeholder="Document the proposed technical rollback steps..."
+                                        ></textarea>
+
+                                    </div>
+
+
+                                    <div
+                                        class="pdev-field"
+                                        style="grid-column: 1 / -1;"
+                                    >
+
+                                        <label for="rollbackValidation">
+
+                                            Recovery Validation Plan
+                                            <span class="pdev-required">*</span>
+
+                                        </label>
+
+                                        <textarea
+                                            class="form-control"
+                                            id="rollbackValidation"
+                                            name="validationPlan"
+                                            rows="3"
+                                            maxlength="1500"
+                                            required
+                                            placeholder="Describe how the previous stable version and service will be validated..."
+                                        ></textarea>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="pdev-form-actions">
+
+                                    <button
+                                        type="reset"
+                                        class="pdev-btn pdev-btn-secondary"
+                                    >
+
+                                        <i class="bi bi-arrow-counterclockwise"></i>
+
+                                        Clear Form
+
+                                    </button>
+
+
+                                    <button
+                                        type="submit"
+                                        class="pdev-btn pdev-btn-primary"
+                                    >
+
+                                        <i class="bi bi-file-earmark-check"></i>
+
+                                        Prepare Rollback Plan
+
+                                    </button>
+
+                                </div>
+
+
+                                <div
+                                    class="pdev-notice success mt-3"
+                                    data-pdev-form-result
+                                    hidden
+                                ></div>
+
+
+                            </form>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION E
+                     AUTHORIZATION AND SAFETY
+                ================================================== -->
+
+                <section
+                    class="pdev-page-section"
+                    data-pdev-section
+                >
+
+                    <div class="pdev-section-heading">
+
+                        <div>
+
+                            <span class="pdev-section-kicker">
+                                SECTION E
+                            </span>
+
+                            <h2>
+                                Rollback Authorization and Safety
+                            </h2>
+
+                            <p>
+                                Required controls before an actual
+                                rollback operation can be performed.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pdev-grid-2">
+
+
+                        <!-- AUTHORIZATION -->
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-body">
+
+                                <span class="pdev-stat-icon pdev-icon-purple mb-3">
+
+                                    <i class="bi bi-shield-check"></i>
+
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Independent Authorization
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Verify the approved or applicable
+                                    pre-authorized rollback procedure
+                                    before execution.
+                                </p>
+
+                                <span class="pdev-badge pdev-badge-warning">
+                                    Required
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- SAFE STATE -->
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-body">
+
+                                <span class="pdev-stat-icon pdev-icon-red mb-3">
+
+                                    <i class="bi bi-shield-lock"></i>
+
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Safe Restricted State
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    If authorization is unavailable,
+                                    do not perform restricted operations.
+                                    Maintain a safe state and escalate.
+                                </p>
+
+                                <span class="pdev-badge pdev-badge-danger">
+                                    Safety Control
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- VALIDATION -->
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-body">
+
+                                <span class="pdev-stat-icon pdev-icon-teal mb-3">
+
+                                    <i class="bi bi-check2-circle"></i>
+
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Recovery Validation
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Validate the previous stable version,
+                                    service behavior and applicable data integrity.
+                                </p>
+
+                                <span class="pdev-badge pdev-badge-success">
+                                    Required
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- DOCUMENTATION -->
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-body">
+
+                                <span class="pdev-stat-icon pdev-icon-blue mb-3">
+
+                                    <i class="bi bi-journal-check"></i>
+
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Historical Documentation
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Record the failure, authorization,
+                                    responsible actor and recovery result.
+                                </p>
+
+                                <span class="pdev-badge pdev-badge-success">
+                                    Required
+                                </span>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION F
+                     ROLLBACK LIFECYCLE
+                ================================================== -->
+
+                <section
+                    class="pdev-page-section"
+                    data-pdev-section
+                >
+
+                    <div class="pdev-section-heading">
+
+                        <div>
+
+                            <span class="pdev-section-kicker">
+                                SECTION F
+                            </span>
+
+                            <h2>
+                                Rollback Lifecycle
+                            </h2>
+
+                            <p>
+                                Standard sequence for investigating
+                                and recovering from a failed deployment.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <article class="pdev-panel">
+
+                        <div class="pdev-panel-body">
+
+                            <div class="pdev-timeline">
+
+
+                                <div class="pdev-timeline-item">
+
+                                    <span class="pdev-timeline-dot">
+
+                                        <i class="bi bi-exclamation-triangle"></i>
+
+                                    </span>
+
+                                    <div class="pdev-timeline-content">
+
+                                        <strong>
+                                            01. Detect Deployment Failure
+                                        </strong>
+
+                                        <p>
+                                            Stop further release actions
+                                            and document the deployment failure.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="pdev-timeline-item">
+
+                                    <span class="pdev-timeline-dot">
+
+                                        <i class="bi bi-search"></i>
+
+                                    </span>
+
+                                    <div class="pdev-timeline-content">
+
+                                        <strong>
+                                            02. Investigate Technical Cause
+                                        </strong>
+
+                                        <p>
+                                            Review permitted technical evidence
+                                            and determine whether rollback is required.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="pdev-timeline-item">
+
+                                    <span class="pdev-timeline-dot">
+
+                                        <i class="bi bi-person-check"></i>
+
+                                    </span>
+
+                                    <div class="pdev-timeline-content">
+
+                                        <strong>
+                                            03. Verify Authorization
+                                        </strong>
+
+                                        <p>
+                                            Check the approved or applicable
+                                            pre-authorized rollback procedure.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="pdev-timeline-item">
+
+                                    <span class="pdev-timeline-dot">
+
+                                        <i class="bi bi-arrow-counterclockwise"></i>
+
+                                    </span>
+
+                                    <div class="pdev-timeline-content">
+
+                                        <strong>
+                                            04. Execute Authorized Rollback
+                                        </strong>
+
+                                        <p>
+                                            Follow the approved technical
+                                            recovery procedure.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="pdev-timeline-item">
+
+                                    <span class="pdev-timeline-dot">
+
+                                        <i class="bi bi-check-circle"></i>
+
+                                    </span>
+
+                                    <div class="pdev-timeline-content">
+
+                                        <strong>
+                                            05. Validate Previous Stable Version
+                                        </strong>
+
+                                        <p>
+                                            Verify service recovery and
+                                            applicable data integrity.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="pdev-timeline-item">
+
+                                    <span class="pdev-timeline-dot">
+
+                                        <i class="bi bi-journal-check"></i>
+
+                                    </span>
+
+                                    <div class="pdev-timeline-content">
+
+                                        <strong>
+                                            06. Record and Report Results
+                                        </strong>
+
+                                        <p>
+                                            Notify the Platform Administrator
+                                            and preserve failure and recovery history.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION G
+                     ROLLBACK STATUS DEFINITIONS
+                ================================================== -->
+
+                <section
+                    class="pdev-page-section"
+                    data-pdev-section
+                >
+
+                    <div class="pdev-section-heading">
+
+                        <div>
+
+                            <span class="pdev-section-kicker">
+                                SECTION G
+                            </span>
+
+                            <h2>
+                                Rollback Status Definitions
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <article class="pdev-panel">
+
+                        <div class="pdev-panel-body">
+
+                            <div class="pdev-detail-grid">
+
+
+                                <div class="pdev-detail-item">
+
+                                    <span>INVESTIGATION</span>
+
+                                    <strong>
+                                        Failure is being examined and assessed.
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="pdev-detail-item">
+
+                                    <span>AWAITING AUTHORIZATION</span>
+
+                                    <strong>
+                                        Required approval has not yet been confirmed.
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="pdev-detail-item">
+
+                                    <span>EXECUTED</span>
+
+                                    <strong>
+                                        Authorized rollback procedure has been performed.
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="pdev-detail-item">
+
+                                    <span>VALIDATED</span>
+
+                                    <strong>
+                                        Recovery checks have been completed successfully.
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- =================================================
+                     FOOTER NOTICE
+                ================================================== -->
+
+                <p class="pdev-footer-note">
+
+                    <i class="bi bi-shield-lock"></i>
+
+                    This page does not execute deployment commands,
+                    modify production environments or perform rollback.
+                    Actual recovery requires the applicable authorization,
+                    approved procedure and technical validation.
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FOOTER
+        ====================================================== -->
+
+        <footer class="main-footer pdev-footer">
+
+            <span>
+                GabayAral &copy;
+                <span data-pdev-year></span>
+                | Platform Developer
+            </span>
+
+            <span data-pdev-last-updated></span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- =========================================================
+     SCRIPTS
+========================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="../../assets/js/platform-developer.js"></script>
+
+<script src="../../assets/js/layout.js"></script>
+
+</body>
+</html>

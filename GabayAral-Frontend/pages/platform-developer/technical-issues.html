@@ -1,0 +1,649 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+
+    <title>Technical Issues | GabayAral</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/platform-developer.css">
+</head>
+
+<body>
+<div class="app-shell platform-developer-app" data-pdev-page="technical-issues">
+
+    <div id="pdevSidebarMount"></div>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <main class="main-area">
+
+        <div id="pdevTopbarMount"></div>
+
+        <section class="main-content pdev-content">
+            <div class="pdev-page">
+
+                <!-- PAGE HEADER -->
+
+                <header class="pdev-page-header">
+                    <div>
+                        <span class="pdev-eyebrow">DEVELOPMENT / PDEV-02</span>
+                        <h1 class="pdev-page-title">Technical Issues</h1>
+                        <p class="pdev-page-description">
+                            Document, investigate and track technical issues
+                            affecting GabayAral application components.
+                        </p>
+
+                        <div class="pdev-page-meta">
+                            <span>
+                                <i class="bi bi-calendar3"></i>
+                                <span data-pdev-date></span>
+                            </span>
+                            <span>
+                                <i class="bi bi-bug"></i>
+                                Technical Issue Management
+                            </span>
+                        </div>
+                    </div>
+
+                    <span class="pdev-header-icon">
+                        <i class="bi bi-bug"></i>
+                    </span>
+                </header>
+
+
+                <!-- DEMO NOTICE -->
+
+                <div class="pdev-demo-notice">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <div>
+                        <strong>Demonstration issue register</strong>
+                        <p>
+                            All displayed issues are fictional.
+                            GitHub Projects and the production issue
+                            database are not connected.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- SECTION A -->
+
+                <section class="pdev-page-section" data-pdev-section>
+                    <div class="pdev-section-heading">
+                        <div>
+                            <span class="pdev-section-kicker">SECTION A</span>
+                            <h2>Technical Issue Overview</h2>
+                            <p>Summary of the available sample issue records.</p>
+                        </div>
+                    </div>
+
+                    <div class="pdev-stat-grid">
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+                            <div class="pdev-stat-top">
+                                <span class="pdev-stat-icon pdev-icon-blue">
+                                    <i class="bi bi-inbox"></i>
+                                </span>
+                                Total Issues
+                            </div>
+                            <strong class="pdev-stat-value">04</strong>
+                            <span class="pdev-stat-caption">Fictional records</span>
+                        </article>
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+                            <div class="pdev-stat-top">
+                                <span class="pdev-stat-icon pdev-icon-amber">
+                                    <i class="bi bi-hourglass-split"></i>
+                                </span>
+                                In Progress
+                            </div>
+                            <strong class="pdev-stat-value">01</strong>
+                            <span class="pdev-stat-caption">Sample investigation</span>
+                        </article>
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+                            <div class="pdev-stat-top">
+                                <span class="pdev-stat-icon pdev-icon-red">
+                                    <i class="bi bi-pause-circle"></i>
+                                </span>
+                                Blocked
+                            </div>
+                            <strong class="pdev-stat-value">01</strong>
+                            <span class="pdev-stat-caption">Sample blocked issue</span>
+                        </article>
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+                            <div class="pdev-stat-top">
+                                <span class="pdev-stat-icon pdev-icon-teal">
+                                    <i class="bi bi-check-circle"></i>
+                                </span>
+                                Completed
+                            </div>
+                            <strong class="pdev-stat-value">01</strong>
+                            <span class="pdev-stat-caption">Sample completed issue</span>
+                        </article>
+
+                    </div>
+                </section>
+
+
+                <!-- SECTION B -->
+
+                <section class="pdev-page-section" data-pdev-section>
+                    <div class="pdev-section-heading">
+                        <div>
+                            <span class="pdev-section-kicker">SECTION B</span>
+                            <h2>Technical Issue Register</h2>
+                            <p>Search and review technical issue records.</p>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="pdev-btn pdev-btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#newIssueModal"
+                        >
+                            <i class="bi bi-plus-lg"></i>
+                            Prepare Issue
+                        </button>
+                    </div>
+
+                    <article class="pdev-panel" data-pdev-searchable>
+
+                        <div class="pdev-panel-header">
+                            <div>
+                                <h3>Issue Register</h3>
+                                <p>Fictional demonstration records.</p>
+                            </div>
+                            <span class="pdev-badge pdev-badge-info">Demo Only</span>
+                        </div>
+
+                        <div class="pdev-toolbar">
+
+                            <div class="pdev-field flex-grow-1">
+                                <label for="issueSearch">Search Issues</label>
+                                <input
+                                    type="search"
+                                    id="issueSearch"
+                                    class="form-control"
+                                    data-pdev-table-search="issues"
+                                    placeholder="Search issue reference or title..."
+                                >
+                            </div>
+
+                            <div class="pdev-field">
+                                <label for="issuePriority">Priority</label>
+                                <select
+                                    id="issuePriority"
+                                    class="form-select"
+                                    data-pdev-filter="priority"
+                                    data-pdev-target="issues"
+                                >
+                                    <option value="all">All Priorities</option>
+                                    <option value="Critical">Critical</option>
+                                    <option value="High">High</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Low">Low</option>
+                                </select>
+                            </div>
+
+                            <div class="pdev-field">
+                                <label for="issueStatus">Status</label>
+                                <select
+                                    id="issueStatus"
+                                    class="form-select"
+                                    data-pdev-filter="status"
+                                    data-pdev-target="issues"
+                                >
+                                    <option value="all">All Statuses</option>
+                                    <option value="Reported">Reported</option>
+                                    <option value="Assigned">Assigned</option>
+                                    <option value="In Progress">In Progress</option>
+                                    <option value="Blocked">Blocked</option>
+                                    <option value="Completed">Completed</option>
+                                </select>
+                            </div>
+
+                            <button
+                                type="button"
+                                class="pdev-btn pdev-btn-secondary"
+                                data-pdev-clear-table="issues"
+                            >
+                                <i class="bi bi-arrow-counterclockwise"></i>
+                                Clear
+                            </button>
+
+                        </div>
+
+                        <div class="pdev-panel-body d-flex justify-content-between align-items-center flex-wrap gap-2">
+                            <span class="pdev-pagination-info" data-pdev-result-count="issues"></span>
+
+                            <div class="pdev-field">
+                                <label for="issuePageSize">Rows per page</label>
+                                <select
+                                    id="issuePageSize"
+                                    class="form-select"
+                                    data-pdev-page-size="issues"
+                                >
+                                    <option value="5" selected>5</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="pdev-table-wrap" data-pdev-table-wrapper>
+                            <table class="pdev-table" data-pdev-table="issues">
+                                <thead>
+                                    <tr>
+                                        <th>Issue Reference</th>
+                                        <th>Title</th>
+                                        <th>Component</th>
+                                        <th>Priority</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr data-pdev-row data-priority="High" data-status="In Progress">
+                                        <td><span class="pdev-code">DEMO-ISS-001</span></td>
+                                        <td>Authentication error</td>
+                                        <td>Authentication</td>
+                                        <td><span class="pdev-badge pdev-badge-danger">High</span></td>
+                                        <td><span class="pdev-badge pdev-badge-info">In Progress</span></td>
+                                        <td>
+                                            <button
+                                                type="button"
+                                                class="pdev-btn pdev-btn-secondary"
+                                                data-pdev-open-issue
+                                                data-issue-id="DEMO-ISS-001"
+                                                data-issue-title="Authentication error"
+                                                data-issue-component="Authentication"
+                                                data-issue-priority="High"
+                                                data-issue-status="In Progress"
+                                                data-issue-description="A fictional authentication issue. Review the permitted evidence, reproduce the behavior and document technical findings."
+                                            >Review</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr data-pdev-row data-priority="Medium" data-status="Assigned">
+                                        <td><span class="pdev-code">DEMO-ISS-002</span></td>
+                                        <td>Workspace navigation issue</td>
+                                        <td>Student Workspace</td>
+                                        <td><span class="pdev-badge pdev-badge-warning">Medium</span></td>
+                                        <td><span class="pdev-badge pdev-badge-neutral">Assigned</span></td>
+                                        <td>
+                                            <button
+                                                type="button"
+                                                class="pdev-btn pdev-btn-secondary"
+                                                data-pdev-open-issue
+                                                data-issue-id="DEMO-ISS-002"
+                                                data-issue-title="Workspace navigation issue"
+                                                data-issue-component="Student Workspace"
+                                                data-issue-priority="Medium"
+                                                data-issue-status="Assigned"
+                                                data-issue-description="A fictional navigation issue. Inspect the relevant routes and record reproduction steps."
+                                            >Review</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr data-pdev-row data-priority="Critical" data-status="Blocked">
+                                        <td><span class="pdev-code">DEMO-ISS-003</span></td>
+                                        <td>Database migration dependency</td>
+                                        <td>Database</td>
+                                        <td><span class="pdev-badge pdev-badge-danger">Critical</span></td>
+                                        <td><span class="pdev-badge pdev-badge-warning">Blocked</span></td>
+                                        <td>
+                                            <button
+                                                type="button"
+                                                class="pdev-btn pdev-btn-secondary"
+                                                data-pdev-open-issue
+                                                data-issue-id="DEMO-ISS-003"
+                                                data-issue-title="Database migration dependency"
+                                                data-issue-component="Database"
+                                                data-issue-priority="Critical"
+                                                data-issue-status="Blocked"
+                                                data-issue-description="A fictional migration dependency. Do not perform restricted database operations without required authorization."
+                                            >Review</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr data-pdev-row data-priority="Low" data-status="Completed">
+                                        <td><span class="pdev-code">DEMO-ISS-004</span></td>
+                                        <td>Notification display issue</td>
+                                        <td>Notifications</td>
+                                        <td><span class="pdev-badge pdev-badge-neutral">Low</span></td>
+                                        <td><span class="pdev-badge pdev-badge-success">Completed</span></td>
+                                        <td>
+                                            <button
+                                                type="button"
+                                                class="pdev-btn pdev-btn-secondary"
+                                                data-pdev-open-issue
+                                                data-issue-id="DEMO-ISS-004"
+                                                data-issue-title="Notification display issue"
+                                                data-issue-component="Notifications"
+                                                data-issue-priority="Low"
+                                                data-issue-status="Completed"
+                                                data-issue-description="A fictional completed notification issue. Historical findings are retained for reference."
+                                            >View</button>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="pdev-empty" data-pdev-table-empty="issues" hidden>
+                            <span class="pdev-empty-icon"><i class="bi bi-bug"></i></span>
+                            <strong>No matching issues found.</strong>
+                            <p>Change your search or filters.</p>
+                        </div>
+
+                        <div class="pdev-panel-footer">
+                            <span class="pdev-pagination-info">Sample issue records</span>
+                            <div class="pdev-pagination-controls" data-pdev-pagination="issues"></div>
+                        </div>
+
+                    </article>
+                </section>
+
+
+                <!-- SECTION C -->
+
+                <section class="pdev-page-section" data-pdev-section>
+                    <div class="pdev-section-heading">
+                        <div>
+                            <span class="pdev-section-kicker">SECTION C</span>
+                            <h2>Investigation Procedure</h2>
+                        </div>
+                    </div>
+
+                    <article class="pdev-panel">
+                        <div class="pdev-panel-body">
+                            <div class="pdev-timeline">
+
+                                <div class="pdev-timeline-item">
+                                    <span class="pdev-timeline-dot"><i class="bi bi-file-earmark-plus"></i></span>
+                                    <div class="pdev-timeline-content">
+                                        <strong>01. Create Technical Issue Record</strong>
+                                        <p>Document the issue, affected component and available permitted evidence.</p>
+                                    </div>
+                                </div>
+
+                                <div class="pdev-timeline-item">
+                                    <span class="pdev-timeline-dot"><i class="bi bi-search"></i></span>
+                                    <div class="pdev-timeline-content">
+                                        <strong>02. Review and Reproduce</strong>
+                                        <p>Examine the reported behavior and record reproduction steps.</p>
+                                    </div>
+                                </div>
+
+                                <div class="pdev-timeline-item">
+                                    <span class="pdev-timeline-dot"><i class="bi bi-code-slash"></i></span>
+                                    <div class="pdev-timeline-content">
+                                        <strong>03. Investigate Technical Cause</strong>
+                                        <p>Identify the likely cause and prepare a proposed correction.</p>
+                                    </div>
+                                </div>
+
+                                <div class="pdev-timeline-item">
+                                    <span class="pdev-timeline-dot"><i class="bi bi-check-circle"></i></span>
+                                    <div class="pdev-timeline-content">
+                                        <strong>04. Proceed to Review and Testing</strong>
+                                        <p>Submit changes for independent review and quality assurance.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+
+                <!-- SECTION D -->
+
+                <section class="pdev-page-section" data-pdev-section>
+                    <div class="pdev-section-heading">
+                        <div>
+                            <span class="pdev-section-kicker">SECTION D</span>
+                            <h2>Investigation Guidelines</h2>
+                        </div>
+                    </div>
+
+                    <div class="pdev-grid-2">
+
+                        <article class="pdev-panel" data-pdev-searchable>
+                            <div class="pdev-panel-body">
+                                <span class="pdev-stat-icon pdev-icon-blue mb-3">
+                                    <i class="bi bi-file-earmark-lock"></i>
+                                </span>
+                                <h3 class="h6 fw-bold">Permitted Evidence</h3>
+                                <p class="small text-secondary">
+                                    Attach only technical information that
+                                    is authorized for the investigation.
+                                </p>
+                                <span class="pdev-badge pdev-badge-success">Required</span>
+                            </div>
+                        </article>
+
+                        <article class="pdev-panel" data-pdev-searchable>
+                            <div class="pdev-panel-body">
+                                <span class="pdev-stat-icon pdev-icon-teal mb-3">
+                                    <i class="bi bi-journal-check"></i>
+                                </span>
+                                <h3 class="h6 fw-bold">Investigation History</h3>
+                                <p class="small text-secondary">
+                                    Preserve findings, technical changes,
+                                    responsible actors and timestamps.
+                                </p>
+                                <span class="pdev-badge pdev-badge-success">Required</span>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+
+                <p class="pdev-footer-note">
+                    <i class="bi bi-shield-lock"></i>
+                    Do not attach passwords, access tokens, Student grades,
+                    submissions or private Guardian records to technical issues.
+                </p>
+
+            </div>
+        </section>
+
+
+        <footer class="main-footer pdev-footer">
+            <span>GabayAral &copy; <span data-pdev-year></span> | Platform Developer</span>
+            <span data-pdev-last-updated></span>
+        </footer>
+
+    </main>
+
+
+    <!-- NEW ISSUE MODAL -->
+
+    <div class="modal fade pdev-modal" id="newIssueModal" tabindex="-1"
+         aria-labelledby="newIssueModalTitle" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <div>
+                        <span class="pdev-eyebrow">TECHNICAL DEVELOPMENT</span>
+                        <h2 class="modal-title" id="newIssueModalTitle">Prepare Technical Issue</h2>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="pdev-demo-notice mb-3">
+                        <i class="bi bi-info-circle"></i>
+                        <div>
+                            <strong>Local demonstration form</strong>
+                            <p>No actual issue record will be created.</p>
+                        </div>
+                    </div>
+
+                    <form
+                        data-pdev-demo-form
+                        data-pdev-success-message="Technical issue draft prepared locally. No Backend issue was created."
+                    >
+
+                        <div class="pdev-form-grid">
+
+                            <div class="pdev-field">
+                                <label for="newIssueTitle">Issue Title <span class="pdev-required">*</span></label>
+                                <input type="text" class="form-control" id="newIssueTitle" maxlength="120" required>
+                            </div>
+
+                            <div class="pdev-field">
+                                <label for="newIssueComponent">Affected Component <span class="pdev-required">*</span></label>
+                                <select class="form-select" id="newIssueComponent" required>
+                                    <option value="">Select component</option>
+                                    <option>Authentication</option>
+                                    <option>Student Workspace</option>
+                                    <option>Teacher Workspace</option>
+                                    <option>Database</option>
+                                    <option>Notifications</option>
+                                    <option>Integration</option>
+                                </select>
+                            </div>
+
+                            <div class="pdev-field">
+                                <label for="newIssuePriority">Priority <span class="pdev-required">*</span></label>
+                                <select class="form-select" id="newIssuePriority" required>
+                                    <option value="">Select priority</option>
+                                    <option>Critical</option>
+                                    <option>High</option>
+                                    <option>Medium</option>
+                                    <option>Low</option>
+                                </select>
+                            </div>
+
+                            <div class="pdev-field">
+                                <label for="newIssueReference">External Reference</label>
+                                <input type="text" class="form-control" id="newIssueReference" maxlength="100"
+                                       placeholder="Optional GitHub Projects reference">
+                            </div>
+
+                            <div class="pdev-field" style="grid-column: 1 / -1;">
+                                <label for="newIssueDescription">Description <span class="pdev-required">*</span></label>
+                                <textarea class="form-control" id="newIssueDescription" rows="4"
+                                          maxlength="1500" required></textarea>
+                            </div>
+
+                            <div class="pdev-field" style="grid-column: 1 / -1;">
+                                <label for="newIssueSteps">Reproduction Steps</label>
+                                <textarea class="form-control" id="newIssueSteps" rows="3"
+                                          maxlength="1000"></textarea>
+                            </div>
+
+                        </div>
+
+                        <div class="pdev-form-actions">
+                            <button type="button" class="pdev-btn pdev-btn-secondary" data-bs-dismiss="modal">
+                                Cancel
+                            </button>
+                            <button type="submit" class="pdev-btn pdev-btn-primary">
+                                <i class="bi bi-file-earmark-plus"></i>
+                                Prepare Local Draft
+                            </button>
+                        </div>
+
+                        <div class="pdev-notice success mt-3" data-pdev-form-result hidden></div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ISSUE REVIEW MODAL -->
+
+    <div class="modal fade pdev-modal" id="pdevIssueModal" tabindex="-1"
+         aria-labelledby="pdevIssueModalTitle" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h2 class="modal-title" id="pdevIssueModalTitle">Technical Issue Review</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="pdev-detail-grid mb-3">
+                        <div class="pdev-detail-item"><span>REFERENCE</span><strong id="pdevIssueId">Not selected</strong></div>
+                        <div class="pdev-detail-item"><span>TITLE</span><strong id="pdevIssueTitle">Not selected</strong></div>
+                        <div class="pdev-detail-item"><span>COMPONENT</span><strong id="pdevIssueComponent">Not selected</strong></div>
+                        <div class="pdev-detail-item"><span>PRIORITY</span><strong id="pdevIssuePriority">Not selected</strong></div>
+                        <div class="pdev-detail-item"><span>STATUS</span><strong id="pdevIssueStatus">Not selected</strong></div>
+                    </div>
+
+                    <div class="pdev-form-section mb-3">
+                        <h3>Issue Description</h3>
+                        <p id="pdevIssueDescription" class="mb-0">Select an issue.</p>
+                    </div>
+
+                    <form
+                        id="pdevIssueReviewForm"
+                        data-pdev-demo-form
+                        data-pdev-success-message="Technical review prepared locally. No Backend record was changed."
+                    >
+                        <input type="hidden" id="pdevIssueReference" name="issueReference">
+
+                        <div class="pdev-field">
+                            <label for="pdevReviewOutcome">Investigation Outcome <span class="pdev-required">*</span></label>
+                            <select class="form-select" id="pdevReviewOutcome" required>
+                                <option value="">Select outcome</option>
+                                <option>Reproducible</option>
+                                <option>Not Reproducible</option>
+                                <option>More Information Required</option>
+                                <option>Technical Dependency Identified</option>
+                                <option>Ready for Code Review</option>
+                            </select>
+                        </div>
+
+                        <div class="pdev-field mt-3">
+                            <label for="pdevReviewNotes">Technical Findings <span class="pdev-required">*</span></label>
+                            <textarea class="form-control" id="pdevReviewNotes" rows="4" maxlength="1500" required></textarea>
+                        </div>
+
+                        <div class="pdev-form-actions">
+                            <button type="button" class="pdev-btn pdev-btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="pdev-btn pdev-btn-primary">Prepare Local Review</button>
+                        </div>
+
+                        <div class="pdev-notice success mt-3" data-pdev-form-result hidden></div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/platform-developer.js"></script>
+<script src="../../assets/js/layout.js"></script>
+
+</body>
+</html>

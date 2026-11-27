@@ -1,0 +1,781 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+
+    <title>Audit Events | GabayAral</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SHARED STYLES -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+
+    <!-- PLATFORM ADMIN -->
+    <link rel="stylesheet" href="../../assets/css/platform-admin.css">
+</head>
+
+<body>
+
+<div class="app-shell platform-admin-app"
+     data-pa-page="audit-events">
+
+    <!-- SIDEBAR -->
+    <div id="paSidebarMount"></div>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+
+    <!-- MAIN AREA -->
+    <main class="main-area">
+
+        <!-- TOPBAR -->
+        <div id="paTopbarMount"></div>
+
+
+        <section class="main-content pa-content">
+
+            <div class="pa-page">
+
+
+                <!-- PAGE HEADER -->
+                <header class="pa-page-header">
+
+                    <div class="pa-page-header-copy">
+
+                        <span class="pa-eyebrow">
+                            SECURITY AND OPERATIONS / PA-13
+                        </span>
+
+                        <h1 class="pa-page-title">
+                            Platform Audit Events
+                        </h1>
+
+                        <p class="pa-page-description">
+                            Review platform-level administrative events
+                            and maintain an accountable history of
+                            authorized actions.
+                        </p>
+
+                        <div class="pa-page-meta">
+
+                            <span>
+                                <i class="bi bi-calendar3"></i>
+                                <span data-pa-date></span>
+                            </span>
+
+                            <span>
+                                <i class="bi bi-shield-check"></i>
+                                Administrative Audit History
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <span class="pa-page-header-icon">
+                        <i class="bi bi-clock-history"></i>
+                    </span>
+
+                </header>
+
+
+                <!-- DEMONSTRATION NOTICE -->
+                <div class="pa-demo-notice">
+
+                    <i class="bi bi-info-circle-fill"></i>
+
+                    <div>
+
+                        <strong>
+                            Demonstration audit viewer
+                        </strong>
+
+                        <span>
+                            All displayed audit events are fictional.
+                            No official audit database is connected.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SECTION A: AUDIT SUMMARY -->
+                <section class="pa-page-section"
+                         data-pa-section>
+
+                    <div class="pa-section-heading">
+
+                        <div>
+
+                            <span class="pa-section-kicker">
+                                SECTION A
+                            </span>
+
+                            <h2>Audit Overview</h2>
+
+                            <p>
+                                Summary of sample platform audit events.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pa-stat-grid">
+
+
+                        <!-- TOTAL EVENTS -->
+                        <article class="pa-stat-card"
+                                 data-pa-searchable>
+
+                            <div class="pa-stat-top">
+
+                                <span class="pa-stat-icon pa-icon-blue">
+                                    <i class="bi bi-journal-text"></i>
+                                </span>
+
+                                Total Events
+
+                            </div>
+
+                            <strong class="pa-stat-value">
+                                128
+                            </strong>
+
+                            <span class="pa-stat-caption">
+                                Fictional sample events
+                            </span>
+
+                        </article>
+
+
+                        <!-- ADMINISTRATIVE -->
+                        <article class="pa-stat-card"
+                                 data-pa-searchable>
+
+                            <div class="pa-stat-top">
+
+                                <span class="pa-stat-icon pa-icon-teal">
+                                    <i class="bi bi-person-check"></i>
+                                </span>
+
+                                Administrative Actions
+
+                            </div>
+
+                            <strong class="pa-stat-value">
+                                42
+                            </strong>
+
+                            <span class="pa-stat-caption">
+                                Sample administrative events
+                            </span>
+
+                        </article>
+
+
+                        <!-- ACCESS -->
+                        <article class="pa-stat-card"
+                                 data-pa-searchable>
+
+                            <div class="pa-stat-top">
+
+                                <span class="pa-stat-icon pa-icon-purple">
+                                    <i class="bi bi-key"></i>
+                                </span>
+
+                                Access Events
+
+                            </div>
+
+                            <strong class="pa-stat-value">
+                                56
+                            </strong>
+
+                            <span class="pa-stat-caption">
+                                Sample access-related events
+                            </span>
+
+                        </article>
+
+
+                        <!-- SECURITY -->
+                        <article class="pa-stat-card"
+                                 data-pa-searchable>
+
+                            <div class="pa-stat-top">
+
+                                <span class="pa-stat-icon pa-icon-amber">
+                                    <i class="bi bi-shield-exclamation"></i>
+                                </span>
+
+                                Security Events
+
+                            </div>
+
+                            <strong class="pa-stat-value">
+                                30
+                            </strong>
+
+                            <span class="pa-stat-caption">
+                                Sample security-related events
+                            </span>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SECTION B: AUDIT REGISTER -->
+                <section class="pa-page-section"
+                         data-pa-section>
+
+                    <div class="pa-section-heading">
+
+                        <div>
+
+                            <span class="pa-section-kicker">
+                                SECTION B
+                            </span>
+
+                            <h2>Audit Event Register</h2>
+
+                            <p>
+                                Search and filter permitted platform-level
+                                audit events.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <article class="pa-panel">
+
+
+                        <!-- TABLE TOOLBAR -->
+                        <div class="pa-toolbar">
+
+
+                            <div class="pa-field flex-grow-1">
+
+                                <label for="auditSearch">
+                                    Search Events
+                                </label>
+
+                                <input
+                                    type="search"
+                                    id="auditSearch"
+                                    class="form-control"
+                                    data-pa-table-search="audit"
+                                    placeholder="Search event ID, actor or action..."
+                                >
+
+                            </div>
+
+
+                            <div class="pa-field">
+
+                                <label for="auditCategory">
+                                    Event Category
+                                </label>
+
+                                <select
+                                    id="auditCategory"
+                                    class="form-select"
+                                    data-pa-table-filter="category"
+                                    data-pa-target="audit"
+                                >
+
+                                    <option value="all">
+                                        All Categories
+                                    </option>
+
+                                    <option value="Administrative">
+                                        Administrative
+                                    </option>
+
+                                    <option value="Access">
+                                        Access
+                                    </option>
+
+                                    <option value="Security">
+                                        Security
+                                    </option>
+
+                                    <option value="Governance">
+                                        Governance
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                class="pa-btn pa-btn-secondary"
+                                data-pa-clear-table="audit"
+                            >
+
+                                <i class="bi bi-arrow-counterclockwise"></i>
+
+                                Clear Filters
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- RESULT COUNT -->
+                        <div class="pa-panel-body">
+
+                            <span
+                                class="pa-pagination-info"
+                                data-pa-result-count="audit"
+                            >
+
+                                Loading audit records...
+
+                            </span>
+
+                        </div>
+
+
+                        <!-- AUDIT TABLE -->
+                        <div class="pa-table-wrap"
+                             data-pa-table-wrapper>
+
+                            <table class="pa-table"
+                                   data-pa-table="audit">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>Event ID</th>
+
+                                        <th>Actor</th>
+
+                                        <th>Action</th>
+
+                                        <th>Category</th>
+
+                                        <th>Date and Time</th>
+
+                                        <th>Result</th>
+
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody>
+
+
+                                    <tr data-pa-row
+                                        data-category="Administrative">
+
+                                        <td>
+                                            <span class="pa-code">
+                                                DEMO-AUD-001
+                                            </span>
+                                        </td>
+
+                                        <td>Demo Administrator</td>
+
+                                        <td>Workspace review opened</td>
+
+                                        <td>Administrative</td>
+
+                                        <td>Nov 27, 2026 · 09:10 AM</td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-success">
+                                                Recorded
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr data-pa-row
+                                        data-category="Access">
+
+                                        <td>
+                                            <span class="pa-code">
+                                                DEMO-AUD-002
+                                            </span>
+                                        </td>
+
+                                        <td>Demo Developer</td>
+
+                                        <td>Access request submitted</td>
+
+                                        <td>Access</td>
+
+                                        <td>Nov 26, 2026 · 02:20 PM</td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-success">
+                                                Recorded
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr data-pa-row
+                                        data-category="Security">
+
+                                        <td>
+                                            <span class="pa-code">
+                                                DEMO-AUD-003
+                                            </span>
+                                        </td>
+
+                                        <td>System Demonstration</td>
+
+                                        <td>Security alert generated</td>
+
+                                        <td>Security</td>
+
+                                        <td>Nov 26, 2026 · 11:30 AM</td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-warning">
+                                                Alert
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr data-pa-row
+                                        data-category="Governance">
+
+                                        <td>
+                                            <span class="pa-code">
+                                                DEMO-AUD-004
+                                            </span>
+                                        </td>
+
+                                        <td>Demo Senior Administrator</td>
+
+                                        <td>Direction acknowledged</td>
+
+                                        <td>Governance</td>
+
+                                        <td>Nov 25, 2026 · 10:15 AM</td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-success">
+                                                Recorded
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr data-pa-row
+                                        data-category="Administrative">
+
+                                        <td>
+                                            <span class="pa-code">
+                                                DEMO-AUD-005
+                                            </span>
+                                        </td>
+
+                                        <td>Demo Administrator</td>
+
+                                        <td>Platform settings reviewed</td>
+
+                                        <td>Administrative</td>
+
+                                        <td>Nov 24, 2026 · 03:40 PM</td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-success">
+                                                Recorded
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr data-pa-row
+                                        data-category="Access">
+
+                                        <td>
+                                            <span class="pa-code">
+                                                DEMO-AUD-006
+                                            </span>
+                                        </td>
+
+                                        <td>Demo Administrator</td>
+
+                                        <td>Developer access reviewed</td>
+
+                                        <td>Access</td>
+
+                                        <td>Nov 23, 2026 · 01:15 PM</td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-success">
+                                                Recorded
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+
+                        <!-- EMPTY STATE -->
+                        <div class="pa-empty"
+                             data-pa-table-empty="audit"
+                             hidden>
+
+                            <span class="pa-empty-icon">
+                                <i class="bi bi-journal-text"></i>
+                            </span>
+
+                            <strong>
+                                No matching audit events found.
+                            </strong>
+
+                            <p>
+                                Change your search term or category filter.
+                            </p>
+
+                        </div>
+
+
+                        <!-- PAGINATION -->
+                        <div class="pa-panel-footer">
+
+                            <span class="pa-pagination-info">
+                                Fictional audit records
+                            </span>
+
+                            <div
+                                class="pa-pagination-controls"
+                                data-pa-pagination="audit"
+                            ></div>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- SECTION C: AUDIT INTEGRITY -->
+                <section class="pa-page-section"
+                         data-pa-section>
+
+                    <div class="pa-section-heading">
+
+                        <div>
+
+                            <span class="pa-section-kicker">
+                                SECTION C
+                            </span>
+
+                            <h2>Audit Integrity and Access</h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pa-grid-2">
+
+
+                        <article class="pa-panel">
+
+                            <div class="pa-panel-body">
+
+                                <span class="pa-stat-icon pa-icon-teal mb-3">
+                                    <i class="bi bi-lock"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Read-Only History
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Historical audit entries must not be
+                                    silently edited or deleted.
+                                </p>
+
+                                <span class="pa-badge pa-badge-success">
+                                    Required
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="pa-panel">
+
+                            <div class="pa-panel-body">
+
+                                <span class="pa-stat-icon pa-icon-blue mb-3">
+                                    <i class="bi bi-person-check"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Authorized Review
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Platform-level audit information must
+                                    follow role permissions and access boundaries.
+                                </p>
+
+                                <span class="pa-badge pa-badge-success">
+                                    Required
+                                </span>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SECTION D: AUDIT RECORD REQUIREMENTS -->
+                <section class="pa-page-section"
+                         data-pa-section>
+
+                    <div class="pa-section-heading">
+
+                        <div>
+
+                            <span class="pa-section-kicker">
+                                SECTION D
+                            </span>
+
+                            <h2>Audit Record Information</h2>
+
+                            <p>
+                                Information that should be preserved
+                                for authorized historical review.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <article class="pa-panel">
+
+                        <div class="pa-panel-body">
+
+                            <div class="pa-detail-grid">
+
+                                <div class="pa-detail-item">
+                                    <span>ACTOR</span>
+                                    <strong>Account that performed the action</strong>
+                                </div>
+
+                                <div class="pa-detail-item">
+                                    <span>ASSIGNED ROLE</span>
+                                    <strong>Role of the acting account</strong>
+                                </div>
+
+                                <div class="pa-detail-item">
+                                    <span>DATE AND TIME</span>
+                                    <strong>Recorded event timestamp</strong>
+                                </div>
+
+                                <div class="pa-detail-item">
+                                    <span>AFFECTED RESOURCE</span>
+                                    <strong>Platform resource or account</strong>
+                                </div>
+
+                                <div class="pa-detail-item">
+                                    <span>REASON</span>
+                                    <strong>Documented reason for action</strong>
+                                </div>
+
+                                <div class="pa-detail-item">
+                                    <span>RESULT</span>
+                                    <strong>Outcome of the action</strong>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <p class="pa-footer-note">
+
+                    <i class="bi bi-shield-lock"></i>
+
+                    This interface is read-only. No audit record editing
+                    or deletion is provided.
+
+                </p>
+
+
+            </div>
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="main-footer pa-footer">
+
+            <span>
+                GabayAral &copy;
+                <span data-pa-year></span>
+                | Platform Administration
+            </span>
+
+            <span data-pa-last-updated></span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="../../assets/js/platform-admin.js"></script>
+
+<script src="../../assets/js/layout.js"></script>
+
+</body>
+</html>

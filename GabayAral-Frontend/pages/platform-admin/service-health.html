@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+    <title>Service Health | GabayAral</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/platform-admin.css">
+</head>
+
+<body>
+<div class="app-shell platform-admin-app" data-pa-page="service-health">
+
+    <div id="paSidebarMount"></div>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <main class="main-area">
+        <div id="paTopbarMount"></div>
+
+        <section class="main-content pa-content">
+            <div class="pa-page">
+
+                <header class="pa-page-header">
+                    <div class="pa-page-header-copy">
+                        <span class="pa-eyebrow">PLATFORM OPERATIONS</span>
+                        <h1 class="pa-page-title">Service Health</h1>
+                        <p class="pa-page-description">
+                            Monitor the operational condition and availability
+                            of GabayAral platform services.
+                        </p>
+                        <div class="pa-page-meta">
+                            <span><i class="bi bi-calendar3"></i><span data-pa-date></span></span>
+                            <span><i class="bi bi-globe2"></i>Platform-wide monitoring</span>
+                        </div>
+                    </div>
+                    <span class="pa-page-header-icon">
+                        <i class="bi bi-activity"></i>
+                    </span>
+                </header>
+
+
+                <div class="pa-demo-notice">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <div>
+                        <strong>Live monitoring source not connected</strong>
+                        <span>
+                            Actual service availability cannot be verified
+                            because no monitoring provider is configured.
+                        </span>
+                    </div>
+                </div>
+
+
+                <!-- SERVICE SUMMARY -->
+
+                <section class="pa-page-section" data-pa-section>
+                    <div class="pa-section-heading">
+                        <div>
+                            <span class="pa-section-kicker">SECTION A</span>
+                            <h2>Platform Status Summary</h2>
+                            <p>Current monitoring information available to this page.</p>
+                        </div>
+                    </div>
+
+                    <div class="pa-stat-grid">
+
+                        <article class="pa-stat-card" data-pa-searchable>
+                            <div class="pa-stat-top">
+                                <span class="pa-stat-icon pa-icon-blue">
+                                    <i class="bi bi-activity"></i>
+                                </span>
+                                Overall Platform Status
+                            </div>
+                            <strong class="pa-stat-value">Unknown</strong>
+                            <span class="pa-stat-caption">No approved live status source</span>
+                            <span class="pa-badge pa-badge-neutral mt-3">Cannot be verified</span>
+                        </article>
+
+                        <article class="pa-stat-card" data-pa-searchable>
+                            <div class="pa-stat-top">
+                                <span class="pa-stat-icon pa-icon-teal">
+                                    <i class="bi bi-layers"></i>
+                                </span>
+                                Monitored Components
+                            </div>
+                            <strong class="pa-stat-value">04</strong>
+                            <span class="pa-stat-caption">Proposed component groups</span>
+                            <span class="pa-badge pa-badge-neutral mt-3">Not connected</span>
+                        </article>
+
+                        <article class="pa-stat-card" data-pa-searchable>
+                            <div class="pa-stat-top">
+                                <span class="pa-stat-icon pa-icon-amber">
+                                    <i class="bi bi-bell"></i>
+                                </span>
+                                Service Alerts
+                            </div>
+                            <strong class="pa-stat-value">N/A</strong>
+                            <span class="pa-stat-caption">Alert feed unavailable</span>
+                            <span class="pa-badge pa-badge-neutral mt-3">Not available</span>
+                        </article>
+
+                        <article class="pa-stat-card" data-pa-searchable>
+                            <div class="pa-stat-top">
+                                <span class="pa-stat-icon pa-icon-purple">
+                                    <i class="bi bi-clock-history"></i>
+                                </span>
+                                Last Health Check
+                            </div>
+                            <strong class="pa-stat-value">N/A</strong>
+                            <span class="pa-stat-caption">No monitoring timestamp</span>
+                            <span class="pa-badge pa-badge-neutral mt-3">Unavailable</span>
+                        </article>
+
+                    </div>
+                </section>
+
+
+                <!-- COMPONENTS -->
+
+                <section class="pa-page-section" data-pa-section>
+                    <div class="pa-section-heading">
+                        <div>
+                            <span class="pa-section-kicker">SECTION B</span>
+                            <h2>Service Components</h2>
+                            <p>Proposed monitoring groups for future integration.</p>
+                        </div>
+                    </div>
+
+                    <article class="pa-panel">
+                        <div class="pa-panel-header">
+                            <div>
+                                <h3>Platform Service Components</h3>
+                                <p>No component has been verified by a live monitoring source.</p>
+                            </div>
+                            <span class="pa-badge pa-badge-neutral">
+                                <i class="bi bi-database-x"></i> No live source
+                            </span>
+                        </div>
+
+                        <div class="pa-table-wrap">
+                            <table class="pa-table">
+                                <thead>
+                                    <tr>
+                                        <th>Component</th>
+                                        <th>Purpose</th>
+                                        <th>Status</th>
+                                        <th>Last Check</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr data-pa-searchable>
+                                        <td><strong>GabayAral Application</strong></td>
+                                        <td>Application availability</td>
+                                        <td><span class="pa-badge pa-badge-neutral">Not Connected</span></td>
+                                        <td>Unavailable</td>
+                                    </tr>
+                                    <tr data-pa-searchable>
+                                        <td><strong>PostgreSQL Database</strong></td>
+                                        <td>Database availability</td>
+                                        <td><span class="pa-badge pa-badge-neutral">Not Connected</span></td>
+                                        <td>Unavailable</td>
+                                    </tr>
+                                    <tr data-pa-searchable>
+                                        <td><strong>Authentication and Authorization</strong></td>
+                                        <td>Identity and permission controls</td>
+                                        <td><span class="pa-badge pa-badge-neutral">Not Connected</span></td>
+                                        <td>Unavailable</td>
+                                    </tr>
+                                    <tr data-pa-searchable>
+                                        <td><strong>Integrations and External Services</strong></td>
+                                        <td>Configured integrations</td>
+                                        <td><span class="pa-badge pa-badge-neutral">Not Connected</span></td>
+                                        <td>Unavailable</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="pa-panel-body">
+                            <div class="pa-notice info">
+                                <i class="bi bi-info-circle"></i>
+                                These are proposed monitoring groups, not verified
+                                live services. No uptime or response-time values are invented.
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+
+                <!-- ALERTS -->
+
+                <section class="pa-page-section" data-pa-section>
+                    <div class="pa-section-heading">
+                        <div>
+                            <span class="pa-section-kicker">SECTION C</span>
+                            <h2>Service Alerts and Events</h2>
+                            <p>Review available operational alerts and service events.</p>
+                        </div>
+                    </div>
+
+                    <div class="pa-grid-2">
+
+                        <article class="pa-panel" data-pa-searchable>
+                            <div class="pa-panel-header">
+                                <div>
+                                    <h3>Service Alert Feed</h3>
+                                    <p>Monitoring alert availability.</p>
+                                </div>
+                                <i class="bi bi-bell-slash fs-4 text-warning"></i>
+                            </div>
+                            <div class="pa-empty">
+                                <span class="pa-empty-icon"><i class="bi bi-bell-slash"></i></span>
+                                <strong>Alert feed not connected</strong>
+                                <p>
+                                    This does not mean there are no actual service alerts.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="pa-panel" data-pa-searchable>
+                            <div class="pa-panel-header">
+                                <div>
+                                    <h3>Recent Service Events</h3>
+                                    <p>Available operational event history.</p>
+                                </div>
+                                <i class="bi bi-clock-history fs-4 text-primary"></i>
+                            </div>
+                            <div class="pa-empty">
+                                <span class="pa-empty-icon"><i class="bi bi-calendar-x"></i></span>
+                                <strong>No event source connected</strong>
+                                <p>
+                                    Event history will be available after an approved
+                                    monitoring or logging source is connected.
+                                </p>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+
+                <!-- DEVELOPER COORDINATION -->
+
+                <section class="pa-page-section" data-pa-section>
+                    <div class="pa-section-heading">
+                        <div>
+                            <span class="pa-section-kicker">SECTION D</span>
+                            <h2>Developer Coordination</h2>
+                            <p>Prepare a technical issue referral for authorized review.</p>
+                        </div>
+                    </div>
+
+                    <article class="pa-panel">
+                        <div class="pa-panel-body">
+                            <div class="d-flex align-items-start gap-3">
+                                <span class="pa-stat-icon pa-icon-purple">
+                                    <i class="bi bi-person-gear"></i>
+                                </span>
+
+                                <div class="flex-grow-1">
+                                    <h3 class="h6 fw-bold text-dark">Technical Issue Referral</h3>
+                                    <p class="small text-secondary">
+                                        The Platform Administrator documents and coordinates
+                                        technical concerns. The Platform Developer handles
+                                        authorized technical investigation and remediation.
+                                    </p>
+
+                                    <button
+                                        type="button"
+                                        class="pa-btn pa-btn-primary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#paReferralModal"
+                                    >
+                                        <i class="bi bi-file-earmark-plus"></i>
+                                        Prepare Developer Referral
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+
+                <!-- STATUS DEFINITIONS -->
+
+                <section class="pa-page-section" data-pa-section>
+                    <div class="pa-section-heading">
+                        <div>
+                            <span class="pa-section-kicker">SECTION E</span>
+                            <h2>Status Definitions</h2>
+                            <p>Standard labels used by the Service Health interface.</p>
+                        </div>
+                    </div>
+
+                    <div class="pa-panel">
+                        <div class="pa-panel-body">
+                            <div class="pa-detail-grid">
+                                <div class="pa-detail-item">
+                                    <span>OPERATIONAL</span>
+                                    <strong>Verified functioning</strong>
+                                </div>
+                                <div class="pa-detail-item">
+                                    <span>DEGRADED</span>
+                                    <strong>Functioning with limitation</strong>
+                                </div>
+                                <div class="pa-detail-item">
+                                    <span>UNAVAILABLE</span>
+                                    <strong>Confirmed service interruption</strong>
+                                </div>
+                                <div class="pa-detail-item">
+                                    <span>MAINTENANCE</span>
+                                    <strong>Approved maintenance period</strong>
+                                </div>
+                                <div class="pa-detail-item">
+                                    <span>UNKNOWN</span>
+                                    <strong>Status cannot be verified</strong>
+                                </div>
+                                <div class="pa-detail-item">
+                                    <span>NOT CONNECTED</span>
+                                    <strong>No monitoring source connected</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <p class="pa-footer-note">
+                    <i class="bi bi-info-circle"></i>
+                    No live health checks, service alerts or technical referrals are connected.
+                </p>
+
+            </div>
+        </section>
+
+        <footer class="main-footer pa-footer">
+            <span>GabayAral &copy; <span data-pa-year></span> | Platform Administration</span>
+            <span data-pa-last-updated></span>
+        </footer>
+    </main>
+
+
+    <!-- DEVELOPER REFERRAL MODAL -->
+
+    <div class="modal fade pa-modal" id="paReferralModal" tabindex="-1"
+         aria-labelledby="paReferralTitle" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <div>
+                        <span class="pa-eyebrow">PLATFORM OPERATIONS</span>
+                        <h2 class="modal-title" id="paReferralTitle">
+                            Prepare Developer Referral
+                        </h2>
+                        <p class="small text-secondary mb-0">
+                            Document a technical issue for authorized review.
+                        </p>
+                    </div>
+
+                    <span class="pa-badge pa-badge-info">DEMO ONLY</span>
+
+                    <button type="button" class="btn-close ms-2"
+                            data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="pa-demo-notice mb-3">
+                        <i class="bi bi-info-circle"></i>
+                        <div>
+                            <strong>Local demonstration form</strong>
+                            <span>No issue will be submitted to a real Developer or saved to a database.</span>
+                        </div>
+                    </div>
+
+                    <div class="pa-grid-main-side">
+
+                        <form data-pa-demo-form
+                              data-pa-success-message="Local Developer referral draft prepared. Nothing was submitted or saved.">
+
+                            <div class="pa-form-section mb-3">
+                                <h3>01. Issue Information</h3>
+                                <p>Identify the affected service and issue.</p>
+
+                                <div class="pa-form-grid">
+
+                                    <div class="pa-field">
+                                        <label for="refComponent">
+                                            Affected Component <span class="pa-required">*</span>
+                                        </label>
+                                        <select class="form-select" id="refComponent" required>
+                                            <option value="">Select component</option>
+                                            <option>GabayAral Application</option>
+                                            <option>PostgreSQL Database</option>
+                                            <option>Authentication and Authorization</option>
+                                            <option>Integrations and External Services</option>
+                                            <option>Other Technical Component</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="pa-field">
+                                        <label for="refCategory">
+                                            Issue Category <span class="pa-required">*</span>
+                                        </label>
+                                        <select class="form-select" id="refCategory" required>
+                                            <option value="">Select category</option>
+                                            <option>Service Availability</option>
+                                            <option>Performance</option>
+                                            <option>Error or Exception</option>
+                                            <option>Integration</option>
+                                            <option>Other Technical Issue</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="pa-field" style="grid-column:1/-1">
+                                        <label for="refTitle">
+                                            Issue Title <span class="pa-required">*</span>
+                                        </label>
+                                        <input class="form-control" id="refTitle"
+                                               maxlength="120" required
+                                               placeholder="Enter a descriptive issue title">
+                                    </div>
+
+                                    <div class="pa-field" style="grid-column:1/-1">
+                                        <label for="refScope">
+                                            Observed Impact Scope <span class="pa-required">*</span>
+                                        </label>
+                                        <select class="form-select" id="refScope" required>
+                                            <option value="">Select scope</option>
+                                            <option>Platform-wide</option>
+                                            <option>Multiple school workspaces</option>
+                                            <option>Single service component</option>
+                                            <option>Not yet determined</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="pa-form-section mb-3">
+                                <h3>02. Requested Priority</h3>
+                                <p>Indicate the requested level of technical attention.</p>
+
+                                <div class="pa-form-grid">
+
+                                    <label class="pa-detail-item">
+                                        <input type="radio" name="refPriority"
+                                               value="Routine" required>
+                                        <strong>Routine</strong>
+                                        <small>Normal technical review</small>
+                                    </label>
+
+                                    <label class="pa-detail-item">
+                                        <input type="radio" name="refPriority"
+                                               value="High">
+                                        <strong>High</strong>
+                                        <small>Significant service impact</small>
+                                    </label>
+
+                                    <label class="pa-detail-item">
+                                        <input type="radio" name="refPriority"
+                                               value="Critical">
+                                        <strong>Critical</strong>
+                                        <small>Major service disruption</small>
+                                    </label>
+
+                                </div>
+
+                                <small class="pa-field-help">
+                                    Requested priority is informational and does not create an SLA.
+                                </small>
+                            </div>
+
+
+                            <div class="pa-form-section">
+                                <h3>03. Issue Description</h3>
+                                <p>Describe observed behavior and relevant technical details.</p>
+
+                                <div class="pa-field">
+                                    <label for="refDescription">
+                                        Technical Issue Details <span class="pa-required">*</span>
+                                    </label>
+                                    <textarea class="form-control" id="refDescription"
+                                              rows="5" maxlength="1500" required
+                                              placeholder="Describe the observed behavior and its impact..."></textarea>
+                                </div>
+
+                                <div class="pa-field mt-3">
+                                    <label for="refReference">
+                                        Supporting Reference (Optional)
+                                    </label>
+                                    <input class="form-control" id="refReference"
+                                           maxlength="100"
+                                           placeholder="Non-sensitive internal reference">
+                                </div>
+                            </div>
+
+                            <div class="pa-form-actions">
+                                <button type="button" class="pa-btn pa-btn-secondary"
+                                        data-bs-dismiss="modal">
+                                    Cancel
+                                </button>
+                                <button type="submit" class="pa-btn pa-btn-primary">
+                                    <i class="bi bi-file-earmark-check"></i>
+                                    Prepare Local Draft
+                                </button>
+                            </div>
+
+                            <div class="pa-notice success mt-3" data-pa-form-result hidden></div>
+
+                        </form>
+
+
+                        <aside class="d-flex flex-column gap-3">
+
+                            <div class="pa-panel">
+                                <div class="pa-panel-header">
+                                    <h3>Referral Workflow</h3>
+                                </div>
+                                <div class="pa-panel-body">
+                                    <div class="pa-timeline">
+                                        <div class="pa-timeline-item">
+                                            <span class="pa-timeline-dot">
+                                                <i class="bi bi-shield-check"></i>
+                                            </span>
+                                            <div class="pa-timeline-content">
+                                                <strong>Platform Administrator</strong>
+                                                <p>Documents and prepares the referral.</p>
+                                            </div>
+                                        </div>
+                                        <div class="pa-timeline-item">
+                                            <span class="pa-timeline-dot">
+                                                <i class="bi bi-code-slash"></i>
+                                            </span>
+                                            <div class="pa-timeline-content">
+                                                <strong>Platform Developer</strong>
+                                                <p>Handles authorized technical investigation.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pa-notice warning">
+                                <i class="bi bi-shield-lock-fill"></i>
+                                Do not include passwords, access tokens, private Student
+                                records, grades, submission files or Guardian documents.
+                            </div>
+
+                        </aside>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/platform-admin.js"></script>
+<script src="../../assets/js/layout.js"></script>
+</body>
+</html>

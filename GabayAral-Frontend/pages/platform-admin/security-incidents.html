@@ -1,0 +1,2345 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+
+    <title>Security and Incidents | GabayAral</title>
+
+    <!-- BOOTSTRAP -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- BOOTSTRAP ICONS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- INTER FONT -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- SHARED CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+
+    <!-- PLATFORM ADMIN CSS -->
+    <link rel="stylesheet" href="../../assets/css/platform-admin.css">
+
+</head>
+
+
+<body>
+
+<div
+    class="app-shell platform-admin-app"
+    data-pa-page="security-incidents"
+>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <div id="paSidebarMount"></div>
+
+    <div
+        class="sidebar-backdrop"
+        id="sidebarBackdrop"
+    ></div>
+
+
+    <!-- =====================================================
+         MAIN AREA
+    ====================================================== -->
+
+    <main class="main-area">
+
+
+        <!-- TOPBAR -->
+        <div id="paTopbarMount"></div>
+
+
+        <!-- PAGE CONTENT -->
+        <section class="main-content pa-content">
+
+            <div class="pa-page">
+
+
+                <!-- =================================================
+                     PAGE HEADER
+                ================================================== -->
+
+                <header class="pa-page-header">
+
+                    <div class="pa-page-header-copy">
+
+                        <span class="pa-eyebrow">
+                            SECURITY AND OPERATIONS / PA-12
+                        </span>
+
+                        <h1 class="pa-page-title">
+                            Security and Incidents
+                        </h1>
+
+                        <p class="pa-page-description">
+                            Monitor platform-level security alerts,
+                            coordinate incident response, review
+                            technical findings and oversee authorized
+                            corrective actions.
+                        </p>
+
+                        <div class="pa-page-meta">
+
+                            <span>
+                                <i class="bi bi-calendar3"></i>
+                                <span data-pa-date></span>
+                            </span>
+
+                            <span>
+                                <i class="bi bi-shield-check"></i>
+                                Platform Security Oversight
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <span class="pa-page-header-icon">
+                        <i class="bi bi-shield-exclamation"></i>
+                    </span>
+
+                </header>
+
+
+                <!-- =================================================
+                     DEMONSTRATION NOTICE
+                ================================================== -->
+
+                <div class="pa-demo-notice">
+
+                    <i class="bi bi-info-circle-fill"></i>
+
+                    <div>
+
+                        <strong>
+                            Demonstration Incident Management Center
+                        </strong>
+
+                        <span>
+                            All incidents, alerts, actors, dates and
+                            technical findings are fictional sample data.
+                            No live security monitoring, authentication
+                            logs or incident database is connected.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     SECTION A - SECURITY OVERVIEW
+                ================================================== -->
+
+                <section
+                    class="pa-page-section"
+                    data-pa-section
+                >
+
+                    <div class="pa-section-heading">
+
+                        <div>
+
+                            <span class="pa-section-kicker">
+                                SECTION A
+                            </span>
+
+                            <h2>Security Overview</h2>
+
+                            <p>
+                                High-level summary of the sample
+                                platform security incidents.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pa-stat-grid">
+
+
+                        <!-- TOTAL INCIDENTS -->
+
+                        <article
+                            class="pa-stat-card"
+                            data-pa-searchable
+                        >
+
+                            <div class="pa-stat-top">
+
+                                <span class="pa-stat-icon pa-icon-blue">
+                                    <i class="bi bi-shield"></i>
+                                </span>
+
+                                Total Incidents
+
+                            </div>
+
+                            <strong class="pa-stat-value">
+                                06
+                            </strong>
+
+                            <span class="pa-stat-caption">
+                                Sample incident records
+                            </span>
+
+                        </article>
+
+
+                        <!-- OPEN INCIDENTS -->
+
+                        <article
+                            class="pa-stat-card"
+                            data-pa-searchable
+                        >
+
+                            <div class="pa-stat-top">
+
+                                <span class="pa-stat-icon pa-icon-red">
+                                    <i class="bi bi-exclamation-triangle"></i>
+                                </span>
+
+                                Open Incidents
+
+                            </div>
+
+                            <strong class="pa-stat-value">
+                                02
+                            </strong>
+
+                            <span class="pa-stat-caption">
+                                Awaiting initial assessment
+                            </span>
+
+                        </article>
+
+
+                        <!-- INVESTIGATION -->
+
+                        <article
+                            class="pa-stat-card"
+                            data-pa-searchable
+                        >
+
+                            <div class="pa-stat-top">
+
+                                <span class="pa-stat-icon pa-icon-amber">
+                                    <i class="bi bi-search"></i>
+                                </span>
+
+                                Under Investigation
+
+                            </div>
+
+                            <strong class="pa-stat-value">
+                                02
+                            </strong>
+
+                            <span class="pa-stat-caption">
+                                Technical investigation underway
+                            </span>
+
+                        </article>
+
+
+                        <!-- RESOLVED -->
+
+                        <article
+                            class="pa-stat-card"
+                            data-pa-searchable
+                        >
+
+                            <div class="pa-stat-top">
+
+                                <span class="pa-stat-icon pa-icon-teal">
+                                    <i class="bi bi-check-circle"></i>
+                                </span>
+
+                                Resolved Incidents
+
+                            </div>
+
+                            <strong class="pa-stat-value">
+                                01
+                            </strong>
+
+                            <span class="pa-stat-caption">
+                                Sample resolved incidents
+                            </span>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION B - SECURITY ALERTS
+                ================================================== -->
+
+                <section
+                    class="pa-page-section"
+                    data-pa-section
+                >
+
+                    <div class="pa-section-heading">
+
+                        <div>
+
+                            <span class="pa-section-kicker">
+                                SECTION B
+                            </span>
+
+                            <h2>Security Alert Monitoring</h2>
+
+                            <p>
+                                Review sample platform-level security
+                                alerts and their possible operational impact.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pa-grid-2">
+
+
+                        <!-- ACCOUNT SECURITY -->
+
+                        <article class="pa-panel">
+
+                            <div class="pa-panel-header">
+
+                                <div>
+
+                                    <h3>
+                                        Account Security Alerts
+                                    </h3>
+
+                                    <p>
+                                        Sample authentication and access events.
+                                    </p>
+
+                                </div>
+
+                                <span class="pa-stat-icon pa-icon-red">
+                                    <i class="bi bi-person-lock"></i>
+                                </span>
+
+                            </div>
+
+
+                            <div class="pa-panel-body">
+
+                                <div class="pa-timeline">
+
+
+                                    <div class="pa-timeline-item">
+
+                                        <span class="pa-timeline-dot">
+                                            <i class="bi bi-exclamation-triangle"></i>
+                                        </span>
+
+                                        <div class="pa-timeline-content">
+
+                                            <strong>
+                                                Unusual sign-in pattern
+                                            </strong>
+
+                                            <p>
+                                                Sample account security alert
+                                                requiring administrative assessment.
+                                            </p>
+
+                                            <small>
+                                                DEMO-SEC-001
+                                            </small>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="pa-timeline-item">
+
+                                        <span class="pa-timeline-dot">
+                                            <i class="bi bi-shield-lock"></i>
+                                        </span>
+
+                                        <div class="pa-timeline-content">
+
+                                            <strong>
+                                                Repeated failed sign-in
+                                            </strong>
+
+                                            <p>
+                                                Sample authentication alert
+                                                requiring technical review.
+                                            </p>
+
+                                            <small>
+                                                DEMO-SEC-002
+                                            </small>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- PLATFORM SECURITY -->
+
+                        <article class="pa-panel">
+
+                            <div class="pa-panel-header">
+
+                                <div>
+
+                                    <h3>
+                                        Platform Security Events
+                                    </h3>
+
+                                    <p>
+                                        Sample application and access events.
+                                    </p>
+
+                                </div>
+
+                                <span class="pa-stat-icon pa-icon-amber">
+                                    <i class="bi bi-server"></i>
+                                </span>
+
+                            </div>
+
+
+                            <div class="pa-panel-body">
+
+                                <div class="pa-timeline">
+
+
+                                    <div class="pa-timeline-item">
+
+                                        <span class="pa-timeline-dot">
+                                            <i class="bi bi-code-square"></i>
+                                        </span>
+
+                                        <div class="pa-timeline-content">
+
+                                            <strong>
+                                                Unexpected application exception
+                                            </strong>
+
+                                            <p>
+                                                Sample technical event requiring
+                                                Developer investigation.
+                                            </p>
+
+                                            <small>
+                                                DEMO-SEC-003
+                                            </small>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="pa-timeline-item">
+
+                                        <span class="pa-timeline-dot">
+                                            <i class="bi bi-key"></i>
+                                        </span>
+
+                                        <div class="pa-timeline-content">
+
+                                            <strong>
+                                                Privilege change alert
+                                            </strong>
+
+                                            <p>
+                                                Sample access governance event
+                                                requiring independent review.
+                                            </p>
+
+                                            <small>
+                                                DEMO-SEC-006
+                                            </small>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION C - INCIDENT REGISTER
+                ================================================== -->
+
+                <section
+                    class="pa-page-section"
+                    data-pa-section
+                >
+
+                    <div class="pa-section-heading">
+
+                        <div>
+
+                            <span class="pa-section-kicker">
+                                SECTION C
+                            </span>
+
+                            <h2>Security Incident Register</h2>
+
+                            <p>
+                                Search, filter and review platform-level
+                                security incidents.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <article class="pa-panel">
+
+
+                        <!-- PANEL HEADER -->
+
+                        <div class="pa-panel-header">
+
+                            <div>
+
+                                <h3>
+                                    Incident Register
+                                </h3>
+
+                                <p>
+                                    All records below are demonstration entries.
+                                </p>
+
+                            </div>
+
+                            <span class="pa-badge pa-badge-info">
+                                DEMO RECORDS
+                            </span>
+
+                        </div>
+
+
+                        <!-- FILTER TOOLBAR -->
+
+                        <div class="pa-toolbar">
+
+
+                            <!-- SEARCH -->
+
+                            <div class="pa-field flex-grow-1">
+
+                                <label for="incidentSearch">
+                                    Search Incidents
+                                </label>
+
+                                <input
+                                    type="search"
+                                    class="form-control"
+                                    id="incidentSearch"
+                                    data-pa-table-search="incidents"
+                                    placeholder="Search ID, description or source..."
+                                >
+
+                            </div>
+
+
+                            <!-- CATEGORY -->
+
+                            <div class="pa-field">
+
+                                <label for="incidentCategory">
+                                    Category
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    id="incidentCategory"
+                                    data-pa-table-filter="category"
+                                    data-pa-target="incidents"
+                                >
+
+                                    <option value="all">
+                                        All Categories
+                                    </option>
+
+                                    <option value="Account Security">
+                                        Account Security
+                                    </option>
+
+                                    <option value="Authentication">
+                                        Authentication
+                                    </option>
+
+                                    <option value="Application">
+                                        Application
+                                    </option>
+
+                                    <option value="Platform Access">
+                                        Platform Access
+                                    </option>
+
+                                    <option value="Service Operations">
+                                        Service Operations
+                                    </option>
+
+                                    <option value="Access Governance">
+                                        Access Governance
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- PRIORITY -->
+
+                            <div class="pa-field">
+
+                                <label for="incidentPriority">
+                                    Priority
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    id="incidentPriority"
+                                    data-pa-table-filter="priority"
+                                    data-pa-target="incidents"
+                                >
+
+                                    <option value="all">
+                                        All Priorities
+                                    </option>
+
+                                    <option value="High">
+                                        High
+                                    </option>
+
+                                    <option value="Medium">
+                                        Medium
+                                    </option>
+
+                                    <option value="Low">
+                                        Low
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- STATUS -->
+
+                            <div class="pa-field">
+
+                                <label for="incidentStatus">
+                                    Incident Status
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    id="incidentStatus"
+                                    data-pa-table-filter="status"
+                                    data-pa-target="incidents"
+                                >
+
+                                    <option value="all">
+                                        All Statuses
+                                    </option>
+
+                                    <option value="Open">
+                                        Open
+                                    </option>
+
+                                    <option value="Investigating">
+                                        Investigating
+                                    </option>
+
+                                    <option value="Resolved">
+                                        Resolved
+                                    </option>
+
+                                    <option value="Escalated">
+                                        Escalated
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- CLEAR -->
+
+                            <button
+                                type="button"
+                                class="pa-btn pa-btn-secondary"
+                                data-pa-clear-table="incidents"
+                            >
+
+                                <i class="bi bi-arrow-counterclockwise"></i>
+
+                                Clear Filters
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- TABLE CONTROLS -->
+
+                        <div class="pa-panel-body d-flex justify-content-between align-items-center flex-wrap gap-2">
+
+                            <span
+                                class="pa-pagination-info"
+                                data-pa-result-count="incidents"
+                            >
+
+                                Loading incidents...
+
+                            </span>
+
+
+                            <div class="pa-field">
+
+                                <label for="incidentPageSize">
+                                    Rows per page
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    id="incidentPageSize"
+                                    data-pa-page-size="incidents"
+                                >
+
+                                    <option value="5" selected>
+                                        5
+                                    </option>
+
+                                    <option value="8">
+                                        8
+                                    </option>
+
+                                    <option value="10">
+                                        10
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- INCIDENT TABLE -->
+
+                        <div
+                            class="pa-table-wrap"
+                            data-pa-table-wrapper
+                        >
+
+                            <table
+                                class="pa-table"
+                                data-pa-table="incidents"
+                            >
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>Incident ID</th>
+
+                                        <th>Incident Description</th>
+
+                                        <th>Category</th>
+
+                                        <th>Priority</th>
+
+                                        <th>Status</th>
+
+                                        <th>Detected</th>
+
+                                        <th>Action</th>
+
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody>
+
+
+                                    <!-- INCIDENT 001 -->
+
+                                    <tr
+                                        data-pa-row
+                                        data-category="Account Security"
+                                        data-priority="High"
+                                        data-status="Open"
+                                    >
+
+                                        <td>
+                                            <span class="pa-code">
+                                                DEMO-SEC-001
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <div class="pa-table-primary">
+                                                <strong>
+                                                    Unusual sign-in pattern
+                                                </strong>
+                                                <small>
+                                                    Sample account security alert
+                                                </small>
+                                            </div>
+                                        </td>
+
+                                        <td>Account Security</td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-danger">
+                                                High
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-warning">
+                                                Open
+                                            </span>
+                                        </td>
+
+                                        <td>Nov 27, 2026</td>
+
+                                        <td>
+
+                                            <button
+                                                type="button"
+                                                class="pa-btn pa-btn-primary"
+                                                data-pa-incident-open
+                                                data-incident-id="DEMO-SEC-001"
+                                                data-incident-title="Unusual sign-in pattern"
+                                                data-incident-category="Account Security"
+                                                data-incident-priority="High"
+                                                data-incident-status="Open"
+                                                data-incident-date="November 27, 2026"
+                                                data-incident-source="Sample authentication monitoring"
+                                                data-incident-scope="Platform account"
+                                                data-incident-description="A fictional unusual sign-in pattern was detected. The event requires an administrative assessment and, if technically necessary, authorized Developer investigation."
+                                            >
+
+                                                Review
+
+                                            </button>
+
+                                        </td>
+
+                                    </tr>
+
+
+                                    <!-- INCIDENT 002 -->
+
+                                    <tr
+                                        data-pa-row
+                                        data-category="Authentication"
+                                        data-priority="Medium"
+                                        data-status="Investigating"
+                                    >
+
+                                        <td>
+                                            <span class="pa-code">
+                                                DEMO-SEC-002
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <div class="pa-table-primary">
+                                                <strong>
+                                                    Repeated failed sign-in
+                                                </strong>
+                                                <small>
+                                                    Sample authentication alert
+                                                </small>
+                                            </div>
+                                        </td>
+
+                                        <td>Authentication</td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-warning">
+                                                Medium
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-info">
+                                                Investigating
+                                            </span>
+                                        </td>
+
+                                        <td>Nov 26, 2026</td>
+
+                                        <td>
+
+                                            <button
+                                                type="button"
+                                                class="pa-btn pa-btn-secondary"
+                                                data-pa-incident-open
+                                                data-incident-id="DEMO-SEC-002"
+                                                data-incident-title="Repeated failed sign-in"
+                                                data-incident-category="Authentication"
+                                                data-incident-priority="Medium"
+                                                data-incident-status="Investigating"
+                                                data-incident-date="November 26, 2026"
+                                                data-incident-source="Sample authentication monitoring"
+                                                data-incident-scope="Platform authentication"
+                                                data-incident-description="A fictional series of failed sign-in attempts is being reviewed. The Platform Administrator coordinates the incident while an authorized Developer may investigate technical causes."
+                                            >
+
+                                                Review
+
+                                            </button>
+
+                                        </td>
+
+                                    </tr>
+
+
+                                    <!-- INCIDENT 003 -->
+
+                                    <tr
+                                        data-pa-row
+                                        data-category="Application"
+                                        data-priority="Medium"
+                                        data-status="Investigating"
+                                    >
+
+                                        <td>
+                                            <span class="pa-code">
+                                                DEMO-SEC-003
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <div class="pa-table-primary">
+                                                <strong>
+                                                    Unexpected application exception
+                                                </strong>
+                                                <small>
+                                                    Sample application event
+                                                </small>
+                                            </div>
+                                        </td>
+
+                                        <td>Application</td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-warning">
+                                                Medium
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-info">
+                                                Investigating
+                                            </span>
+                                        </td>
+
+                                        <td>Nov 26, 2026</td>
+
+                                        <td>
+
+                                            <button
+                                                type="button"
+                                                class="pa-btn pa-btn-secondary"
+                                                data-pa-incident-open
+                                                data-incident-id="DEMO-SEC-003"
+                                                data-incident-title="Unexpected application exception"
+                                                data-incident-category="Application"
+                                                data-incident-priority="Medium"
+                                                data-incident-status="Investigating"
+                                                data-incident-date="November 26, 2026"
+                                                data-incident-source="Sample application event log"
+                                                data-incident-scope="Application component"
+                                                data-incident-description="A fictional application exception requires technical investigation. The Developer reports the technical cause and findings to the Platform Administrator."
+                                            >
+
+                                                Review
+
+                                            </button>
+
+                                        </td>
+
+                                    </tr>
+
+
+                                    <!-- INCIDENT 004 -->
+
+                                    <tr
+                                        data-pa-row
+                                        data-category="Platform Access"
+                                        data-priority="Low"
+                                        data-status="Resolved"
+                                    >
+
+                                        <td>
+                                            <span class="pa-code">
+                                                DEMO-SEC-004
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <div class="pa-table-primary">
+                                                <strong>
+                                                    Sample access anomaly
+                                                </strong>
+                                                <small>
+                                                    Sample platform access event
+                                                </small>
+                                            </div>
+                                        </td>
+
+                                        <td>Platform Access</td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-neutral">
+                                                Low
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-success">
+                                                Resolved
+                                            </span>
+                                        </td>
+
+                                        <td>Nov 25, 2026</td>
+
+                                        <td>
+
+                                            <button
+                                                type="button"
+                                                class="pa-btn pa-btn-secondary"
+                                                data-pa-incident-open
+                                                data-incident-id="DEMO-SEC-004"
+                                                data-incident-title="Sample access anomaly"
+                                                data-incident-category="Platform Access"
+                                                data-incident-priority="Low"
+                                                data-incident-status="Resolved"
+                                                data-incident-date="November 25, 2026"
+                                                data-incident-source="Sample platform access event"
+                                                data-incident-scope="Platform access"
+                                                data-incident-description="A fictional access anomaly was reviewed and resolved. The incident record remains available for historical review."
+                                            >
+
+                                                View
+
+                                            </button>
+
+                                        </td>
+
+                                    </tr>
+
+
+                                    <!-- INCIDENT 005 -->
+
+                                    <tr
+                                        data-pa-row
+                                        data-category="Service Operations"
+                                        data-priority="High"
+                                        data-status="Open"
+                                    >
+
+                                        <td>
+                                            <span class="pa-code">
+                                                DEMO-SEC-005
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <div class="pa-table-primary">
+                                                <strong>
+                                                    Sample service security alert
+                                                </strong>
+                                                <small>
+                                                    Sample platform service event
+                                                </small>
+                                            </div>
+                                        </td>
+
+                                        <td>Service Operations</td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-danger">
+                                                High
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-warning">
+                                                Open
+                                            </span>
+                                        </td>
+
+                                        <td>Nov 24, 2026</td>
+
+                                        <td>
+
+                                            <button
+                                                type="button"
+                                                class="pa-btn pa-btn-primary"
+                                                data-pa-incident-open
+                                                data-incident-id="DEMO-SEC-005"
+                                                data-incident-title="Sample service security alert"
+                                                data-incident-category="Service Operations"
+                                                data-incident-priority="High"
+                                                data-incident-status="Open"
+                                                data-incident-date="November 24, 2026"
+                                                data-incident-source="Sample service monitoring"
+                                                data-incident-scope="Platform service"
+                                                data-incident-description="A fictional service security alert requires an impact assessment. The Platform Administrator coordinates the response and refers technical investigation when needed."
+                                            >
+
+                                                Review
+
+                                            </button>
+
+                                        </td>
+
+                                    </tr>
+
+
+                                    <!-- INCIDENT 006 -->
+
+                                    <tr
+                                        data-pa-row
+                                        data-category="Access Governance"
+                                        data-priority="High"
+                                        data-status="Escalated"
+                                    >
+
+                                        <td>
+                                            <span class="pa-code">
+                                                DEMO-SEC-006
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <div class="pa-table-primary">
+                                                <strong>
+                                                    Suspected privilege change
+                                                </strong>
+                                                <small>
+                                                    Sample access governance event
+                                                </small>
+                                            </div>
+                                        </td>
+
+                                        <td>Access Governance</td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-danger">
+                                                High
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-danger">
+                                                Escalated
+                                            </span>
+                                        </td>
+
+                                        <td>Nov 23, 2026</td>
+
+                                        <td>
+
+                                            <button
+                                                type="button"
+                                                class="pa-btn pa-btn-secondary"
+                                                data-pa-incident-open
+                                                data-incident-id="DEMO-SEC-006"
+                                                data-incident-title="Suspected privilege change"
+                                                data-incident-category="Access Governance"
+                                                data-incident-priority="High"
+                                                data-incident-status="Escalated"
+                                                data-incident-date="November 23, 2026"
+                                                data-incident-source="Sample access governance event"
+                                                data-incident-scope="Platform permissions"
+                                                data-incident-description="A fictional privilege change requires independent authorization review. The Developer cannot approve their own privilege elevation."
+                                            >
+
+                                                Review
+
+                                            </button>
+
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+
+                        <!-- EMPTY STATE -->
+                        <div
+                            class="pa-empty"
+                            data-pa-table-empty="incidents"
+                            hidden
+                        >
+
+                            <span class="pa-empty-icon">
+                                <i class="bi bi-shield"></i>
+                            </span>
+
+                            <strong>
+                                No matching incidents found.
+                            </strong>
+
+                            <p>
+                                Change your search term or filters.
+                            </p>
+
+                        </div>
+
+
+                        <!-- PAGINATION -->
+                        <div class="pa-panel-footer">
+
+                            <span class="pa-pagination-info">
+                                Six fictional incident records
+                            </span>
+
+                            <div
+                                class="pa-pagination-controls"
+                                data-pa-pagination="incidents"
+                            ></div>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION D - INCIDENT RESPONSE WORKFLOW
+                ================================================== -->
+
+                <section
+                    class="pa-page-section"
+                    data-pa-section
+                >
+
+                    <div class="pa-section-heading">
+
+                        <div>
+
+                            <span class="pa-section-kicker">
+                                SECTION D
+                            </span>
+
+                            <h2>Incident Response Workflow</h2>
+
+                            <p>
+                                Follow the established administrative
+                                and technical coordination process.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <article class="pa-panel">
+
+                        <div class="pa-panel-body">
+
+                            <div class="pa-timeline">
+
+
+                                <!-- STEP 1 -->
+                                <div class="pa-timeline-item">
+
+                                    <span class="pa-timeline-dot">
+                                        <i class="bi bi-bell"></i>
+                                    </span>
+
+                                    <div class="pa-timeline-content">
+
+                                        <strong>
+                                            01. Security Alert Received
+                                        </strong>
+
+                                        <p>
+                                            Review the alert and available
+                                            permitted evidence.
+                                        </p>
+
+                                        <small>
+                                            Initial incident assessment
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- STEP 2 -->
+                                <div class="pa-timeline-item">
+
+                                    <span class="pa-timeline-dot">
+                                        <i class="bi bi-search"></i>
+                                    </span>
+
+                                    <div class="pa-timeline-content">
+
+                                        <strong>
+                                            02. Assess Incident Impact
+                                        </strong>
+
+                                        <p>
+                                            Determine operational impact
+                                            and whether technical investigation
+                                            is required.
+                                        </p>
+
+                                        <small>
+                                            Platform Administrator responsibility
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- STEP 3 -->
+                                <div class="pa-timeline-item">
+
+                                    <span class="pa-timeline-dot">
+                                        <i class="bi bi-code-slash"></i>
+                                    </span>
+
+                                    <div class="pa-timeline-content">
+
+                                        <strong>
+                                            03. Developer Investigation
+                                        </strong>
+
+                                        <p>
+                                            Refer technical investigation
+                                            to an authorized Platform Developer.
+                                        </p>
+
+                                        <small>
+                                            Technical investigation and findings
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- STEP 4 -->
+                                <div class="pa-timeline-item">
+
+                                    <span class="pa-timeline-dot">
+                                        <i class="bi bi-tools"></i>
+                                    </span>
+
+                                    <div class="pa-timeline-content">
+
+                                        <strong>
+                                            04. Corrective Action
+                                        </strong>
+
+                                        <p>
+                                            Authorize appropriate remediation
+                                            and allow the Developer to implement
+                                            the approved technical correction.
+                                        </p>
+
+                                        <small>
+                                            Separation of duties applies
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- STEP 5 -->
+                                <div class="pa-timeline-item">
+
+                                    <span class="pa-timeline-dot">
+                                        <i class="bi bi-check-circle"></i>
+                                    </span>
+
+                                    <div class="pa-timeline-content">
+
+                                        <strong>
+                                            05. Validation and Resolution
+                                        </strong>
+
+                                        <p>
+                                            Review technical validation
+                                            and confirm whether the incident
+                                            has been resolved.
+                                        </p>
+
+                                        <small>
+                                            Administrative review
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- STEP 6 -->
+                                <div class="pa-timeline-item">
+
+                                    <span class="pa-timeline-dot">
+                                        <i class="bi bi-journal-check"></i>
+                                    </span>
+
+                                    <div class="pa-timeline-content">
+
+                                        <strong>
+                                            06. Record and Close
+                                        </strong>
+
+                                        <p>
+                                            Preserve incident evidence,
+                                            corrective action history
+                                            and audit information.
+                                        </p>
+
+                                        <small>
+                                            Historical record preservation
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION E - ROLE RESPONSIBILITIES
+                ================================================== -->
+
+                <section
+                    class="pa-page-section"
+                    data-pa-section
+                >
+
+                    <div class="pa-section-heading">
+
+                        <div>
+
+                            <span class="pa-section-kicker">
+                                SECTION E
+                            </span>
+
+                            <h2>Incident Management Responsibilities</h2>
+
+                            <p>
+                                Separation of duties between platform roles.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <article class="pa-panel">
+
+                        <div class="pa-table-wrap">
+
+                            <table class="pa-table">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>Incident Activity</th>
+
+                                        <th>Platform Administrator</th>
+
+                                        <th>Platform Developer</th>
+
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody>
+
+                                    <tr>
+
+                                        <td>Review security alerts</td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-success">
+                                                Responsible
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-info">
+                                                Technical Support
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>Assess operational impact</td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-success">
+                                                Responsible
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-info">
+                                                Technical Findings
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>Investigate technical cause</td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-neutral">
+                                                Coordinate
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-success">
+                                                Responsible
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>Authorize technical remediation</td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-success">
+                                                Authorize
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-danger">
+                                                No Self-Approval
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>Implement approved correction</td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-neutral">
+                                                Oversee
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-success">
+                                                Responsible
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>Review incident resolution</td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-success">
+                                                Responsible
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-info">
+                                                Report Findings
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>Preserve technical history</td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-success">
+                                                Oversee
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span class="pa-badge pa-badge-success">
+                                                Maintain Technical Records
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION F - INCIDENT REVIEW GUIDELINES
+                ================================================== -->
+
+                <section
+                    class="pa-page-section"
+                    data-pa-section
+                >
+
+                    <div class="pa-section-heading">
+
+                        <div>
+
+                            <span class="pa-section-kicker">
+                                SECTION F
+                            </span>
+
+                            <h2>Incident Review Guidelines</h2>
+
+                            <p>
+                                Important controls during incident assessment
+                                and response.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pa-grid-2">
+
+
+                        <!-- EVIDENCE -->
+
+                        <article class="pa-panel">
+
+                            <div class="pa-panel-body">
+
+                                <span class="pa-stat-icon pa-icon-blue mb-3">
+                                    <i class="bi bi-file-earmark-lock"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Evidence Preservation
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Preserve available permitted evidence,
+                                    relevant event references, technical
+                                    findings and response history.
+                                </p>
+
+                                <span class="pa-badge pa-badge-success">
+                                    Required
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- AUDIT -->
+
+                        <article class="pa-panel">
+
+                            <div class="pa-panel-body">
+
+                                <span class="pa-stat-icon pa-icon-teal mb-3">
+                                    <i class="bi bi-journal-check"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Audit History
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Record the responsible actor, action,
+                                    reason, authorization, result and
+                                    incident status changes.
+                                </p>
+
+                                <span class="pa-badge pa-badge-success">
+                                    Required
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- SEPARATION OF DUTIES -->
+
+                        <article class="pa-panel">
+
+                            <div class="pa-panel-body">
+
+                                <span class="pa-stat-icon pa-icon-purple mb-3">
+                                    <i class="bi bi-person-lock"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Separation of Duties
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    The Developer must not independently
+                                    authorize their own elevated access
+                                    or privileged production changes.
+                                </p>
+
+                                <span class="pa-badge pa-badge-success">
+                                    Mandatory
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- DATA PRIVACY -->
+
+                        <article class="pa-panel">
+
+                            <div class="pa-panel-body">
+
+                                <span class="pa-stat-icon pa-icon-amber mb-3">
+                                    <i class="bi bi-shield-lock"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Data Protection
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Technical incident access must not
+                                    become unrestricted access to Student
+                                    grades, submissions or private
+                                    Guardian documents.
+                                </p>
+
+                                <span class="pa-badge pa-badge-success">
+                                    Mandatory
+                                </span>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION G - INCIDENT STATUS DEFINITIONS
+                ================================================== -->
+
+                <section
+                    class="pa-page-section"
+                    data-pa-section
+                >
+
+                    <div class="pa-section-heading">
+
+                        <div>
+
+                            <span class="pa-section-kicker">
+                                SECTION G
+                            </span>
+
+                            <h2>Incident Status Definitions</h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <article class="pa-panel">
+
+                        <div class="pa-panel-body">
+
+                            <div class="pa-detail-grid">
+
+
+                                <div class="pa-detail-item">
+
+                                    <span>OPEN</span>
+
+                                    <strong>
+                                        Received and awaiting initial assessment
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="pa-detail-item">
+
+                                    <span>INVESTIGATING</span>
+
+                                    <strong>
+                                        Under administrative or technical investigation
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="pa-detail-item">
+
+                                    <span>ESCALATED</span>
+
+                                    <strong>
+                                        Referred to the appropriate higher authority
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="pa-detail-item">
+
+                                    <span>RESOLVED</span>
+
+                                    <strong>
+                                        Corrective action verified and incident resolved
+                                    </strong>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- FOOTER NOTICE -->
+
+                <p class="pa-footer-note">
+
+                    <i class="bi bi-shield-lock"></i>
+
+                    This page does not grant technical permissions,
+                    execute remediation, change account access,
+                    or close actual security incidents. All actions
+                    are demonstration-only.
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FOOTER
+        ====================================================== -->
+
+        <footer class="main-footer pa-footer">
+
+            <span>
+                GabayAral &copy;
+                <span data-pa-year></span>
+                | Platform Administration
+            </span>
+
+            <span data-pa-last-updated></span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =====================================================
+         INCIDENT REVIEW MODAL
+    ====================================================== -->
+
+    <div
+        class="modal fade pa-modal"
+        id="paIncidentModal"
+        tabindex="-1"
+        aria-labelledby="paIncidentModalTitle"
+        aria-hidden="true"
+    >
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+
+            <div class="modal-content">
+
+
+                <!-- MODAL HEADER -->
+
+                <div class="modal-header">
+
+                    <div>
+
+                        <span class="pa-eyebrow">
+                            INCIDENT MANAGEMENT
+                        </span>
+
+                        <h2
+                            class="modal-title"
+                            id="paIncidentModalTitle"
+                        >
+
+                            Incident Review
+
+                        </h2>
+
+                        <p class="small text-secondary mb-0">
+
+                            Review incident information and prepare
+                            an administrative response.
+
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+
+                </div>
+
+
+                <!-- MODAL BODY -->
+
+                <div class="modal-body">
+
+
+                    <div class="pa-demo-notice mb-3">
+
+                        <i class="bi bi-info-circle"></i>
+
+                        <div>
+
+                            <strong>
+                                Demonstration incident record
+                            </strong>
+
+                            <span>
+                                The information below is fictional.
+                                No actual security record will be modified.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- INCIDENT DETAILS -->
+
+                    <div class="pa-detail-grid mb-3">
+
+
+                        <div class="pa-detail-item">
+
+                            <span>INCIDENT ID</span>
+
+                            <strong id="paIncidentId">
+                                Not selected
+                            </strong>
+
+                        </div>
+
+
+                        <div class="pa-detail-item">
+
+                            <span>INCIDENT TITLE</span>
+
+                            <strong id="paIncidentTitle">
+                                Not selected
+                            </strong>
+
+                        </div>
+
+
+                        <div class="pa-detail-item">
+
+                            <span>CATEGORY</span>
+
+                            <strong id="paIncidentCategory">
+                                Not selected
+                            </strong>
+
+                        </div>
+
+
+                        <div class="pa-detail-item">
+
+                            <span>PRIORITY</span>
+
+                            <strong id="paIncidentPriority">
+                                Not selected
+                            </strong>
+
+                        </div>
+
+
+                        <div class="pa-detail-item">
+
+                            <span>CURRENT STATUS</span>
+
+                            <strong id="paIncidentStatus">
+                                Not selected
+                            </strong>
+
+                        </div>
+
+
+                        <div class="pa-detail-item">
+
+                            <span>DETECTED DATE</span>
+
+                            <strong id="paIncidentDate">
+                                Not available
+                            </strong>
+
+                        </div>
+
+
+                        <div class="pa-detail-item">
+
+                            <span>EVENT SOURCE</span>
+
+                            <strong id="paIncidentSource">
+                                Not available
+                            </strong>
+
+                        </div>
+
+
+                        <div class="pa-detail-item">
+
+                            <span>IMPACT SCOPE</span>
+
+                            <strong id="paIncidentScope">
+                                Not determined
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- INCIDENT DESCRIPTION -->
+
+                    <div class="pa-form-section mb-3">
+
+                        <h3>
+                            Incident Description
+                        </h3>
+
+                        <p id="paIncidentDescription">
+                            Select an incident from the register.
+                        </p>
+
+                    </div>
+
+
+                    <!-- REVIEW FORM -->
+
+                    <form
+                        id="paIncidentReviewForm"
+                        data-pa-demo-form
+                        data-pa-success-message="Incident review prepared locally. No actual incident status or security record was changed."
+                    >
+
+                        <input
+                            type="hidden"
+                            id="paIncidentReviewId"
+                            name="incidentId"
+                        >
+
+
+                        <div class="pa-form-section">
+
+                            <h3>
+                                Administrative Response
+                            </h3>
+
+                            <p>
+                                Prepare the next authorized incident
+                                management action.
+                            </p>
+
+
+                            <div class="pa-field mb-3">
+
+                                <label for="paIncidentAction">
+
+                                    Response Action
+                                    <span class="pa-required">*</span>
+
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    id="paIncidentAction"
+                                    name="incidentAction"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select response action
+                                    </option>
+
+                                    <option value="Continue Assessment">
+                                        Continue Assessment
+                                    </option>
+
+                                    <option value="Refer to Authorized Developer">
+                                        Refer to Authorized Developer
+                                    </option>
+
+                                    <option value="Review Technical Findings">
+                                        Review Technical Findings
+                                    </option>
+
+                                    <option value="Authorize Corrective Action">
+                                        Authorize Corrective Action
+                                    </option>
+
+                                    <option value="Prepare Closure Review">
+                                        Prepare Closure Review
+                                    </option>
+
+                                    <option value="Escalate Incident">
+                                        Escalate Incident
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="pa-field mb-3">
+
+                                <label for="paIncidentAssignment">
+
+                                    Technical Assignment
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    id="paIncidentAssignment"
+                                    name="technicalAssignment"
+                                >
+
+                                    <option value="">
+                                        No technical assignment
+                                    </option>
+
+                                    <option value="Authorized Platform Developer">
+                                        Authorized Platform Developer
+                                    </option>
+
+                                    <option value="Higher Authorized Authority">
+                                        Higher Authorized Authority
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="pa-field">
+
+                                <label for="paIncidentReviewNotes">
+
+                                    Administrative Review Notes
+                                    <span class="pa-required">*</span>
+
+                                </label>
+
+                                <textarea
+                                    class="form-control"
+                                    id="paIncidentReviewNotes"
+                                    name="reviewNotes"
+                                    rows="4"
+                                    maxlength="1500"
+                                    required
+                                    placeholder="Document the assessment, reason and intended next action..."
+                                ></textarea>
+
+                            </div>
+
+
+                            <div class="pa-notice warning mt-3">
+
+                                <i class="bi bi-shield-exclamation"></i>
+
+                                <span>
+                                    Do not include passwords, access tokens,
+                                    Student grades, submission files,
+                                    private Student information or
+                                    Guardian documents.
+                                </span>
+
+                            </div>
+
+
+                            <div class="pa-form-actions">
+
+                                <button
+                                    type="button"
+                                    class="pa-btn pa-btn-secondary"
+                                    data-bs-dismiss="modal"
+                                >
+
+                                    Cancel
+
+                                </button>
+
+
+                                <button
+                                    type="submit"
+                                    class="pa-btn pa-btn-primary"
+                                >
+
+                                    <i class="bi bi-file-earmark-check"></i>
+
+                                    Prepare Local Review
+
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                class="pa-notice success mt-3"
+                                data-pa-form-result
+                                hidden
+                            ></div>
+
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<!-- =========================================================
+     SCRIPTS
+========================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="../../assets/js/platform-admin.js"></script>
+
+<script src="../../assets/js/layout.js"></script>
+
+</body>
+</html>

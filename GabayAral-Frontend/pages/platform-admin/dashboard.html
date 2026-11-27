@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+    <title>Dashboard | GabayAral</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/platform-admin.css">
+</head>
+
+<body>
+<div class="app-shell platform-admin-app" data-pa-page="dashboard">
+
+    <div id="paSidebarMount"></div>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <main class="main-area">
+        <div id="paTopbarMount"></div>
+
+        <section class="main-content pa-content">
+            <div class="pa-page">
+
+                <!-- PAGE HEADER -->
+                <header class="pa-page-header">
+                    <div class="pa-page-header-copy">
+                        <span class="pa-eyebrow">PLATFORM OVERVIEW</span>
+                        <h1 class="pa-page-title">Platform Dashboard</h1>
+                        <p class="pa-page-description">
+                            Monitor platform operations, school workspaces,
+                            access governance, security and service conditions.
+                        </p>
+
+                        <div class="pa-page-meta">
+                            <span><i class="bi bi-calendar3"></i><span data-pa-date></span></span>
+                            <span><i class="bi bi-globe2"></i>All school workspaces</span>
+                        </div>
+                    </div>
+
+                    <span class="pa-page-header-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </span>
+                </header>
+
+
+                <!-- DEMO NOTICE -->
+                <div class="pa-demo-notice">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <div>
+                        <strong>Demonstration dashboard</strong>
+                        <span>
+                            All displayed counts and events are fictional
+                            sample data. No live platform records are connected.
+                        </span>
+                    </div>
+                </div>
+
+
+                <!-- SECTION A -->
+                <section class="pa-page-section" data-pa-section>
+                    <div class="pa-section-heading">
+                        <div>
+                            <span class="pa-section-kicker">SECTION A</span>
+                            <h2>Platform Summary</h2>
+                            <p>High-level platform information.</p>
+                        </div>
+                    </div>
+
+                    <div class="pa-stat-grid">
+
+                        <article class="pa-stat-card" data-pa-searchable>
+                            <div class="pa-stat-top">
+                                <span class="pa-stat-icon pa-icon-blue">
+                                    <i class="bi bi-activity"></i>
+                                </span>
+                                Platform Health
+                            </div>
+                            <strong class="pa-stat-value">Unknown</strong>
+                            <span class="pa-stat-caption">
+                                Live monitoring is not connected
+                            </span>
+                            <a href="service-health.html" class="pa-btn-link mt-2">
+                                View Service Health <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </article>
+
+                        <article class="pa-stat-card" data-pa-searchable>
+                            <div class="pa-stat-top">
+                                <span class="pa-stat-icon pa-icon-teal">
+                                    <i class="bi bi-buildings"></i>
+                                </span>
+                                School Workspaces
+                            </div>
+                            <strong class="pa-stat-value">12</strong>
+                            <span class="pa-stat-caption">
+                                Fictional sample records
+                            </span>
+                            <a href="school-workspaces.html" class="pa-btn-link mt-2">
+                                View Directory <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </article>
+
+                        <article class="pa-stat-card" data-pa-searchable>
+                            <div class="pa-stat-top">
+                                <span class="pa-stat-icon pa-icon-purple">
+                                    <i class="bi bi-people"></i>
+                                </span>
+                                Platform Accounts
+                            </div>
+                            <strong class="pa-stat-value">1,284</strong>
+                            <span class="pa-stat-caption">
+                                Fictional sample accounts
+                            </span>
+                            <a href="platform-accounts.html" class="pa-btn-link mt-2">
+                                View Accounts <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </article>
+
+                        <article class="pa-stat-card" data-pa-searchable>
+                            <div class="pa-stat-top">
+                                <span class="pa-stat-icon pa-icon-amber">
+                                    <i class="bi bi-inbox"></i>
+                                </span>
+                                Pending Requests
+                            </div>
+                            <strong class="pa-stat-value">05</strong>
+                            <span class="pa-stat-caption">
+                                Sample governance requests
+                            </span>
+                            <a href="deactivation-requests.html" class="pa-btn-link mt-2">
+                                Review Requests <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </article>
+
+                    </div>
+                </section>
+
+
+                <!-- SECTION B -->
+                <section class="pa-page-section" data-pa-section>
+                    <div class="pa-section-heading">
+                        <div>
+                            <span class="pa-section-kicker">SECTION B</span>
+                            <h2>Needs Attention</h2>
+                            <p>Sample items requiring administrative review.</p>
+                        </div>
+                    </div>
+
+                    <div class="pa-grid-2">
+
+                        <article class="pa-panel" data-pa-searchable>
+                            <div class="pa-panel-header">
+                                <div>
+                                    <h3>Workspace Requests</h3>
+                                    <p>Whole-school lifecycle requests.</p>
+                                </div>
+                                <span class="pa-badge pa-badge-warning">03 Pending</span>
+                            </div>
+
+                            <div class="pa-panel-body">
+                                <div class="pa-detail-item mb-2">
+                                    <span>DEMO-REQ-001</span>
+                                    <strong>Deactivation request</strong>
+                                    <span class="pa-badge pa-badge-warning">Pending</span>
+                                </div>
+
+                                <div class="pa-detail-item">
+                                    <span>DEMO-REQ-002</span>
+                                    <strong>Deactivation request</strong>
+                                    <span class="pa-badge pa-badge-info">For information</span>
+                                </div>
+                            </div>
+
+                            <div class="pa-panel-footer">
+                                <a href="deactivation-requests.html" class="pa-btn-link">
+                                    Open Request Inbox <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+
+                        <article class="pa-panel" data-pa-searchable>
+                            <div class="pa-panel-header">
+                                <div>
+                                    <h3>Security Alerts</h3>
+                                    <p>Sample platform security notices.</p>
+                                </div>
+                                <span class="pa-badge pa-badge-danger">02 Alerts</span>
+                            </div>
+
+                            <div class="pa-panel-body">
+                                <div class="pa-detail-item mb-2">
+                                    <span>DEMO-SEC-001</span>
+                                    <strong>Unusual sign-in pattern</strong>
+                                    <span class="pa-badge pa-badge-warning">Review</span>
+                                </div>
+
+                                <div class="pa-detail-item">
+                                    <span>DEMO-SEC-002</span>
+                                    <strong>Repeated failed sign-in</strong>
+                                    <span class="pa-badge pa-badge-danger">Open</span>
+                                </div>
+                            </div>
+
+                            <div class="pa-panel-footer">
+                                <a href="security-incidents.html" class="pa-btn-link">
+                                    Open Incident Center <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+
+                <!-- SECTION C -->
+                <section class="pa-page-section" data-pa-section>
+                    <div class="pa-section-heading">
+                        <div>
+                            <span class="pa-section-kicker">SECTION C</span>
+                            <h2>Platform Operations</h2>
+                            <p>Quick access to operational management areas.</p>
+                        </div>
+                    </div>
+
+                    <div class="pa-grid-3">
+
+                        <article class="pa-panel" data-pa-searchable>
+                            <div class="pa-panel-body">
+                                <span class="pa-stat-icon pa-icon-blue mb-3">
+                                    <i class="bi bi-tools"></i>
+                                </span>
+                                <h3 class="h6 fw-bold">Maintenance</h3>
+                                <p class="small text-secondary">
+                                    Coordinate maintenance and service announcements.
+                                </p>
+                                <a href="maintenance-announcements.html" class="pa-btn-link">
+                                    Open Maintenance <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="pa-panel" data-pa-searchable>
+                            <div class="pa-panel-body">
+                                <span class="pa-stat-icon pa-icon-teal mb-3">
+                                    <i class="bi bi-database-check"></i>
+                                </span>
+                                <h3 class="h6 fw-bold">Backup and Recovery</h3>
+                                <p class="small text-secondary">
+                                    Review available backup and recovery information.
+                                </p>
+                                <a href="backup-recovery.html" class="pa-btn-link">
+                                    Open Backup <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="pa-panel" data-pa-searchable>
+                            <div class="pa-panel-body">
+                                <span class="pa-stat-icon pa-icon-purple mb-3">
+                                    <i class="bi bi-gear"></i>
+                                </span>
+                                <h3 class="h6 fw-bold">Platform Settings</h3>
+                                <p class="small text-secondary">
+                                    Review authorized platform-wide configurations.
+                                </p>
+                                <a href="platform-settings.html" class="pa-btn-link">
+                                    Open Settings <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+
+                <!-- SECTION D -->
+                <section class="pa-page-section" data-pa-section>
+                    <div class="pa-section-heading">
+                        <div>
+                            <span class="pa-section-kicker">SECTION D</span>
+                            <h2>Governance and Audit</h2>
+                            <p>Platform-level oversight and administrative history.</p>
+                        </div>
+                    </div>
+
+                    <div class="pa-grid-2">
+
+                        <article class="pa-panel" data-pa-searchable>
+                            <div class="pa-panel-header">
+                                <div>
+                                    <h3>Governance Oversight</h3>
+                                    <p>Senior Platform Administrator directions.</p>
+                                </div>
+                                <i class="bi bi-bank fs-4 text-success"></i>
+                            </div>
+
+                            <div class="pa-panel-body">
+                                <strong class="fs-4 text-dark">02</strong>
+                                <p class="small text-secondary mb-0">
+                                    Fictional open oversight cases.
+                                </p>
+                            </div>
+
+                            <div class="pa-panel-footer">
+                                <a href="governance-oversight.html" class="pa-btn-link">
+                                    Open Governance <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="pa-panel" data-pa-searchable>
+                            <div class="pa-panel-header">
+                                <div>
+                                    <h3>Recent Audit Events</h3>
+                                    <p>Fictional demonstration entries.</p>
+                                </div>
+                                <i class="bi bi-clock-history fs-4 text-primary"></i>
+                            </div>
+
+                            <div class="pa-panel-body">
+                                <div class="pa-timeline">
+                                    <div class="pa-timeline-item">
+                                        <span class="pa-timeline-dot">
+                                            <i class="bi bi-person-check"></i>
+                                        </span>
+                                        <div class="pa-timeline-content">
+                                            <strong>Account review opened</strong>
+                                            <p>DEMO-AUD-001</p>
+                                            <small>Sample event</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="pa-timeline-item">
+                                        <span class="pa-timeline-dot">
+                                            <i class="bi bi-key"></i>
+                                        </span>
+                                        <div class="pa-timeline-content">
+                                            <strong>Developer access requested</strong>
+                                            <p>DEMO-AUD-002</p>
+                                            <small>Sample event</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pa-panel-footer">
+                                <a href="audit-events.html" class="pa-btn-link">
+                                    View Audit Events <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+
+                <p class="pa-footer-note">
+                    <i class="bi bi-info-circle"></i>
+                    Demonstration only. No live monitoring, account or audit data is connected.
+                </p>
+
+            </div>
+        </section>
+
+        <footer class="main-footer pa-footer">
+            <span>GabayAral &copy; <span data-pa-year></span> | Platform Administration</span>
+            <span data-pa-last-updated></span>
+        </footer>
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/platform-admin.js"></script>
+<script src="../../assets/js/layout.js"></script>
+</body>
+</html>

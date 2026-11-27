@@ -1,0 +1,985 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+
+    <title>Notifications and Security | GabayAral</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- INTER FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- GLOBAL CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+
+    <!-- DEVELOPER CSS -->
+    <link rel="stylesheet" href="../../assets/css/platform-developer.css">
+</head>
+
+
+<body>
+
+<div class="app-shell platform-developer-app" data-pdev-page="notifications-security">
+
+    <!-- SIDEBAR -->
+    <div id="pdevSidebarMount"></div>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+
+    <!-- MAIN AREA -->
+    <main class="main-area">
+
+        <div id="pdevTopbarMount"></div>
+
+
+        <section class="main-content pdev-content">
+
+            <div class="pdev-page">
+
+
+                <!-- =================================================
+                     PAGE HEADER
+                ================================================== -->
+
+                <header class="pdev-page-header">
+
+                    <div>
+
+                        <span class="pdev-eyebrow">
+                            MY ACCOUNT / PDEV-12
+                        </span>
+
+                        <h1 class="pdev-page-title">
+                            Notifications and Security
+                        </h1>
+
+                        <p class="pdev-page-description">
+                            Review personal platform notifications,
+                            account information and security-related settings.
+                        </p>
+
+                        <div class="pdev-page-meta">
+
+                            <span>
+                                <i class="bi bi-calendar3"></i>
+                                <span data-pdev-date></span>
+                            </span>
+
+                            <span>
+                                <i class="bi bi-person-shield"></i>
+                                Developer Account
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <span class="pdev-header-icon">
+                        <i class="bi bi-bell"></i>
+                    </span>
+
+                </header>
+
+
+                <!-- DEMONSTRATION NOTICE -->
+
+                <div class="pdev-demo-notice">
+
+                    <i class="bi bi-info-circle-fill"></i>
+
+                    <div>
+
+                        <strong>
+                            Developer Account Demonstration
+                        </strong>
+
+                        <p>
+                            Account and notification information is fictional.
+                            Authentication, session management and account
+                            security are not connected to the Django Backend.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     SECTION A - ACCOUNT OVERVIEW
+                ================================================== -->
+
+                <section class="pdev-page-section" data-pdev-section>
+
+                    <div class="pdev-section-heading">
+
+                        <div>
+
+                            <span class="pdev-section-kicker">SECTION A</span>
+
+                            <h2>My Account Overview</h2>
+
+                            <p>
+                                Overview of the Developer's personal
+                                demonstration account.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pdev-grid-2">
+
+
+                        <!-- ACCOUNT CARD -->
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-body">
+
+                                <div class="d-flex align-items-center gap-3">
+
+                                    <span class="pdev-header-icon">
+                                        <i class="bi bi-person-fill"></i>
+                                    </span>
+
+                                    <div>
+
+                                        <span class="pdev-eyebrow">
+                                            CURRENT ACCOUNT
+                                        </span>
+
+                                        <h2 class="h5 fw-bold mb-1">
+                                            Platform Developer
+                                        </h2>
+
+                                        <span class="pdev-badge pdev-badge-info">
+                                            Demonstration Account
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="pdev-detail-grid mt-3">
+
+                                    <div class="pdev-detail-item">
+
+                                        <span>ACCOUNT ROLE</span>
+
+                                        <strong>
+                                            Platform Developer
+                                        </strong>
+
+                                    </div>
+
+
+                                    <div class="pdev-detail-item">
+
+                                        <span>ACCOUNT STATUS</span>
+
+                                        <strong>
+                                            Sample Active
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- NOTIFICATION SUMMARY -->
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-body">
+
+                                <span class="pdev-stat-icon pdev-icon-blue mb-3">
+                                    <i class="bi bi-bell"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Notification Inbox
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Review your personal platform
+                                    and technical notices.
+                                </p>
+
+                                <span
+                                    class="pdev-badge pdev-badge-info"
+                                    id="pdevUnreadBadge"
+                                >
+                                    03 Unread
+                                </span>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION B - NOTIFICATION INBOX
+                ================================================== -->
+
+                <section class="pdev-page-section" data-pdev-section>
+
+                    <div class="pdev-section-heading">
+
+                        <div>
+
+                            <span class="pdev-section-kicker">SECTION B</span>
+
+                            <h2>My Notifications</h2>
+
+                            <p>
+                                Personal Developer notifications
+                                and technical reminders.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <article class="pdev-panel" data-pdev-searchable>
+
+
+                        <div class="pdev-panel-header">
+
+                            <div>
+
+                                <h3>
+                                    Notification Inbox
+                                </h3>
+
+                                <p>
+                                    Sample demonstration notifications.
+                                </p>
+
+                            </div>
+
+                            <span
+                                class="pdev-badge pdev-badge-info"
+                                id="pdevInboxBadge"
+                            >
+                                Demo Inbox
+                            </span>
+
+                        </div>
+
+
+                        <div class="pdev-panel-body">
+
+
+                            <!-- NOTIFICATION 001 -->
+
+                            <div
+                                class="pdev-list-row"
+                                data-pdev-notification
+                                data-notification-id="pdev-notice-001"
+                                data-read="false"
+                            >
+
+                                <span class="pdev-stat-icon pdev-icon-blue">
+                                    <i class="bi bi-bug"></i>
+                                </span>
+
+
+                                <div class="pdev-list-main">
+
+                                    <strong>
+                                        Technical Issue Assignment
+                                    </strong>
+
+                                    <small>
+                                        A sample technical issue has been
+                                        assigned for investigation.
+                                    </small>
+
+                                    <small>
+                                        November 28, 2026
+                                    </small>
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="pdev-btn pdev-btn-secondary"
+                                    data-pdev-mark-read
+                                >
+                                    Mark as Read
+                                </button>
+
+                            </div>
+
+
+                            <!-- NOTIFICATION 002 -->
+
+                            <div
+                                class="pdev-list-row"
+                                data-pdev-notification
+                                data-notification-id="pdev-notice-002"
+                                data-read="false"
+                            >
+
+                                <span class="pdev-stat-icon pdev-icon-amber">
+                                    <i class="bi bi-box-seam"></i>
+                                </span>
+
+
+                                <div class="pdev-list-main">
+
+                                    <strong>
+                                        Release Review Reminder
+                                    </strong>
+
+                                    <small>
+                                        A sample release candidate requires
+                                        additional validation.
+                                    </small>
+
+                                    <small>
+                                        November 27, 2026
+                                    </small>
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="pdev-btn pdev-btn-secondary"
+                                    data-pdev-mark-read
+                                >
+                                    Mark as Read
+                                </button>
+
+                            </div>
+
+
+                            <!-- NOTIFICATION 003 -->
+
+                            <div
+                                class="pdev-list-row"
+                                data-pdev-notification
+                                data-notification-id="pdev-notice-003"
+                                data-read="false"
+                            >
+
+                                <span class="pdev-stat-icon pdev-icon-purple">
+                                    <i class="bi bi-key"></i>
+                                </span>
+
+
+                                <div class="pdev-list-main">
+
+                                    <strong>
+                                        Access Request Update
+                                    </strong>
+
+                                    <small>
+                                        A sample environment access request
+                                        is awaiting authorization.
+                                    </small>
+
+                                    <small>
+                                        November 26, 2026
+                                    </small>
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="pdev-btn pdev-btn-secondary"
+                                    data-pdev-mark-read
+                                >
+                                    Mark as Read
+                                </button>
+
+                            </div>
+
+
+                            <!-- NOTIFICATION 004 -->
+
+                            <div
+                                class="pdev-list-row"
+                                data-pdev-notification
+                                data-notification-id="pdev-notice-004"
+                                data-read="true"
+                            >
+
+                                <span class="pdev-stat-icon pdev-icon-teal">
+                                    <i class="bi bi-shield-check"></i>
+                                </span>
+
+
+                                <div class="pdev-list-main">
+
+                                    <strong>
+                                        Security Information
+                                    </strong>
+
+                                    <small>
+                                        Sample information about technical
+                                        security and authorized access.
+                                    </small>
+
+                                    <small>
+                                        November 25, 2026
+                                    </small>
+
+                                </div>
+
+
+                                <span class="pdev-badge pdev-badge-neutral">
+                                    Read
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION C - PROFILE INFORMATION
+                ================================================== -->
+
+                <section class="pdev-page-section" data-pdev-section>
+
+                    <div class="pdev-section-heading">
+
+                        <div>
+
+                            <span class="pdev-section-kicker">SECTION C</span>
+
+                            <h2>Profile Information</h2>
+
+                            <p>
+                                View and prepare changes to personal
+                                Developer profile information.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <article class="pdev-panel">
+
+
+                        <div class="pdev-panel-header">
+
+                            <div>
+
+                                <h3>
+                                    My Developer Profile
+                                </h3>
+
+                                <p>
+                                    Demonstration account information.
+                                </p>
+
+                            </div>
+
+                            <span class="pdev-badge pdev-badge-info">
+                                Demo Only
+                            </span>
+
+                        </div>
+
+
+                        <div class="pdev-panel-body">
+
+                            <form
+                                data-pdev-demo-form
+                                data-pdev-success-message="Profile update draft prepared locally. No actual account information was changed."
+                            >
+
+                                <div class="pdev-form-grid">
+
+
+                                    <div class="pdev-field">
+
+                                        <label for="developerDisplayName">
+                                            Display Name
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="developerDisplayName"
+                                            value="Platform Developer"
+                                            maxlength="100"
+                                            required
+                                        >
+
+                                    </div>
+
+
+                                    <div class="pdev-field">
+
+                                        <label for="developerEmail">
+                                            Email Address
+                                        </label>
+
+                                        <input
+                                            type="email"
+                                            class="form-control"
+                                            id="developerEmail"
+                                            value="developer@example.test"
+                                            required
+                                        >
+
+                                    </div>
+
+
+                                    <div class="pdev-field">
+
+                                        <label for="developerRole">
+                                            Assigned Role
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="developerRole"
+                                            value="Platform Developer"
+                                            readonly
+                                        >
+
+                                    </div>
+
+
+                                    <div class="pdev-field">
+
+                                        <label for="developerScope">
+                                            Access Scope
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="developerScope"
+                                            value="Authorized Technical Resources"
+                                            readonly
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="pdev-notice info mt-3">
+
+                                    <i class="bi bi-info-circle"></i>
+
+                                    <span>
+                                        Role assignment and permission scope
+                                        cannot be modified through the
+                                        Developer profile form.
+                                    </span>
+
+                                </div>
+
+
+                                <div class="pdev-form-actions">
+
+                                    <button
+                                        type="submit"
+                                        class="pdev-btn pdev-btn-primary"
+                                    >
+
+                                        <i class="bi bi-person-check"></i>
+
+                                        Prepare Profile Update
+
+                                    </button>
+
+                                </div>
+
+
+                                <div
+                                    class="pdev-notice success mt-3"
+                                    data-pdev-form-result
+                                    hidden
+                                ></div>
+
+                            </form>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION D - AUTHENTICATION
+                ================================================== -->
+
+                <section class="pdev-page-section" data-pdev-section>
+
+                    <div class="pdev-section-heading">
+
+                        <div>
+
+                            <span class="pdev-section-kicker">SECTION D</span>
+
+                            <h2>Account Security</h2>
+
+                            <p>
+                                Personal authentication and session information.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pdev-grid-2">
+
+
+                        <!-- AUTHENTICATION -->
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+
+                            <div class="pdev-panel-header">
+
+                                <h3>Authentication</h3>
+
+                                <i class="bi bi-shield-lock fs-4 text-primary"></i>
+
+                            </div>
+
+
+                            <div class="pdev-panel-body">
+
+
+                                <div class="pdev-list-row">
+
+                                    <div class="pdev-list-main">
+
+                                        <strong>
+                                            Password Management
+                                        </strong>
+
+                                        <small>
+                                            Handled through the authorized
+                                            authentication process.
+                                        </small>
+
+                                    </div>
+
+                                    <span class="pdev-badge pdev-badge-neutral">
+                                        Not Connected
+                                    </span>
+
+                                </div>
+
+
+                                <div class="pdev-list-row">
+
+                                    <div class="pdev-list-main">
+
+                                        <strong>
+                                            Additional Authentication
+                                        </strong>
+
+                                        <small>
+                                            Availability depends on the
+                                            approved authentication configuration.
+                                        </small>
+
+                                    </div>
+
+                                    <span class="pdev-badge pdev-badge-neutral">
+                                        Not Connected
+                                    </span>
+
+                                </div>
+
+
+                                <div class="pdev-list-row">
+
+                                    <div class="pdev-list-main">
+
+                                        <strong>
+                                            Account Recovery
+                                        </strong>
+
+                                        <small>
+                                            Uses the authorized account
+                                            recovery workflow.
+                                        </small>
+
+                                    </div>
+
+                                    <span class="pdev-badge pdev-badge-neutral">
+                                        Not Connected
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- ACTIVE SESSIONS -->
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+
+                            <div class="pdev-panel-header">
+
+                                <h3>Active Sessions</h3>
+
+                                <i class="bi bi-laptop fs-4 text-primary"></i>
+
+                            </div>
+
+
+                            <div class="pdev-panel-body">
+
+                                <div class="pdev-empty">
+
+                                    <span class="pdev-empty-icon">
+                                        <i class="bi bi-pc-display"></i>
+                                    </span>
+
+                                    <strong>
+                                        Session Information Unavailable
+                                    </strong>
+
+                                    <p>
+                                        No live authentication session
+                                        information is connected to
+                                        this demonstration.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION E - SECURITY REMINDERS
+                ================================================== -->
+
+                <section class="pdev-page-section" data-pdev-section>
+
+                    <div class="pdev-section-heading">
+
+                        <div>
+
+                            <span class="pdev-section-kicker">SECTION E</span>
+
+                            <h2>Security Reminders</h2>
+
+                            <p>
+                                Important personal account and
+                                technical security practices.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pdev-grid-2">
+
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-body">
+
+                                <span class="pdev-stat-icon pdev-icon-blue mb-3">
+                                    <i class="bi bi-key"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Protect Credentials
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Never share passwords, private keys,
+                                    access tokens or authentication codes.
+                                </p>
+
+                                <span class="pdev-badge pdev-badge-success">
+                                    Required
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-body">
+
+                                <span class="pdev-stat-icon pdev-icon-teal mb-3">
+                                    <i class="bi bi-shield-check"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Follow Least Privilege
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Use only the technical resources
+                                    and permissions required for assigned work.
+                                </p>
+
+                                <span class="pdev-badge pdev-badge-success">
+                                    Required
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-body">
+
+                                <span class="pdev-stat-icon pdev-icon-purple mb-3">
+                                    <i class="bi bi-file-earmark-lock"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Protect Technical Records
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Avoid exposing confidential technical
+                                    evidence or sensitive application data.
+                                </p>
+
+                                <span class="pdev-badge pdev-badge-success">
+                                    Required
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-body">
+
+                                <span class="pdev-stat-icon pdev-icon-amber mb-3">
+                                    <i class="bi bi-person-check"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Independent Authorization
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Do not approve your own access requests
+                                    or privileged production changes.
+                                </p>
+
+                                <span class="pdev-badge pdev-badge-success">
+                                    Mandatory
+                                </span>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     FOOTER NOTICE
+                ================================================== -->
+
+                <p class="pdev-footer-note">
+
+                    <i class="bi bi-shield-lock"></i>
+
+                    Account information, notifications and security
+                    settings are demonstration-only. Real account
+                    changes require the authorized authentication service.
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer class="main-footer pdev-footer">
+
+            <span>
+                GabayAral &copy;
+                <span data-pdev-year></span>
+                | Platform Developer
+            </span>
+
+            <span data-pdev-last-updated></span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- SCRIPTS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="../../assets/js/platform-developer.js"></script>
+
+<script src="../../assets/js/layout.js"></script>
+
+</body>
+</html>

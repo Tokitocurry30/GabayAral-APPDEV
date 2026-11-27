@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Developer Access Requests | GabayAral</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/platform-admin.css">
+</head>
+
+<body>
+<div class="app-shell platform-admin-app" data-pa-page="developer-access-requests">
+
+    <div id="paSidebarMount"></div>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <main class="main-area">
+        <div id="paTopbarMount"></div>
+
+        <section class="main-content pa-content">
+            <div class="pa-page">
+
+                <header class="pa-page-header">
+                    <div class="pa-page-header-copy">
+                        <span class="pa-eyebrow">PLATFORM ACCESS / PA-11</span>
+                        <h1 class="pa-page-title">Developer Access Requests</h1>
+                        <p class="pa-page-description">
+                            Review and authorize eligible Platform Developer
+                            access requests within the approved technical scope.
+                        </p>
+                    </div>
+                    <span class="pa-page-header-icon">
+                        <i class="bi bi-key"></i>
+                    </span>
+                </header>
+
+
+                <div class="pa-demo-notice">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <div>
+                        <strong>Developer access governance</strong>
+                        <span>
+                            Access requests shown here are fictional.
+                            Approval does not grant unrestricted academic-record access.
+                        </span>
+                    </div>
+                </div>
+
+
+                <!-- SUMMARY -->
+
+                <section class="pa-page-section" data-pa-section>
+                    <div class="pa-section-heading">
+                        <div>
+                            <span class="pa-section-kicker">SECTION A</span>
+                            <h2>Access Request Overview</h2>
+                        </div>
+                    </div>
+
+                    <div class="pa-stat-grid">
+
+                        <article class="pa-stat-card">
+                            <div class="pa-stat-top">
+                                <span class="pa-stat-icon pa-icon-blue">
+                                    <i class="bi bi-key"></i>
+                                </span>
+                                Total Requests
+                            </div>
+                            <strong class="pa-stat-value">04</strong>
+                            <span class="pa-stat-caption">Sample requests</span>
+                        </article>
+
+                        <article class="pa-stat-card">
+                            <div class="pa-stat-top">
+                                <span class="pa-stat-icon pa-icon-amber">
+                                    <i class="bi bi-clock"></i>
+                                </span>
+                                Pending Review
+                            </div>
+                            <strong class="pa-stat-value">02</strong>
+                            <span class="pa-stat-caption">Awaiting authorization</span>
+                        </article>
+
+                        <article class="pa-stat-card">
+                            <div class="pa-stat-top">
+                                <span class="pa-stat-icon pa-icon-teal">
+                                    <i class="bi bi-check-circle"></i>
+                                </span>
+                                Approved
+                            </div>
+                            <strong class="pa-stat-value">01</strong>
+                            <span class="pa-stat-caption">Sample approved request</span>
+                        </article>
+
+                        <article class="pa-stat-card">
+                            <div class="pa-stat-top">
+                                <span class="pa-stat-icon pa-icon-red">
+                                    <i class="bi bi-x-circle"></i>
+                                </span>
+                                Rejected
+                            </div>
+                            <strong class="pa-stat-value">01</strong>
+                            <span class="pa-stat-caption">Sample rejected request</span>
+                        </article>
+
+                    </div>
+                </section>
+
+
+                <!-- ACCESS REQUEST TABLE -->
+
+                <section class="pa-page-section" data-pa-section>
+                    <div class="pa-section-heading">
+                        <div>
+                            <span class="pa-section-kicker">SECTION B</span>
+                            <h2>Developer Access Request Queue</h2>
+                            <p>Review the requested scope and authorization status.</p>
+                        </div>
+                    </div>
+
+                    <article class="pa-panel">
+
+                        <div class="pa-toolbar">
+
+                            <div class="pa-field flex-grow-1">
+                                <label for="developerSearch">Search Requests</label>
+                                <input type="search"
+                                       id="developerSearch"
+                                       class="form-control"
+                                       data-pa-table-search="developer"
+                                       placeholder="Search request ID or Developer...">
+                            </div>
+
+                            <div class="pa-field">
+                                <label for="developerStatus">Request Status</label>
+                                <select id="developerStatus"
+                                        class="form-select"
+                                        data-pa-table-filter="status"
+                                        data-pa-target="developer">
+                                    <option value="all">All Statuses</option>
+                                    <option value="Pending">Pending</option>
+                                    <option value="Approved">Approved</option>
+                                    <option value="Rejected">Rejected</option>
+                                </select>
+                            </div>
+
+                            <button type="button"
+                                    class="pa-btn pa-btn-secondary"
+                                    data-pa-clear-table="developer">
+                                <i class="bi bi-arrow-counterclockwise"></i> Clear
+                            </button>
+
+                        </div>
+
+
+                        <div class="pa-panel-body">
+                            <span class="pa-pagination-info"
+                                  data-pa-result-count="developer"></span>
+                        </div>
+
+
+                        <div class="pa-table-wrap" data-pa-table-wrapper>
+                            <table class="pa-table" data-pa-table="developer">
+
+                                <thead>
+                                    <tr>
+                                        <th>Request ID</th>
+                                        <th>Developer Account</th>
+                                        <th>Requested Access</th>
+                                        <th>Environment</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr data-pa-row data-status="Pending">
+                                        <td><span class="pa-code">DEV-REQ-001</span></td>
+                                        <td>Demo Developer A</td>
+                                        <td>Temporary diagnostic access</td>
+                                        <td>Staging</td>
+                                        <td><span class="pa-badge pa-badge-warning">Pending</span></td>
+                                        <td><button type="button" class="pa-btn pa-btn-primary" data-bs-toggle="modal" data-bs-target="#developerReviewModal">Review</button></td>
+                                    </tr>
+
+                                    <tr data-pa-row data-status="Pending">
+                                        <td><span class="pa-code">DEV-REQ-002</span></td>
+                                        <td>Demo Developer B</td>
+                                        <td>Database maintenance access</td>
+                                        <td>Development</td>
+                                        <td><span class="pa-badge pa-badge-warning">Pending</span></td>
+                                        <td><button type="button" class="pa-btn pa-btn-primary" data-bs-toggle="modal" data-bs-target="#developerReviewModal">Review</button></td>
+                                    </tr>
+
+                                    <tr data-pa-row data-status="Approved">
+                                        <td><span class="pa-code">DEV-REQ-003</span></td>
+                                        <td>Demo Developer C</td>
+                                        <td>Testing environment access</td>
+                                        <td>Staging</td>
+                                        <td><span class="pa-badge pa-badge-success">Approved</span></td>
+                                        <td><button type="button" class="pa-btn pa-btn-secondary" data-bs-toggle="modal" data-bs-target="#developerReviewModal">View</button></td>
+                                    </tr>
+
+                                    <tr data-pa-row data-status="Rejected">
+                                        <td><span class="pa-code">DEV-REQ-004</span></td>
+                                        <td>Demo Developer D</td>
+                                        <td>Unscoped elevated access</td>
+                                        <td>Production</td>
+                                        <td><span class="pa-badge pa-badge-danger">Rejected</span></td>
+                                        <td><button type="button" class="pa-btn pa-btn-secondary" data-bs-toggle="modal" data-bs-target="#developerReviewModal">View</button></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                        <div class="pa-empty" data-pa-table-empty="developer" hidden>
+                            <span class="pa-empty-icon"><i class="bi bi-key"></i></span>
+                            <strong>No matching access requests found.</strong>
+                            <p>Change the search term or selected filter.</p>
+                        </div>
+
+
+                        <div class="pa-panel-footer">
+                            <span class="pa-pagination-info">Sample request records</span>
+                            <div class="pa-pagination-controls" data-pa-pagination="developer"></div>
+                        </div>
+
+                    </article>
+                </section>
+
+
+                <!-- AUTHORIZATION RULES -->
+
+                <section class="pa-page-section" data-pa-section>
+                    <div class="pa-section-heading">
+                        <div>
+                            <span class="pa-section-kicker">SECTION C</span>
+                            <h2>Developer Access Rules</h2>
+                        </div>
+                    </div>
+
+                    <div class="pa-grid-2">
+
+                        <article class="pa-panel">
+                            <div class="pa-panel-body">
+                                <h3 class="h6 fw-bold">Scoped Technical Access</h3>
+                                <p class="small text-secondary">
+                                    Additional access must have a defined technical
+                                    purpose, scope, environment and authorization.
+                                </p>
+                                <span class="pa-badge pa-badge-success">Required</span>
+                            </div>
+                        </article>
+
+                        <article class="pa-panel">
+                            <div class="pa-panel-body">
+                                <h3 class="h6 fw-bold">No Self-Approval</h3>
+                                <p class="small text-secondary">
+                                    A Developer cannot approve their own account,
+                                    access request or privilege elevation.
+                                </p>
+                                <span class="pa-badge pa-badge-danger">Mandatory</span>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+
+                <p class="pa-footer-note">
+                    <i class="bi bi-shield-lock"></i>
+                    Developer technical access is not permission to view
+                    Student submissions, grades or private Guardian documents.
+                </p>
+
+            </div>
+        </section>
+
+        <footer class="main-footer pa-footer">
+            <span>GabayAral &copy; <span data-pa-year></span> | Platform Administration</span>
+            <span data-pa-last-updated></span>
+        </footer>
+    </main>
+
+
+    <!-- ACCESS REVIEW MODAL -->
+
+    <div class="modal fade pa-modal" id="developerReviewModal" tabindex="-1"
+         aria-labelledby="developerReviewTitle" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h2 class="modal-title" id="developerReviewTitle">
+                        Developer Access Review
+                    </h2>
+                    <button type="button" class="btn-close"
+                            data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="pa-notice warning mb-3">
+                        <i class="bi bi-shield-exclamation"></i>
+                        Review only the technical permissions necessary
+                        for the stated task.
+                    </div>
+
+                    <form data-pa-demo-form
+                          data-pa-success-message="Developer access decision prepared locally. No actual permission was granted.">
+
+                        <div class="pa-form-grid">
+
+                            <div class="pa-field">
+                                <label for="devReviewAccount">Developer Account</label>
+                                <input class="form-control" id="devReviewAccount"
+                                       value="Demo Developer A" readonly>
+                            </div>
+
+                            <div class="pa-field">
+                                <label for="devReviewEnvironment">Requested Environment</label>
+                                <select class="form-select" id="devReviewEnvironment" required>
+                                    <option value="">Select environment</option>
+                                    <option>Development</option>
+                                    <option>Staging</option>
+                                    <option>Production</option>
+                                </select>
+                            </div>
+
+                            <div class="pa-field" style="grid-column:1/-1">
+                                <label for="devReviewScope">Requested Technical Scope</label>
+                                <textarea class="form-control" id="devReviewScope"
+                                          rows="3" required
+                                          placeholder="Describe the exact technical permission requested..."></textarea>
+                            </div>
+
+                            <div class="pa-field">
+                                <label for="devReviewDecision">Decision</label>
+                                <select class="form-select" id="devReviewDecision" required>
+                                    <option value="">Select decision</option>
+                                    <option>Approve Scoped Access</option>
+                                    <option>Reject Request</option>
+                                    <option>Return for Clarification</option>
+                                </select>
+                            </div>
+
+                            <div class="pa-field">
+                                <label for="devReviewDuration">Requested Duration</label>
+                                <select class="form-select" id="devReviewDuration" required>
+                                    <option value="">Select duration</option>
+                                    <option>Temporary</option>
+                                    <option>Until task completion</option>
+                                    <option>Not yet determined</option>
+                                </select>
+                            </div>
+
+                            <div class="pa-field" style="grid-column:1/-1">
+                                <label for="devReviewReason">Decision Reason</label>
+                                <textarea class="form-control" id="devReviewReason"
+                                          rows="3" required
+                                          placeholder="Enter the authorization or rejection reason..."></textarea>
+                            </div>
+
+                        </div>
+
+                        <div class="pa-form-actions">
+                            <button type="button" class="pa-btn pa-btn-secondary"
+                                    data-bs-dismiss="modal">
+                                Cancel
+                            </button>
+                            <button type="submit" class="pa-btn pa-btn-primary">
+                                Prepare Decision
+                            </button>
+                        </div>
+
+                        <div class="pa-notice success mt-3"
+                             data-pa-form-result hidden></div>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/platform-admin.js"></script>
+<script src="../../assets/js/layout.js"></script>
+</body>
+</html>

@@ -1,0 +1,1978 @@
+
+/* ============================================================
+   GABAYARAL - PLATFORM ADMINISTRATOR
+   F13.3.1 - COMPLETE SERVICE HEALTH STYLESHEET
+
+   Includes:
+   1. Service Health page introduction
+   2. Monitoring notice
+   3. Summary cards
+   4. Service component table
+   5. Alerts and events
+   6. Developer coordination
+   7. Status definitions
+   8. Developer Referral modal
+   9. Responsive layouts
+
+   Uses existing GabayAral design tokens.
+   All selectors are scoped to PA-specific classes.
+============================================================ */
+
+
+/* ============================================================
+   01. SERVICE HEALTH PAGE
+============================================================ */
+
+.pa-health-content {
+    padding: 20px 24px;
+    font-family: "Inter", sans-serif;
+    color: #14243B;
+}
+
+.pa-health-content * {
+    box-sizing: border-box;
+}
+
+.pa-health-content h1,
+.pa-health-content h2,
+.pa-health-content h3,
+.pa-health-content p {
+    overflow-wrap: break-word;
+}
+
+
+/* ============================================================
+   02. PAGE INTRODUCTION
+============================================================ */
+
+.pa-health-welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 23px;
+    margin-bottom: 16px;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+
+    background: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(15, 35, 55, .035);
+}
+
+.pa-health-welcome > div:first-child {
+    min-width: 0;
+}
+
+.pa-health-welcome h1 {
+    margin: 0;
+
+    color: #16324F;
+
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -.4px;
+}
+
+.pa-health-welcome p {
+    margin: 8px 0 13px;
+
+    color: #64748B;
+
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+.pa-health-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px 16px;
+
+    color: #64748B;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.pa-health-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pa-health-meta i {
+    color: #0F766E;
+}
+
+.pa-health-welcome-icon {
+    display: grid;
+
+    width: 62px;
+    height: 62px;
+    flex: 0 0 62px;
+
+    place-items: center;
+
+    border-radius: 13px;
+
+    background: #E4F7F4;
+    color: #0F766E;
+
+    font-size: 28px;
+}
+
+
+/* ============================================================
+   03. MONITORING NOTICE
+============================================================ */
+
+.pa-health-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+
+    padding: 14px 16px;
+    margin-bottom: 21px;
+
+    border: 1px solid #BFDBFE;
+    border-radius: 10px;
+
+    background: #EFF6FF;
+    color: #1E40AF;
+
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+.pa-health-notice > i {
+    flex: 0 0 auto;
+    margin-top: 2px;
+
+    font-size: 17px;
+}
+
+.pa-health-notice > div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pa-health-notice strong {
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.pa-health-notice span {
+    color: #1E40AF;
+}
+
+
+/* ============================================================
+   04. SECTION HEADINGS
+============================================================ */
+
+.pa-health-section {
+    margin-bottom: 23px;
+}
+
+.pa-health-section[hidden] {
+    display: none !important;
+}
+
+.pa-health-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+
+    margin-bottom: 12px;
+}
+
+.pa-health-kicker {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #0F766E;
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .9px;
+}
+
+.pa-health-section-heading h2 {
+    margin: 0;
+
+    color: #16324F;
+
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.pa-health-section-heading p {
+    margin: 5px 0 0;
+
+    color: #64748B;
+
+    font-size: 10px;
+    line-height: 1.55;
+}
+
+.pa-health-demo-label {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 6px 10px;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 20px;
+
+    background: #F8FAFC;
+    color: #64748B;
+
+    font-size: 9px;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+
+/* ============================================================
+   05. SERVICE SUMMARY CARDS
+============================================================ */
+
+.pa-health-summary-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 13px;
+}
+
+.pa-health-summary-card {
+    display: flex;
+    min-width: 0;
+    min-height: 160px;
+
+    flex-direction: column;
+
+    padding: 16px;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0 2px 8px rgba(15, 35, 55, .035);
+
+    transition:
+        border-color .15s ease,
+        transform .15s ease,
+        box-shadow .15s ease;
+}
+
+.pa-health-summary-card:hover {
+    border-color: #B8DCD5;
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 18px rgba(15, 35, 55, .06);
+}
+
+.pa-health-card-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 14px;
+
+    color: #64748B;
+
+    font-size: 10px;
+    font-weight: 750;
+}
+
+.pa-health-icon {
+    display: grid;
+
+    width: 37px;
+    height: 37px;
+    flex: 0 0 37px;
+
+    place-items: center;
+
+    border-radius: 9px;
+
+    font-size: 16px;
+}
+
+
+/* SUMMARY ICON COLORS */
+
+.pa-health-icon.is-blue {
+    background: #EFF6FF;
+    color: #2563EB;
+}
+
+.pa-health-icon.is-teal {
+    background: #E4F7F4;
+    color: #0F766E;
+}
+
+.pa-health-icon.is-amber {
+    background: #FFF7ED;
+    color: #B45309;
+}
+
+.pa-health-icon.is-purple {
+    background: #F3E8FF;
+    color: #7C3AED;
+}
+
+.pa-health-main-value {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #16324F;
+
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.pa-health-card-description {
+    color: #94A3B8;
+
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+
+/* STATUS LABELS */
+
+.pa-health-state {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+
+    gap: 6px;
+
+    margin-top: auto;
+    padding-top: 12px;
+
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.pa-health-state.is-unknown {
+    color: #64748B;
+}
+
+.pa-health-state.is-neutral {
+    color: #64748B;
+}
+
+
+/* ============================================================
+   06. COMMON SERVICE PANELS
+============================================================ */
+
+.pa-health-panel {
+    display: flex;
+    min-width: 0;
+
+    flex-direction: column;
+
+    padding: 17px;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0 2px 8px rgba(15, 35, 55, .035);
+}
+
+.pa-health-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+.pa-health-panel-header > div {
+    min-width: 0;
+}
+
+.pa-health-panel-header h3 {
+    margin: 0;
+
+    color: #16324F;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.pa-health-panel-header p {
+    margin: 5px 0 0;
+
+    color: #64748B;
+
+    font-size: 9px;
+    line-height: 1.55;
+}
+
+.pa-health-source-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 7px 10px;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 20px;
+
+    background: #F8FAFC;
+    color: #64748B;
+
+    font-size: 9px;
+    font-weight: 750;
+
+    white-space: nowrap;
+}
+
+
+/* ============================================================
+   07. SERVICE COMPONENT TABLE
+============================================================ */
+
+.pa-health-table-wrap {
+    width: 100%;
+
+    overflow-x: auto;
+
+    border: 1px solid #E8EDF3;
+    border-radius: 9px;
+}
+
+.pa-health-table {
+    width: 100%;
+    min-width: 720px;
+
+    margin: 0;
+
+    border-collapse: collapse;
+
+    background: #FFFFFF;
+}
+
+.pa-health-table thead {
+    background: #F8FAFC;
+}
+
+.pa-health-table th {
+    padding: 13px;
+
+    border-bottom: 1px solid #E2E8F0;
+
+    color: #64748B;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: .35px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.pa-health-table td {
+    padding: 14px 13px;
+
+    border-bottom: 1px solid #F1F5F9;
+
+    color: #475569;
+
+    font-size: 10px;
+    vertical-align: middle;
+}
+
+.pa-health-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.pa-health-table tbody tr:hover {
+    background: #FAFCFE;
+}
+
+
+/* COMPONENT NAME */
+
+.pa-health-component {
+    display: flex;
+    min-width: 200px;
+
+    align-items: center;
+    gap: 10px;
+}
+
+.pa-health-component-icon {
+    display: grid;
+
+    width: 37px;
+    height: 37px;
+    flex: 0 0 37px;
+
+    place-items: center;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+}
+
+.pa-health-component-icon.is-blue {
+    background: #EFF6FF;
+    color: #2563EB;
+}
+
+.pa-health-component-icon.is-teal {
+    background: #E4F7F4;
+    color: #0F766E;
+}
+
+.pa-health-component-icon.is-purple {
+    background: #F3E8FF;
+    color: #7C3AED;
+}
+
+.pa-health-component-icon.is-amber {
+    background: #FFF7ED;
+    color: #B45309;
+}
+
+.pa-health-component > div {
+    display: flex;
+    min-width: 0;
+
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pa-health-component strong {
+    color: #16324F;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.pa-health-component small {
+    color: #94A3B8;
+    font-size: 9px;
+}
+
+.pa-health-unavailable {
+    color: #64748B;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+
+/* TABLE FOOTNOTE */
+
+.pa-health-table-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+
+    margin-top: 13px;
+
+    color: #64748B;
+
+    font-size: 9px;
+    line-height: 1.6;
+}
+
+.pa-health-table-note i {
+    flex: 0 0 auto;
+    margin-top: 2px;
+
+    color: #0F766E;
+}
+
+
+/* ============================================================
+   08. ALERTS AND EVENTS
+============================================================ */
+
+.pa-health-alert-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 13px;
+}
+
+.pa-health-empty-state {
+    display: flex;
+    min-height: 190px;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 22px;
+
+    border: 1px dashed #CBD5E1;
+    border-radius: 9px;
+
+    background: #FAFCFE;
+
+    text-align: center;
+}
+
+.pa-health-empty-icon {
+    display: grid;
+
+    width: 46px;
+    height: 46px;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #F1F5F9;
+    color: #64748B;
+
+    font-size: 20px;
+}
+
+.pa-health-empty-state strong {
+    color: #16324F;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.pa-health-empty-state p {
+    max-width: 300px;
+
+    margin: 0;
+
+    color: #64748B;
+
+    font-size: 9px;
+    line-height: 1.65;
+}
+
+
+/* ============================================================
+   09. DEVELOPER COORDINATION
+============================================================ */
+
+.pa-health-coordination {
+    display: flex;
+
+    align-items: flex-start;
+    gap: 17px;
+
+    flex-direction: row;
+}
+
+.pa-health-coordination-icon {
+    display: grid;
+
+    width: 49px;
+    height: 49px;
+    flex: 0 0 49px;
+
+    place-items: center;
+
+    border-radius: 11px;
+
+    background: #F3E8FF;
+    color: #7C3AED;
+
+    font-size: 21px;
+}
+
+.pa-health-coordination-content {
+    min-width: 0;
+    flex: 1;
+}
+
+.pa-health-coordination h3 {
+    margin: 0 0 9px;
+
+    color: #16324F;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.pa-health-coordination p {
+    margin: 0 0 9px;
+
+    color: #64748B;
+
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+
+/* PRIMARY BUTTON */
+
+.pa-health-primary-button {
+    display: inline-flex;
+
+    min-height: 39px;
+
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 10px 15px;
+
+    border: 1px solid #0F766E;
+    border-radius: 8px;
+
+    background: #0F766E;
+    color: #FFFFFF;
+
+    font-family: inherit;
+
+    font-size: 10px;
+    font-weight: 750;
+
+    cursor: pointer;
+
+    transition: background .15s ease;
+}
+
+.pa-health-primary-button:hover {
+    border-color: #115E59;
+
+    background: #115E59;
+    color: #FFFFFF;
+}
+
+.pa-health-primary-button:focus-visible {
+    outline: 3px solid rgba(15, 118, 110, .25);
+    outline-offset: 3px;
+}
+
+
+/* REFERRAL DRAFT NOTICE */
+
+.pa-health-referral-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+
+    padding: 12px 13px;
+    margin-top: 13px;
+
+    border: 1px solid #BFDBFE;
+    border-radius: 9px;
+
+    background: #EFF6FF;
+    color: #1E40AF;
+
+    font-size: 10px;
+    line-height: 1.65;
+}
+
+.pa-health-referral-notice[hidden] {
+    display: none !important;
+}
+
+.pa-health-referral-notice i {
+    flex: 0 0 auto;
+    margin-top: 2px;
+}
+
+.pa-health-referral-notice span {
+    white-space: pre-line;
+}
+
+
+/* ============================================================
+   10. STATUS DEFINITIONS
+============================================================ */
+
+.pa-health-status-guide {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 0 22px;
+}
+
+.pa-health-guide-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.pa-health-guide-row:nth-last-child(-n+2) {
+    border-bottom: 0;
+}
+
+.pa-health-guide-indicator {
+    width: 10px;
+    height: 10px;
+
+    flex: 0 0 10px;
+
+    margin-top: 4px;
+
+    border-radius: 50%;
+}
+
+.pa-health-guide-indicator.is-operational {
+    background: #16A34A;
+}
+
+.pa-health-guide-indicator.is-degraded {
+    background: #D97706;
+}
+
+.pa-health-guide-indicator.is-unavailable {
+    background: #DC2626;
+}
+
+.pa-health-guide-indicator.is-maintenance {
+    background: #2563EB;
+}
+
+.pa-health-guide-indicator.is-unknown {
+    background: #64748B;
+}
+
+.pa-health-guide-indicator.is-not-connected {
+    background: #94A3B8;
+}
+
+.pa-health-guide-row > div {
+    display: flex;
+    min-width: 0;
+
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pa-health-guide-row strong {
+    color: #16324F;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.pa-health-guide-row span {
+    color: #64748B;
+
+    font-size: 9px;
+    line-height: 1.55;
+}
+
+
+/* ============================================================
+   11. SERVICE HEALTH SEARCH
+============================================================ */
+
+.pa-health-searchable[hidden],
+.pa-health-search-empty[hidden] {
+    display: none !important;
+}
+
+.pa-health-search-empty {
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+
+    gap: 8px;
+
+    padding: 30px 15px;
+    margin: 12px 0;
+
+    border: 1px dashed #CBD5E1;
+    border-radius: 10px;
+
+    background: #FFFFFF;
+    color: #64748B;
+
+    text-align: center;
+}
+
+.pa-health-search-empty > i {
+    color: #94A3B8;
+    font-size: 25px;
+}
+
+.pa-health-search-empty strong {
+    color: #16324F;
+    font-size: 12px;
+}
+
+.pa-health-search-empty span {
+    font-size: 10px;
+}
+
+
+/* ============================================================
+   12. DEVELOPER REFERRAL MODAL
+============================================================ */
+
+
+/* MODAL SIZE */
+
+.pa-referral-modal .modal-dialog {
+    width: calc(100% - 30px);
+    max-width: 1040px;
+
+    margin: 15px auto;
+}
+
+.pa-referral-modal .modal-content {
+    overflow: hidden;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0 20px 55px rgba(15, 35, 55, .20);
+}
+
+
+/* MODAL HEADER */
+
+.pa-referral-modal .pa-referral-modal-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 18px;
+
+    padding: 21px 24px;
+
+    border-bottom: 1px solid #E2E8F0;
+
+    background: #FFFFFF;
+}
+
+.pa-referral-modal .pa-referral-header-content {
+    display: flex;
+
+    min-width: 0;
+
+    align-items: center;
+    gap: 14px;
+}
+
+.pa-referral-modal .pa-referral-header-icon {
+    display: grid;
+
+    width: 49px;
+    height: 49px;
+    flex: 0 0 49px;
+
+    place-items: center;
+
+    border-radius: 12px;
+
+    background: #E4F7F4;
+    color: #0F766E;
+
+    font-size: 21px;
+}
+
+.pa-referral-modal .pa-referral-eyebrow {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #0F766E;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: .9px;
+}
+
+.pa-referral-modal .pa-referral-modal-header h2 {
+    margin: 0;
+
+    color: #16324F;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    line-height: 1.35;
+}
+
+.pa-referral-modal .pa-referral-modal-header p {
+    margin: 5px 0 0;
+
+    color: #64748B;
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.pa-referral-modal .pa-referral-header-actions {
+    display: flex;
+
+    flex: 0 0 auto;
+
+    align-items: center;
+    gap: 14px;
+}
+
+.pa-referral-modal .pa-referral-demo-badge {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 6px;
+
+    padding: 7px 10px;
+
+    border: 1px solid #BFDBFE;
+    border-radius: 20px;
+
+    background: #EFF6FF;
+    color: #1D4ED8;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+/* MODAL BODY */
+
+.pa-referral-modal .pa-referral-modal-body {
+    padding: 0;
+
+    background: #F8FAFC;
+}
+
+.pa-referral-modal .pa-referral-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.55fr)
+        minmax(270px, .85fr);
+
+    align-items: start;
+
+    gap: 18px;
+
+    padding: 21px;
+}
+
+.pa-referral-modal .pa-referral-form-column {
+    min-width: 0;
+}
+
+.pa-referral-modal .pa-referral-form-section {
+    padding: 19px;
+    margin-bottom: 13px;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 11px;
+
+    background: #FFFFFF;
+}
+
+.pa-referral-modal .pa-referral-form-section:last-child {
+    margin-bottom: 0;
+}
+
+
+/* FORM SECTION HEADINGS */
+
+.pa-referral-modal .pa-referral-section-heading {
+    display: flex;
+
+    align-items: flex-start;
+    gap: 11px;
+
+    margin-bottom: 17px;
+}
+
+.pa-referral-modal .pa-referral-step {
+    display: grid;
+
+    width: 29px;
+    height: 29px;
+    flex: 0 0 29px;
+
+    place-items: center;
+
+    border-radius: 8px;
+
+    background: #E4F7F4;
+    color: #0F766E;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.pa-referral-modal .pa-referral-section-heading h3 {
+    margin: 0;
+
+    color: #16324F;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.pa-referral-modal .pa-referral-section-heading p {
+    margin: 4px 0 0;
+
+    color: #64748B;
+
+    font-size: 9px;
+    line-height: 1.55;
+}
+
+
+/* FORM LABELS AND INPUTS */
+
+.pa-referral-modal .form-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #334155;
+
+    font-size: 10px;
+    font-weight: 750;
+}
+
+.pa-referral-modal .pa-required {
+    color: #DC2626;
+    font-weight: 800;
+}
+
+.pa-referral-modal .pa-optional {
+    color: #94A3B8;
+
+    font-size: 9px;
+    font-weight: 500;
+}
+
+.pa-referral-modal .form-control,
+.pa-referral-modal .form-select {
+    width: 100%;
+    min-height: 41px;
+
+    padding: 9px 11px;
+
+    border: 1px solid #DCE3EB;
+    border-radius: 8px;
+
+    background-color: #FFFFFF;
+    color: #14243B;
+
+    font-family: inherit;
+    font-size: 10px;
+
+    box-shadow: none;
+
+    transition:
+        border-color .15s ease,
+        box-shadow .15s ease;
+}
+
+.pa-referral-modal .form-control::placeholder {
+    color: #A0AEC0;
+}
+
+.pa-referral-modal .form-select {
+    cursor: pointer;
+}
+
+.pa-referral-modal textarea.form-control {
+    min-height: 120px;
+
+    resize: vertical;
+
+    line-height: 1.65;
+}
+
+.pa-referral-modal .form-control:focus,
+.pa-referral-modal .form-select:focus {
+    border-color: #80C5B8;
+
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, .09);
+}
+
+.pa-referral-modal .pa-referral-field-help {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #94A3B8;
+
+    font-size: 9px;
+    line-height: 1.55;
+}
+
+
+/* PRIORITY CARDS */
+
+.pa-referral-modal .pa-referral-priority-fieldset {
+    min-width: 0;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+}
+
+.pa-referral-modal .pa-referral-priority-legend {
+    margin-bottom: 10px;
+
+    color: #334155;
+
+    font-size: 10px;
+    font-weight: 750;
+}
+
+.pa-referral-modal .pa-priority-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 9px;
+
+    margin-bottom: 10px;
+}
+
+.pa-referral-modal .pa-priority-option {
+    position: relative;
+    min-width: 0;
+}
+
+.pa-referral-modal .pa-priority-option input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+
+    white-space: nowrap;
+}
+
+.pa-referral-modal .pa-priority-card {
+    display: flex;
+
+    min-height: 112px;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    padding: 12px 7px;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 9px;
+
+    background: #FFFFFF;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        border-color .15s ease,
+        background .15s ease,
+        box-shadow .15s ease;
+}
+
+.pa-referral-modal .pa-priority-card:hover {
+    border-color: #B8DCD5;
+    background: #FAFDFC;
+}
+
+.pa-referral-modal .pa-priority-option input:checked
++ .pa-priority-card {
+    border-color: #0F766E;
+
+    background: #F0F8F7;
+
+    box-shadow: inset 0 0 0 1px #0F766E;
+}
+
+.pa-referral-modal .pa-priority-option input:focus-visible
++ .pa-priority-card {
+    outline: 3px solid rgba(15, 118, 110, .25);
+    outline-offset: 3px;
+}
+
+.pa-referral-modal .pa-priority-icon {
+    display: grid;
+
+    width: 32px;
+    height: 32px;
+
+    place-items: center;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+}
+
+.pa-referral-modal .pa-priority-icon.routine {
+    background: #F1F5F9;
+    color: #64748B;
+}
+
+.pa-referral-modal .pa-priority-icon.high {
+    background: #FFF7ED;
+    color: #B45309;
+}
+
+.pa-referral-modal .pa-priority-icon.critical {
+    background: #FEF2F2;
+    color: #B91C1C;
+}
+
+.pa-referral-modal .pa-priority-card strong {
+    color: #16324F;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.pa-referral-modal .pa-priority-card small {
+    color: #64748B;
+
+    font-size: 8px;
+    line-height: 1.4;
+}
+
+
+/* RIGHT COLUMN */
+
+.pa-referral-modal .pa-referral-side-column {
+    display: flex;
+
+    min-width: 0;
+
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/* LIVE PREVIEW */
+
+.pa-referral-modal .pa-referral-preview-card {
+    padding: 17px;
+
+    border: 1px solid #294B68;
+    border-radius: 12px;
+
+    background: linear-gradient(155deg, #16324F, #102E49);
+
+    color: #FFFFFF;
+
+    box-shadow: 0 6px 16px rgba(16, 46, 73, .10);
+}
+
+.pa-referral-modal .pa-referral-preview-header {
+    display: flex;
+
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 14px;
+}
+
+.pa-referral-modal .pa-referral-preview-icon {
+    display: grid;
+
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+
+    place-items: center;
+
+    border-radius: 9px;
+
+    background: rgba(25, 197, 183, .15);
+    color: #5EEAD4;
+
+    font-size: 16px;
+}
+
+.pa-referral-modal .pa-referral-preview-header > div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pa-referral-modal .pa-referral-preview-header strong {
+    color: #FFFFFF;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.pa-referral-modal .pa-referral-preview-header small {
+    color: #BFCFDE;
+    font-size: 8px;
+}
+
+.pa-referral-modal .pa-preview-divider {
+    height: 1px;
+    margin-bottom: 13px;
+
+    background: rgba(255, 255, 255, .15);
+}
+
+.pa-referral-modal .pa-preview-item {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .10);
+}
+
+.pa-referral-modal .pa-preview-item > span {
+    color: #AFC5D7;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: .65px;
+}
+
+.pa-referral-modal .pa-preview-item > strong {
+    overflow-wrap: anywhere;
+
+    color: #FFFFFF;
+
+    font-size: 10px;
+    font-weight: 650;
+
+    line-height: 1.5;
+}
+
+.pa-referral-modal .pa-preview-item .pa-preview-summary {
+    color: #D9E7F0;
+    font-weight: 500;
+}
+
+.pa-referral-modal .pa-preview-footer {
+    display: flex;
+
+    align-items: flex-start;
+    gap: 7px;
+
+    padding: 10px;
+    margin-top: 12px;
+
+    border: 1px solid rgba(255, 255, 255, .13);
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, .06);
+
+    color: #CBD5E1;
+
+    font-size: 8px;
+    line-height: 1.5;
+}
+
+.pa-referral-modal .pa-preview-footer i {
+    flex: 0 0 auto;
+    color: #5EEAD4;
+}
+
+
+/* REFERRAL WORKFLOW */
+
+.pa-referral-modal .pa-referral-routing-card {
+    padding: 16px;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 11px;
+
+    background: #FFFFFF;
+}
+
+.pa-referral-modal .pa-referral-side-heading {
+    display: flex;
+
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 16px;
+
+    color: #16324F;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.pa-referral-modal .pa-referral-side-heading i {
+    color: #0F766E;
+    font-size: 15px;
+}
+
+.pa-referral-modal .pa-referral-route-step {
+    display: flex;
+
+    align-items: center;
+    gap: 10px;
+}
+
+.pa-referral-modal .pa-route-avatar {
+    display: grid;
+
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+
+    place-items: center;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+}
+
+.pa-referral-modal .pa-route-avatar.admin {
+    background: #E4F7F4;
+    color: #0F766E;
+}
+
+.pa-referral-modal .pa-route-avatar.developer {
+    background: #F3E8FF;
+    color: #7C3AED;
+}
+
+.pa-referral-modal .pa-referral-route-step > div {
+    display: flex;
+
+    min-width: 0;
+
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pa-referral-modal .pa-referral-route-step strong {
+    color: #16324F;
+
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.pa-referral-modal .pa-referral-route-step small {
+    color: #64748B;
+
+    font-size: 8px;
+    line-height: 1.5;
+}
+
+.pa-referral-modal .pa-referral-route-connector {
+    padding: 6px 0 6px 11px;
+
+    color: #94A3B8;
+    font-size: 13px;
+}
+
+.pa-referral-modal .pa-referral-routing-note {
+    padding: 10px;
+    margin-top: 13px;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+
+    background: #F8FAFC;
+    color: #64748B;
+
+    font-size: 8px;
+    line-height: 1.6;
+}
+
+
+/* PRIVACY REMINDER */
+
+.pa-referral-modal .pa-referral-privacy-card {
+    padding: 15px;
+
+    border: 1px solid #FDE2B8;
+    border-radius: 11px;
+
+    background: #FFFBF5;
+}
+
+.pa-referral-modal .pa-referral-privacy-heading {
+    display: flex;
+
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 9px;
+
+    color: #92400E;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.pa-referral-modal .pa-referral-privacy-heading i {
+    font-size: 15px;
+}
+
+.pa-referral-modal .pa-referral-privacy-card p {
+    margin: 0 0 8px;
+
+    color: #92400E;
+
+    font-size: 9px;
+    line-height: 1.55;
+}
+
+.pa-referral-modal .pa-referral-privacy-card ul {
+    display: flex;
+
+    flex-direction: column;
+    gap: 6px;
+
+    padding-left: 17px;
+    margin: 0;
+
+    color: #9A5B16;
+
+    font-size: 8px;
+    line-height: 1.5;
+}
+
+
+/* MODAL FOOTER */
+
+.pa-referral-modal .pa-referral-modal-footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 14px 22px;
+
+    border-top: 1px solid #E2E8F0;
+
+    background: #FFFFFF;
+}
+
+.pa-referral-modal .pa-referral-footer-note {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 7px;
+
+    color: #94A3B8;
+
+    font-size: 9px;
+}
+
+.pa-referral-modal .pa-referral-footer-note i {
+    color: #0F766E;
+}
+
+.pa-referral-modal .pa-referral-footer-actions {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 9px;
+}
+
+.pa-referral-modal .pa-referral-cancel-button,
+.pa-referral-modal .pa-referral-submit-button {
+    display: inline-flex;
+
+    min-height: 39px;
+
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 9px 15px;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-size: 10px;
+    font-weight: 750;
+
+    cursor: pointer;
+}
+
+.pa-referral-modal .pa-referral-cancel-button {
+    border: 1px solid #E2E8F0;
+
+    background: #FFFFFF;
+    color: #475569;
+}
+
+.pa-referral-modal .pa-referral-cancel-button:hover {
+    background: #F1F5F9;
+}
+
+.pa-referral-modal .pa-referral-submit-button {
+    border: 1px solid #0F766E;
+
+    background: #0F766E;
+    color: #FFFFFF;
+}
+
+.pa-referral-modal .pa-referral-submit-button:hover {
+    border-color: #115E59;
+    background: #115E59;
+}
+
+
+/* ============================================================
+   13. RESPONSIVE DESIGN
+============================================================ */
+
+
+/* TABLETS */
+
+@media (max-width: 1100px) {
+
+    .pa-health-summary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* SMALL TABLETS */
+
+@media (max-width: 900px) {
+
+    .pa-health-content {
+        padding: 16px;
+    }
+
+    .pa-health-alert-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+
+    .pa-health-content {
+        padding: 14px 12px;
+    }
+
+    .pa-health-welcome {
+        padding: 16px;
+    }
+
+    .pa-health-welcome h1 {
+        font-size: 23px;
+    }
+
+    .pa-health-welcome-icon {
+        width: 48px;
+        height: 48px;
+        flex-basis: 48px;
+        font-size: 23px;
+    }
+
+    .pa-health-coordination {
+        flex-direction: column;
+    }
+
+    .pa-health-status-guide {
+        grid-template-columns: 1fr;
+    }
+
+    .pa-health-guide-row:nth-last-child(-n+2) {
+        border-bottom: 1px solid #F1F5F9;
+    }
+
+    .pa-health-guide-row:last-child {
+        border-bottom: 0;
+    }
+
+    .pa-referral-modal .pa-referral-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .pa-referral-modal .pa-referral-side-column {
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        align-items: start;
+    }
+
+    .pa-referral-modal .pa-referral-preview-card {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 550px) {
+
+    .pa-referral-modal .modal-dialog {
+        width: calc(100% - 16px);
+        margin: 8px auto;
+    }
+
+    .pa-referral-modal .pa-referral-modal-header {
+        align-items: flex-start;
+        padding: 16px;
+    }
+
+    .pa-referral-modal .pa-referral-header-content {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .pa-referral-modal .pa-referral-header-icon {
+        width: 39px;
+        height: 39px;
+        flex-basis: 39px;
+        font-size: 17px;
+    }
+
+    .pa-referral-modal .pa-referral-modal-header h2 {
+        font-size: 15px;
+    }
+
+    .pa-referral-modal .pa-referral-modal-header p {
+        font-size: 9px;
+    }
+
+    .pa-referral-modal .pa-referral-demo-badge {
+        padding: 5px 7px;
+        font-size: 8px;
+    }
+
+    .pa-referral-modal .pa-referral-layout {
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .pa-referral-modal .pa-referral-form-section {
+        padding: 14px;
+    }
+
+    .pa-referral-modal .pa-referral-side-column {
+        grid-template-columns: 1fr;
+    }
+
+    .pa-referral-modal .pa-referral-preview-card {
+        grid-column: auto;
+    }
+
+    .pa-referral-modal .pa-referral-modal-footer {
+        align-items: stretch;
+        flex-direction: column;
+        padding: 13px;
+    }
+
+    .pa-referral-modal .pa-referral-footer-actions {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+    }
+
+    .pa-referral-modal .pa-referral-cancel-button,
+    .pa-referral-modal .pa-referral-submit-button {
+        padding: 9px 8px;
+    }
+
+}
+
+
+/* VERY SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+    .pa-health-summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pa-referral-modal .pa-priority-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pa-referral-modal .pa-priority-card {
+        min-height: 75px;
+
+        flex-direction: row;
+        justify-content: flex-start;
+
+        padding: 10px;
+
+        text-align: left;
+    }
+
+    .pa-referral-modal .pa-priority-card small {
+        margin-left: auto;
+        text-align: right;
+    }
+
+}
+
+
+/* ============================================================
+   14. ACCESSIBILITY - REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .pa-health-content *,
+    .pa-health-content *::before,
+    .pa-health-content *::after,
+    .pa-referral-modal *,
+    .pa-referral-modal *::before,
+    .pa-referral-modal *::after {
+
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: .01ms !important;
+
+    }
+
+}

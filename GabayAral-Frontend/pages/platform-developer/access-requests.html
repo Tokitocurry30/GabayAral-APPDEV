@@ -1,0 +1,982 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+
+    <title>Access Requests | GabayAral</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- INTER FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- GLOBAL CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+
+    <!-- DEVELOPER CSS -->
+    <link rel="stylesheet" href="../../assets/css/platform-developer.css">
+</head>
+
+
+<body>
+
+<div class="app-shell platform-developer-app" data-pdev-page="access-requests">
+
+    <!-- SIDEBAR -->
+    <div id="pdevSidebarMount"></div>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+
+    <!-- MAIN AREA -->
+    <main class="main-area">
+
+        <div id="pdevTopbarMount"></div>
+
+
+        <section class="main-content pdev-content">
+
+            <div class="pdev-page">
+
+
+                <!-- PAGE HEADER -->
+
+                <header class="pdev-page-header">
+
+                    <div>
+
+                        <span class="pdev-eyebrow">
+                            DOCUMENTATION AND ACCESS / PDEV-11
+                        </span>
+
+                        <h1 class="pdev-page-title">
+                            Access Requests
+                        </h1>
+
+                        <p class="pdev-page-description">
+                            Review your authorized technical resources,
+                            request additional scoped access and track
+                            authorization decisions.
+                        </p>
+
+                        <div class="pdev-page-meta">
+
+                            <span>
+                                <i class="bi bi-calendar3"></i>
+                                <span data-pdev-date></span>
+                            </span>
+
+                            <span>
+                                <i class="bi bi-key"></i>
+                                Developer Access
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <span class="pdev-header-icon">
+                        <i class="bi bi-key"></i>
+                    </span>
+
+                </header>
+
+
+                <!-- DEMONSTRATION NOTICE -->
+
+                <div class="pdev-demo-notice">
+
+                    <i class="bi bi-info-circle-fill"></i>
+
+                    <div>
+
+                        <strong>
+                            Developer Access Management Demonstration
+                        </strong>
+
+                        <p>
+                            Account permissions and access requests
+                            are fictional. No live authentication
+                            or authorization service is connected.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     SECTION A - OVERVIEW
+                ================================================== -->
+
+                <section class="pdev-page-section" data-pdev-section>
+
+                    <div class="pdev-section-heading">
+
+                        <div>
+
+                            <span class="pdev-section-kicker">SECTION A</span>
+
+                            <h2>My Access Overview</h2>
+
+                            <p>
+                                Summary of the current Developer's
+                                sample access request records.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pdev-stat-grid">
+
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+
+                            <div class="pdev-stat-top">
+
+                                <span class="pdev-stat-icon pdev-icon-blue">
+                                    <i class="bi bi-shield-check"></i>
+                                </span>
+
+                                Current Permissions
+
+                            </div>
+
+                            <strong class="pdev-stat-value">
+                                N/A
+                            </strong>
+
+                            <span class="pdev-stat-caption">
+                                No live permission source
+                            </span>
+
+                        </article>
+
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+
+                            <div class="pdev-stat-top">
+
+                                <span class="pdev-stat-icon pdev-icon-amber">
+                                    <i class="bi bi-hourglass-split"></i>
+                                </span>
+
+                                Pending Requests
+
+                            </div>
+
+                            <strong class="pdev-stat-value">
+                                01
+                            </strong>
+
+                            <span class="pdev-stat-caption">
+                                Fictional sample request
+                            </span>
+
+                        </article>
+
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+
+                            <div class="pdev-stat-top">
+
+                                <span class="pdev-stat-icon pdev-icon-teal">
+                                    <i class="bi bi-check-circle"></i>
+                                </span>
+
+                                Approved Samples
+
+                            </div>
+
+                            <strong class="pdev-stat-value">
+                                01
+                            </strong>
+
+                            <span class="pdev-stat-caption">
+                                Fictional approval record
+                            </span>
+
+                        </article>
+
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+
+                            <div class="pdev-stat-top">
+
+                                <span class="pdev-stat-icon pdev-icon-purple">
+                                    <i class="bi bi-clock-history"></i>
+                                </span>
+
+                                Access History
+
+                            </div>
+
+                            <strong class="pdev-stat-value">
+                                03
+                            </strong>
+
+                            <span class="pdev-stat-caption">
+                                Fictional sample records
+                            </span>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION B - ACCESS REQUEST REGISTER
+                ================================================== -->
+
+                <section class="pdev-page-section" data-pdev-section>
+
+                    <div class="pdev-section-heading">
+
+                        <div>
+
+                            <span class="pdev-section-kicker">SECTION B</span>
+
+                            <h2>My Access Requests</h2>
+
+                            <p>
+                                Review your own fictional access request records.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <article class="pdev-panel" data-pdev-searchable>
+
+
+                        <div class="pdev-panel-header">
+
+                            <div>
+                                <h3>Access Request Register</h3>
+                                <p>Demonstration records for the current Developer.</p>
+                            </div>
+
+                            <span class="pdev-badge pdev-badge-info">
+                                Demo Only
+                            </span>
+
+                        </div>
+
+
+                        <div class="pdev-toolbar">
+
+
+                            <div class="pdev-field flex-grow-1">
+
+                                <label for="accessSearch">
+                                    Search Requests
+                                </label>
+
+                                <input
+                                    type="search"
+                                    id="accessSearch"
+                                    class="form-control"
+                                    data-pdev-table-search="access"
+                                    placeholder="Search request reference or resource..."
+                                >
+
+                            </div>
+
+
+                            <div class="pdev-field">
+
+                                <label for="accessStatus">
+                                    Status
+                                </label>
+
+                                <select
+                                    id="accessStatus"
+                                    class="form-select"
+                                    data-pdev-filter="status"
+                                    data-pdev-target="access"
+                                >
+
+                                    <option value="all">All Statuses</option>
+                                    <option value="Pending">Pending</option>
+                                    <option value="Approved">Approved</option>
+                                    <option value="Rejected">Rejected</option>
+                                    <option value="Expired">Expired</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                class="pdev-btn pdev-btn-secondary"
+                                data-pdev-clear-table="access"
+                            >
+
+                                <i class="bi bi-arrow-counterclockwise"></i>
+                                Clear
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="pdev-panel-body">
+
+                            <span
+                                class="pdev-pagination-info"
+                                data-pdev-result-count="access"
+                            ></span>
+
+                        </div>
+
+
+                        <div class="pdev-table-wrap" data-pdev-table-wrapper>
+
+                            <table
+                                class="pdev-table"
+                                data-pdev-table="access"
+                            >
+
+                                <thead>
+
+                                    <tr>
+                                        <th>Request Reference</th>
+                                        <th>Resource</th>
+                                        <th>Purpose</th>
+                                        <th>Requested Scope</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody>
+
+
+                                    <tr data-pdev-row data-status="Pending">
+
+                                        <td>
+                                            <span class="pdev-code">DEMO-ACC-001</span>
+                                        </td>
+
+                                        <td>Staging Environment</td>
+
+                                        <td>Release validation</td>
+
+                                        <td>Scoped Testing Access</td>
+
+                                        <td>
+                                            <span class="pdev-badge pdev-badge-warning">
+                                                Pending
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <button type="button"
+                                                class="pdev-btn pdev-btn-secondary"
+                                                data-pdev-action="review">
+                                                View
+                                            </button>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr data-pdev-row data-status="Approved">
+
+                                        <td>
+                                            <span class="pdev-code">DEMO-ACC-002</span>
+                                        </td>
+
+                                        <td>Development Environment</td>
+
+                                        <td>Application debugging</td>
+
+                                        <td>Authorized Development Access</td>
+
+                                        <td>
+                                            <span class="pdev-badge pdev-badge-success">
+                                                Approved
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <button type="button"
+                                                class="pdev-btn pdev-btn-secondary"
+                                                data-pdev-action="review">
+                                                View
+                                            </button>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr data-pdev-row data-status="Rejected">
+
+                                        <td>
+                                            <span class="pdev-code">DEMO-ACC-003</span>
+                                        </td>
+
+                                        <td>Restricted Production Resource</td>
+
+                                        <td>Sample technical investigation</td>
+
+                                        <td>Additional Restricted Access</td>
+
+                                        <td>
+                                            <span class="pdev-badge pdev-badge-danger">
+                                                Rejected
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <button type="button"
+                                                class="pdev-btn pdev-btn-secondary"
+                                                data-pdev-action="review">
+                                                View
+                                            </button>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+
+                        <div class="pdev-empty" data-pdev-table-empty="access" hidden>
+
+                            <span class="pdev-empty-icon">
+                                <i class="bi bi-key"></i>
+                            </span>
+
+                            <strong>No matching access requests.</strong>
+
+                            <p>Change your search or filter.</p>
+
+                        </div>
+
+
+                        <div class="pdev-panel-footer">
+
+                            <span class="pdev-pagination-info">
+                                Three sample access records
+                            </span>
+
+                            <div
+                                class="pdev-pagination-controls"
+                                data-pdev-pagination="access"
+                            ></div>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION C - ENVIRONMENT ACCESS
+                ================================================== -->
+
+                <section class="pdev-page-section" data-pdev-section>
+
+                    <div class="pdev-section-heading">
+
+                        <div>
+
+                            <span class="pdev-section-kicker">SECTION C</span>
+
+                            <h2>Environment Access</h2>
+
+                            <p>
+                                Review the different environment
+                                authorization requirements.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pdev-grid-3">
+
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-body">
+
+                                <span class="pdev-stat-icon pdev-icon-teal mb-3">
+                                    <i class="bi bi-code-square"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Development
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Access depends on the assigned
+                                    Developer permission.
+                                </p>
+
+                                <span class="pdev-badge pdev-badge-neutral">
+                                    Not Verified
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-body">
+
+                                <span class="pdev-stat-icon pdev-icon-blue mb-3">
+                                    <i class="bi bi-box"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Testing / Staging
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Requires appropriate scoped authorization.
+                                </p>
+
+                                <span class="pdev-badge pdev-badge-warning">
+                                    Authorization Required
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-body">
+
+                                <span class="pdev-stat-icon pdev-icon-purple mb-3">
+                                    <i class="bi bi-shield-lock"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Production
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Restricted to separately authorized
+                                    technical work.
+                                </p>
+
+                                <span class="pdev-badge pdev-badge-danger">
+                                    Restricted
+                                </span>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION D - NEW ACCESS REQUEST
+                ================================================== -->
+
+                <section class="pdev-page-section" data-pdev-section>
+
+                    <div class="pdev-section-heading">
+
+                        <div>
+
+                            <span class="pdev-section-kicker">SECTION D</span>
+
+                            <h2>Submit Additional Access Request</h2>
+
+                            <p>
+                                Specify the technical resource,
+                                purpose and required permission scope.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <article class="pdev-panel">
+
+
+                        <div class="pdev-panel-header">
+
+                            <div>
+                                <h3>Access Request Form</h3>
+                                <p>Local demonstration form.</p>
+                            </div>
+
+                            <span class="pdev-badge pdev-badge-info">
+                                Demo Only
+                            </span>
+
+                        </div>
+
+
+                        <div class="pdev-panel-body">
+
+                            <form
+                                data-pdev-demo-form
+                                data-pdev-success-message="Access request prepared locally. No permission was granted and no Backend request was submitted."
+                            >
+
+                                <div class="pdev-form-grid">
+
+
+                                    <div class="pdev-field">
+
+                                        <label for="accessResource">
+                                            Requested Resource
+                                            <span class="pdev-required">*</span>
+                                        </label>
+
+                                        <select
+                                            class="form-select"
+                                            id="accessResource"
+                                            required
+                                        >
+
+                                            <option value="">Select resource</option>
+                                            <option>Development Environment</option>
+                                            <option>Testing Environment</option>
+                                            <option>Staging Environment</option>
+                                            <option>Approved Technical Repository</option>
+                                            <option>Database Maintenance Resource</option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <div class="pdev-field">
+
+                                        <label for="accessPermission">
+                                            Permission Scope
+                                            <span class="pdev-required">*</span>
+                                        </label>
+
+                                        <select
+                                            class="form-select"
+                                            id="accessPermission"
+                                            required
+                                        >
+
+                                            <option value="">Select scope</option>
+                                            <option>Read</option>
+                                            <option>Development</option>
+                                            <option>Testing</option>
+                                            <option>Scoped Maintenance</option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <div class="pdev-field">
+
+                                        <label for="accessDuration">
+                                            Requested Duration
+                                            <span class="pdev-required">*</span>
+                                        </label>
+
+                                        <select
+                                            class="form-select"
+                                            id="accessDuration"
+                                            required
+                                        >
+
+                                            <option value="">Select duration</option>
+                                            <option>Temporary</option>
+                                            <option>Project Duration</option>
+                                            <option>Ongoing Review Required</option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <div class="pdev-field">
+
+                                        <label for="accessPriority">
+                                            Priority
+                                            <span class="pdev-required">*</span>
+                                        </label>
+
+                                        <select
+                                            class="form-select"
+                                            id="accessPriority"
+                                            required
+                                        >
+
+                                            <option value="">Select priority</option>
+                                            <option>Routine</option>
+                                            <option>High</option>
+                                            <option>Critical</option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <div class="pdev-field" style="grid-column: 1 / -1;">
+
+                                        <label for="accessPurpose">
+                                            Technical Purpose
+                                            <span class="pdev-required">*</span>
+                                        </label>
+
+                                        <textarea
+                                            class="form-control"
+                                            id="accessPurpose"
+                                            rows="4"
+                                            maxlength="1200"
+                                            required
+                                            placeholder="Explain why the requested technical access is necessary..."
+                                        ></textarea>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="pdev-notice warning mt-3">
+
+                                    <i class="bi bi-shield-exclamation"></i>
+
+                                    <span>
+                                        The Developer cannot approve their own
+                                        access request. An authorized Platform
+                                        Administrator must independently review it.
+                                    </span>
+
+                                </div>
+
+
+                                <div class="pdev-form-actions">
+
+                                    <button type="reset" class="pdev-btn pdev-btn-secondary">
+                                        Clear
+                                    </button>
+
+                                    <button type="submit" class="pdev-btn pdev-btn-primary">
+                                        <i class="bi bi-key"></i>
+                                        Prepare Access Request
+                                    </button>
+
+                                </div>
+
+
+                                <div class="pdev-notice success mt-3" data-pdev-form-result hidden></div>
+
+                            </form>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- =================================================
+                     SECTION E - ACCESS REVIEW
+                ================================================== -->
+
+                <section class="pdev-page-section" data-pdev-section>
+
+                    <div class="pdev-section-heading">
+
+                        <div>
+
+                            <span class="pdev-section-kicker">SECTION E</span>
+
+                            <h2>Access Review Requirements</h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pdev-grid-2">
+
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-body">
+
+                                <span class="pdev-stat-icon pdev-icon-blue mb-3">
+                                    <i class="bi bi-shield-check"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Least-Privilege Access
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Request only the technical resource
+                                    and permissions required for assigned work.
+                                </p>
+
+                                <span class="pdev-badge pdev-badge-success">
+                                    Required
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-body">
+
+                                <span class="pdev-stat-icon pdev-icon-teal mb-3">
+                                    <i class="bi bi-clock-history"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Access Expiration
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Temporary permissions must be reviewed
+                                    and revoked when no longer required.
+                                </p>
+
+                                <span class="pdev-badge pdev-badge-success">
+                                    Required
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-body">
+
+                                <span class="pdev-stat-icon pdev-icon-purple mb-3">
+                                    <i class="bi bi-person-check"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Independent Authorization
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Access requests must be reviewed
+                                    by an authorized independent authority.
+                                </p>
+
+                                <span class="pdev-badge pdev-badge-success">
+                                    Mandatory
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="pdev-panel" data-pdev-searchable>
+
+                            <div class="pdev-panel-body">
+
+                                <span class="pdev-stat-icon pdev-icon-amber mb-3">
+                                    <i class="bi bi-journal-check"></i>
+                                </span>
+
+                                <h3 class="h6 fw-bold">
+                                    Access History
+                                </h3>
+
+                                <p class="small text-secondary">
+                                    Preserve request, authorization,
+                                    modification and revocation history.
+                                </p>
+
+                                <span class="pdev-badge pdev-badge-success">
+                                    Required
+                                </span>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <p class="pdev-footer-note">
+
+                    <i class="bi bi-shield-lock"></i>
+
+                    This page cannot grant permissions, elevate privileges
+                    or approve the Developer's own access requests.
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+        <footer class="main-footer pdev-footer">
+
+            <span>
+                GabayAral &copy;
+                <span data-pdev-year></span>
+                | Platform Developer
+            </span>
+
+            <span data-pdev-last-updated></span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- SCRIPTS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="../../assets/js/platform-developer.js"></script>
+
+<script src="../../assets/js/layout.js"></script>
+
+</body>
+</html>

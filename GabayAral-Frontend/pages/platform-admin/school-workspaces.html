@@ -1,0 +1,435 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>School Workspace Directory | GabayAral</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/platform-admin.css">
+</head>
+
+<body>
+<div class="app-shell platform-admin-app" data-pa-page="school-workspaces">
+
+    <div id="paSidebarMount"></div>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <main class="main-area">
+        <div id="paTopbarMount"></div>
+
+        <section class="main-content pa-content">
+            <div class="pa-page">
+
+                <header class="pa-page-header">
+                    <div class="pa-page-header-copy">
+                        <span class="pa-eyebrow">SCHOOL WORKSPACES</span>
+                        <h1 class="pa-page-title">School Workspace Directory</h1>
+                        <p class="pa-page-description">
+                            View and monitor registered school workspaces
+                            and their operational status across GabayAral.
+                        </p>
+                        <div class="pa-page-meta">
+                            <span><i class="bi bi-calendar3"></i><span data-pa-date></span></span>
+                            <span><i class="bi bi-globe2"></i>Platform-wide directory</span>
+                        </div>
+                    </div>
+                    <span class="pa-page-header-icon">
+                        <i class="bi bi-buildings"></i>
+                    </span>
+                </header>
+
+
+                <div class="pa-demo-notice">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <div>
+                        <strong>Demonstration directory</strong>
+                        <span>
+                            All school names, identifiers, statuses and dates
+                            are fictional sample records.
+                        </span>
+                    </div>
+                </div>
+
+
+                <!-- SUMMARY -->
+
+                <section class="pa-page-section" data-pa-section>
+                    <div class="pa-section-heading">
+                        <div>
+                            <span class="pa-section-kicker">SECTION A</span>
+                            <h2>Workspace Overview</h2>
+                            <p>Summary of the demonstration workspace records.</p>
+                        </div>
+                    </div>
+
+                    <div class="pa-stat-grid">
+
+                        <article class="pa-stat-card" data-pa-searchable>
+                            <div class="pa-stat-top">
+                                <span class="pa-stat-icon pa-icon-blue">
+                                    <i class="bi bi-buildings"></i>
+                                </span>
+                                Total Workspaces
+                            </div>
+                            <strong class="pa-stat-value">12</strong>
+                            <span class="pa-stat-caption">All sample records</span>
+                        </article>
+
+                        <article class="pa-stat-card" data-pa-searchable>
+                            <div class="pa-stat-top">
+                                <span class="pa-stat-icon pa-icon-teal">
+                                    <i class="bi bi-check-circle"></i>
+                                </span>
+                                Active Workspaces
+                            </div>
+                            <strong class="pa-stat-value">08</strong>
+                            <span class="pa-stat-caption">Active sample records</span>
+                        </article>
+
+                        <article class="pa-stat-card" data-pa-searchable>
+                            <div class="pa-stat-top">
+                                <span class="pa-stat-icon pa-icon-amber">
+                                    <i class="bi bi-inbox"></i>
+                                </span>
+                                Pending Requests
+                            </div>
+                            <strong class="pa-stat-value">03</strong>
+                            <span class="pa-stat-caption">Awaiting review</span>
+                        </article>
+
+                        <article class="pa-stat-card" data-pa-searchable>
+                            <div class="pa-stat-top">
+                                <span class="pa-stat-icon pa-icon-gray">
+                                    <i class="bi bi-pause-circle"></i>
+                                </span>
+                                Deactivated
+                            </div>
+                            <strong class="pa-stat-value">04</strong>
+                            <span class="pa-stat-caption">Deactivated sample records</span>
+                        </article>
+
+                    </div>
+                </section>
+
+
+                <!-- DIRECTORY TABLE -->
+
+                <section class="pa-page-section" data-pa-section>
+                    <div class="pa-section-heading">
+                        <div>
+                            <span class="pa-section-kicker">SECTION B</span>
+                            <h2>Registered School Workspaces</h2>
+                            <p>Search, filter and review workspace information.</p>
+                        </div>
+                        <span class="pa-badge pa-badge-neutral">Sample Records</span>
+                    </div>
+
+                    <article class="pa-panel">
+
+                        <div class="pa-panel-header">
+                            <div>
+                                <h3>Workspace Directory</h3>
+                                <p>Select a workspace to view its operational details.</p>
+                            </div>
+                        </div>
+
+
+                        <!-- FILTERS -->
+
+                        <div class="pa-toolbar">
+
+                            <div class="pa-field flex-grow-1">
+                                <label for="workspaceSearch">Search Workspace</label>
+                                <input type="search"
+                                       class="form-control"
+                                       id="workspaceSearch"
+                                       data-pa-table-search="workspaces"
+                                       placeholder="Search school name or workspace ID...">
+                            </div>
+
+                            <div class="pa-field">
+                                <label for="workspaceStatus">Workspace Status</label>
+                                <select class="form-select"
+                                        id="workspaceStatus"
+                                        data-pa-table-filter="status"
+                                        data-pa-target="workspaces">
+                                    <option value="all">All Statuses</option>
+                                    <option value="Active">Active</option>
+                                    <option value="Deactivated">Deactivated</option>
+                                </select>
+                            </div>
+
+                            <div class="pa-field">
+                                <label for="workspaceRequest">Request Status</label>
+                                <select class="form-select"
+                                        id="workspaceRequest"
+                                        data-pa-table-filter="request"
+                                        data-pa-target="workspaces">
+                                    <option value="all">All Requests</option>
+                                    <option value="none">No Pending Request</option>
+                                    <option value="deactivation-pending">Deactivation Pending</option>
+                                    <option value="restoration-pending">Restoration Pending</option>
+                                </select>
+                            </div>
+
+                            <button type="button"
+                                    class="pa-btn pa-btn-secondary"
+                                    data-pa-clear-table="workspaces">
+                                <i class="bi bi-arrow-counterclockwise"></i>
+                                Clear
+                            </button>
+
+                        </div>
+
+
+                        <div class="pa-panel-body d-flex justify-content-between align-items-center flex-wrap gap-2">
+
+                            <span class="small text-secondary"
+                                  data-pa-result-count="workspaces">
+                                Showing sample records
+                            </span>
+
+                            <div class="pa-field">
+                                <label for="workspacePageSize">Rows per page</label>
+                                <select class="form-select"
+                                        id="workspacePageSize"
+                                        data-pa-page-size="workspaces">
+                                    <option value="8" selected>8</option>
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+
+                        <!-- TABLE -->
+
+                        <div class="pa-table-wrap"
+                             data-pa-table-wrapper>
+
+                            <table class="pa-table"
+                                   data-pa-table="workspaces">
+
+                                <thead>
+                                    <tr>
+                                        <th>School Name</th>
+                                        <th>Workspace ID</th>
+                                        <th>Workspace Status</th>
+                                        <th>Request Status</th>
+                                        <th>Last Updated</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr data-pa-row data-status="Active" data-request="none">
+                                        <td>
+                                            <div class="pa-table-primary">
+                                                <strong>Demo School 001</strong>
+                                                <small>School workspace</small>
+                                            </div>
+                                        </td>
+                                        <td><span class="pa-code">GAW-SCH-001</span></td>
+                                        <td><span class="pa-badge pa-badge-success">Active</span></td>
+                                        <td><span class="pa-badge pa-badge-neutral">None</span></td>
+                                        <td>Nov 27, 2026</td>
+                                        <td><a href="workspace-details.html?id=GAW-SCH-001" class="pa-btn pa-btn-secondary">View Details</a></td>
+                                    </tr>
+
+                                    <tr data-pa-row data-status="Active" data-request="deactivation-pending">
+                                        <td><div class="pa-table-primary"><strong>Demo School 002</strong><small>School workspace</small></div></td>
+                                        <td><span class="pa-code">GAW-SCH-002</span></td>
+                                        <td><span class="pa-badge pa-badge-success">Active</span></td>
+                                        <td><span class="pa-badge pa-badge-warning">Deactivation Pending</span></td>
+                                        <td>Nov 26, 2026</td>
+                                        <td><a href="workspace-details.html?id=GAW-SCH-002" class="pa-btn pa-btn-secondary">View Details</a></td>
+                                    </tr>
+
+                                    <tr data-pa-row data-status="Deactivated" data-request="none">
+                                        <td><div class="pa-table-primary"><strong>Demo School 003</strong><small>School workspace</small></div></td>
+                                        <td><span class="pa-code">GAW-SCH-003</span></td>
+                                        <td><span class="pa-badge pa-badge-neutral">Deactivated</span></td>
+                                        <td><span class="pa-badge pa-badge-neutral">None</span></td>
+                                        <td>Nov 24, 2026</td>
+                                        <td><a href="workspace-details.html?id=GAW-SCH-003" class="pa-btn pa-btn-secondary">View Details</a></td>
+                                    </tr>
+
+                                    <tr data-pa-row data-status="Active" data-request="none">
+                                        <td><div class="pa-table-primary"><strong>Demo School 004</strong><small>School workspace</small></div></td>
+                                        <td><span class="pa-code">GAW-SCH-004</span></td>
+                                        <td><span class="pa-badge pa-badge-success">Active</span></td>
+                                        <td><span class="pa-badge pa-badge-neutral">None</span></td>
+                                        <td>Nov 25, 2026</td>
+                                        <td><a href="workspace-details.html?id=GAW-SCH-004" class="pa-btn pa-btn-secondary">View Details</a></td>
+                                    </tr>
+
+                                    <tr data-pa-row data-status="Deactivated" data-request="restoration-pending">
+                                        <td><div class="pa-table-primary"><strong>Demo School 005</strong><small>School workspace</small></div></td>
+                                        <td><span class="pa-code">GAW-SCH-005</span></td>
+                                        <td><span class="pa-badge pa-badge-neutral">Deactivated</span></td>
+                                        <td><span class="pa-badge pa-badge-warning">Restoration Pending</span></td>
+                                        <td>Nov 23, 2026</td>
+                                        <td><a href="workspace-details.html?id=GAW-SCH-005" class="pa-btn pa-btn-secondary">View Details</a></td>
+                                    </tr>
+
+                                    <tr data-pa-row data-status="Active" data-request="none">
+                                        <td><div class="pa-table-primary"><strong>Demo School 006</strong><small>School workspace</small></div></td>
+                                        <td><span class="pa-code">GAW-SCH-006</span></td>
+                                        <td><span class="pa-badge pa-badge-success">Active</span></td>
+                                        <td><span class="pa-badge pa-badge-neutral">None</span></td>
+                                        <td>Nov 26, 2026</td>
+                                        <td><a href="workspace-details.html?id=GAW-SCH-006" class="pa-btn pa-btn-secondary">View Details</a></td>
+                                    </tr>
+
+                                    <tr data-pa-row data-status="Active" data-request="deactivation-pending">
+                                        <td><div class="pa-table-primary"><strong>Demo School 007</strong><small>School workspace</small></div></td>
+                                        <td><span class="pa-code">GAW-SCH-007</span></td>
+                                        <td><span class="pa-badge pa-badge-success">Active</span></td>
+                                        <td><span class="pa-badge pa-badge-warning">Deactivation Pending</span></td>
+                                        <td>Nov 22, 2026</td>
+                                        <td><a href="workspace-details.html?id=GAW-SCH-007" class="pa-btn pa-btn-secondary">View Details</a></td>
+                                    </tr>
+
+                                    <tr data-pa-row data-status="Active" data-request="none">
+                                        <td><div class="pa-table-primary"><strong>Demo School 008</strong><small>School workspace</small></div></td>
+                                        <td><span class="pa-code">GAW-SCH-008</span></td>
+                                        <td><span class="pa-badge pa-badge-success">Active</span></td>
+                                        <td><span class="pa-badge pa-badge-neutral">None</span></td>
+                                        <td>Nov 21, 2026</td>
+                                        <td><a href="workspace-details.html?id=GAW-SCH-008" class="pa-btn pa-btn-secondary">View Details</a></td>
+                                    </tr>
+
+                                    <tr data-pa-row data-status="Deactivated" data-request="none">
+                                        <td><div class="pa-table-primary"><strong>Demo School 009</strong><small>School workspace</small></div></td>
+                                        <td><span class="pa-code">GAW-SCH-009</span></td>
+                                        <td><span class="pa-badge pa-badge-neutral">Deactivated</span></td>
+                                        <td><span class="pa-badge pa-badge-neutral">None</span></td>
+                                        <td>Nov 20, 2026</td>
+                                        <td><a href="workspace-details.html?id=GAW-SCH-009" class="pa-btn pa-btn-secondary">View Details</a></td>
+                                    </tr>
+
+                                    <tr data-pa-row data-status="Active" data-request="none">
+                                        <td><div class="pa-table-primary"><strong>Demo School 010</strong><small>School workspace</small></div></td>
+                                        <td><span class="pa-code">GAW-SCH-010</span></td>
+                                        <td><span class="pa-badge pa-badge-success">Active</span></td>
+                                        <td><span class="pa-badge pa-badge-neutral">None</span></td>
+                                        <td>Nov 19, 2026</td>
+                                        <td><a href="workspace-details.html?id=GAW-SCH-010" class="pa-btn pa-btn-secondary">View Details</a></td>
+                                    </tr>
+
+                                    <tr data-pa-row data-status="Deactivated" data-request="none">
+                                        <td><div class="pa-table-primary"><strong>Demo School 011</strong><small>School workspace</small></div></td>
+                                        <td><span class="pa-code">GAW-SCH-011</span></td>
+                                        <td><span class="pa-badge pa-badge-neutral">Deactivated</span></td>
+                                        <td><span class="pa-badge pa-badge-neutral">None</span></td>
+                                        <td>Nov 18, 2026</td>
+                                        <td><a href="workspace-details.html?id=GAW-SCH-011" class="pa-btn pa-btn-secondary">View Details</a></td>
+                                    </tr>
+
+                                    <tr data-pa-row data-status="Deactivated" data-request="none">
+                                        <td><div class="pa-table-primary"><strong>Demo School 012</strong><small>School workspace</small></div></td>
+                                        <td><span class="pa-code">GAW-SCH-012</span></td>
+                                        <td><span class="pa-badge pa-badge-neutral">Deactivated</span></td>
+                                        <td><span class="pa-badge pa-badge-neutral">None</span></td>
+                                        <td>Nov 17, 2026</td>
+                                        <td><a href="workspace-details.html?id=GAW-SCH-012" class="pa-btn pa-btn-secondary">View Details</a></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                        <div class="pa-empty" data-pa-table-empty="workspaces" hidden>
+                            <span class="pa-empty-icon"><i class="bi bi-search"></i></span>
+                            <strong>No matching workspaces found.</strong>
+                            <p>Change your search term or filters.</p>
+                        </div>
+
+
+                        <div class="pa-panel-footer">
+                            <span class="pa-pagination-info" data-pa-result-count="workspaces"></span>
+                            <div class="pa-pagination-controls" data-pa-pagination="workspaces"></div>
+                        </div>
+
+                    </article>
+                </section>
+
+
+                <!-- RELATED WORKFLOWS -->
+
+                <section class="pa-page-section" data-pa-section>
+                    <div class="pa-section-heading">
+                        <div>
+                            <span class="pa-section-kicker">SECTION C</span>
+                            <h2>Related Workspace Operations</h2>
+                        </div>
+                    </div>
+
+                    <div class="pa-grid-2">
+
+                        <article class="pa-panel">
+                            <div class="pa-panel-body">
+                                <span class="pa-stat-icon pa-icon-blue mb-3">
+                                    <i class="bi bi-card-list"></i>
+                                </span>
+                                <h3 class="h6 fw-bold">Workspace Details</h3>
+                                <p class="small text-secondary">
+                                    Review an individual workspace's operational information.
+                                </p>
+                                <a href="workspace-details.html" class="pa-btn-link">
+                                    Open Workspace Details <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="pa-panel">
+                            <div class="pa-panel-body">
+                                <span class="pa-stat-icon pa-icon-amber mb-3">
+                                    <i class="bi bi-inbox"></i>
+                                </span>
+                                <h3 class="h6 fw-bold">Deactivation Request Inbox</h3>
+                                <p class="small text-secondary">
+                                    Review whole-school requests submitted by School Administrators.
+                                </p>
+                                <a href="deactivation-requests.html" class="pa-btn-link">
+                                    Open Request Inbox <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+
+                <p class="pa-footer-note">
+                    <i class="bi bi-info-circle"></i>
+                    This page does not create, deactivate or restore actual school workspaces.
+                </p>
+
+            </div>
+        </section>
+
+        <footer class="main-footer pa-footer">
+            <span>GabayAral &copy; <span data-pa-year></span> | Platform Administration</span>
+            <span data-pa-last-updated></span>
+        </footer>
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/platform-admin.js"></script>
+<script src="../../assets/js/layout.js"></script>
+</body>
+</html>

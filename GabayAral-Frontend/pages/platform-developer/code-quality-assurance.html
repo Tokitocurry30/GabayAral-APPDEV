@@ -1,0 +1,427 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+
+    <title>Code and Quality Assurance | GabayAral</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/platform-developer.css">
+</head>
+
+<body>
+<div class="app-shell platform-developer-app" data-pdev-page="code-quality-assurance">
+
+    <div id="pdevSidebarMount"></div>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <main class="main-area">
+        <div id="pdevTopbarMount"></div>
+
+        <section class="main-content pdev-content">
+            <div class="pdev-page">
+
+                <header class="pdev-page-header">
+                    <div>
+                        <span class="pdev-eyebrow">DEVELOPMENT / PDEV-03</span>
+                        <h1 class="pdev-page-title">Code and Quality Assurance</h1>
+                        <p class="pdev-page-description">
+                            Track code changes, independent reviews,
+                            functional testing and technical validation.
+                        </p>
+                        <div class="pdev-page-meta">
+                            <span><i class="bi bi-calendar3"></i><span data-pdev-date></span></span>
+                            <span><i class="bi bi-code-slash"></i>Development Quality</span>
+                        </div>
+                    </div>
+                    <span class="pdev-header-icon"><i class="bi bi-code-slash"></i></span>
+                </header>
+
+
+                <div class="pdev-demo-notice">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <div>
+                        <strong>Quality assurance demonstration</strong>
+                        <p>
+                            Code references, reviews and test results are fictional.
+                            No repository, CI pipeline or automated testing service is connected.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- SECTION A -->
+
+                <section class="pdev-page-section" data-pdev-section>
+                    <div class="pdev-section-heading">
+                        <div>
+                            <span class="pdev-section-kicker">SECTION A</span>
+                            <h2>Quality Assurance Overview</h2>
+                            <p>Sample development and validation status.</p>
+                        </div>
+                    </div>
+
+                    <div class="pdev-stat-grid">
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+                            <div class="pdev-stat-top">
+                                <span class="pdev-stat-icon pdev-icon-blue"><i class="bi bi-code-square"></i></span>
+                                Code Changes
+                            </div>
+                            <strong class="pdev-stat-value">04</strong>
+                            <span class="pdev-stat-caption">Sample records</span>
+                        </article>
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+                            <div class="pdev-stat-top">
+                                <span class="pdev-stat-icon pdev-icon-amber"><i class="bi bi-eye"></i></span>
+                                Under Review
+                            </div>
+                            <strong class="pdev-stat-value">01</strong>
+                            <span class="pdev-stat-caption">Sample review record</span>
+                        </article>
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+                            <div class="pdev-stat-top">
+                                <span class="pdev-stat-icon pdev-icon-teal"><i class="bi bi-check2-circle"></i></span>
+                                Tests Passed
+                            </div>
+                            <strong class="pdev-stat-value">02</strong>
+                            <span class="pdev-stat-caption">Fictional test results</span>
+                        </article>
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+                            <div class="pdev-stat-top">
+                                <span class="pdev-stat-icon pdev-icon-red"><i class="bi bi-x-circle"></i></span>
+                                Failed Checks
+                            </div>
+                            <strong class="pdev-stat-value">01</strong>
+                            <span class="pdev-stat-caption">Sample failed validation</span>
+                        </article>
+
+                    </div>
+                </section>
+
+
+                <!-- SECTION B -->
+
+                <section class="pdev-page-section" data-pdev-section>
+                    <div class="pdev-section-heading">
+                        <div>
+                            <span class="pdev-section-kicker">SECTION B</span>
+                            <h2>Code Change Register</h2>
+                            <p>Review sample code change and review records.</p>
+                        </div>
+                    </div>
+
+                    <article class="pdev-panel" data-pdev-searchable>
+
+                        <div class="pdev-panel-header">
+                            <div>
+                                <h3>Code Change Records</h3>
+                                <p>Fictional demonstration entries.</p>
+                            </div>
+                            <span class="pdev-badge pdev-badge-info">Demo Only</span>
+                        </div>
+
+                        <div class="pdev-toolbar">
+
+                            <div class="pdev-field flex-grow-1">
+                                <label for="codeSearch">Search Changes</label>
+                                <input type="search" id="codeSearch" class="form-control"
+                                       data-pdev-table-search="codechanges"
+                                       placeholder="Search change reference or title...">
+                            </div>
+
+                            <div class="pdev-field">
+                                <label for="codeStatus">Review Status</label>
+                                <select id="codeStatus" class="form-select"
+                                        data-pdev-filter="status" data-pdev-target="codechanges">
+                                    <option value="all">All Statuses</option>
+                                    <option value="Draft">Draft</option>
+                                    <option value="Under Review">Under Review</option>
+                                    <option value="Changes Requested">Changes Requested</option>
+                                    <option value="Approved">Approved</option>
+                                </select>
+                            </div>
+
+                            <button type="button" class="pdev-btn pdev-btn-secondary"
+                                    data-pdev-clear-table="codechanges">
+                                <i class="bi bi-arrow-counterclockwise"></i> Clear
+                            </button>
+
+                        </div>
+
+                        <div class="pdev-panel-body">
+                            <span class="pdev-pagination-info" data-pdev-result-count="codechanges"></span>
+                        </div>
+
+                        <div class="pdev-table-wrap" data-pdev-table-wrapper>
+                            <table class="pdev-table" data-pdev-table="codechanges">
+                                <thead>
+                                    <tr>
+                                        <th>Change Reference</th>
+                                        <th>Change Description</th>
+                                        <th>Component</th>
+                                        <th>Review Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr data-pdev-row data-status="Under Review">
+                                        <td><span class="pdev-code">DEMO-CR-001</span></td>
+                                        <td>Authentication validation update</td>
+                                        <td>Authentication</td>
+                                        <td><span class="pdev-badge pdev-badge-info">Under Review</span></td>
+                                        <td><button type="button" class="pdev-btn pdev-btn-secondary"
+                                            data-pdev-action="review">Review</button></td>
+                                    </tr>
+
+                                    <tr data-pdev-row data-status="Approved">
+                                        <td><span class="pdev-code">DEMO-CR-002</span></td>
+                                        <td>Navigation component correction</td>
+                                        <td>Shared Layout</td>
+                                        <td><span class="pdev-badge pdev-badge-success">Approved</span></td>
+                                        <td><button type="button" class="pdev-btn pdev-btn-secondary"
+                                            data-pdev-action="review">View</button></td>
+                                    </tr>
+
+                                    <tr data-pdev-row data-status="Changes Requested">
+                                        <td><span class="pdev-code">DEMO-CR-003</span></td>
+                                        <td>Database validation correction</td>
+                                        <td>Database</td>
+                                        <td><span class="pdev-badge pdev-badge-warning">Changes Requested</span></td>
+                                        <td><button type="button" class="pdev-btn pdev-btn-secondary"
+                                            data-pdev-action="review">Review</button></td>
+                                    </tr>
+
+                                    <tr data-pdev-row data-status="Draft">
+                                        <td><span class="pdev-code">DEMO-CR-004</span></td>
+                                        <td>Notification display enhancement</td>
+                                        <td>Notifications</td>
+                                        <td><span class="pdev-badge pdev-badge-neutral">Draft</span></td>
+                                        <td><button type="button" class="pdev-btn pdev-btn-secondary"
+                                            data-pdev-action="review">View</button></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="pdev-empty" data-pdev-table-empty="codechanges" hidden>
+                            <span class="pdev-empty-icon"><i class="bi bi-code-slash"></i></span>
+                            <strong>No matching code changes.</strong>
+                            <p>Change your search or filter.</p>
+                        </div>
+
+                        <div class="pdev-panel-footer">
+                            <span class="pdev-pagination-info">Sample change records</span>
+                            <div class="pdev-pagination-controls" data-pdev-pagination="codechanges"></div>
+                        </div>
+
+                    </article>
+                </section>
+
+
+                <!-- SECTION C -->
+
+                <section class="pdev-page-section" data-pdev-section>
+                    <div class="pdev-section-heading">
+                        <div>
+                            <span class="pdev-section-kicker">SECTION C</span>
+                            <h2>Quality Assurance Checklist</h2>
+                        </div>
+                    </div>
+
+                    <div class="pdev-grid-2">
+
+                        <article class="pdev-panel" data-pdev-searchable>
+                            <div class="pdev-panel-body">
+                                <span class="pdev-stat-icon pdev-icon-blue mb-3"><i class="bi bi-check2-square"></i></span>
+                                <h3 class="h6 fw-bold">Functional Testing</h3>
+                                <p class="small text-secondary">
+                                    Verify that the intended application behavior
+                                    works according to approved requirements.
+                                </p>
+                                <span class="pdev-badge pdev-badge-success">Required</span>
+                            </div>
+                        </article>
+
+                        <article class="pdev-panel" data-pdev-searchable>
+                            <div class="pdev-panel-body">
+                                <span class="pdev-stat-icon pdev-icon-purple mb-3"><i class="bi bi-diagram-3"></i></span>
+                                <h3 class="h6 fw-bold">Integration Testing</h3>
+                                <p class="small text-secondary">
+                                    Check interactions between authorized application
+                                    components and services.
+                                </p>
+                                <span class="pdev-badge pdev-badge-success">Required</span>
+                            </div>
+                        </article>
+
+                        <article class="pdev-panel" data-pdev-searchable>
+                            <div class="pdev-panel-body">
+                                <span class="pdev-stat-icon pdev-icon-teal mb-3"><i class="bi bi-shield-check"></i></span>
+                                <h3 class="h6 fw-bold">Security Validation</h3>
+                                <p class="small text-secondary">
+                                    Review security implications and access boundaries
+                                    of the proposed changes.
+                                </p>
+                                <span class="pdev-badge pdev-badge-success">Required</span>
+                            </div>
+                        </article>
+
+                        <article class="pdev-panel" data-pdev-searchable>
+                            <div class="pdev-panel-body">
+                                <span class="pdev-stat-icon pdev-icon-amber mb-3"><i class="bi bi-display"></i></span>
+                                <h3 class="h6 fw-bold">Compatibility Testing</h3>
+                                <p class="small text-secondary">
+                                    Check supported screen sizes, browser behavior
+                                    and existing role workspaces.
+                                </p>
+                                <span class="pdev-badge pdev-badge-success">Required</span>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+
+                <!-- SECTION D -->
+
+                <section class="pdev-page-section" data-pdev-section>
+                    <div class="pdev-section-heading">
+                        <div>
+                            <span class="pdev-section-kicker">SECTION D</span>
+                            <h2>Prepare QA Result</h2>
+                            <p>Document a local demonstration test result.</p>
+                        </div>
+                    </div>
+
+                    <article class="pdev-panel">
+                        <div class="pdev-panel-body">
+
+                            <form data-pdev-demo-form
+                                  data-pdev-success-message="QA result prepared locally. No actual test record was saved.">
+
+                                <div class="pdev-form-grid">
+
+                                    <div class="pdev-field">
+                                        <label for="qaReference">Change Reference <span class="pdev-required">*</span></label>
+                                        <input type="text" class="form-control" id="qaReference" required
+                                               placeholder="Enter change reference">
+                                    </div>
+
+                                    <div class="pdev-field">
+                                        <label for="qaType">Test Type <span class="pdev-required">*</span></label>
+                                        <select class="form-select" id="qaType" required>
+                                            <option value="">Select test type</option>
+                                            <option>Functional Testing</option>
+                                            <option>Integration Testing</option>
+                                            <option>Security Testing</option>
+                                            <option>Compatibility Testing</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="pdev-field">
+                                        <label for="qaResult">Test Result <span class="pdev-required">*</span></label>
+                                        <select class="form-select" id="qaResult" required>
+                                            <option value="">Select result</option>
+                                            <option>Passed</option>
+                                            <option>Failed</option>
+                                            <option>Requires Retesting</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="pdev-field">
+                                        <label for="qaEnvironment">Test Environment</label>
+                                        <select class="form-select" id="qaEnvironment">
+                                            <option value="">Select environment</option>
+                                            <option>Development</option>
+                                            <option>Testing</option>
+                                            <option>Staging</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="pdev-field" style="grid-column:1/-1">
+                                        <label for="qaFindings">Test Findings <span class="pdev-required">*</span></label>
+                                        <textarea class="form-control" id="qaFindings" rows="4"
+                                                  maxlength="1500" required></textarea>
+                                    </div>
+
+                                </div>
+
+                                <div class="pdev-form-actions">
+                                    <button type="reset" class="pdev-btn pdev-btn-secondary">Clear</button>
+                                    <button type="submit" class="pdev-btn pdev-btn-primary">
+                                        <i class="bi bi-file-earmark-check"></i>
+                                        Prepare QA Result
+                                    </button>
+                                </div>
+
+                                <div class="pdev-notice success mt-3" data-pdev-form-result hidden></div>
+
+                            </form>
+
+                        </div>
+                    </article>
+                </section>
+
+
+                <!-- SECTION E -->
+
+                <section class="pdev-page-section" data-pdev-section>
+                    <div class="pdev-section-heading">
+                        <div>
+                            <span class="pdev-section-kicker">SECTION E</span>
+                            <h2>Independent Review Requirements</h2>
+                        </div>
+                    </div>
+
+                    <div class="pdev-notice warning">
+                        <i class="bi bi-shield-exclamation"></i>
+                        <span>
+                            Developers may perform self-checks but must submit
+                            privileged code changes for independent review.
+                            A Developer cannot be the sole reviewer and approver
+                            of their own production change.
+                        </span>
+                    </div>
+                </section>
+
+
+                <p class="pdev-footer-note">
+                    <i class="bi bi-journal-lock"></i>
+                    Code references, test results and review records are
+                    demonstration-only. No repository or CI service is connected.
+                </p>
+
+            </div>
+        </section>
+
+        <footer class="main-footer pdev-footer">
+            <span>GabayAral &copy; <span data-pdev-year></span> | Platform Developer</span>
+            <span data-pdev-last-updated></span>
+        </footer>
+
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/platform-developer.js"></script>
+<script src="../../assets/js/layout.js"></script>
+
+</body>
+</html>

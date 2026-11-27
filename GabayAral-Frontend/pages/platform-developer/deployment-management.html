@@ -1,0 +1,447 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16324F">
+
+    <title>Deployment Management | GabayAral</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/platform-developer.css">
+</head>
+
+<body>
+<div class="app-shell platform-developer-app" data-pdev-page="deployment-management">
+
+    <div id="pdevSidebarMount"></div>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <main class="main-area">
+        <div id="pdevTopbarMount"></div>
+
+        <section class="main-content pdev-content">
+            <div class="pdev-page">
+
+                <header class="pdev-page-header">
+                    <div>
+                        <span class="pdev-eyebrow">RELEASE AND DEPLOYMENT / PDEV-05</span>
+                        <h1 class="pdev-page-title">Deployment Management</h1>
+                        <p class="pdev-page-description">
+                            Review approved releases, coordinate authorized
+                            deployment execution and document post-deployment results.
+                        </p>
+                        <div class="pdev-page-meta">
+                            <span><i class="bi bi-calendar3"></i><span data-pdev-date></span></span>
+                            <span><i class="bi bi-rocket-takeoff"></i>Deployment Operations</span>
+                        </div>
+                    </div>
+                    <span class="pdev-header-icon"><i class="bi bi-rocket-takeoff"></i></span>
+                </header>
+
+
+                <div class="pdev-demo-notice">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <div>
+                        <strong>Deployment demonstration</strong>
+                        <p>
+                            Deployment records are fictional. No hosting provider,
+                            production server, repository or deployment pipeline is connected.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- SECTION A -->
+
+                <section class="pdev-page-section" data-pdev-section>
+                    <div class="pdev-section-heading">
+                        <div>
+                            <span class="pdev-section-kicker">SECTION A</span>
+                            <h2>Deployment Overview</h2>
+                        </div>
+                    </div>
+
+                    <div class="pdev-stat-grid">
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+                            <div class="pdev-stat-top">
+                                <span class="pdev-stat-icon pdev-icon-blue"><i class="bi bi-box-seam"></i></span>
+                                Approved Releases
+                            </div>
+                            <strong class="pdev-stat-value">01</strong>
+                            <span class="pdev-stat-caption">Fictional sample record</span>
+                        </article>
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+                            <div class="pdev-stat-top">
+                                <span class="pdev-stat-icon pdev-icon-amber"><i class="bi bi-hourglass-split"></i></span>
+                                Awaiting Execution
+                            </div>
+                            <strong class="pdev-stat-value">01</strong>
+                            <span class="pdev-stat-caption">Sample authorization record</span>
+                        </article>
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+                            <div class="pdev-stat-top">
+                                <span class="pdev-stat-icon pdev-icon-teal"><i class="bi bi-check-circle"></i></span>
+                                Successful Samples
+                            </div>
+                            <strong class="pdev-stat-value">01</strong>
+                            <span class="pdev-stat-caption">Fictional deployment result</span>
+                        </article>
+
+                        <article class="pdev-stat-card" data-pdev-searchable>
+                            <div class="pdev-stat-top">
+                                <span class="pdev-stat-icon pdev-icon-red"><i class="bi bi-exclamation-triangle"></i></span>
+                                Failed Samples
+                            </div>
+                            <strong class="pdev-stat-value">01</strong>
+                            <span class="pdev-stat-caption">Fictional failure record</span>
+                        </article>
+
+                    </div>
+                </section>
+
+
+                <!-- SECTION B -->
+
+                <section class="pdev-page-section" data-pdev-section>
+                    <div class="pdev-section-heading">
+                        <div>
+                            <span class="pdev-section-kicker">SECTION B</span>
+                            <h2>Deployment Register</h2>
+                            <p>Review sample deployment requests and results.</p>
+                        </div>
+                    </div>
+
+                    <article class="pdev-panel" data-pdev-searchable>
+
+                        <div class="pdev-panel-header">
+                            <div>
+                                <h3>Deployment Records</h3>
+                                <p>Fictional demonstration records.</p>
+                            </div>
+                            <span class="pdev-badge pdev-badge-info">Demo Only</span>
+                        </div>
+
+                        <div class="pdev-toolbar">
+
+                            <div class="pdev-field flex-grow-1">
+                                <label for="deploymentSearch">Search Deployments</label>
+                                <input type="search" id="deploymentSearch" class="form-control"
+                                       data-pdev-table-search="deployments"
+                                       placeholder="Search deployment reference...">
+                            </div>
+
+                            <div class="pdev-field">
+                                <label for="deploymentStatus">Status</label>
+                                <select id="deploymentStatus" class="form-select"
+                                        data-pdev-filter="status" data-pdev-target="deployments">
+                                    <option value="all">All Statuses</option>
+                                    <option value="Awaiting Execution">Awaiting Execution</option>
+                                    <option value="Successful">Successful</option>
+                                    <option value="Failed">Failed</option>
+                                </select>
+                            </div>
+
+                            <button type="button" class="pdev-btn pdev-btn-secondary"
+                                    data-pdev-clear-table="deployments">
+                                <i class="bi bi-arrow-counterclockwise"></i> Clear
+                            </button>
+
+                        </div>
+
+                        <div class="pdev-panel-body">
+                            <span class="pdev-pagination-info" data-pdev-result-count="deployments"></span>
+                        </div>
+
+                        <div class="pdev-table-wrap" data-pdev-table-wrapper>
+                            <table class="pdev-table" data-pdev-table="deployments">
+                                <thead>
+                                    <tr>
+                                        <th>Deployment ID</th>
+                                        <th>Release</th>
+                                        <th>Environment</th>
+                                        <th>Authorization</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr data-pdev-row data-status="Awaiting Execution">
+                                        <td><span class="pdev-code">DEMO-DEP-001</span></td>
+                                        <td>DEMO-REL-002</td>
+                                        <td>Staging</td>
+                                        <td><span class="pdev-badge pdev-badge-success">Authorized Sample</span></td>
+                                        <td><span class="pdev-badge pdev-badge-warning">Awaiting Execution</span></td>
+                                        <td><button type="button" class="pdev-btn pdev-btn-secondary"
+                                            data-pdev-action="review">Review</button></td>
+                                    </tr>
+
+                                    <tr data-pdev-row data-status="Successful">
+                                        <td><span class="pdev-code">DEMO-DEP-002</span></td>
+                                        <td>DEMO-REL-003</td>
+                                        <td>Staging</td>
+                                        <td><span class="pdev-badge pdev-badge-success">Authorized Sample</span></td>
+                                        <td><span class="pdev-badge pdev-badge-success">Successful</span></td>
+                                        <td><button type="button" class="pdev-btn pdev-btn-secondary"
+                                            data-pdev-action="review">View</button></td>
+                                    </tr>
+
+                                    <tr data-pdev-row data-status="Failed">
+                                        <td><span class="pdev-code">DEMO-DEP-003</span></td>
+                                        <td>DEMO-REL-004</td>
+                                        <td>Staging</td>
+                                        <td><span class="pdev-badge pdev-badge-neutral">Not Applicable</span></td>
+                                        <td><span class="pdev-badge pdev-badge-danger">Failed</span></td>
+                                        <td><a href="rollback-management.html" class="pdev-btn pdev-btn-secondary">Rollback Review</a></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="pdev-empty" data-pdev-table-empty="deployments" hidden>
+                            <span class="pdev-empty-icon"><i class="bi bi-rocket-takeoff"></i></span>
+                            <strong>No matching deployment records.</strong>
+                            <p>Change your search or filter.</p>
+                        </div>
+
+                        <div class="pdev-panel-footer">
+                            <span class="pdev-pagination-info">Sample deployment records</span>
+                            <div class="pdev-pagination-controls" data-pdev-pagination="deployments"></div>
+                        </div>
+
+                    </article>
+                </section>
+
+
+                <!-- SECTION C -->
+
+                <section class="pdev-page-section" data-pdev-section>
+                    <div class="pdev-section-heading">
+                        <div>
+                            <span class="pdev-section-kicker">SECTION C</span>
+                            <h2>Deployment Environment</h2>
+                        </div>
+                    </div>
+
+                    <div class="pdev-grid-3">
+
+                        <article class="pdev-panel" data-pdev-searchable>
+                            <div class="pdev-panel-body">
+                                <span class="pdev-stat-icon pdev-icon-teal mb-3"><i class="bi bi-code-square"></i></span>
+                                <h3 class="h6 fw-bold">Development</h3>
+                                <p class="small text-secondary">Local development environment.</p>
+                                <span class="pdev-badge pdev-badge-neutral">Not Connected</span>
+                            </div>
+                        </article>
+
+                        <article class="pdev-panel" data-pdev-searchable>
+                            <div class="pdev-panel-body">
+                                <span class="pdev-stat-icon pdev-icon-blue mb-3"><i class="bi bi-box"></i></span>
+                                <h3 class="h6 fw-bold">Testing / Staging</h3>
+                                <p class="small text-secondary">Environment for authorized release validation.</p>
+                                <span class="pdev-badge pdev-badge-neutral">Not Connected</span>
+                            </div>
+                        </article>
+
+                        <article class="pdev-panel" data-pdev-searchable>
+                            <div class="pdev-panel-body">
+                                <span class="pdev-stat-icon pdev-icon-purple mb-3"><i class="bi bi-shield-lock"></i></span>
+                                <h3 class="h6 fw-bold">Production</h3>
+                                <p class="small text-secondary">Requires independent deployment authorization.</p>
+                                <span class="pdev-badge pdev-badge-warning">Restricted</span>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+
+                <!-- SECTION D -->
+
+                <section class="pdev-page-section" data-pdev-section>
+                    <div class="pdev-section-heading">
+                        <div>
+                            <span class="pdev-section-kicker">SECTION D</span>
+                            <h2>Deployment Execution Record</h2>
+                            <p>Prepare a local record of an authorized deployment activity.</p>
+                        </div>
+                    </div>
+
+                    <article class="pdev-panel">
+                        <div class="pdev-panel-body">
+
+                            <div class="pdev-notice warning mb-3">
+                                <i class="bi bi-shield-exclamation"></i>
+                                This form does not execute a deployment.
+                                Verify independent authorization before any real execution.
+                            </div>
+
+                            <form data-pdev-demo-form
+                                  data-pdev-success-message="Deployment execution record prepared locally. No actual deployment occurred.">
+
+                                <div class="pdev-form-grid">
+
+                                    <div class="pdev-field">
+                                        <label for="deploymentReference">Deployment Reference <span class="pdev-required">*</span></label>
+                                        <input type="text" class="form-control" id="deploymentReference" required>
+                                    </div>
+
+                                    <div class="pdev-field">
+                                        <label for="deploymentRelease">Release Reference <span class="pdev-required">*</span></label>
+                                        <input type="text" class="form-control" id="deploymentRelease" required>
+                                    </div>
+
+                                    <div class="pdev-field">
+                                        <label for="deploymentEnvironmentRecord">Environment <span class="pdev-required">*</span></label>
+                                        <select class="form-select" id="deploymentEnvironmentRecord" required>
+                                            <option value="">Select environment</option>
+                                            <option>Development</option>
+                                            <option>Testing</option>
+                                            <option>Staging</option>
+                                            <option>Production</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="pdev-field">
+                                        <label for="deploymentAuthorization">Authorization Reference <span class="pdev-required">*</span></label>
+                                        <input type="text" class="form-control" id="deploymentAuthorization" required
+                                               placeholder="Enter approved reference">
+                                    </div>
+
+                                    <div class="pdev-field">
+                                        <label for="deploymentResult">Execution Result <span class="pdev-required">*</span></label>
+                                        <select class="form-select" id="deploymentResult" required>
+                                            <option value="">Select result</option>
+                                            <option>Successful</option>
+                                            <option>Failed</option>
+                                            <option>Not Executed</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="pdev-field">
+                                        <label for="deploymentVersion">Deployed Version</label>
+                                        <input type="text" class="form-control" id="deploymentVersion">
+                                    </div>
+
+                                    <div class="pdev-field" style="grid-column:1/-1">
+                                        <label for="deploymentNotes">Execution Notes <span class="pdev-required">*</span></label>
+                                        <textarea class="form-control" id="deploymentNotes" rows="4" maxlength="1500" required></textarea>
+                                    </div>
+
+                                </div>
+
+                                <div class="pdev-form-actions">
+                                    <button type="reset" class="pdev-btn pdev-btn-secondary">Clear</button>
+                                    <button type="submit" class="pdev-btn pdev-btn-primary">
+                                        <i class="bi bi-file-earmark-check"></i>
+                                        Prepare Execution Record
+                                    </button>
+                                </div>
+
+                                <div class="pdev-notice success mt-3" data-pdev-form-result hidden></div>
+
+                            </form>
+
+                        </div>
+                    </article>
+                </section>
+
+
+                <!-- SECTION E -->
+
+                <section class="pdev-page-section" data-pdev-section>
+                    <div class="pdev-section-heading">
+                        <div>
+                            <span class="pdev-section-kicker">SECTION E</span>
+                            <h2>Post-Deployment Validation</h2>
+                        </div>
+                    </div>
+
+                    <div class="pdev-notice info">
+                        <i class="bi bi-info-circle"></i>
+                        <span>
+                            After an authorized deployment, perform the required
+                            service, functional and integration checks. Record failures
+                            and notify the Platform Administrator when escalation is required.
+                        </span>
+                    </div>
+
+                    <div class="pdev-panel mt-3">
+                        <div class="pdev-panel-body">
+                            <div class="pdev-timeline">
+
+                                <div class="pdev-timeline-item">
+                                    <span class="pdev-timeline-dot"><i class="bi bi-play-circle"></i></span>
+                                    <div class="pdev-timeline-content">
+                                        <strong>01. Confirm approved release</strong>
+                                        <p>Verify the deployment authorization and target environment.</p>
+                                    </div>
+                                </div>
+
+                                <div class="pdev-timeline-item">
+                                    <span class="pdev-timeline-dot"><i class="bi bi-rocket"></i></span>
+                                    <div class="pdev-timeline-content">
+                                        <strong>02. Execute authorized deployment</strong>
+                                        <p>Follow the approved deployment procedure.</p>
+                                    </div>
+                                </div>
+
+                                <div class="pdev-timeline-item">
+                                    <span class="pdev-timeline-dot"><i class="bi bi-check2-square"></i></span>
+                                    <div class="pdev-timeline-content">
+                                        <strong>03. Validate application behavior</strong>
+                                        <p>Run post-deployment checks and document results.</p>
+                                    </div>
+                                </div>
+
+                                <div class="pdev-timeline-item">
+                                    <span class="pdev-timeline-dot"><i class="bi bi-journal-check"></i></span>
+                                    <div class="pdev-timeline-content">
+                                        <strong>04. Preserve deployment history</strong>
+                                        <p>Record the result, responsible actor and authorization reference.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <p class="pdev-footer-note">
+                    <i class="bi bi-shield-lock"></i>
+                    This interface does not execute deployment commands.
+                    Production deployment requires independent authorization.
+                </p>
+
+            </div>
+        </section>
+
+        <footer class="main-footer pdev-footer">
+            <span>GabayAral &copy; <span data-pdev-year></span> | Platform Developer</span>
+            <span data-pdev-last-updated></span>
+        </footer>
+
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/platform-developer.js"></script>
+<script src="../../assets/js/layout.js"></script>
+
+</body>
+</html>
